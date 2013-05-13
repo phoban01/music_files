@@ -7,7 +7,8 @@ violin_I_pizz_intro = {
   \once \override Hairpin #'circled-tip = ##t
   \bezier_gliss #'(0.9 . -3) #'(0.75 1.1 0 -0.5)
   \once \override Glissando.bound-details.right.attach-dir = #-1
-  \afterGrace d8 ^\markup \vertical_bow _\markup {\translate #'(-3 . 0) \mute-sign} ^\markup \string-numbers #'( "III II"  -1.25 2)  \< [ \glissando {\stopStaff a'8 \effort mf} 
+  \afterGrace d8 ^\markup \vertical_bow _\markup {\translate #'(-3 . 0) \mute-sign} ^\markup \string-numbers #'( "III II"  -1.25 2)  \< [ \glissando 
+    {\stopStaff a'8 \effort mf} 
   \switch-staff \normal_staff
   \once \override Staff.Clef #'extra-offset = #'(-1.5 . 0)
   \bracket-clef
@@ -99,34 +100,62 @@ g''4 \startTextSpan \< \glissando \glissSkipOn \afterGrace e''4 \glissando {\gli
  %%%%%%%% ============= measure 9 ============= %%%%%%%% 
 \time 6/8
 fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flare_width \afterGrace a''16 \< {s8 \flare_f} 
-\squares gqs''16 ^\up_bow ^\altosultasto \p g'' fs'' f'' e'' d'' cs''] 
-
+\squares gqs''16 ] ^\up_bow ^\altosultasto \p g'' [ \diamonds a'']
+\tuplet 7/4 {
+  \draw_line_arrow " " \altosulpont 
+  \flare_width 
+  fs'' [ \< ^\down_bow_heavy ( f''\startTextSpan a'' e'' cs''' d'' c'' ] \flare_mf ) \stopTextSpan
+}
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-  
-
+\compoundMeter #'((3 8 ) (5 16))
+\squares c''16 ^\altosultasto [ \p d'' \diamonds e'' \staccato \accent \mf r16 \squares fs'' g'' ]
+\diamonds a''16 [ \mf \staccato \accent \squares b'' \p g'' \> fs'' f'' \ppp ]
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
-  
-
- %%%%%%%% ============= measure 12 ============= %%%%%%%% 
-  
-
+ \time 3/8 
+ \switch-staff \single_line_staff
+ \clockhead c'8 [ ^\down_bow_very_heavy ^\nat \sfz r16 
+ \switch-staff \normal_staff
+ \bracket-clef
+ \diamonds e''16 ^\sulpont ^\markup \string-numbers #'("II" 0 0) \mf \staccato \accent 
+ \flare_width
+ \bezier_gliss #'(0.99 . 2.5) #'(0.5 1 0 -0.5)
+ \afterGrace a''16. \pp \< \glissando {fs'''8 \flare_sf } 
+ r32 ] 
+ %>%%%%%%% ============= measure 12 ============= %%%%%%%% 
+ \time 5/16 
+  r16 [
+      c''8 ~ ^\down_bow_light ^\markup \string-numbers #'("IV" 0 0) ^\aldita \pp
+      c''8 ] \glissando 
  %%%%%%%% ============= measure 13 ============= %%%%%%%% 
-  
-
+ \time 7/16
+\draw_line_arrow \aldita \altosulpont
+ \glissSkipOn g'8 \< \startTextSpan [ d'8 ] \mf \>  b8 [ \glissSkipOff gqs16 \pp ~ \stopTextSpan ]
  %%%%%%%% ============= measure 14 ============= %%%%%%%% 
-  
-
+ \time 3/8 
+ gqs8  ~ \draw_line_arrow \altosulpont \altosultasto
+ gqs4  ~ \startTextSpan
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
-  
-
+ \time 5/16 
+ gqs8 [ \< ~ 
+ \niente \afterGrace gqs16 ] \mf \> \stopTextSpan {s8 \!}
+ \switch-staff \single_line_staff
+ r16   [
+ \clockhead c'16] ^\down_bow_very_heavy ^\nat \f 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
-  
-
+  \time 2/8
+  \tuplet 3/2 {
+    \anti-clockhead c'16 [ \mp  r16
+    r16 \anti-clockhead c'8. ] \mf
+  }
  %%%%%%%% ============= measure 17 ============= %%%%%%%% 
-  
-
- %%%%%%%% ============= measure 18 ============= %%%%%%%% 
-  
+  \time 3/16
+  \clockhead c'32 [ \mf \anti-clockhead c'16 r32 r16 ]
+%  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
+  \time 4/8
+  \squares
+   r16 [  \switch-staff \body_staff a'8. ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0) \mf ~ a'8 ] ~ 
+  \no-gliss-pad
+  a'16 [ ^\vertical_bow ^\flat_bow \effort mf  \glissando \no-gliss-pad \afterGrace c' ] \glissando {a'8}
 
  %%%%%%%% ============= measure 19 ============= %%%%%%%% 
   

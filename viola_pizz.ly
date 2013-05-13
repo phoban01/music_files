@@ -965,7 +965,7 @@ r16 [
   	\pizz_head "I" \ppos #0 c32 
   }
 
-  \pizz_head "II III" \ppos #0.6 c32 \p
+  \pizz_head "II III" \ppos #0.6 c16. \p
   \pizz_head "I" \ppos #0.5 c32 ]
 
 

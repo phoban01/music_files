@@ -92,7 +92,8 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
 
  %%%%%%%% ============= measure 9 ============= %%%%%%%% 
   \time 6/8 
-  e''8 [  \afterGrace g''8 \mp {\glissSkipOff a''8  } \diamonds \flare_width \afterGrace a'8 \p \< ^\down_bow ^\nat {s8 \flare_sf} gs'16 ^\up_bow_light ^\altosultasto \p
+  e''8 [  \afterGrace g''8 \mp {\glissSkipOff a''8  } \diamonds \flare_width \afterGrace a'8 \p \< ^\down_bow ^\nat {s8 \flare_sf} 
+  \squares gs'16 ^\up_bow_light ^\altosultasto \p
   g'16  fs'  f' e' e' ]
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 

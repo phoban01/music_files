@@ -63,7 +63,8 @@ f''8 [ \glissSkipOff ef''16 \mf g'' \p fs'' fqs'' e'' d'']
  \time 6/8
  \diamonds
  \flare_width
- \afterGrace a''8 [ ^\nat \< {s8 \flare_mf} \squares gqs''16 ^\up_bow ^\sultasto g'' fs'' f'' e'' d'' cs'' c'' d'' 
+ \afterGrace a''8 [ ^\nat \< {s8 \flare_mf} \squares gqs''16 ^\up_bow ^\sultasto g'' fs'' f'' 
+ \diamonds e'' \staccato \accent \mf d'' \p \squares cs'' c'' d'' 
  \diamonds e'' ] \mf \staccato \accent ^\nat
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
