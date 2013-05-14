@@ -87,16 +87,49 @@ cello_pizz_right = {
 
  %%%%%%%% ============= measure 71 ============= %%%%%%%% 
   
-
  %%%%%%%% ============= measure 72 ============= %%%%%%%% 
-  
+ \time 3/4
+  r4 r4
+  \tuplet 3/2 {
+  	\pizz_head "I II" \ppos #0.5 c8 [ \p
+  	\arp_pizz_head "I" "IV" \ppos #-0.15 c8 \effort mf
+  	\tuplet 3/2 {
+  		\pizz_head "I" \ppos #0.7 c16 \f
+  		\pizz_head "II" \ppos #0.6 c16 \p
+  		\pizz_head "III" \ppos #0.5 c16 ] 
+  	}
+  	
+  }  
 
  %%%%%%%% ============= measure 73 ============= %%%%%%%% 
-  
+  \time 5/8
+  r4
+  \pizz_head "I" \ppos #0.45 c64 [ \mf
+  \pizz_head "II III IV" \ppos #0.45 c16. \f
+  \pizz_head "I" \ppos #0.25 c64 \effort "f"
+  \pizz_head "II" \ppos #0.25 c32
+  \pizz_head "II" \ppos #0.15 c32
+  \pizz_head "IV" \ppos #0.1 c16
+
+  \pizz_head "III IV" \ppos #0.7 c8 ] \f
 
  %%%%%%%% ============= measure 74 ============= %%%%%%%% 
-  
+  \time 4/8
+  \pizz_head "II" \ppos #0 c32 [ \effort p
+  \pizz_head "I" \ppos #0 c32
+  r32
 
+  \tuplet 6/4 {
+  	\pizz_head "I" \ppos #0.5 c32 \p \< %>
+  	\pizz_head "II" \ppos #0.4 c32
+  	\pizz_head "III" \ppos #0.3 c32 \mf \>
+  	\pizz_head "II" \ppos #0.4 c32 
+  	\pizz_head "I" \ppos #0.5 c32
+  	\pizz_head "II" \ppos #0.4 c32 ] \pp
+  }
+
+  r4
+ 
  %%%%%%%% ============= measure 75 ============= %%%%%%%% 
   
 
@@ -264,13 +297,43 @@ cello_pizz_left = {
   
 
  %%%%%%%% ============= measure 72 ============= %%%%%%%% 
-  
+   \time 3/4
+  r4 r4
+  \tuplet 3/2 {
+  	\ppos #0.35 c8 [ \glissando
+  		_\markup {
+  				\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) ("dot" . 0.6) ("dot" . 0.8))
+  		}
+  	\glissSkipOn c8 \glissSkipOff	
+  	\afterGrace\ppos #0.15 c8 ] \glissando {\slash_grace \ppos #0.235 c8}
+  }
 
  %%%%%%%% ============= measure 73 ============= %%%%%%%% 
-  
+  \time 5/8
+  r4
+  \ppos #0.3 c8 [ \glissando
+  	_\markup {
+  			\fingering-diagram #'(("mute" . 0.2) (#f. 0.5) ("mute" . 0.6) ("mute" . 0.8))
+  	}
+  \afterGrace \ppos #0.55 c8 \glissando {\slash_grace \ppos #0.2 c8}
+  \ppos #0.5 c8 ] \glissando
+  	_\markup {
+  		\override #'(top-barre . "dot")
+  		\override #'(bottom-barre . "dot")
+  		\override #'(speed . 32)
+  		\override #'(bar-height . 0.19)
+  		\barre-diagram #'(0.25 0.65)
+  	}
 
  %%%%%%%% ============= measure 74 ============= %%%%%%%% 
-  
+  \time 4/8
+  \glissSkipOn \afterGrace c8 [ \glissando {\glissSkipOff \slash_grace \ppos #0.3 c8}
+  \afterGrace \ppos #0.2 c8 ] \glissando
+  	_\markup {
+  			\override #'(trills . (#t #t #t #t))
+  			\fingering-diagram #'(("mute" . 0.2) ("mute" . 0.4) ("mute" . 0.6) ("mute" . 0.8))
+  	} {\slash_grace \ppos #0.4 c8}
+  r4
 
  %%%%%%%% ============= measure 75 ============= %%%%%%%% 
   

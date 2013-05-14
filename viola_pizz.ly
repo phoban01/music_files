@@ -1092,35 +1092,113 @@ r16 [
   \pizz_head "II" \ppos #0.55 c32 ] \mf
   
  %%%%%%%% ============= measure 65 ============= %%%%%%%% 
-  
+  \time 5/16
+  r8 [
+  \pizz_head "IV" \ppos #0.6 c16 \p
+  \pizz_head "I II II" \ppos #0.3 c16.. \mp
+  \pizz_head "IV" \ppos #0 c64
+  ]
 
  %%%%%%%% ============= measure 66 ============= %%%%%%%% 
-  
+  \time 4/4
+  r4
+  \tuplet 3/2 {
+  	r8 [
+  	r8
+  	\pizz_head "I" \ppos #0.1 c32 \effort mf
+  	\pizz_head "II" \ppos #0.2 c32
+  	\pizz_head "III" \ppos #0.3 c32
+  	\pizz_head "II" \ppos #0.2 c32
+  }
+  r16
+  \pizz_head "I II" \ppos #0.4 c16 \p
+  \pizz_head "II III IV" \ppos #0.5 c16. \mf
+  \pizz_head "IV" \ppos #0 c64 \effort "f"
+  \pizz_head "III" \ppos #0 c64 \effort p
+
+  \tuplet 12/8 {
+  	\pizz_head "IV" \ppos #0.65 c32 \mf
+  	\pizz_head "III" \ppos #0.7 c32
+  	\pizz_head "II" \ppos #0.75 c32
+  	\pizz_head "III" \ppos #0.7 c32
+  	\pizz_head "II" \ppos #0.75 c32
+  	\pizz_head "I" \ppos #0.8 c32
+  	\pizz_head "IV" \ppos #0.7 c32 \f \>
+  	\pizz_head "III" \ppos #0.75 c32
+  	\pizz_head "II" \ppos #0.8 c32
+  	\pizz_head "I" \ppos #0.85 c32
+  	\pizz_head "II" \ppos #0.8 c32
+  	\pizz_head "III" \ppos #0.75 c32 ] \pp
+  }
 
  %%%%%%%% ============= measure 67 ============= %%%%%%%% 
-  
+  \time 5/16
+  	r8 [
+  	\tuplet 5/4 {
+  		\pizz_head "I" \ppos #0.2 c32 \effort "f"
+  		\pizz_head "II" \ppos #0.25 c32
+  		\pizz_head "III" \ppos #0.2 c32
+  		\pizz_head "IV" \ppos #0.2 c32
+  		\pizz_head "III" \ppos #0.3 c32
+  	}
 
+  	\tuplet 3/2 {
+  		r32
+  		\pizz_head "IV" \ppos #0.75 c32 \p
+  		\pizz_head "III" \ppos #0.65 c32 ]
+  	}
  %%%%%%%% ============= measure 68 ============= %%%%%%%% 
-  
+  \time 5/8
+  	r4.
+  	\tuplet 3/2 {
+  		r8
+  		\pizz_head "I II" \ppos #0.35 c16 [ \p
+  		\pizz_head "IV" \ppos #0.75 c16 \f
+  		\arp_pizz_head "I" "III" \ppos #0.5 c8 ] \effort p
+  	}
 
  %%%%%%%% ============= measure 69 ============= %%%%%%%% 
-  
-
+  \time 3/4
+  \tuplet 5/4 {
+  		\pizz_head "I" \ppos #0 c32 [ \effort "f" \> 
+  		\pizz_head "II" \ppos #0 c32
+  		\pizz_head "III" \ppos #0.1 c32
+  		\pizz_head "IV" \ppos #0.12 c32 \effort "p"
+  		r32
+  }
+  r16 
+  \pizz_head "II III" \ppos #0.75 c16 ] \effort "p"
+  r4
+  \tuplet 5/4 {
+  	\arp_pizz_head "I" "IV" \ppos #0.3 c32 [ \f
+  	\pizz_head "II" \ppos #0.7 c32 \mp
+  	\pizz_head "III" \ppos #0.6 c32
+  	\pizz_head "IV" \ppos #0.5 c32 \f
+  	\pizz_head "III" \ppos #0.6 c32  \p	
+  }
+  r8 ]
  %%%%%%%% ============= measure 70 ============= %%%%%%%% 
-  
+  \time 3/8
+  \pizz_head "II III" \ppos #0.8 c8 [ \f
+  \tuplet 3/2 {
+  	\arp_pizz_head "I" "IV" \ppos #0 c16 \effort p
+  	r16
+  	\pizz_head "I II" \ppos #0 c16 \effort sfz
+  }
+  \pizz_head "III" \ppos #0.75 c16 \p
+  \pizz_head "III IV" \ppos #0.7 c16 ] \mf
 
  %%%%%%%% ============= measure 71 ============= %%%%%%%% 
-  
+  \time 2/4
+  r4 r4
 
  %%%%%%%% ============= measure 72 ============= %%%%%%%% 
-  
+ \time 3/4
+
 
  %%%%%%%% ============= measure 73 ============= %%%%%%%% 
-  
-
- %%%%%%%% ============= measure 74 ============= %%%%%%%% 
-  
-
+  \time 5/8
+ 
  %%%%%%%% ============= measure 75 ============= %%%%%%%% 
   
 
@@ -2340,7 +2418,7 @@ r8
   			\fingering-diagram #'((#f . 0.5) ("dot" . 0.4) (#f . 0.5) ("dot" . 0.8))
   	} {\slash_grace \ppos #0.1 c8}
 
-  \ppos #0.7 c16 \glissando
+  \ppos #0.55 c16 \glissando
   	_\markup {
   			\override #'(trills . (#t #t #t #t))
   			\fingering-diagram #'(("mute" . 0.6) ("mute" . 0.5) ("mute" . 0.4) ("mute" . 0.3))
@@ -2369,41 +2447,66 @@ r8
   r8 ]
   \tuplet 3/2 {
   	r8 [
-  	\afterGrace \ppos #0.2 c16 \glissando {\slash_grace \ppos #0.4 c8}
+  	\afterGrace \ppos #0.2 c16 \glissando 
+  		_\markup {
+  				\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) (#f . 0.5) ("mute" . 0.8))
+  		}
+  		{\slash_grace \ppos #0.4 c8}
   	\ppos #0.1 c16 \glissando
-  	\ppos #0.6 c8 \glissando
+  	\ppos #0.6 c8 ] \glissando
   }
 
  %%%%%%%% ============= measure 69 ============= %%%%%%%% 
   \time 3/4
   \ppos #0.4 c8 [ \glissando
+  	_\markup {
+  			\fingering-diagram #'(("mute" . 0.2) ("dot" . 0.4) ("mute" . 0.6) ("dot" . 0.8))
+  	}
   \glissSkipOn \afterGrace c8 \glissando {\glissSkipOff \slash_grace \ppos #0.6 c8}
   r8
   r8
-  \afterGrace \ppos #0.375 c8 \glissando {\slash_grace \ppos #0.7 c8}
+  \afterGrace \ppos #0.375 c8 \glissando 
+  	_\markup {
+  		\override #'(top-barre . "dots")
+  		\override #'(bottom-barre . "dots")
+  		\override #'(speed . 16)
+  		\override #'(bar-height . 0.19)
+  		\barre-diagram #'(0.25 0.65)
+  	}
+  	{\slash_grace \ppos #0.7 c8}
   r8 ]
 
  %%%%%%%% ============= measure 70 ============= %%%%%%%% 
   \time 3/8
-  \afterGrace \ppos #0.8 c8 [ \glissando {\slash_grace \ppos #0.25 c8}
+  \afterGrace \ppos #0.8 c8 [ \glissando 
+  	_\markup {
+  			\fingering-diagram #'(("mute" . 0.2) ("dot" . 0.4) ("dot" . 0.6) ("mute" . 0.8))
+  	}
+  	{\slash_grace \ppos #0.25 c8}
   \tuplet 3/2 {
   	\ppos #0.5 c16 \glissando
   	\ppos #0.2 c16 \glissando
-  	\afterGrace \ppos #0.4 c16 \glissando {\slash_grace \ppos #0.2 c8}
+  	\afterGrace \ppos #0.4 c16 \glissando 
+  		_\markup {
+  				\override #'(extender-I . (#t . "release"))
+  				\fingering-diagram #'(("mute" . 0.2) ("mute" . 0.4) ("dot" . 0.6) ("dot" . 0.6))
+  		}
+  		{\slash_grace \ppos #0.2 c8}
   }
   \afterGrace \ppos #0.6 c8 ] \glissando {\slash_grace \ppos #0.3 c8}
 
  %%%%%%%% ============= measure 71 ============= %%%%%%%% 
-  
+  \time 2/4
+  r4 r4
 
  %%%%%%%% ============= measure 72 ============= %%%%%%%% 
-  
+  \time 3/4
 
  %%%%%%%% ============= measure 73 ============= %%%%%%%% 
-  
+  \time 5/8
 
  %%%%%%%% ============= measure 74 ============= %%%%%%%% 
-  
+  \time 4/8
 
  %%%%%%%% ============= measure 75 ============= %%%%%%%% 
   
