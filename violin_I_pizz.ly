@@ -6,40 +6,40 @@ violin_I_pizz_right_one = {
  %%%%%%%% ============= measure 26 ============= %%%%%%%% 
  \time 5/4
  r8. [
- \pizz_head "I II III" \ppos #0.75 c16
+ \pizz_head "I II III" \ppos #0.75 c16 \mf
  \tuplet 5/4 {
  	r32
- 	\pizz_head "II" \ppos #0.3 c64
+ 	\pizz_head "II" \ppos #0.3 c64 \effort sfz
  	\pizz_head "I" \ppos #0.2 c64
- 	\pizz_head "II" \ppos #0.8 c16
- 	\pizz_head "II III" \ppos #0.85 c16
- 	\arp_pizz_head "I" "IV" \ppos #-0.15 c16
- 	\pizz_head "I" \ppos #0.2 c32
+ 	\pizz_head "II" \ppos #0.8 c16 \p
+ 	\pizz_head "II III" \ppos #0.85 c16 \mf
+ 	\arp_pizz_head "I" "IV" \ppos #-0.15 c16 \effort sfz
+ 	\pizz_head "I" \ppos #0.2 c32 \effort mf
  	\pizz_head "II" \ppos #0.1 c32
  }
 
- \pizz_head "IV" \ppos #0.6 c16 
+ \pizz_head "IV" \ppos #0.6 c16  \p
  r16
- \arp_pizz_head "I" "IV" \ppos #-0.15 c16
+ \arp_pizz_head "I" "IV" \ppos #-0.15 c16 \effort mf
 
  \tuplet 3/2 {
- 	\pizz_head "I" \ppos #0.5 c32
+ 	\pizz_head "I" \ppos #0.5 c32 \effort mf
  	\pizz_head "II" \ppos #0.4 c32
  	\pizz_head "III" \ppos #0.35 c32
  	\pizz_head "IV" \ppos #0.25 c32
 
- 	\pizz_head "II" \ppos #0.75 c16
- 	\pizz_head "III" \ppos #0.5 c16
+ 	\pizz_head "II" \ppos #0.75 c16 \mf
+ 	\pizz_head "III" \ppos #0.5 c16 \p
 
  	\tuplet 3/2 {
- 		\pizz_head "IV" \ppos #0 c16.
+ 		\pizz_head "IV" \ppos #0 c16. \effort p
  		\pizz_head "I" \ppos #0.2 c32
  		\pizz_head "II" \ppos #0.1 c16
  	}
  }
 
- 	\pizz_head "III IV" \ppos #0.75 c16
- 	\arp_pizz_head "I" "III" \ppos #-0.15 c16
+ 	\pizz_head "III IV" \ppos #0.75 c16 \f
+ 	\arp_pizz_head "I" "III" \ppos #-0.15 c16 \effort p
 
  	r8 ]
 }

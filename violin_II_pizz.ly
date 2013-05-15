@@ -1,3 +1,140 @@
+violin_II_pizz_right_one = { 
+
+\switch-staff \pizz_staff
+\set subdivideBeams = ##t
+\set baseMoment = #(ly:make-moment 1/8)
+
+ %%%%%%%% ============= measure 25 ============= %%%%%%%% 
+ 	\time 3/8
+ 	r8 [ 
+ 	r16
+ 	\pizz_head "II III IV" \ppos #0.8 c8 \mf
+ 	\pizz_head "II" \ppos #0.1 c32
+ 	\pizz_head "I" \ppos #0.05 c32 ] \effort "f"
+ 
+  %%%%%%%% ============= measure 26 ============= %%%%%%%% 
+ 	\time 5/4
+ 	\arp_pizz_head "I" "IV" \ppos #0.65 c16. [ \p
+ 	\pizz_head "IV" \ppos #0.15 c32 \effort p
+
+ 	\pizz_head "I" \ppos #0.3 c32 \mf
+ 	\pizz_head "II" \ppos #0.4 c32
+ 	\pizz_head "III" \ppos #0.5 c32
+ 	r32
+
+ 	\tuplet 3/2 {
+ 		\arp_pizz_head "I" "IV" \ppos #0 c8 \effort sfz
+ 		\pizz_head "III IV" \ppos #0.85 c16 \f
+ 	}
+
+ 	\pizz_head "I" \ppos #0.2 c32 \effort mf
+ 	\pizz_head "II" \ppos #0.15 c32
+ 	\pizz_head "III" \ppos #0.5 c16 \p
+
+ 	\tuplet 3/2 {
+ 		\tuplet 5/4 {
+ 			\pizz_head "IV" \ppos #0.65 c32 \mf
+ 			\pizz_head "I" \ppos #0.85 c32
+ 			\pizz_head "II" \ppos #0.75 c32
+ 			\pizz_head "III" \ppos #0.65 c32
+ 			\pizz_head "IV" \ppos #0.5 c32
+ 		}
+ 		\arp_pizz_head "I" "IV" \ppos #0.3 c16 \f
+ 		\arp_pizz_head "IV" "I" \ppos #-0.15 c16 \effort "f"
+
+ 		\tuplet 3/2 {
+ 			r16
+ 			\pizz_head "II" \ppos #0.75 c16 \mf
+ 			\pizz_head "III" \ppos #0.65 c16 \p
+ 		}
+ 	}
+
+ 	\tuplet 5/4 {
+ 		\pizz_head "IV" \ppos #0.85 c8 \f
+ 		\pizz_head "I II" \ppos #0.4 c16 \mf
+ 		\pizz_head "IV" \ppos #0 c16 \p
+ 		\pizz_head "I II III" \ppos #0.3 c16 ] \effort "f"
+ 	}
+ 	
+ 	r4
+}
+
+violin_II_pizz_left_one = { 
+	 %%%%%%%% ============= measure 25 ============= %%%%%%%% 
+	\time 3/8
+	r8 [
+	r16 \glissando
+	\ppos #0.5 c16 \glissando
+		_\markup {
+				\override #'(extender-IV . (#t . "dot"))
+				\fingering-diagram #'(("dot" . 0.8) ("dot" . 0.6) ("dot" . 0.4) (#f . 0.2))
+		}
+	\glissSkipOn \afterGrace c16 \glissando {\glissSkipOff \slash_grace \ppos #0.1 c8}
+	\ppos #0.25 c16 ] \glissando
+
+	 %%%%%%%% ============= measure 26 ============= %%%%%%%% 
+	 \time 5/4
+	 \glissSkipOn \afterGrace c8 [ \glissando 
+	 	_\markup {
+	 			\fingering-diagram #'(("mute" . 0.5) ("mute" . 0.5) ("mute" . 0.5) ("mute" . 0.5))
+	 	}
+	 	{\glissSkipOff \slash_grace \ppos #0.7 c8}
+	 \afterGrace \ppos #0 c8 \glissando 
+	 	_\markup {
+				\override #'(trills . (#t #t #t #t))	 		
+	 			\fingering-diagram #'(("mute" . 0.3) ("mute" . 0.4) ("mute" . 0.5) ("mute" . 0.6))
+	 	}
+	 	{\slash_grace \ppos #0.6 c8}
+
+	 \tuplet 3/2 {
+	 	\ppos #0.65 c16 \glissando
+	 	\ppos #0.25 c16 \glissando
+	 	\ppos #0.5 c16 \glissando
+	 		_\markup {
+	 				\fingering-diagram #'(("mute" . 0.2) ("mute" . 0.4) ("dot" . 0.6) ("dot" . 0.8))
+	 		}
+	 }
+	 \glissSkipOn \afterGrace c8 \glissando {\glissSkipOff \slash_grace \ppos #0.15 c8}
+
+	 \tuplet 3/2 {
+	 	\ppos #0.5 c8 \glissando
+	 		_\markup {
+	 			\override #'(top-barre . "dot")
+	 			\override #'(bottom-barre . "dot")
+	 			\override #'(speed . 32)
+	 			\override #'(bar-height . 0.19)
+	 			\barre-diagram #'(0.25 0.75)
+	 		}
+	 	\ppos #0.3 c8 \glissando
+	 	\afterGrace \ppos #0.75 c8 \glissando 
+	 		_\markup {
+	 				\override #'(extender-III . (#t . "dot"))
+	 				\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) (#f . 0.6) ("mute" . 0.8))
+	 		}
+	 		{\slash_grace \ppos #0 c8}
+	 }
+
+	 \tuplet 5/4 {
+	 	\ppos #0.2 c16 \glissando
+	 	\afterGrace \ppos #0.5 c16 \glissando {\slash_grace \ppos #0.15 c8}
+	 	\afterGrace \ppos #0.05 c8 \glissando {\slash_grace \ppos #0.55 c8}
+	 	\afterGrace \ppos #0.25 c16 ] \glissando {\slash_grace \ppos #0.8 c8}
+	 }
+}
+
+violin_II_first_pizz = {
+	<<
+		\new RightHandVoice = "upper" {
+			\violin_II_pizz_right_one
+		} 
+		\new LeftHandVoice = "lower" {
+			\violin_II_pizz_left_one
+		}
+	>>	
+}
+%%%%%%%%%%%%%
+
+
 violin_II_pizz_right = { 
 
  %%%%%%%% ============= measure 50 ============= %%%%%%%% 
@@ -490,7 +627,7 @@ r8
  %%%%%%%% ============= measure 88 ============= %%%%%%%% 
   \time 4/8
   r4 r4
-  
+
   %%%%%%%% ============= measure 89 ============= %%%%%%%% 
   \time 7/16
   \pizz_head "II III" \ppos #0.9 c16 [ \mp
@@ -1656,4 +1793,15 @@ r16 [
   				\fingering-diagram #'(("mute" . 0.8) ("mute" . 0.6) ("dot" . 0.4) ("dot" . 0.2))
   		} {\slash_grace \ppos #0.4 c8}
  
+}
+
+violin_II_second_pizz = {
+	<<
+		\new RightHandVoice = "upper" {
+			\violin_II_pizz_right
+		} 
+		\new LeftHandVoice = "lower" {
+			\violin_II_pizz_left
+		}
+	>>	
 }
