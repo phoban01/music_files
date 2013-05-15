@@ -193,35 +193,49 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   \time 4/8
   r4 r4
 
-  \time 4/8
-  r4 r4
+  \time 3/8
+  r4.
 
  %%%%%%%% ============= measure 22 ============= %%%%%%%% 
-  \time 4/4
+  \time 3/8
+  r4
   \stemDown
   \circles
-  r8 [ gqs8 ~ 
-  <\tweak extra-offset #'(0.135 . 0) gqs \single\diamonds  d'>8 ~ <gqs e'> ~
-  <e' cs''> ~ <\tweak extra-offset #'(0.135 . 0) cs'' \single\diamonds gs''> ~
-  <cs'' a''> ~ <\tweak extra-offset #'(0.135 . 0) a'' \single\diamonds d'''> ]
+   gqs8 ~ [
 
  %%%%%%%% ============= measure 23 ============= %%%%%%%% 
+ \time 4/8
+   <\tweak extra-offset #'(0.135 . 0) gqs \single\diamonds  d'>8 ~ 
+
+  <gqs e'> ~
+
+  <e' cs''> ~ 
+  <\tweak extra-offset #'(0.135 . 0) cs'' \single\diamonds gs''> ~
+ 
+
+  %%%%%%%% ============= measure 24 ============= %%%%%%%% 
   \time 2/8
+
+  <cs'' a''> ~ 
+  <\tweak extra-offset #'(0.135 . 0) a'' \single\diamonds d'''> ]
+
+ %%%%%%%% ============= measure 25 ============= %%%%%%%% 
+
+  \time 5/8
   a''64 [ \diamonds cs'' \circles e' \diamonds gqs \circles e' cs'' 
   \diamonds a'' \glissando e''' \glissando a''
   d'' e' \circles gqs \diamonds a' d'' \circles 
   \bezier_gliss #'(0.95 . 2) #'(0 1.35 0 -0.5)
   a'' \glissando \glissSkipOn \afterGrace a'' ] {\glissSkipOff \diamonds gs'''8}
 
-
- %%%%%%%% ============= measure 24 ============= %%%%%%%% 
-  \time 3/8
   \circles
   <cqs'' c''>8 [  \glissando
     \glissSkipOn c''16  c''16 
   \glissSkipOff <fqs'' f''>8 ]  \glissando
 
- %%%%%%%% ============= measure 25 ============= %%%%%%%% 
+ %%%%%%%% ============= measure 26 ============= %%%%%%%% 
+
+
   \time 6/4
   \glissSkipOn c''8 [ \glissando
   \glissSkipOff <dqs'' d''>16  \glissando \glissSkipOn c'16 ] 
@@ -231,7 +245,6 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
 
   \glissSkipOn c'8 [ c'8 ]
   \glissSkipOff <fqs'' f''>4 \glissando \glissSkipOn c'8 [ \glissSkipOff <aqs'' a''>8 ]
- %%%%%%%% ============= measure 26 ============= %%%%%%%% 
   
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
