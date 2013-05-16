@@ -731,3 +731,14 @@ cello_pizz_left = {
 		\glissSkipOn \afterGrace c16 ] \glissando {\glissSkipOff \slash_grace \ppos #0.3 c8}
 	} 
 }
+
+cello_pizz_section = {
+      <<
+        \new RightHandVoice = "upper" {
+          \cello_pizz_right
+        } 
+        \new LeftHandVoice = "lower" {
+          \cello_pizz_left
+        }
+      >>
+}
