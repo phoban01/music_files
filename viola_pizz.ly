@@ -9,9 +9,9 @@ viola_pizz_right = {
 \set subdivideBeams = ##t
 \set baseMoment = #(ly:make-moment 1/8)
 
-\pizz_head "IV" \ppos #0.475 c64 [ \mp
+r64 [ 
 
-\pizz_head "I" \ppos #0.6 c64
+\pizz_head "I" \ppos #0.6 c64 \mp
 \pizz_head "II" \ppos #0.5 c64
 \pizz_head "III" \ppos #0.475 c64
 r64
@@ -645,7 +645,7 @@ r16 [
 	\arp_pizz_head "I" "IV" \ppos #-0.15 c32 ] \effort "f"
 }
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
- \time 4/8
+ \time 6/8
  \pizz_head "III IV" \ppos #0.8 c8 [ \mf
  \pizz_head "I" \ppos #0.1 c32 \effort "f"
  \pizz_head "III" \ppos #0.2 c32  \effort p
@@ -662,7 +662,6 @@ r16 [
 
 
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
-  \time 2/8
   \pizz_head "I II" \ppos #0.275 c32 [ \effort "f"
   \pizz_head "II III IV" \ppos #0.7 c32 \f
   
@@ -677,7 +676,7 @@ r16 [
 
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
-  \time 5/8 
+  \time 2/8 
   \tuplet 5/4 {
   	\pizz_head "IV" \ppos #0.475 c32 [ \mf
   	\pizz_head "I" \ppos #0.675 c32
@@ -690,6 +689,8 @@ r16 [
   	\pizz_head "III IV" \ppos #0.075 c16. \effort p
   	\pizz_head "III" \ppos #0.7 c16 ] \p
   }
+
+  \time 3/8
   \tuplet 6/4 {
   	\pizz_head "IV" \ppos #0.65 c32 [ \f
   	\pizz_head "II" \ppos #0.8 c32
@@ -711,7 +712,7 @@ r16 [
   R1. 
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
-  \compoundMeter #'((3 16) (5 16))
+  \time 3/16
 	
 	\pizz_head "I II III IV" \ppos #0.35 c8 [ \mf
 	\tuplet 3/2 {
@@ -719,6 +720,7 @@ r16 [
 		\pizz_head "I" \ppos #0.1 c32
 		r32 ]
 	}
+\time 5/16
 	\pizz_head "II III" \ppos #0.85 c8 [ \p
 	\pizz_head "III IV" \ppos #0.375 c8 \f
 	\arp_pizz_head "I" "IV" \ppos #-0.15 c32 \effort sfz
@@ -2333,22 +2335,21 @@ r8
   	{\slash_grace \ppos #0.2 c8}
 
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
-  \time 4/8
+  \time 6/8
   \ppos #0.65 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("mute" . 0.8) ("mute" . 0.6) ("dot" . 0.25) ("dot" . 0.25))
   	}
   \glissSkipOn c8
   \afterGrace c8 \glissando {\glissSkipOff \slash_grace \ppos #0.05 c8}
-  \afterGrace \ppos #0.1 c8 ] \glissando 
+  \afterGrace \ppos #0.1 c8  \glissando 
   	_\markup {
   			\fingering-diagram #'(("mute" . 0.2) (#f. 0.5) ("dot" . 0.6) ("mute" . 0.8))
   	}
   	{\slash_grace \ppos #0.3 c8}
 
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
-  \time 2/8
-  \afterGrace \ppos #0.8 c16 [ \glissando 
+  \afterGrace \ppos #0.8 c16  \glissando 
   	_\markup {
   			\override #'(extender-IV . (#t . "dot"))
   			\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) ("mute" . 0.8) (#f. 0.8))
@@ -2361,12 +2362,13 @@ r8
   	{\slash_grace \ppos #0.75 c8}
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
-  \time 5/8
+  \time 2/8
   \ppos #0.3 c8 [ \glissando
   \ppos #0.7 c8 \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.7) ("dot" . 0.6) ("dot" . 0.5) ("dot" . 0.4))
   	}
+  \time 3/8
   \afterGrace \ppos #0.1 c8 \glissando 
   	_\markup {
   			\override #'(trills . (#t #t #t #t))
@@ -2384,12 +2386,14 @@ r8
   s1.
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
-  \compoundMeter #'((3 16) (5 16))
+  \time 3/16
   \ppos #0.1 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) ("dot" . 0.6) ("dot" . 0.8))
   	}
   \afterGrace \ppos #0.75 c16 \glissando {\slash_grace \ppos #0.25 c8}
+
+  \time 5/16
   \ppos #0.75 c8 \glissando 
   	_\markup {
   			\override #'(trills . (#t #t #t #t))

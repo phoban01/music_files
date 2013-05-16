@@ -1,3 +1,5 @@
+\include "/pieces/diotima_quartet/code_files/eighthTone.ly"
+
 cello_pizz_intro = { 
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
@@ -7,7 +9,8 @@ cello_pizz_intro = {
 \circles
 <<
 	{
-		\once \override Staff.Glissando.bound-details.right.padding = #0				
+		\once \override Staff.Glissando.bound-details.right.padding = #0
+		\once \override Staff.Script.padding = #1.5
 		<d, as, fs d'>8 [ ^\stopped \effort mf \glissando 
 		\glissSkipOn 
 		\once \override Dots #'extra-offset = #'(0 . -1)
@@ -47,7 +50,8 @@ cello_pizz_intro = {
  %%%%%%%% ============= measure 4 ============= %%%%%%%% 
 \time 4/8
 \once \override Accidental #'stencil = ##f
-\afterGrace d4 \< {s8 \p _\bow-mute} %>
+\flare_width
+\afterGrace d4 \< {s8 \flare_mp _\bow-mute} %>
 r4
  %%%%%%%% ============= measure 5 ============= %%%%%%%% 
   \time 5/16
@@ -93,95 +97,189 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
  %%%%%%%% ============= measure 9 ============= %%%%%%%% 
   \time 6/8 
   e''8 [  \afterGrace g''8 \mp {\glissSkipOff a''8  } \diamonds \flare_width \afterGrace a'8 \p \< ^\down_bow ^\nat {s8 \flare_sf} 
-  \squares gs'16 ^\up_bow_light ^\altosultasto \p
-  g'16  fs'  f' e' e' ]
+  \draw_line_arrow \altosultasto \altosulpont
+  \diamonds gs'16 ^\up_bow_light  \p \startTextSpan 
+  g'16  fs'  f' ] 
+  \tuplet 5/4 {
+  	e'32 [ fs'32 a'32 b'32 cs''32 \stopTextSpan ]
+  }
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-  
+  \compoundMeter #'((3 8) (5 16))
+  \clef tenor
+  \draw_line_arrow \down_bow_light \down_bow_heavy
+  \diamonds <b fs'>4. \ppp \< ^\altosulpont ^\markup \string-numbers #'("II III" -0.5 0) \glissando \startTextSpan \glissSkipOn 				%%%> 
+  \niente g8 \mf \stopTextSpan \> \glissSkipOff 
+  \draw_line_arrow \altosulpont \altosultasto
+  \afterGrace <c g>8. \startTextSpan \glissando {<g d'>8 \! ^\down_bow_light \stopTextSpan}
 
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
-  
-
+  \time 3/8
+  r8 
+  r16 \clef treble 
+  \tuplet 3/2 {
+  		\slurUp
+  		fs''32 ([ \pp ^\markup \string-numbers #'("I" 0 0) e'' d'' ]
+  }
+  \tuplet 5/4 { 
+  		cs''[ b' a' \< b' cs'' ] %%%%\>
+  }
  %%%%%%%% ============= measure 12 ============= %%%%%%%% 
-  
+  \time 5/16
+  \tuplet 11/10 {d''32 [ e'' fs'' a'' b'' cs''' \mf \> b'' a'' fs'' e'' d'']}
 
  %%%%%%%% ============= measure 13 ============= %%%%%%%% 
-  
+  \time 7/16
+  cs''32 [ b' a' b' cs'' d'' cs'' b' \pp
+  d'' a' \< ^\markup \string-numbers #'("II" 0 0) b' c'' b' a' ] %%%>
+
 
  %%%%%%%% ============= measure 14 ============= %%%%%%%% 
-  
-
+ \time 3/8
+ \tuplet 13/12 {
+ 	g'32 \mp \> [ fs' g' a' 
+ 	b' a' g' fs' 
+ 	e' d' e' fs' g' \ppp ] )
+ }
+ \slurNeutral
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
-  
+  \time 5/16
+  cs'''4 ^\markup \string-numbers #'("I" 0 0) \glissando 
+  #(define afterGraceFraction (cons 49 50))
+  \wavy_vibrato #1
+  \afterGrace cs''16 \glissando {\hideNotes cs''8 \unHideNotes}
 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
-  
+  \switch-staff \single_line_staff
+  \time 2/8
+  \tuplet 3/2 {
+  	r8 [ r16 \clockhead c'16 ^\down_bow_very_heavy ^\nat ^\markup \string-numbers #'("II" 0.5 0) \mf r8 ]
+  }
 
  %%%%%%%% ============= measure 17 ============= %%%%%%%% 
-  
+  \time 3/16
+  \tieDown 
+  \stemDown
+  \anti-clockhead \afterGrace  c'8. \mf ~ ^\down_bow_very_heavy ^\sulpont ^\markup \string-numbers #'("III" 1 0.35) \< {\anti-clockhead c'8 \sfz} %>
 
+  \tieNeutral
+  \stemNeutral
  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
-  
+  \time 4/8
+  \circles
+  \switch-staff \normal_staff  
+  \set Staff.forceClef = ##f
+  r4 r8.. [
+  \clef bass
+
+	\once \override Glissando.bound-details.right.padding = #0
+	\once \override Script.padding = #1.5
+	<d, as, fs d'>32 ] ^\stopped \effort "f" \glissando 
 
  %%%%%%%% ============= measure 19 ============= %%%%%%%% 
-  
-
+ \time 9/16 
+	\glissSkipOn 
+	d,8. [
+	\once \override Dots #'extra-offset = #'(0 . -1)
+	\afterGrace g,8. ]   \glissando 	
+		{\glissSkipOff 
+			\transpose d, a, 
+				{<\single\once\override Accidental.transparent = ##t d, \single\hideNote as, \single\hideNote fs \single\hideNote d'>8}}
+ 
+	r8. 
  %%%%%%%% ============= measure 20 ============= %%%%%%%% 
-  
-
+  \compoundMeter #'((4 8 ) (3 16))
+  r4 ^\markup {"cello should have some kind of pizz material here? would make the transistion more smooth..."} r4
+  r8. 
  %%%%%%%% ============= measure 21 ============= %%%%%%%% 
-  
+  \time 4/8
+  r4 r4
 
  %%%%%%%% ============= measure 22 ============= %%%%%%%% 
-  
+  \time 4/8
+  r4 r4
 
  %%%%%%%% ============= measure 23 ============= %%%%%%%% 
-  
+  \time 7/16
+  r4 r8.
 
  %%%%%%%% ============= measure 24 ============= %%%%%%%% 
-  
+  \time 3/8
+  r4. 
 
  %%%%%%%% ============= measure 25 ============= %%%%%%%% 
-  
+  \time 3/8
+  r4.
 
  %%%%%%%% ============= measure 26 ============= %%%%%%%% 
-  
+  \time 5/4
+  r2. r2
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
-  
-
+  \time 4/8
+  r4 r4
  %%%%%%%% ============= measure 28 ============= %%%%%%%% 
-  
+  \time 3/8
+  r4.
 
  %%%%%%%% ============= measure 29 ============= %%%%%%%% 
-  
+  \time 4/8
+  r4 r4
 
  %%%%%%%% ============= measure 30 ============= %%%%%%%% 
-  
+  \time 3/8
+  r4.
 
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
-  
+  \time 3/8
+  r4.
+
 
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
-  
-
- %%%%%%%% ============= measure 33 ============= %%%%%%%% 
-  
+  \time 6/8
+   	r8 \tuplet 6/5 { ces,8 [ ~  <ces, aqf,>8 ~ 
+  	<aqf, e>8 ~ <e \single\diamonds gs>8  ~ <e c'>8 ~ <c' \single\diamonds f'>8 ] }
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
-  
+  \time 2/8
+  \tuplet 18/16 {
+  		e'64[ aqf, \diamonds ces, \circles aqf, eqs \diamonds c'32 \glissando a'32 \glissando \circles b64
+  		\diamonds e aqf, \circles ces, a, e c' \diamonds e c ]
+  	}
+
 
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
-  
+  \time 3/8
+  r16 [
+  \clef treble
+  \circles
+  <d' dqs''>8. ~ <d' dqs''>8 ] \glissando
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
-  
+  \time 6/4
+  	\glissSkipOn
+  	\stemUp
+  	f''8 [ f''8]
+  	f''8 [ f''8]
+  	f''8 [ f''8]
+  	\stemNeutral
+  	\glissSkipOff <gs' gqs''>8 ~ <gs' gqs''>8 \glissando
+  	\stemUp
+  	\glissSkipOn f''8 [ f''8]
+  	f''8 [ \afterGrace f''8] \glissando {\glissSkipOff <e' eqs''>8}
+  	\stemNeutral 
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
+  \time 3/16
+  r8 
+  \clef bass
+  \tuplet 10/8 {
+  	b64 [ e \diamonds aqf, ces, \circles aqf, 
   
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
-  
+  \time 5/16
+	e c' eqs g \diamonds fs' ] } r4
 
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   

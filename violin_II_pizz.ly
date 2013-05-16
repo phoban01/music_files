@@ -3,11 +3,11 @@ violin_II_pizz_right_one = {
 \switch-staff \pizz_staff
 \set subdivideBeams = ##t
 \set baseMoment = #(ly:make-moment 1/8)
-
  %%%%%%%% ============= measure 25 ============= %%%%%%%% 
  	\time 3/8
  	r8 [ 
  	r16
+  \set Staff.forceClef = ##t  
  	\pizz_head "II III IV" \ppos #0.8 c8 \mf
  	\pizz_head "II" \ppos #0.1 c32
  	\pizz_head "I" \ppos #0.05 c32 ] \effort "f"

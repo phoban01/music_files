@@ -140,7 +140,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
  \niente \afterGrace gqs16 ] \mf \> \stopTextSpan {s8 \!}
  \switch-staff \single_line_staff
  r16   [
- \clockhead c'16] ^\down_bow_very_heavy ^\nat \f 
+ \clockhead c'16] ^\down_bow_very_heavy ^\nat ^\markup \string-numbers #'("III" 0.5 0) \f 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
   \time 2/8
   \tuplet 3/2 {
@@ -204,8 +204,8 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
    gqs8 ~ [
 
  %%%%%%%% ============= measure 23 ============= %%%%%%%% 
- \time 4/8
-   <\tweak extra-offset #'(0.135 . 0) gqs \single\diamonds  d'>8 ~ 
+ \time 6/8
+   <\tweak extra-offset #'(0.135 . 0) gqs \single\diamonds  dqs'>8 ~ 
 
   <gqs e'> ~
 
@@ -214,23 +214,23 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
  
 
   %%%%%%%% ============= measure 24 ============= %%%%%%%% 
-  \time 2/8
-
   <cs'' a''> ~ 
   <\tweak extra-offset #'(0.135 . 0) a'' \single\diamonds d'''> ]
 
  %%%%%%%% ============= measure 25 ============= %%%%%%%% 
 
-  \time 5/8
+  \time 2/8
   a''64 [ \diamonds cs'' \circles e' \diamonds gqs \circles e' cs'' 
   \diamonds a'' \glissando e''' \glissando a''
   d'' e' \circles gqs \diamonds a' d'' \circles 
   \bezier_gliss #'(0.95 . 2) #'(0 1.35 0 -0.5)
   a'' \glissando \glissSkipOn \afterGrace a'' ] {\glissSkipOff \diamonds gs'''8}
 
+
+  \time 3/8
   \circles
   <cqs'' c''>8 [  \glissando
-    \glissSkipOn c''16  c''16 
+  \glissSkipOn c''16  c''16 
   \glissSkipOff <fqs'' f''>8 ]  \glissando
 
  %%%%%%%% ============= measure 26 ============= %%%%%%%% 
@@ -240,21 +240,28 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   \glissSkipOn c''8 [ \glissando
   \glissSkipOff <dqs'' d''>16  \glissando \glissSkipOn c'16 ] 
 
-  c'8 [ c'8 ]
-  c'8 [ \glissSkipOff <bqs'' b''>8 ] \glissando
+  c''8 [ e''8 ]
+  f''8 [ \glissSkipOff <bqs'' b''>8 ] \glissando
 
-  \glissSkipOn c'8 [ c'8 ]
-  \glissSkipOff <fqs'' f''>4 \glissando \glissSkipOn c'8 [ \glissSkipOff <aqs'' a''>8 ]
+  \glissSkipOn f''8 [ e''8 ]
+  \glissSkipOff <fqs'' f''>8 [ \glissando \glissSkipOn f''8]  g''8 [ \glissSkipOff <aqs'' a''>8 ]
   
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
-  
+  \time 3/16
+  r16 
+  \tuplet 9/8 {
+    \diamonds a''64 [ \circles cs'' e'' \diamonds gqs \circles e'' \diamonds cs'' \circles a''
+    d' \diamonds e''' ]
+  }  
 
  %%%%%%%% ============= measure 28 ============= %%%%%%%% 
-  
+  \time 5/16
+  r8 r8.
 
  %%%%%%%% ============= measure 29 ============= %%%%%%%% 
-  
+  \time 3/8
+  r4.
 
  %%%%%%%% ============= measure 30 ============= %%%%%%%% 
   
