@@ -238,14 +238,15 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
 
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
   \time 6/8
-   	r8 \tuplet 6/5 { ces,8 [ ~  <ces, aqf,>8 ~ 
-  	<aqf, e>8 ~ <e \single\diamonds gs>8  ~ <e c'>8 ~ <c' \single\diamonds f'>8 ] }
+   	r8 \tuplet 6/5 { \niente ces,8 [ \< ~ ^\up_bow_light <ces, aqf,>8 ~ 
+  	<aqf, e>8 ~ <e \single\diamonds gs>8  ~ <e c'>8 ~ ^\down_bow <c' \single\diamonds f'>8 ] ^\up_bow }
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
   \time 2/8
   \tuplet 18/16 {
-  		e'64[ aqf, \diamonds ces, \circles aqf, eqs \diamonds c'32 \glissando a'32 \glissando \circles b64
-  		\diamonds e aqf, \circles ces, a, e c' \diamonds e c ]
+      \draw_line_arrow \down_bow \down_bow_very_heavy
+  		e'64[ \startTextSpan aqf, \diamonds ces, \fposs \circles aqf, eqs \diamonds c'32 \glissando a'32 \glissando \circles b64
+  		\diamonds e \stopTextSpan aqf, \circles ces, a, e c' \diamonds e c ]
   	}
 
 
@@ -254,7 +255,8 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   r16 [
   \clef treble
   \circles
-  <d' dqs''>8. ~ <d' dqs''>8 ] \< \glissando
+  \niente
+  <d' dqs''>8. ^\up_bow ~ <d' dqs''>8 ] \< \glissando
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
   \time 6/4
@@ -267,7 +269,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   	\glissSkipOff <gs' gqs''>8 ~ <gs' gqs''>8 ^\down_bow \glissando
   	\stemUp
   	\glissSkipOn f''8 [ f''8] ^\up_bow
-  	f''8 [ \afterGrace f''8] \glissando {\glissSkipOff <e' eqs''>8}
+  	f''8 [ \niente \afterGrace f''8]  \> \glissando {\glissSkipOff <e' eqs''>8 \!}
   	\stemNeutral 
 
  %%%%%%% ============= measure 37 ============= %%%%%%%% 
@@ -276,7 +278,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   \clef bass
   \tuplet 10/8 {
   	\niente
-  	b64 [ \< e \diamonds aqf, ces, \fposs \circles aqf,  %%>
+  	b64 [ \startTextSpan \< e \diamonds aqf, ces, \fposs \stopTextSpan \circles aqf,  %%>
   
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
@@ -301,13 +303,13 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   e'''4 ~ e'''4 ~ e'''4 ~ e'''16 ^\down_bow_light [ ~ e'''8. ^\up_bow_light ~ ] %>
  %%%%%%% ============= measure 32 ============= %%%%%%%% 
   \time 3/8 
-  e'''4.  ~
+  e'''4.  ~ \< %>
  %%%%%%% ============= measure 33 ============= %%%%%%%% 
   \time 4/8  
   e'''4  ~ \pp  e'''4 ~
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
   \time 5/16
-  e'''16 ^\down_bow_light ~ e'''4 ~ ^\up_bow_light
+  e'''16 ^\down_bow ~ e'''4 ~ ^\up_bow
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
   \time 7/16
   e'''4 ~ e'''8. ~
@@ -328,10 +330,10 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   \time 5/8
   e'''8 ~ [ e'''8 \ppp ~ ]
-  e'''8 ~ [ e'''8 ~ e'''8 ~]
+  e'''4. ~
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 3/4
-  e'''4 ~ ^\down_bow  \niente \afterGrace e'''4 \> ~ {\stemDown e'''8 \!} r4
+  e'''4 ~ ^\down_bow  \niente \afterGrace e'''4 \> ~ {s8\!} r4
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 11/16  
   r4 r4 r8.

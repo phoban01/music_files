@@ -57,20 +57,20 @@ a''16 ^\up_bow_light [ a''16 ^\down_bow_light a''8 ^\up_bow_light \< \glissando 
 
  %%%%%%%% ============= measure 8 ============= %%%%%%%% 
  \time 4/8
-f''8 [ \glissSkipOff ef''16 \mf g'' \p fs'' fqs'' e'' d'']  
+f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]  
 
  %%%%%%%% ============= measure 9 ============= %%%%%%%% 
  \time 6/8
  \diamonds
  \flare_width
- \afterGrace a''8 [ ^\nat \< {s8 \flare_mf} \squares gqs''16 ^\up_bow ^\sultasto g'' fs'' f'' 
- \diamonds e'' \staccato \accent \mf d'' \p \squares cs'' c'' d'' 
- \diamonds e'' ] \mf \staccato \accent ^\nat
+ \afterGrace a''8 [ ^\nat \< {s8 \flare_mf} 
+ r8. \mute_head c'16:128 ~ ] ^\markup {\center-align \center-column {\altosultasto \vertical_bow \altosulpont}}
+ \mute_head c'8:64 r8 r8]
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
   \compoundMeter #'((3 8 ) (5 16))
   \draw_line_arrow \sultasto \altosulpont
-  d''16 \startTextSpan [ \p  dqf''16 cs'' d'' e'' \mf ^\staccato ^\accent \stopTextSpan r16 ]
+  d''16 ( \startTextSpan [ \p  dqf''16 cs'' d'' e'' ) \mf ^\staccato ^\accent \stopTextSpan r16 ]
 
   \draw_line_arrow \altosulpont \altosultasto
   c'32 [( \ppp \< ^\markup \string-numbers #'("IV" 1 0) b  cqs' c' b cs' \mf \> \startTextSpan bqf d' cs' bqs \pp  \stopTextSpan )]
@@ -158,46 +158,52 @@ f''8 [ \glissSkipOff ef''16 \mf g'' \p fs'' fqs'' e'' d'']
   r4.
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 3/8
-  r8 \circles gqs8 [ ~ gqs ~
+  r8 
+  \niente
+  \circles gqs8 \< ^\up_bow_light ^\sulpont [ ~ gqs ~
 
- %%%%%%%% ============= measure 32 ============= %%%%%%%% 
+ %>%%%%%%% ============= measure 32 ============= %%%%%%%% 
   \time 6/8
-  <gqs g'>8 ~ < g' \single\diamonds c''> ~ 
-  <g' cs''> ~ < cs'' \single\diamonds fs''> ~  
+  <gqs g'>8 ~ < g' \single\diamonds c''> ^\down_bow_light ~ 
+  <g' cs''> ~ < cs'' \single\diamonds fs''> ^\up_bow ~  
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
 
-  <cs'' g''>8 ~ < g'' \single\diamonds d'''>8 ]
+  <cs'' g''>8 ~ 
+  \draw_line_arrow \down_bow \down_bow_very_heavy
+  < g'' \single\diamonds b''>8 \startTextSpan ]
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
   \time 2/8
   \tuplet 17/16 {
-  	\diamonds gs''64 [ \circles cs'' g' gs \diamonds a'' cs'' \circles a''
+  	\diamonds gs''64 \fposs [ \circles cs'' g' gs \diamonds a'' \stopTextSpan cs'' \circles a''
   	cs'' a' \diamonds gqs g' d'' a'' b'' e''' e'' \circles gqs ]
   }
   \time 3/8
-
-  r8 [ <dqf'' d''>8 \glissando \glissSkipOn e'' ]
+  r8 [ <dqf'' d''>8 ^\down_bow ^\sulpont ^\markup \string-numbers #'( "II III" 1 0) \f  \glissando \glissSkipOn e'' ]
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
   \time 6/4
- \glissSkipOff <fqs'' f''>8 [ \glissando \glissSkipOn d''8 ]
+ \glissSkipOff <fqs'' f''>8 \< [ \glissando \glissSkipOn d''8 ^\up_bow ]
  \tuplet 3/2 {
  	\stemDown
- 	c''8 [ a' ^\down_bow g' ]
+ 	c''8 [ a' ^\down_bow \ff g' \mp \< ]
  }
  \stemNeutral
- \glissSkipOff <cqs'' c''>8. [ \glissando \glissSkipOn e''16 ] ^\down_bow 
- \glissSkipOff <aqs'' a''>4 \glissando
+ \glissSkipOff <cqs'' c''>8. ^\up_bow[ \glissando \glissSkipOn e''16 ] ^\down_bow 
+ \glissSkipOff <aqs'' a''>4 \f \glissando
  \tuplet 3/2 {
  	\glissSkipOn f''8 [ \glissSkipOff <fqs'' f''>8 \glissando \glissSkipOn f''8 ^\up_bow ]
  }
- g''8 [ \glissSkipOff <aqs'' a''>8 ]
+ g''8 [ \glissSkipOff \niente \afterGrace <aqs'' a''>8 ] \> {s8 \!}
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
   \time 3/16
   r8.
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
   \time 5/16
-  gs64 [ g' cs'' gs'' \diamonds e''' e'' \circles g' \diamonds gqs ] ~ 
-  gqs8. ~
+  \niente
+  gs64  \startTextSpan [ \< g' cs'' \stopTextSpan \fposs gs'' \diamonds e''' 
+  \draw_line_arrow " " \down_bow_light
+  e'' \> \startTextSpan \circles g' \diamonds gqs \stopTextSpan ] ~ 
+  gqs8. ~ \ppp ^\altosulpont
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
   \time 3/8
@@ -205,8 +211,14 @@ f''8 [ \glissSkipOff ef''16 \mf g'' \p fs'' fqs'' e'' d'']
 
  %%%%%%%% ============= measure 30 ============= %%%%%%%% 
   \time 4/8
-  \niente
-  \afterGrace gqs4. \> {s8 \!} r8
+  <<
+    {gqs4.}
+    {
+    s4
+    \niente
+    \afterGrace s8 \> {s8 \!}
+    }
+  >> r8
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 4/4
   R1
@@ -253,7 +265,7 @@ f''8 [ \glissSkipOff ef''16 \mf g'' \p fs'' fqs'' e'' d'']
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
   \time 3/8
-  c'''8 [ ^\down_bow \glissSkipOff \natural_notehead c'''8 \> ~ \natural_notehead c'''8] \ppp
+  c'''8 [ ^\down_bow \glissSkipOff \natural_notehead c'''8 \> ~ \natural_notehead c'''8] \ppp ~
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
   \time 3/4
@@ -263,8 +275,8 @@ f''8 [ \glissSkipOff ef''16 \mf g'' \p fs'' fqs'' e'' d'']
 
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   \time 5/8
-  \glissSkipOff \natural_notehead c'''8 [ ~ \natural_notehead c'''8 ~]
-  \natural_notehead c'''8 [ ~ \natural_notehead c'''8 ~ \natural_notehead c'''8 ~]
+  \glissSkipOff \natural_notehead c'''8 [ ~ \natural_notehead c'''8 \> ~]
+  \natural_notehead c'''8 \ppp [ ~ \natural_notehead c'''8 ~ \natural_notehead c'''8 ~ ] ^\down_bow
 
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 3/4
@@ -274,6 +286,6 @@ f''8 [ \glissSkipOff ef''16 \mf g'' \p fs'' fqs'' e'' d'']
 	r4
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 11/16
-  	r4 r4 r8. 
+  	r4 ^\markup {SWITCH TO PIZZ HOLD} r4 r8. 
  
 }

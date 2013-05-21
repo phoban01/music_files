@@ -1747,9 +1747,10 @@ r16 [
   	\pizz_head "III" \ppos #0 c64 \effort p
   	\pizz_head "IV" \ppos #0 c64
 
-  	\pizz_head "III IV" \ppos #0.8 c8 \mf
-
-  	\pizz_head "II" \ppos #0.6 c16 ] \p 
+  	\tuplet 3/2 {
+  		\pizz_head "III IV" \ppos #0.8 c8 \mf
+  		\pizz_head "II" \ppos #0.6 c16 ] \p 
+  	}
 }
 
 
@@ -3355,4 +3356,15 @@ r8
   				\fingering-diagram #'(("mute" . 0.8) ("mute" . 0.6) ("dot" . 0.4) ("dot" . 0.2))
   		} {\slash_grace \ppos #0.4 c8}
 
+}
+
+viola_pizz = {
+		<<
+			\new RightHandVoice = "upper" {
+				\viola_pizz_right
+			} 
+			\new LeftHandVoice = "lower" {
+				\viola_pizz_left
+			}
+		>>
 }

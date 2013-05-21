@@ -108,8 +108,8 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
 }
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
 \compoundMeter #'((3 8 ) (5 16))
-\squares c''16 ^\altosultasto [ \p d'' \diamonds e'' \staccato \accent \mf r16 \squares fs'' g'' ]
-\diamonds a''16 [ \mf \staccato \accent \squares b'' \p g'' \> fs'' f'' \ppp ]
+\squares c''16 ( ^\altosultasto [ \p d'' \diamonds e'' ) \staccato \accent \mf r16 \squares fs'' () g'' ]
+\diamonds a''16 [ \mf \staccato \accent \squares b'' \p g'' \> fs'' f'' ) \ppp ]
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
  \time 3/8 
  \switch-staff \single_line_staff
@@ -201,26 +201,28 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   r4
   \stemDown
   \circles
-   gqs8 ~ [
+  \niente
+   gqs8 ~ [ \<  ^\up_bow_light ^\sulpont
 
- %%%%%%%% ============= measure 23 ============= %%%%%%%% 
+ %>%%%%%%% ============= measure 23 ============= %%%%%%%% 
  \time 6/8
    <\tweak extra-offset #'(0.135 . 0) gqs \single\diamonds  dqs'>8 ~ 
 
   <gqs e'> ~
 
-  <e' cs''> ~ 
-  <\tweak extra-offset #'(0.135 . 0) cs'' \single\diamonds gs''> ~
+  <e' cs''> ~ ^\down_bow_light 
+  <\tweak extra-offset #'(0.135 . 0) cs'' \single\diamonds gs''> ~ ^\up_bow_light
  
 
   %%%%%%%% ============= measure 24 ============= %%%%%%%% 
-  <cs'' a''> ~ 
+  \draw_line_arrow \down_bow \down_bow_very_heavy
+  <cs'' a''> ~  \startTextSpan
   <\tweak extra-offset #'(0.135 . 0) a'' \single\diamonds d'''> ]
 
  %%%%%%%% ============= measure 25 ============= %%%%%%%% 
 
   \time 2/8
-  a''64 [ \diamonds cs'' \circles e' \diamonds gqs \circles e' cs'' 
+  a''64 [ \fposs \diamonds cs'' \circles e' \diamonds gqs \stopTextSpan \circles e' cs'' 
   \diamonds a'' \glissando e''' \glissando a''
   d'' e' \circles gqs \diamonds a' d'' \circles 
   \bezier_gliss #'(0.95 . 2) #'(0 1.35 0 -0.5)
@@ -229,29 +231,30 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
 
   \time 3/8
   \circles
-  <cqs'' c''>8 [  \glissando
-  \glissSkipOn c''16  c''16 
-  \glissSkipOff <fqs'' f''>8 ]  \glissando
+  <cqs'' c''>8 [ \f ^\down_bow ^\sulpont ^\markup \string-numbers #'( "II III" 2 0) \glissando
+  \glissSkipOn c''16  c''16 ^\up_bow
+  \glissSkipOff <fqs'' f''>8 \< ] ^\down_bow  \glissando
 
- %%%%%%%% ============= measure 26 ============= %%%%%%%% 
+ %%%>%%%%% ============= measure 26 ============= %%%%%%%% 
 
 
   \time 6/4
-  \glissSkipOn c''8 [ \glissando
-  \glissSkipOff <dqs'' d''>16  \glissando \glissSkipOn c'16 ] 
+  \glissSkipOn c''8 [ ^\up_bow \glissando
+  \glissSkipOff <dqs'' d''>16 \ff \> ^\down_bow \glissando \glissSkipOn c''16 ^\up_bow ] 
 
-  c''8 [ e''8 ]
-  f''8 [ \glissSkipOff <bqs'' b''>8 ] \glissando
+  c''8 [ e''8 ] \mp
+  f''8 [ \glissSkipOff <bqs'' b''>8 \< ] \glissando
 
   \glissSkipOn f''8 [ e''8 ]
-  \glissSkipOff <fqs'' f''>8 [ \glissando \glissSkipOn f''8]  g''8 [ \glissSkipOff <aqs'' a''>8 ]
+  \glissSkipOff <fqs'' f''>8 \f [ \glissando \glissSkipOn f''8]  g''8 [ \glissSkipOff \niente \afterGrace <aqs'' a''>8 ] {s8\!}
   
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
   \time 3/16
   r16 
   \tuplet 9/8 {
-    \diamonds a''64 [ \circles cs'' e'' \diamonds gqs \circles e'' \diamonds cs'' \circles a''
+    \niente
+    \diamonds a''64 \< \startTextSpan [ \circles cs'' e'' \diamonds gqs \fposs \stopTextSpan \circles e'' \diamonds cs'' \circles a''
     d' \diamonds e''' ]
   }  
 
@@ -317,17 +320,18 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   \natural_notehead c'''8 ] \< \glissando
   \glissSkipOn c'''16 [ c'''16 ^\down_bow \glissSkipOff 
   \once \override Glissando.rotation = #'(1.5 0 0)
-  \flat_notehead a8 \mf ] \glissando
+  \flat_notehead a''8 \mf ] \glissando
   \glissSkipOn c'''8 [ c'''8 ] ^\up_bow
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   \time 5/8
-  c'''8 [ \> \glissSkipOff \natural_notehead c'''8 \ppp ] ~ \natural_notehead c'''4. ~
+  c'''8 [ \> \glissSkipOff \natural_notehead c'''8 \ppp  ~ 
+  \natural_notehead c'''8 ~ \natural_notehead c'''8 ^\down_bow ~ \natural_notehead c'''8 ] ~
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 3/4
   \natural_notehead c'''4 ~ 
   \niente
   \natural_notehead 
-  \afterGrace c'''4 ~ \> {\natural_notehead c'''8 \!}
+  \afterGrace c'''4 ~ \> {s8 \!}
   r4
   \revert Staff.NoteHead.no-ledgers 
   \revert Staff.Accidental.stencil
