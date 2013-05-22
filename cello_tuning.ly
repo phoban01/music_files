@@ -1,473 +1,543 @@
-violin_II_angles = { 
+cello_tuning = { 
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
    \switch-staff \single_line_staff
-
   \time 6/4
-  r1.
+  R1.
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
-  \time 6/4
-  r2 
-  \niente
-  \circles c'2 ~ ^\up_bow ^\angle_bow \< c'2 \mp ~
+  R1.
 
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
-  \time 6/4
-  \niente
-  c'4 \> r4 \! r1
+  <<
+  	{s2 s2 \niente s4 \< s4 \mp} \\
+  	{\stemUp \circles r2 r2 c'2 ^\down_bow ^\angle_bow ~}
+  >>
 
  %%%%%%%% ============= measure 4 ============= %%%%%%%% 
-  << 
-  	{\niente s4 \< s4 \mp s2 s4 \niente \afterGrace s4 \> {s8 \!}} \\
-  	{\circles \stemUp c'2 ~ c'2 ~ c'2}
+  <<
+  	{s2 s4 \niente \afterGrace s4 \> {s8 \!}} \\
+  	{\stemUp \circles c'4 ~ c'4 ^\up_bow ~ c'2 r2}
   >>
 
  %%%%%%%% ============= measure 5 ============= %%%%%%%% 
-  << 
-  	{s2 s2 \niente s4 \< s4 \mp} \\ %>
-  	{r2 r2 \circles c'2 ^\up_bow ~}
-  >>
+  R1.
 
  %%%%%%%% ============= measure 6 ============= %%%%%%%% 
   <<
-  	{s2 \niente s4 \> s4 \! s2} \\
-  	{\circles c'2 ~ c'4 r4 r2}
+  	{s2 \niente s4 \< s4 \mp s2 } \\ %>
+  	{\stemUp \circles r2 c'2 ^\up_bow ~ c'2 ~}
   >>
 
  %%%%%%%% ============= measure 7 ============= %%%%%%%% 
   \time 6/4
-  R1.
-
- %%%%%%%% ============= measure 8 ============= %%%%%%%% 
-  \time 3/4
-  r2 r8 c'8 ~ ^\down_bow \mp
-
- %%%%%%%% ============= measure 9 ============= %%%%%%%% 
-  \time 6/4
   <<
-  {s2 \niente \afterGrace s4 \> {s8\!} s4 s2}
-  {\circles \stemUp c'2 ~ c'4 r2.}
-  >>
-
- %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-  \time 6/4
-  <<
-  	{s2 \mp s2 s4 \niente \afterGrace s4 \> {s8\!}} \\
-  	{\circles \stemUp c'2 ^\down_bow ~ c'2 ~ c'2}
-  >>
-
- %%%%%%%% ============= measure 11 ============= %%%%%%%% 
-  \time 6/4
-  <<
-  	{s1.} \\
-  	{r2 \circles \stemUp c'2 ^\down_bow ~ c'2 ^\up_bow ~}
-  >>
-
- %%%%%%%% ============= measure 12 ============= %%%%%%%% 
-  <<
-  	{s4 \niente \afterGrace s4 \> {s8\!} s2 s2} \\
+  	{s4 \niente \afterGrace s4 \> {s8 \!} s1} \\
   	{\circles \stemUp c'2 r2 r2}
   >>
 
+ %%%%%%%% ============= measure 8 ============= %%%%%%%% 
+  \time 3/4
+  r2.
+
+ %%%%%%%% ============= measure 9 ============= %%%%%%%% 
+  \time 6/4
+  r8 \circles c'8 ^\down_bow \mp ~ c'4 ~ c'2 ~ c'4 r4
+
+ %%%%%%%% ============= measure 10 ============= %%%%%%%% 
+  \time 6/4
+  r2 r4 c'4 ^\up_bow ~ c'2 ^\down_bow 
+
+ %%%%%%%% ============= measure 11 ============= %%%%%%%% 
+  \time 6/4
+  r2. c'4 \mp ^\down_bow ~ c'2 
+
+ %%%%%%%% ============= measure 12 ============= %%%%%%%% 
+  \time 6/4
+  r2. c'4 ^\up_bow \mp ~ c'4 ~ c'8 r8
+
  %%%%%%%% ============= measure 13 ============= %%%%%%%% 
   \time 6/4
-  <<
-  	{s2 s2 s2} \\
-  	{\circles \stemUp c'2 ^\down_bow \mp ~ c'4 r4 c'2 ^\up_bow \mp}
-  >>
+  R1.
 
  %%%%%%%% ============= measure 14 ============= %%%%%%%% 
   \time 6/4
-  <<
-  	{s1.} \\
-  	{r2 c'4 \mp ^\down_bow ~ c'8 r8 r2}
-  >>
+  c'2 \mp ^\down_bow r2 r8 c'8 \mp ^\down_bow ~ c'4
+
 
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
   \time 6/4
-  r4 c'4 ^\up_bow \mp ~ c'4 r4 c'4 ^\down_bow \mp ~ c'8 r8
-
+  R1.
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
   \time 5/4
-  r2 r2.
+  r4 r8 c'8 ^\up_bow \mp ~ c'4 ~ c'2
 
  %%%%%%%% ============= measure 17 ============= %%%%%%%% 
   \time 6/4
-  \draw_bracket \up_bow
-  c'2 \mp \startTextSpan ~ c'2 ~ \afterGrace c'2 ~ {s8 \stopTextSpan}
+  \draw_bracket \down_bow
+  c'2 \mp \startTextSpan ~ c'2 ~ \afterGrace c'2 {s8 \stopTextSpan}
 
  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 6/4
-  \draw_bracket \down_bow
-  c'2 \startTextSpan ~ c'2 ~ \afterGrace c'2  {s8 \stopTextSpan}  
-  
+  \draw_bracket \up_bow
+  c'2 \startTextSpan ~ c'2 ~ \afterGrace c'2  {s8 \stopTextSpan}
 
  %%%%%%%% ============= measure 19 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		c'4  ^\up_bow ^\angle_bow ^\markup \string-numbers #'( "II III" 0 0)
-  		\draw_tuning_arrow \tuning_peg_second \violin_second
-  		c'4 ^\down_bow ~ c'8 \startTextSpan c'8 ^\up_bow ^\nat ^\horz_bow ^\markup \string-numbers #'("II" 0 0) ~ c'4 ~ c'8 ~ c'8
-  	}\\
-  	{
-  		s2 s2 
-  		\draw_line_arrow \nat \sulpont
-  		s8 \startTextSpan 
-  		\draw_line_arrow \down_bow \down_bow_heavy
-  		s8 \stopTextSpan \startTextSpan
-  	}
+    {
+      \circles
+      \tieDown
+      r8
+      \draw_tuning_arrow \tuning_peg_third \cello_third
+      c'8 ~ \startTextSpan 
+          ^\up_bow_light ^\altosulpont ^\markup \string-numbers #'( "II III" 0 0)
+      c'4 ~ ^\markup \string-numbers #'( "III" 0 0)
+      c'8 c'8 ^\down_bow ~ c'4 
+      c'8. ~ ^\markup \string-numbers #'( "II III" 0 0) c'16 ~ \stopTextSpan
+    } \\
+    {
+      s2
+      \draw_line_arrow \altosulpont \nat
+      s8 \startTextSpan s8 \stopTextSpan 
+      s4 
+      \hideNotes
+      \tweak #'transparent ##t
+      \tuplet 3/2 {
+        \draw_line_arrow \up_bow_light \up_bow_heavy
+        r8 \startTextSpan 
+        \draw_line_arrow \markup {" "} \up_bow_light
+        r8 \stopTextSpan \startTextSpan r8 \stopTextSpan
+      }
+      \unHideNotes
+      
+    } \\
+    {
+      s2 s2.
+    }
   >>
 
  %%%%%%%% ============= measure 20 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		c'4 ~ c'16 ~ c'8. ~ \stopTextSpan c'4
-  		c'4 ^\up_bow ^\markup \string-numbers #'( "II III" 0 0) ~ c'8. c'16 ~ ^\down_bow ^\angle_bow ^\markup \string-numbers #'( "III IV" 0 0)
-  	}\\
-  	{
-  		\draw_line_arrow " " \down_bow
-  		s4 \stopTextSpan \startTextSpan s4 \stopTextSpan s2.
-  	}\\
-  	{
-  		\draw_line_arrow \sulpont \nat
-  		s4 \startTextSpan s4 \stopTextSpan
-  		\draw_line_arrow \nat \altosulpont
-  		s4 \startTextSpan s4 \stopTextSpan
-  		s4
-  	}
+    { 
+      \circles
+      \tieDown      
+      c'4 ^\down_bow ^\markup \string-numbers #'( "III" 0 0) ~ 
+      c'16 ~ c'16 c'8 ~  ^\up_bow ^\angle_bow
+      c'4 ^\markup \string-numbers #'( "II III" 0 0)
+      c'4 ^\down_bow c'4 ~ ^\up_bow
+    } \\
+    {
+      \draw_line_arrow \nat \altosulpont
+      s4 \startTextSpan s16 s16 \stopTextSpan s8
+      s4
+      \draw_line_arrow \markup \string-numbers #'( "II III" 0 0) \markup \string-numbers #'( "I II" 0 0)
+      s4 \startTextSpan s4 \stopTextSpan
+    }
   >>
 
  %%%%%%%% ============= measure 21 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		c'2. c'2 ^\up_bow
-  	}\\
-  	{
-  		s2 
-  		\draw_line_arrow \markup \string-numbers #'( "III IV" 0 0) \markup \string-numbers #'( "II III" 0 0)
-  		s4 \startTextSpan s2 \stopTextSpan
-  	}
+    {
+      \circles
+      \tieDown      
+      c'2. c'2 ^\down_bow ^\markup \string-numbers #'( "III IV" 0 0)
+    } \\
+    {
+      s2 s2 
+      \draw_tuning_arrow \tuning_peg_fourth \cello_fourth
+      s4 \startTextSpan
+    }
   >>
 
  %%%%%%%% ============= measure 22 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		\draw_tuning_arrow \tuning_peg_third \tuning_fermata
-  		c'8 ^\down_bow ^\markup \string-numbers #'( "II III" 0 0) \startTextSpan c'8 ~ ^\up_bow
-  		c'4 ^\markup \string-numbers #'( "III" 0 0)
-  		c'2 ~ ^\down_bow ^\altosulpont ^\horz_bow c'4 ~
-  	} \\
-  	{
-  		s2. s8 
-  		\draw_line_arrow \altosulpont \sultasto
-  		s8 \startTextSpan s8.. s32 \stopTextSpan
-  	}
+    {
+      \circles
+      \tieDown      
+      c'2 ^\up_bow ^\markup \string-numbers #'( "IV" 0 0) 
+      c'4 ~ ^\down_bow 
+      \draw_line_arrow \down_bow \down_bow_heavy
+      c'8 \startTextSpan c'8 ~ \stopTextSpan
+      \draw_line_arrow \up_bow_heavy \up_bow
+      c'16 \startTextSpan c'8. \stopTextSpan
+    } \\
+    {
+      s1 s4
+    } \\
+    {
+      s4
+      \draw_line_arrow \altosulpont \nat
+      s4 \startTextSpan s4 \stopTextSpan
+      s4 s8 
+      \draw_line_arrow \nat \altosultasto
+      s8 \startTextSpan
+    }
   >>
 
  %%%%%%%% ============= measure 23 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		c'8 c'8 \stopTextSpan ~ ^\up_bow 
-  		\draw_tuning_arrow \tuning_peg_third \violin_third
-  		c'16 ~ ^\markup \string-numbers #'( "III IV" 0 0) \startTextSpan c'8. ~
-  		c'8 ~ c'8 ~ ^\down_bow ^\markup \string-numbers #'( "III" 0 0)
-  		c'4 ~ \stopTextSpan c'4
-  	}\\
-  	{
-  		s8 
-  		\draw_line_arrow \up_bow \up_bow_light
-  		s8 \startTextSpan
-  		\draw_line_arrow " " \up_bow
-  		s8 s8 \stopTextSpan \startTextSpan
-  		s2. \stopTextSpan
-  	}
+    {
+      \circles
+      \tieDown      
+      c'4 c'2. \pp ^\down_bow c'4 ~ ^\up_bow ^\angle_bow ^\markup \string-numbers #'( "I II" 0 0)
+    } \\
+    {
+      s4 s4 \stopTextSpan s2.
+    } \\
+    {
+      s4 \stopTextSpan s1
+    }
   >>
 
  %%%%%%%% ============= measure 24 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		\niente c'2 \< ^\up_bow ^\altosulpont ^\markup \string-numbers #'( "III" 0 0)
-  		\niente \afterGrace c'4 \mp ^\down_bow \> {s8 \!}
-  		c'2 ^\up_bow ^\angle_bow ^\markup \string-numbers #'( "III IV" -0.5 -0.5)
-  	}\\
-  	{
-  		\new Staff \with {
-  			alignAboveContext = "violin_2"
-  			\remove "Time_signature_engraver"
-  			\override VerticalAxisGroup.staff-staff-spacing =
-			  			#'((basic-distance . 0)
-						(minimum-distance . -3)
-						(padding . 0)
-					    (stretchability . 0)
-						)
-  		} {
-  			\diamonds dqs'4 \glissando s4 \afterGrace b'4 \glissando {e'8}
-  		}
-  	}
+    {
+      \circles
+      \tieDown
+      c'4 ~ c'4 ~ c'4 c'2 ~ ^\down_bow ^\markup \string-numbers #'( "II III" 0 0)
+    } \\
+    {
+      \draw_line_arrow \up_bow \up_bow_heavy
+      s4 \startTextSpan 
+      \draw_line_arrow " " \up_bow
+      s8 \stopTextSpan s8 \startTextSpan s4 \stopTextSpan
+      s2
+    }
   >>
 
  %%%%%%%% ============= measure 25 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\tieDown
-  		\circles
-  		c'2 c'4. ~  ^\down_bow ^\markup \string-numbers #'( "I II III" 0 0)
-  		\draw_tuning_arrow \tuning_peg_first \tuning_fermata
-  		c'8 ~ \startTextSpan c'4 ~
-  	}\\
-  	{
-  		s2. s2
-  	}
+    {
+      \circles
+      \tieDown
+      c'4 c'2 ~ ^\up_bow ^\altosulpont ^\markup \string-numbers #'( "I" 0 0)
+      c'4 ^\nat 
+      \draw_line_arrow \down_bow \down_bow_heavy
+      c'4 ~ \startTextSpan 
+    } \\
+    {
+      s8
+      \draw_tuning_arrow \tuning_peg_first \cello_first
+      s8 \startTextSpan s1
+    }
   >>
 
  %%%%%%%% ============= measure 26 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		c'8 ~ ^\up_bow ^\altosulpont ^\horz_bow ^\markup \string-numbers #'( "I" 0.5 0)  ~ c'8 ~ \stopTextSpan
-  		\draw_tuning_arrow \tuning_peg_first \violin_first
-  		c'8 ~ c'8  \startTextSpan
-  		c'2. ~ ^\down_bow
-  	}\\
-  	{
-  		s2 
-  		\draw_line_arrow \altosulpont \nat
-  		s2 \startTextSpan s4 \stopTextSpan
-  	}
+    {
+      \circles
+      \tieDown      
+      \draw_line_arrow " " \down_bow
+      c'16 ~ \stopTextSpan c'8. ~ \startTextSpan c'2 \stopTextSpan 
+      c'2 ^\angle_bow ^\markup \string-numbers #'( "I II" 0 0)
+    } \\
+    {
+      s4 s2 \stopTextSpan s2
+    } \\
+    {
+      \once \override TextSpanner.outside-staff-priority = #200
+      \draw_line_arrow \nat \altosultasto
+      s4 \startTextSpan s4 \stopTextSpan s2.
+    }
   >>
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		\niente \afterGrace c'4 \> \stopTextSpan {s8\!}
-  		\switch-staff \normal_staff
-  		\set Staff.forceClef = ##t
-  		\diamonds
-  		 g'4 ^\markup {\small \italic "pizz."} ^\markup \string-numbers #'( "IV" 1.5 0) \ff \laissezVibrer
-  		\switch-staff \single_line_staff
-  		r4
-  		c'2 ~ ^\down_bow ^\angle_bow ^\markup \string-numbers #'( "III IV" 0 0)
-  	}\\
-  	{
-  		s2. s4 \draw_tuning_arrow \tuning_peg_fourth \tuning_fermata
-  		s4 \startTextSpan 
-  	}
+    {
+
+    \switch-staff \normal_staff
+    \clef bass
+    \diamonds
+    r8.[ g16] \laissezVibrer \ff ^\markup {\small \italic "pizz."} r4 r4
+    \squares
+    r8 \tweak #'direction #-1 \tuplet 3/2 {
+          r16 [ cs'16 ^\altosultasto ^\markup {\small \italic "(arco)"} ( cqs'] }
+     b16[ cqf' ] \tweak #'direction #-1 \tuplet 3/2 {b16 [ bf16 cqf'16 ]}
+    } \\
+    {
+      s2 s2.
+    }
   >>
 
  %%%%%%%% ============= measure 28 ============= %%%%%%%% 
   \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		\draw_line_arrow " " \down_bow_heavy
-  		c'4 \startTextSpan ~ c'8 \stopTextSpan c'8 ^\up_bow_light ^\horz_bow ~ c'4 ~ 
-  		\draw_line_arrow \up_bow_light \up_bow
-  		c'4 \startTextSpan ~  c'4 \stopTextSpan
-  	}
-  	\\
-  	{
-  		s2. s4 \stopTextSpan 
-  		\draw_tuning_arrow \tuning_peg_fourth \violin_fourth
-  		s4 \startTextSpan
-  	}
+    {
+      \stemDown
+      \squares
+      \tweak #'direction #-1
+      \tuplet 5/4 {
+        c'32[ bqs b as ) r32 ]
+      }
+      \circles
+      \tieDown
+      \stemUp
+      \switch-staff \single_line_staff
+      r8
+      c'2. ^\angle_bow ^\markup \string-numbers #'( "II III" 0 0) 
+      \draw_line_arrow \markup \string-numbers #'( "II III" 0 0) \markup \string-numbers #'( "I II" 0 0)
+      c'4 ^\down_bow \startTextSpan
+
+    } 
+    \\
+    {
+      s4 
+      \draw_line_arrow \up_bow \up_bow_heavy
+      s4. \startTextSpan s8 \stopTextSpan 
+      \draw_line_arrow " " \up_bow
+      s8 \startTextSpan s8 \stopTextSpan
+      s4
+    }
   >>
 
  %%%%%%%% ============= measure 29 ============= %%%%%%%% 
   \time 5/4
-  <<	
-  	{
-  		\circles
-  		\tieDown
-  		c'2. ^\down_bow c'2 ~
-  	} \\
-  	{
-  		s4 s4 \stopTextSpan 
-  		\draw_line_arrow \nat \altosulpont
-  		s4 \startTextSpan 
-  		\draw_line_arrow "" \altosultasto
-  		s4 \stopTextSpan \startTextSpan
-  		\afterGrace s4 {s8\stopTextSpan}
-  	}
+  <<
+    {
+      c'2. \stopTextSpan
+      \switch-staff \normal_staff
+      \stemDown
+      \clef bass
+      \diamonds
+      \draw_line_arrow \altosultasto \altosulpont
+      \tweak #'direction #-1
+      \tuplet 5/4 {
+        r8 [ c8 ( ^\up_bow_light ^\markup \string-numbers #'( "III" 0 0) \startTextSpan b,16 ]
+      }
+      \tweak #'direction #-1 \tuplet 5/4 {
+        dqf8 [ bqs,16 cqs16 \stopTextSpan b,16 ]
+      }
+    } 
+    \\
+    {
+      \draw_line_arrow " " \markup \string-numbers #'( "II III" 0 0)
+      s2 \startTextSpan s4 \stopTextSpan
+      s2
+    }
   >>
 
  %%%%%%%% ============= measure 30 ============= %%%%%%%% 
- \time 5/4
+  \time 5/4
   <<
-  	{
-  		\circles
-  		\tieDown
-  		\niente \afterGrace c'4 \> {s8 \!} r4
-  		\tieNeutral
-  		\switch-staff \normal_staff
-  		r8  [
-  		\set Staff.forceClef = ##t
-  		\niente
-  		<bf ees' aqs' eqs''>8 ] ~ \< ^\circular_bow ^\markup \string-numbers #'( "I II III IV" 0 0)
-  		<bf ees' aqs' eqs''>8 [ ~
-  		<bf ees' aqs' eqs''>8 ] \glissando
-  		\transpose eqs'' g'' {
-  			\niente \afterGrace <\single\hideNote bf \single\hideNote  ees' \single\hideNote  aqs' eqs''>4 \mf  \>\glissando
- 				{ \transpose g'' f'' {
-  			  		<\single\hideNote bf \single\hideNote  ees' \single\hideNote  aqs' eqs''>8 \! 
-  			  	}}
-  			  }
-  	}\\
-  	{
-  		s2
-  		\new BowPositionStaff \with {alignAboveContext = "violin_2"} {
-  			r8 [ \glissando d'8 \glissando g'8 \glissando d'8  \glissando
-  			g'8  \glissando \glissSkipOn \afterGrace e'8 ] {\glissSkipOff  d'8}
-        \stopStaff
-  		}
-  	}
+    {
+      \circles
+      \tieDown
+      \stemDown
+      c32 [ ^\down_bow b, ^\up_bow a, g, ]
+      \clef tenor
+      ef'32 ^\down_bow ^\up_bow [ c' g bf c' cs' d' cs' )]  r8
+      \switch-staff \single_line_staff
+      \stemUp
+      c'2. ~ ^\down_bow ^\angle_bow ^\markup \string-numbers #'( "I II" 0 0)
+    } \\
+    {
+      s2 s2.
+    }
   >>
+
 
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 5/4
-  \stemNeutral
-  \tieNeutral
-  r8 [
-  \diamonds
-  \niente
-  \flare_width
-  \ottava #1 \afterGrace gs''''8 \< \laissezVibrer ] ^\sulpont {s8 \flare_f} \ottava #0
-  r4 
-  \ottava #1 
-  gs''''16 \pp [ gs''''8. ] \ottava #0
-  \niente gs'''4.. \< ~ gs'''16 \pp ~ 
- 
-
+  <<
+    {
+      \circles
+      \tieDown
+      \draw_line_arrow " " \down_bow_heavy
+      c'4 ~ \startTextSpan 
+      \draw_line_arrow " " \down_bow_light
+      c'4 \stopTextSpan \startTextSpan
+      c'16 \stopTextSpan c'8. ^\up_bow ~ c'2 ~
+    }\\
+    {s2 s2.}
+  >>
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
   \time 5/4
-  \flare_width
-  gs'''4 ~ \< gs'''8 \laissezVibrer r8 \flare_sfz
-  r4
-  r8
-  \circles
-  \niente 
-  \tuplet 3/2 {
-  	cqs'32 [ \< ^\down_bow_light ^\altosultasto ( c'  dqf' ]
-  } 
-  \bezier_gliss #'(0.8 . -2.5) #'(0 1 0 0)
-  \niente
-  \afterGrace cs'8. )  \mp \> \glissando {a8 \!} r8
+  <<  
+    {   
+      \circles 
+      \tieDown
+      c'2 
+      c'8 ^\down_bow ^\altosultasto ^\horz_bow c'8 ^\up_bow
+      \draw_line_arrow \down_bow \down_bow_heavy
+      c'4 ~ \startTextSpan 
+      \draw_line_arrow " " \down_bow
+      c'4 ~ \stopTextSpan \startTextSpan
+    } \\
+    {
+      s4. 
+      \draw_tuning_arrow \tuning_peg_second \cello_second
+      s8 \startTextSpan
+      s2.
+    } \\
+    {
+      s2. 
+      \draw_line_arrow \altosultasto \altosulpont
+      s4 \startTextSpan s8 \stopTextSpan
+      \draw_line_arrow " " \nat
+      s8 \startTextSpan 
+    }
+  >>
 
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
- \time 5/4
+  \time 5/4
   <<
-  	{r8 [ \niente
-  		\circles
-  		<bqs fs' c'' fs''>8 ] \< ^\circular_bow ^\markup \string-numbers #'( "I II III IV" -1 0) \glissando 
-  		\stemUp
-  		\glissSkipOn g''8 \niente g''8 \p \> \glissSkipOff 
+    {
+      c'8 \stopTextSpan c'4. ^\up_bow 
+      \switch-staff \normal_staff
+      \clef bass
+      \set glissandoMap = #'((0 . 0) (1 . 1))
 
-  		\transpose fs'' a'' {
-  					\afterGrace <\single\hideNote bqs \single\hideNote fs' \single\hideNote c'' fs''>8 [ {s8\!}
-  		}  \stemNeutral r8 ] 
-      r8 [
-		\diamonds
-		\niente
-		\slurDown
-		b32 ( ^\horz_bow \< a g' \mp e' ] 
-    \niente d' [ \> c' b ) r32 ] \! r8
-		\slurNeutral
-  	}
-  	\\
-  	{
-      r8
-  		\new BowPositionStaff \with {alignAboveContext="violin_2"} {
-        c'8
-  			\tuplet 3/2 {
-  				a'16 [ \glissando d'16 \glissando a'16 ] \glissando \glissSkipOn
-  			}
-  			g'8 [ e'8 ] \glissSkipOff 
-  			\afterGrace d'8 \glissando {a'8}
-        \stopStaff r4 \startStaff
-        \afterGrace a'4 \glissando {d'8}
-%         \stopStaff
-  		}
-  	}
+      \once \override Glissando.rotation = #'(1.5 0 0)
+      \once \override Glissando.bound-details.right.padding = #2
+      \once \override Glissando.bound-details.left.padding = #3.5
+      <\tweak Accidental.X-offset #-0.85  d d>2 ^\altosultasto ^\markup \string-numbers #'( "II III" 1 0) \glissando <dqs d>4 ~
+    } \\
+    {
+      s4 \stopTextSpan s1
+    } \\
+    {
+      s4 \stopTextSpan s1
+    }
   >>
+
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
   \time 5/4
-  r2 r2
-  \tuplet 3/2 {
-    c'4 \glissando csef'8 ~
-  }
+  \stemDown
+  <<
+    {
+      \circles
+      \stemDown
+      \tieDown
+      \override TieColumn #'tie-configuration = #'((0 . 1) (0 . -1))
+      <dqs d>4 ~ <dqs d> ~ 
+      \draw_line_arrow \altosultasto \altosulpont
+      <dqs d>8 ~ \startTextSpan d8 \stopTextSpan \glissando \glissSkipOn 
+      e4 f4
+      \revert TieColumn #'tie-configuration
+    }\\
+    {s2. s2}
+  >>
 
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
   \time 4/4
-  csef'2.
-  def''16 [ ( cs'' aqf' bef']
+  <<
+    {
+        \circles
+        \tieDown
+        \stemDown
+        \draw_line_arrow \altosulpont \sultasto
+        g8 \startTextSpan \glissSkipOff aqf8 ~ aqf2. \stopTextSpan
+    }\\
+    {
+      s2 s2
+    }
+  >>
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
   \time 4/4
-  \tuplet 6/4 {
-    gs'16 [ bqf' gsef' cs'' def'' cef'' )]
-  }
-  b2 \glissando cef'4 ~
+    \diamonds
+    \tuplet 5/4 {
+      g32 [( ^\altosulpont ^\markup \string-numbers #'( "II" 0 0) a f g gqs
+    } fs16 g ]
+    \circles a4 ) \glissando 
+    \draw_line_arrow " " \sultasto
+    gsef2 ~ \startTextSpan
+
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
   \time 6/4
-  cef'4 ~ cef'2 ~ 
-  cef'4 ~ cef'4 \glissando \glissSkipOn \afterGrace c4 {\glissSkipOff a8}
+  gsef8 ~ gsef8 ~ \stopTextSpan gsef2 ~ 
+  gsef8 ~ 
+  \draw_line_arrow \sultasto \altosulpont
+  gsef8 \startTextSpan \glissando \glissSkipOn
+  g8 f8 \stopTextSpan
+  \tuplet 3/2 {
+      \draw_line_arrow " " \aldita
+      f8 \startTextSpan \glissSkipOff e8 \glissando \glissSkipOn 
+      \afterGrace e8  \glissando {\glissSkipOff fs8 \stopTextSpan}
+  }
+
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
   \time 3/16
-  \flare_width \afterGrace bqf'8. \pp \< {s8 \flare_sfz} %>
+  r16 [ \clef treble \flare_width \afterGrace asef'8 ] ^\altosulpont \pp \< {s8 \flare_sfz} %>
 
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   \time 5/4
-  r8 [ gqs8 ] ~ gqs2 ~ gqs8 r8 r4
+  \clef bass
+  \draw_line_arrow \aldita \altosultasto
+  gsef2 ~ ^\up_bow_light \startTextSpan gsef8 \stopTextSpan ~ gsef8 \glissando \glissSkipOn g4 \afterGrace f4  {\glissSkipOff fqs8}
 
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 5/4
-  r8.. [ <cqs''' fqs'''>32 ]
-  r8 [ csef'8 ] ~ csef'2 ~ csef'8.. [ r32 ] _\bow-mute
+  r4 aqf2 ^\down_bow_light ^\aldita ~ \afterGrace aqf2 {s8 _\bow-mute}
 
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 2/8
-  \tuplet 3/2 {
-    c''8 \glissando b'8 \glissando \glissSkipOn \afterGrace b'8 {\glissSkipOff a'8}
-  }
+  \clef treble
+  \niente
+  asef'8. [ ^\sultasto \< cs'''16 \f ] ^\down_bow_very_heavy \glissando %>
 
  %%%%%%%% ============= measure 42 ============= %%%%%%%% 
-  
+  \time 4/4
+  \glissSkipOn \afterGrace c''8 [ \glissando {\glissSkipOff e'8} r8 ]
+  <<
+    {
+      \circles
+      gs'4 ~ gs'8 ~ gs'8 ~ gs'4 ~
+    }\\
+    { 
+      \diamonds 
+      d'2. ~
+    }
+  >>
 
  %%%%%%%% ============= measure 43 ============= %%%%%%%% 
-  
+  \time 5/4
+  <<
+    {
+      \circles
+      gs'4 ~ gs'8 ~ gs'8 \glissando \glissSkipOn a'4 \glissSkipOff \diamonds a'4 ~ a'4
+    }\\
+    {
+      \diamonds
+      d'2 ~ d'2 ~ d'4
+    }
+  >>
 
  %%%%%%%% ============= measure 44 ============= %%%%%%%% 
-  
+  \time 6/4
+  \clef bass
+  \diamonds
+  r4 r8 [ af,8] \glissando \glissSkipOn a,4 e4 b4 \glissSkipOff c'4 \glissando
 
  %%%%%%%% ============= measure 45 ============= %%%%%%%% 
-  
+  \time 6/4
+  \circles
+  aqf2. ~ aqf2 ~ aqf8 [ \diamonds g16 ( gqs16 ]
 
  %%%%%%%% ============= measure 46 ============= %%%%%%%% 
-  
+  \time 6/4
+  \tuplet 5/4 {
+      a32 [ \single\circles aqs \single\circles a c' aqf ]
+  }
+  \circles
+  \tuplet 3/2 {
+      \tuplet 3/2 {
+        a16 [ aqs \single\diamonds d]
+      }
+      aqf8 \diamonds a8 ) \glissando \glissSkipOn
+  }
+  b4 b4 c'8 [ \glissSkipOff \afterGrace cqs'8 ] \glissando {b8}
 
  %%%%%%%% ============= measure 47 ============= %%%%%%%% 
   
