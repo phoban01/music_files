@@ -386,28 +386,51 @@ viola_angles = {
   >>
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
-  
+  \time 5/4
+  \clef alto
+  dqf4 ~ 
+  \tuplet 3/2 {
+    dqf8 gsef4 ~
+  } gsef2 ~ gsef4 ~
 
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
-  
+  \time 4/4
+  gsef2. ~ 
+  \tuplet 3/2 {
+      gsef4 \clef treble ds''8 (
+  }
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
-  
+  \time 4/4
+  cef''16 [ aqf'16 gs'8 ) ] \glissando
+  g'16[ asef'8 \clef alto bqf16 ] \glissando \glissSkipOn
+  b4  c4
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
-  
+  \time 6/4
+  \glissSkipOff cs'4 ~ cs'2. ~ cs'8 ~ cs'8 \glissando \glissSkipOn 
+  \afterGrace d'4 {\glissSkipOff fs'8}
+
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
-  
+  \time 3/16
+  r16 [ 
+  \clef treble
+  \flare_width \afterGrace as'8] \pp \< {s8 \flare_sfz} %>
 
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
-  
-
+  \time 5/4
+  r4 
+  \clef alto
+  cs'4 ~ cs'4 ~ cs'4 ~ cs'8 r8
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
-  
+  \time 5/4
+  r4 gsef2. ^\down_bow_light ^\aldita r4 _\bow-mute
 
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
-  
+  \time 2/8
+  \clef treble
+  c''8 \glissando \afterGrace as'8 ~ {as'8}
 
  %%%%%%%% ============= measure 42 ============= %%%%%%%% 
   

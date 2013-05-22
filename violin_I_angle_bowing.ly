@@ -192,6 +192,7 @@ violin_I_angles = {
  			alignAboveContext = "violin_1"
  		} {
  		c'8 [ \glissando \glissSkipOn e'8 \glissSkipOff b'8 \glissando f'8 ]
+    \stopStaff
  		}
  	}
  >>
@@ -244,7 +245,6 @@ violin_I_angles = {
 				(padding . 0)
 			    (stretchability . 0)
 				)	
-
  			alignAboveContext = "violin_1"
  		} {
  			\time 5/4
@@ -258,8 +258,8 @@ violin_I_angles = {
  			\afterGrace b'4 ^\startTrillSpan \glissando 
  				{\once\override Accidental.transparent=##t\once\override NoteColumn.glissando-skip = ##t \parenthesize d''8}  
  			\bar "|"
- 			s8 \afterGrace fs''64 {\once\override Accidental.transparent=##t \parenthesize a''8 \stopTrillSpan}
- 			\stopStaff
+ 			s8 \afterGrace fs''8 {\once\override Accidental.transparent=##t \parenthesize a''8 \stopTrillSpan}
+ 			\stopStaff s1
  		}
 
  	}
@@ -399,6 +399,7 @@ violin_I_angles = {
         r8 [ g'8 ]  \glissando  
         c'8 [ \glissando \glissSkipOn e'8 ] \glissSkipOff 
         b'8 [ \glissando \glissSkipOn \afterGrace g'8 ] {\glissSkipOff c'8}
+        \stopStaff
       }
     }
   >>
@@ -408,7 +409,7 @@ violin_I_angles = {
   <<
   	{
   		\switch-staff \normal_staff
-  		\set Staff.middleCPosition = #0
+%   		\set Staff.middleCPosition = #0
   		r2
   		\set Staff.forceClef = ##t
   		\circles
@@ -424,6 +425,7 @@ violin_I_angles = {
   			}
   			f'8 [ \glissSkipOff a'8 ]
   			\glissando d'16 \glissando a'16 \glissando \afterGrace d'8  \glissando {a'8}
+        \stopStaff
   		}
   	} \\
   	{
@@ -432,28 +434,48 @@ violin_I_angles = {
   >>
 
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
- 
+ \time 5/4
+ r2 r8 [ 
+ \circles
+ \bezier_gliss #'(0.85 . -0.25) #'(0 0 0 0)
+ d'8 ] \glissando \glissSkipOn d'4 d'8 [ \glissSkipOff cef'8 ~ ]
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
-  
+  \time 4/4 
+  cef'2. 
+  \tuplet 5/4 {
+    aqf'16:64 [( ^\down_bow ^\altosulpont b' gs' as' bqf' )]
+  }
 
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
-  
+  \time 4/4
+  b4 \glissando \glissSkipOn b4 \glissSkipOff
+  \draw_line_arrow \altosulpont \sultasto
+  gqs4 ~ \startTextSpan gqs4 ~ \stopTextSpan
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
-  
+  \time 6/4
+  gqs4 ~ gqs2 ~ gqs4 \glissando \glissSkipOn b4 \glissSkipOff \afterGrace bqf4 \glissando {a8}
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
-  
+  \time 3/16
+  \flare_width \afterGrace bef8. \pp \< {s8 \flare_sfz} %>
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
-  
+  \time 5/4
+  r8 cses'8 ^\up_bow_light ~ cses'2 ~ cses'4 r4
 
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
-  
+  \time 5/4
+  \stemNeutral
+  r8. [ <c''' \single\diamonds f'''>16 ]
 
+  r8. [ cef'16 ~] cef'4 ~ cef'8. [ r16 _\bow-mute ] r4
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
-  
+  \time 2/8
+  \tuplet 3/2 {
+    a'8 [ \glissando bqf'8 \glissando \glissSkipOn \afterGrace c''8] {\glissSkipOff cses''8}
+  }
 
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   

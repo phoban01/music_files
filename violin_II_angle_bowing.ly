@@ -412,28 +412,47 @@ violin_II_angles = {
   	}
   >>
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
-  
+  \time 5/4
+  r2 r2
+  \tuplet 3/2 {
+    c'4 \glissando csef'8 ~
+  }
 
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
-  
+  \time 4/4
+  csef'2.
+  def''16 [ ( cs'' aqf' bef']
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
-  
+  \time 4/4
+  \tuplet 6/4 {
+    gs'16 [ bqf' gsef' cs'' def'' cef'' )]
+  }
+  b2 \glissando cef'4 ~
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
-  
+  \time 6/4
+  cef'4 ~ cef'2 ~ 
+  cef'4 ~ cef'4 \glissando \glissSkipOn \afterGrace c4 {\glissSkipOff a8}
 
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
-  
+  \time 3/16
+  \flare_width \afterGrace bqf'8. \pp \< {s8 \flare_sfz} %>
 
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
-  
+  \time 5/4
+  r8 [ gqs8 ] ~ gqs2 ~ gqs8 r8 r4
 
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
-  
+  \time 5/4
+  r8.. [ <cqs''' fqs'''>32 ]
+  r8 [ csef'8 ] ~ csef'2 ~ csef'8.. [ r32 ] _\bow-mute
 
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
-  
+  \time 2/8
+  \tuplet 3/2 {
+    c''8 \glissando b'8 \glissando \glissSkipOn \afterGrace b'8 {\glissSkipOff a'8}
+  }
 
  %%%%%%%% ============= measure 42 ============= %%%%%%%% 
   
