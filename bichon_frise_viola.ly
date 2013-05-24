@@ -1,25 +1,29 @@
-\include "/pieces/diotima_quartet/code_files/quartet_template.ly"
+% \include "/pieces/diotima_quartet/code_files/quartet_template.ly"
 
-\pointAndClickOff
+% \pointAndClickOff
 
-%%%%MUSIC
-\include "/pieces/diotima_quartet/music_files/violin_I_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/viola_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/cello_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/violin_I_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/cello_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/violin_I_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/viola_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/cello_tuning.ly"
+% %%%%MUSIC
+% \include "/pieces/diotima_quartet/music_files/violin_I_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_II_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/viola_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/cello_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_I_pizz_intro.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_II_pizz_intro.ly"
+% \include "/pieces/diotima_quartet/music_files/cello_pizz_intro.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_I_tuning.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_II_tuning.ly"
+% \include "/pieces/diotima_quartet/music_files/viola_tuning.ly"
+% \include "/pieces/diotima_quartet/music_files/cello_tuning.ly"
 
 viola_bichon_frise = {
 
 %%%%%%%%%   MEASURE 1   %%%%%%%%% 
 {
 	\time 4/4
+	\override NoteHead.font-size = #1.2
+	\override TextScript.X-offset = #0.5
+	\switch-staff \no_line_staff
+	\stemDown
 	\tempo "" 4=96~110
 	\times 2/3 {
 		\pizz_head "I II III" \ppos #0.5 c'8 \mf \< ^\down_bow_light ^\sulpont ^\markup {
@@ -2199,20 +2203,9 @@ viola_bichon_frise = {
 	\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_heavy
 	\pizz_head "III IV" \ppos #0.5 c'8. ~ ^\up_bow_light
 	\hideNote c'4 
+	\revert NoteHead.font-size 
+	\revert TextScript.X-offset
+	\stemNeutral
 }
 }
 
-\score {
-	\new Staff \with {
-		\override NoteHead.font-size = #1.2
-		\override TextScript.X-offset = #0.5
-		\override TextScript.extra-offset = #'(0 . 0.5)
-		\override Slur.extra-offset = #'(0 . 0.35)
-	} {
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)
-
-		\switch-staff \no_line_staff
-		\stemDown
-		\viola_bichon_frise
-	}
-}
