@@ -1,9 +1,9 @@
 cello_tuning = { 
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
-   \switch-staff \single_line_staff
   \time 6/4
-  R1.
+  \circles
+  c'2 ~ c'2 ~ \niente \afterGrace c'2 \> (s8\!)
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   R1.
@@ -537,10 +537,11 @@ cello_tuning = {
       }
       aqf8 \diamonds a8 ) \glissando \glissSkipOn
   }
-  b4 b4 c'8 [ \glissSkipOff \afterGrace cqs'8 ] \glissando {b8}
-  r4.
+  b4 b4 c'8 [ \glissSkipOff cqs'8 ] \glissando 
+  b8 ~ 
+  \wavy_vibrato #1
+  \afterGrace b8 \< \glissando {\hideNotes b8 \f \unHideNotes} r8
  
- %%%%%%%% ============= measure 300 ============= %%%%%%%% 
   
 
 }

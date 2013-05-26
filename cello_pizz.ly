@@ -821,7 +821,10 @@ r8 r8
 
 \time 3/8
 
-r4.
+\switch-staff \single_line_staff
+\niente
+\stemUp \circles 
+c'8 \< ~ ^\down_bow ^\angle_bow c'4 \mp ~
 
 }
 

@@ -20,11 +20,11 @@ violin_II_bichon_frise = {
 %%%%%%%%%   MEASURE 1   %%%%%%%%% 
 {
 	\time 4/4
-	\override NoteHead.font-size = #1.2
-	\override TextScript.X-offset = #0.5
-	\switch-staff \no_line_staff
+	\switch-staff \string-staff
 	\stemDown		
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy ^\sulpont
+	\circles
+	
+	<e' g' b'>8 ^\up_bow_very_heavy ^\sulpont
 			^\markup {
 				\center-align
 				\center-column {
@@ -58,13 +58,13 @@ violin_II_bichon_frise = {
 		}
 	\hideNote c'8 ^\down_bow_heavy
 	\times 2/3 {
-		\pizz_head "II III" \ppos #0.5 c'8 ^\down_bow_light
+		<e' g'>8 ^\down_bow_light
 		\hideNote c'16 ^\up_bow_light
-		\pizz_head "III IV" \ppos #0.5 c'8. ^\down_bow_light
+		<c' e'>8. ^\down_bow_light
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_very_heavy
-	\pizz_head "I II" \ppos #0.5 c'8. ~ ^\down_bow_light
-	\hideNote c'4
+	<e' g' b'>16 ^\up_bow_very_heavy
+	<g' b'>8. \glissando ^\down_bow_light
+	<g' b'>4
 	\revert NoteHead.font-size 
 	\revert TextScript.X-offset
 	\stemNeutral
@@ -73,33 +73,33 @@ violin_II_bichon_frise = {
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   {
 	\time 4/4
-	\pizz_head "II III IV" \ppos #0.5 c'8. ^\up_bow_heavy
+	<c' e' g'>8. ^\up_bow_heavy
 	\hideNote c'16 ^\down_bow_heavy
 	\hideNote c'8 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }
 
@@ -109,35 +109,35 @@ violin_II_bichon_frise = {
 	\times 2/3 {
 		\hideNote c'8 ^\up_bow_very_heavy
 		\times 2/3 {
-			\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-			\pizz_head "III" \ppos #0.7 c'16
-			\pizz_head "II" \ppos #0.6 c'16 ]
+			c'16 [ ^\down_bow_very_heavy
+			e'16
+			g'16 ]
 		}
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\up_bow_very_heavy
+		<c' e' g'>8 ^\up_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
-	}
-	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
+	}
+	\times 2/3 {
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-			\pizz_head "III" \ppos #0.7 c'16
-			\pizz_head "II" \ppos #0.6 c'16 ]
+			c'16 [ ^\down_bow_very_heavy
+			e'16
+			g'16 ]
 		}
-		\pizz_head "I II" \ppos #0.5 c'16 ^\up_bow_light
+		<g' b'>16 ^\up_bow_light
 	}
 	\hideNote c'8 ^\down_bow_light
 }
@@ -147,53 +147,53 @@ violin_II_bichon_frise = {
 	\time 4/4
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
 		\times 2/3 {
-			\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-			\pizz_head "III" \ppos #0.7 c'16
-			\pizz_head "II" \ppos #0.6 c'16 ]
+			c'16 [ ^\down_bow_very_heavy
+			e'16
+			g'16 ]
 		}
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
+		<e' g' b'>8 ^\up_bow_heavy
 	}
-	\pizz_head "II III" \ppos #0.5 c'8.:64 ^\down_bow
-	\pizz_head "III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
+	<e' g'>8.:64 ^\down_bow
+	<c' e'>16 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'4 ^\down_bow_very_heavy
+	<e' g' b'>4 ^\down_bow_very_heavy
 }
 
  %%%%%%%% ============= measure 5 ============= %%%%%%%% 
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+		<e' g' b'>8 ^\down_bow_heavy
 		\hideNote c'8. ^\up_bow_heavy
 		\hideNote c'16 ^\down_bow_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8 ^\up_bow_heavy
+		<g' b'>8 ^\up_bow_heavy
 		\hideNote c'16 ^\down_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<c' e' g'>16 ^\up_bow_very_heavy
 		\hideNote c'8 ^\down_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
+	<e' g' b'>8 ^\up_bow_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+	<e' g' b'>8 ^\up_bow_very_heavy
 	\hideNote c'8 ^\down_bow_very_heavy
 }
 
@@ -201,35 +201,35 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_heavy
+		<c' e' g'>8 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+	<e' g' b'>8 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }
 
@@ -237,39 +237,39 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8. ^\down_bow_heavy
+		<g' b'>8. ^\down_bow_heavy
 		\hideNote c'16 ^\up_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<c' e' g'>8 ^\down_bow_very_heavy
 	}
 }
 
@@ -277,19 +277,19 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\tuplet 7/4 {
 		\draw_bracket \down_bow_heavy
@@ -302,14 +302,14 @@ violin_II_bichon_frise = {
 		c'16 -> -. \stopTextSpan
 	}
 	\times 2/3 {
-		\pizz_head "II III" \ppos #0.5 c'8 ^\up_bow_light ^\sulpont \mf \< %>
-		\pizz_head "III IV" \ppos #0.5 c'8. ^\down_bow_light
+		<e' g'>8 ^\up_bow_light ^\sulpont \mf \< %>
+		<c' e'>8. ^\down_bow_light
 		\hideNote c'16 ^\up_bow_light \fposs
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }
   
@@ -318,36 +318,36 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8. ^\up_bow_heavy
+	<e' g' b'>8. ^\up_bow_heavy
 	\hideNote c'16 ^\down_bow_heavy
 }
 
@@ -355,36 +355,36 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
+		<e' g' b'>8 ^\up_bow_heavy
 		\hideNote c'8. ^\down_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<c' e' g'>16 ^\up_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+	<e' g' b'>16 ^\down_bow_very_heavy
 	\hideNote c'16 ^\up_bow_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }  
 
@@ -392,43 +392,43 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "III IV" \ppos #0.5 c'8 ^\down_bow
+		<c' e'>8 ^\down_bow
 		\hideNote c'16 ^\up_bow
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }
 
@@ -437,24 +437,24 @@ violin_II_bichon_frise = {
 	\time 4/4
 	\hideNote c'4 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'8. ^\up_bow_very_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<c' e' g'>16 ^\down_bow_very_heavy
+		<e' g' b'>8. ^\up_bow_very_heavy
+		<c' e' g'>8 ^\down_bow_very_heavy
 	}
 	\times 2/3 {	
 		\hideNote c'8 ^\up_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }  
 
@@ -462,24 +462,24 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\up_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
+		<c' e' g'>8 ^\up_bow_very_heavy
+		<e' g' b'>16 ^\down_bow_heavy
 		\hideNote c'16 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II" \ppos #0.5 c'8 ~ ^\up_bow_light
-	\hideNote c'16
+	<g' b'>8 \glissando ^\up_bow_light
+	<g' b'>16
 	\hideNote c'8 ^\down_bow_light
 	\hideNote c'16 ^\up_bow
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
+		<c' e' g'>16 ^\up_bow_very_heavy
+		<e' g' b'>16 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_heavy
 	}
 }
@@ -488,44 +488,44 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }
 
@@ -538,31 +538,31 @@ violin_II_bichon_frise = {
 		\hideNote c'8 ^\up_bow_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_very_heavy
+	<e' g' b'>16 ^\up_bow_very_heavy
 	\hideNote c'16 ^\down_bow_very_heavy
 }
 
@@ -570,72 +570,72 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "II III" \ppos #0.5 c'8:32 ^\down_bow
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<e' g'>8:32 ^\down_bow
+		<e' g' b'>16 ^\up_bow_very_heavy
 	}
-	\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_very_heavy
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_very_heavy
+	<c' e' g'>16 ^\down_bow_very_heavy
+	<e' g' b'>16 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
-	}
-	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_heavy
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
+	}
+	\times 2/3 {
+		<e' g' b'>16 ^\up_bow_heavy
+		<c' e' g'>8 ^\down_bow_heavy
 	}
 }
 
  %%%%%%%% ============= measure 17 ============= %%%%%%%% 
  {
 	\time 4/4
-	\pizz_head "I II III" \ppos #0.5 c'8. ^\down_bow_very_heavy
-	\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<e' g' b'>8. ^\down_bow_very_heavy
+	<c' e' g'>16 ^\up_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 } 
 
@@ -643,39 +643,39 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<c' e' g'>8 ^\down_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+	<e' g' b'>8 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
-	}
-	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
+	}
+	\times 2/3 {
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
-		\pizz_head "III IV" \ppos #0.5 c'16 ^\down_bow_very_heavy
+		<c' e'>16 ^\down_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+	<e' g' b'>8 ^\up_bow_very_heavy
 } 
 
  %%%%%%%% ============= measure 19 ============= %%%%%%%% 
@@ -683,80 +683,80 @@ violin_II_bichon_frise = {
 	\time 4/4
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-			\pizz_head "III" \ppos #0.7 c'16
-			\pizz_head "II" \ppos #0.6 c'16 ]
+			c'16 [ ^\down_bow_very_heavy
+			e'16
+			g'16 ]
 		}
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
-		\pizz_head "II III" \ppos #0.5 c'8 ^\down_bow
+		<e' g'>8 ^\down_bow
 	}
-	\pizz_head "III IV" \ppos #0.5 c'8. ^\up_bow_heavy
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+	<c' e'>8. ^\up_bow_heavy
+	<e' g' b'>16 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II" \ppos #0.5 c'4 ^\up_bow_heavy
+	<g' b'>4 ^\up_bow_heavy
 } 
 
  %%%%%%%% ============= measure 20 ============= %%%%%%%% 
   {
 	\time 4/4
-	\pizz_head "III IV" \ppos #0.5 c'8 ^\up_bow_very_heavy
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<c' e'>8 ^\up_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
-		\pizz_head "III IV" \ppos #0.5 c'16 ^\down_bow_heavy
-		\pizz_head "II III" \ppos #0.5 c'8.:64 ^\up_bow
+		<e' g'>8 ^\up_bow_very_heavy
+		<c' e'>16 ^\down_bow_heavy
+		<e' g'>8.:64 ^\up_bow
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_heavy
-	\pizz_head "III IV" \ppos #0.5 c'8. ~ ^\up_bow_light
-	\hideNote c'4
+	<e' g' b'>16 ^\down_bow_heavy
+	<c' e'>8. \glissando ^\up_bow_light
+	<c' e'>4
 }
 
  %%%%%%%% ============= measure 21 ============= %%%%%%%% 
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8 ^\down_bow_light
+		<g' b'>8 ^\down_bow_light
 		\hideNote c'8 ^\up_bow_light
 		\hideNote c'8 ^\down_bow_light
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }
 
@@ -764,37 +764,37 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8. ^\up_bow_heavy
+		<e' g' b'>8. ^\up_bow_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
@@ -804,19 +804,19 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\draw_bracket \up_bow_heavy
 	c'32 -> -. \f ^\sultasto ^\markup {\small \italic ricochet} \startTextSpan
@@ -829,14 +829,14 @@ violin_II_bichon_frise = {
 	\hideNote c'32 -> -. \stopTextSpan
 
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 \fposs ^\sulpont ^\down_bow_heavy
+		<e' g' b'>8 \fposs ^\sulpont ^\down_bow_heavy
 		\hideNote c'8. 
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_heavy
+		<c' e' g'>16 ^\up_bow_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }  
 
@@ -844,23 +844,23 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'8. ^\down_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_very_heavy
+		<c' e' g'>8. ^\down_bow_very_heavy
+		<e' g' b'>16 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<c' e' g'>8 ^\down_bow_very_heavy
+		<e' g' b'>16 ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
-	\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<c' e' g'>8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\hideNote c'8 ^\up_bow_very_heavy
 }
 
@@ -868,36 +868,36 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+		<e' g' b'>8 ^\down_bow_heavy
 		\hideNote c'8. ^\up_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<c' e' g'>16 ^\up_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
-	\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
+	<e' g' b'>16 ^\down_bow_very_heavy
+	<c' e' g'>16 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
-	}
-	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
+	}
+	\times 2/3 {
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 } 
 
@@ -905,52 +905,52 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
-		\pizz_head "III IV" \ppos #0.5 c'16 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_very_heavy
+		<c' e'>16 ^\down_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
   {
 	\time 4/4
-	\pizz_head "III IV" \ppos #0.5 c'4 ^\down_bow_light
+	<c' e'>4 ^\down_bow_light
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_heavy
+		<e' g' b'>16 ^\up_bow_heavy
 		\hideNote c'8. ^\down_bow_heavy
 		\hideNote c'8 ^\up_bow_heavy
 	}
@@ -960,14 +960,14 @@ violin_II_bichon_frise = {
 		\hideNote c'8 ^\down_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }
 
@@ -975,81 +975,81 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "II III" \ppos #0.5 c'8.:32 ^\down_bow_heavy
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_heavy
+	<e' g'>8.:32 ^\down_bow_heavy
+	<e' g' b'>16 ^\up_bow_heavy
 }
 
  %%%%%%%% ============= measure 29 ============= %%%%%%%% 
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }
 
@@ -1057,37 +1057,37 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_heavy
+		<c' e' g'>8 ^\down_bow_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 		\hideNote c'8 ^\down_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_heavy
-	\pizz_head "II III" \ppos #0.5 c'16 ^\up_bow_heavy
+	<e' g' b'>16 ^\down_bow_heavy
+	<e' g'>16 ^\up_bow_heavy
 }
 
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
@@ -1100,32 +1100,32 @@ violin_II_bichon_frise = {
 	\hideNote c'16 ^\up_bow_very_heavy
 	\hideNote c'16 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_heavy
+		<e' g' b'>16 ^\down_bow_heavy
 		\hideNote c'8 ^\up_bow_heavy
 	}
 }
@@ -1137,22 +1137,22 @@ violin_II_bichon_frise = {
 		\hideNote c'8 ^\up_bow_heavy
 		\hideNote c'8 ^\down_bow_heavy
 		\hideNote c'16 ^\up_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_heavy
+		<c' e' g'>16 ^\down_bow_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ~ ^\down_bow_very_heavy
-	\hideNote c'16
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
-	\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_very_heavy
+	<e' g' b'>8 \glissando ^\down_bow_very_heavy
+	<e' g' b'>16
+	<e' g' b'>8 ^\up_bow_very_heavy
+	<c' e' g'>16 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8 ^\up_bow_heavy
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_heavy
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+		<g' b'>8 ^\up_bow_heavy
+		<e' g' b'>16 ^\down_bow_heavy
+		<c' e' g'>16 ^\up_bow_heavy
+		<e' g' b'>8 ^\down_bow_heavy
 	}
 } 
 
@@ -1162,37 +1162,37 @@ violin_II_bichon_frise = {
 	\times 2/3 {
 		\hideNote c'8 ^\down_bow_light
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow
+			g'16
+			e'16 ]
 		}
 		c'8
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+	<e' g' b'>8 ^\down_bow_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-			\pizz_head "III" \ppos #0.7 c'16
-			\pizz_head "II" \ppos #0.6 c'16 ]
+			c'16 [ ^\down_bow_very_heavy
+			e'16
+			g'16 ]
 		}
-		\pizz_head "III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<c' e'>16 ^\up_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 } 
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
@@ -1200,45 +1200,45 @@ violin_II_bichon_frise = {
 	\time 4/4
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-			\pizz_head "III" \ppos #0.7 c'16
-			\pizz_head "II" \ppos #0.6 c'16 ]
+			c'16 [ ^\down_bow_very_heavy
+			e'16
+			g'16 ]
 		}
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+		<e' g' b'>8 ^\down_bow_heavy
 	}
-	\pizz_head "II III IV" \ppos #0.5 c'8. ^\up_bow_very_heavy
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+	<c' e' g'>8. ^\up_bow_very_heavy
+	<e' g' b'>16 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "III IV" \ppos #0.5 c'4 ^\up_bow_light
+	<c' e'>4 ^\up_bow_light
 }
 
  %%%%%%%% ============= measure 35 ============= %%%%%%%% 
  {
 	\time 4/4
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
-	\pizz_head "II III IV" \ppos #0.5 c'8 ^\up_bow_heavy
+	<e' g' b'>8 ^\down_bow_heavy
+	<c' e' g'>8 ^\up_bow_heavy
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+		<e' g' b'>8 ^\down_bow_heavy
 		\hideNote c'16 ^\up_bow_heavy
 		\hideNote c'8. ^\down_bow_heavy
 	}
 	\hideNote c'16 ^\up_bow_very_heavy
-	\hideNote c'8. ~ ^\down_bow_very_heavy
-	\pizz_head "III IV" \ppos #0.5 c'4 ^\up_bow_light
+	<c' e'>8. \glissando ^\down_bow_light
+	<c' e'>4 
 } 
 
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
@@ -1248,29 +1248,29 @@ violin_II_bichon_frise = {
 	\hideNote c'16 ^\up_bow_very_heavy
 	\hideNote c'8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 } 
 
@@ -1278,37 +1278,37 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8. ^\up_bow_very_heavy
+		<e' g' b'>8. ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
@@ -1318,19 +1318,19 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\tuplet 7/4 {
 		\draw_bracket \down_bow_heavy
@@ -1343,14 +1343,14 @@ violin_II_bichon_frise = {
 		\hideNote c'16 -> -. \stopTextSpan
 	}
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8 ^\up_bow_light ^\sulpont 
+		<g' b'>8 ^\up_bow_light ^\sulpont 
 		\hideNote c'8. ^\down_bow_light
 		\hideNote c'16 ^\up_bow_light
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }  
 
@@ -1358,23 +1358,23 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
-		\pizz_head "II III IV" \ppos #0.5  c'8. ^\up_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
+		<c' e' g'>8. ^\up_bow_very_heavy
+		<e' g' b'>16 ^\down_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\up_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+		<c' e' g'>8 ^\up_bow_very_heavy
+		<e' g' b'>16 ^\down_bow_very_heavy
 		\hideNote c'16 ^\up_bow_very_heavy
 		\hideNote c'8 ^\down_bow_very_heavy
 	}
 	\hideNote c'8 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "II III IV" \ppos #0.5 c'8 ^\up_bow_very_heavy
+	<c' e' g'>8 ^\up_bow_very_heavy
 	\hideNote c'8 ^\down_bow_very_heavy
 }  
 
@@ -1382,35 +1382,35 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\up_bow_very_heavy
+		<c' e' g'>8 ^\up_bow_very_heavy
 		\hideNote c'8 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+	<e' g' b'>8 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }
 
@@ -1418,69 +1418,69 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8 ^\down_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_heavy
+		<g' b'>8 ^\down_bow_heavy
+		<c' e' g'>16 ^\up_bow_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }
 
  %%%%%%%% ============= measure 42 ============= %%%%%%%% 
  {
 	\time 4/4
-	\pizz_head "III IV" \ppos #0.5 c'4 ^\up_bow_light
+	<c' e'>4 ^\up_bow_light
 	\times 2/3 {
 		\hideNote c'16 ^\down_bow_light
 		\hideNote c'8. ^\up_bow_light
 		\hideNote c'8 ^\down_bow_light
 	}
 	\times 2/3 {
-		\pizz_head "II III" \ppos #0.5 c'8 ^\up_bow
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+		<e' g'>8 ^\up_bow
+		<e' g' b'>8 ^\down_bow_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 } 
 
@@ -1488,36 +1488,36 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "II III IV" \ppos #0.5 c'8. ^\up_bow_heavy
+	<c' e' g'>8. ^\up_bow_heavy
 	\hideNote c'16 ^\down_bow_very_heavy
 } 
 
@@ -1525,36 +1525,36 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_very_heavy
 		\hideNote c'8. ^\down_bow_very_heavy
 		\hideNote c'16 ^\up_bow_very_heavy
 	}
-	\pizz_head "I II" \ppos #0.5 c'16 ^\down_bow_heavy
+	<g' b'>16 ^\down_bow_heavy
 	\hideNote c'16 ^\up_bow_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 } 
 
@@ -1562,36 +1562,36 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_very_heavy
 		\hideNote c'8 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\up_bow_heavy
+	<e' g' b'>16 ^\up_bow_heavy
 	\hideNote c'16 ^\down_bow_very_heavy
 } 
 
@@ -1600,38 +1600,38 @@ violin_II_bichon_frise = {
 	\time 4/4
 	\times 2/3 {
 		\hideNote c'8 ^\down_bow_very_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
+		<c' e' g'>16 ^\up_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+	<e' g' b'>16 ^\down_bow_very_heavy
 	\hideNote c'16 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
-		\pizz_head "II III" \ppos #0.5 c'8:64 ^\down_bow
+		<c' e'>16 ^\up_bow_very_heavy
+		<e' g'>8:64 ^\down_bow
 	}
 } 
 
@@ -1639,19 +1639,19 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 		\hideNote c'16 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "II III IV" \ppos #0.5 c'8 ~ ^\up_bow_very_heavy
-	\hideNote c'16 
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<c' e' g'>8 \glissando ^\up_bow_very_heavy
+	<c' e' g'>16 
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\hideNote c'16 ^\up_bow_very_heavy
 	\times 2/3 {
 		\hideNote c'8 ^\down_bow_very_heavy
@@ -1665,44 +1665,44 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }
 
@@ -1711,77 +1711,77 @@ violin_II_bichon_frise = {
 	\time 4/4
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
 		\times 2/3 {
-			\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-			\pizz_head "III" \ppos #0.7 c'16
-			\pizz_head "II" \ppos #0.6 c'16 ]
+			c'16 [ ^\down_bow_very_heavy
+			e'16
+			g'16 ]
 		}
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
+		<e' g' b'>8 ^\up_bow_heavy
 	}
-	\pizz_head "I II" \ppos #0.5 c'8. ^\up_bow_light
+	<g' b'>8. ^\up_bow_light
 	\hideNote c'16 ^\down_bow_light
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow
+		e'16
+		g'16 ]
 	}
-	\pizz_head "II III" \ppos #0.5 c'4 ^\up_bow_heavy
+	<e' g'>4 ^\up_bow_heavy
 } 
 
  %%%%%%%% ============= measure 50 ============= %%%%%%%% 
   {
 	\time 4/4
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
-	\pizz_head "I II" \ppos #0.5 c'8 ^\up_bow_light
+	<e' g' b'>8 ^\down_bow_very_heavy
+	<g' b'>8 ^\up_bow_light
 	\times 2/3 {
 		\hideNote c'8 ^\down_bow_light
 		\hideNote c'16 ^\up_bow_heavy
 		\hideNote c'8. ^\down_bow_light
 	}
-	\pizz_head "III IV" \ppos #0.5 c'16 ^\up_bow_heavy
-	\pizz_head "II III IV" \ppos #0.5 c'8. ~ ^\down_bow_heavy
-	\hideNote c'4
+	<c' e'>16 ^\up_bow_heavy
+	<c' e' g'>8. \glissando ^\down_bow_heavy
+	<c' e' g'>4
 }
 
  %%%%%%%% ============= measure 51 ============= %%%%%%%% 
   {
 	\time 4/4
-	\pizz_head "I II III" \ppos #0.5 c'8. ^\down_bow_very_heavy
+	<e' g' b'>8. ^\down_bow_very_heavy
 	\hideNote c'16 ^\up_bow_very_heavy
 	\hideNote c'8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 }
 
@@ -1789,37 +1789,37 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+		<e' g' b'>8 ^\down_bow_very_heavy
 	}
 	\hideNote c'8 ^\up_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
 		\times 2/3 {
-			\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-			\pizz_head "II" \ppos #0.6 c'16
-			\pizz_head "III" \ppos #0.7 c'16 ]
+			b'16 [  ^\up_bow_very_heavy
+			g'16
+			e'16 ]
 		}
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_very_heavy
+		<c' e' g'>16 ^\down_bow_very_heavy
 	}
 	\hideNote c'8 ^\up_bow_very_heavy
 } 
@@ -1828,19 +1828,19 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\tuplet 6/4 {
 		\draw_bracket \up_bow_heavy
@@ -1852,14 +1852,14 @@ violin_II_bichon_frise = {
 		\hideNote c'16 -> -. \stopTextSpan
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\sulpont \fposs ^\down_bow_very_heavy
+		<e' g' b'>8 ^\sulpont \fposs ^\down_bow_very_heavy
 		\hideNote c'8. ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 } 
 
@@ -1867,23 +1867,23 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II II" \ppos #0.5 c'8 ^\up_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_very_heavy
 		\hideNote c'8. ^\down_bow_very_heavy
 		\hideNote c'16 ^\up_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "III IV" \ppos #0.5 c'8 ^\down_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_heavy
+		<c' e'>8 ^\down_bow_heavy
+		<c' e' g'>16 ^\up_bow_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_very_heavy
+	<e' g' b'>8 ^\down_bow_very_heavy
 	\hideNote c'8 ^\up_bow_very_heavy
 } 
 
@@ -1891,36 +1891,36 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8 ^\down_bow_light
+		<g' b'>8 ^\down_bow_light
 		\hideNote c'8 ^\up_bow_light
 		\hideNote c'8 ^\down_bow_light
 	}
 	\times 2/3 {
 		\draw_line_arrow \up_bow_light \up_bow_very_heavy
-		\pizz_head "I" \ppos #0.5 c'16 [  \startTextSpan
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ] \stopTextSpan
+		b'16 [  \startTextSpan
+		g'16
+		e'16 ] \stopTextSpan
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\down_bow_heavy
+	<e' g' b'>8 ^\down_bow_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }  
 
@@ -1928,37 +1928,37 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8. ^\up_bow_very_heavy
+		<e' g' b'>8. ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 		\hideNote c'8 ^\up_bow_very_heavy
 	}
@@ -1967,26 +1967,26 @@ violin_II_bichon_frise = {
  %%%%%%%% ============= measure 57 ============= %%%%%%%% 
   {
 	\time 4/4
-	\pizz_head "I II" \ppos #0.5 c'4 ^\up_bow_light
+	<g' b'>4 ^\up_bow_light
 	\times 2/3 {
-		\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_heavy
+		<c' e' g'>16 ^\down_bow_heavy
 		\hideNote c'8. ^\up_bow_heavy
 		\hideNote c'8 ^\down_bow_heavy
 	}
 	\times 2/3 {
 		\hideNote c'8 ^\up_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_very_heavy
+		<e' g' b'>8 ^\up_bow_very_heavy
 		\hideNote c'8 ^\down_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 }
 
@@ -1994,73 +1994,73 @@ violin_II_bichon_frise = {
   {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'8. ^\up_bow_heavy
-	\pizz_head "II III IV" \ppos #0.5 c'16 ^\down_bow_heavy
+	<e' g' b'>8. ^\up_bow_heavy
+	<c' e' g'>16 ^\down_bow_heavy
 }
 
  %%%%%%%% ============= measure 59 ============= %%%%%%%% 
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
+		<e' g' b'>8 ^\up_bow_heavy
 		\hideNote c'8. ^\down_bow_heavy
 		\hideNote c'16 ^\up_bow_heavy
 	}
-	\pizz_head "III IV" \ppos #0.5 c'16 ^\down_bow_very_heavy
-	\pizz_head "II III IV" \ppos #0.5 c'16 ^\up_bow_heavy
+	<c' e'>16 ^\down_bow_very_heavy
+	<c' e' g'>16 ^\up_bow_heavy
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 } 
 
@@ -2068,43 +2068,43 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_heavy		
-		\pizz_head "II III" \ppos #0.5 c'16 ^\up_bow_heavy
+		<c' e' g'>8 ^\down_bow_heavy		
+		<e' g'>16 ^\up_bow_heavy
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 } 
 
@@ -2118,32 +2118,32 @@ violin_II_bichon_frise = {
 	\hideNote c'16 ^\up_bow_very_heavy
 	\hideNote c'16 ^\down_bow_very_heavy
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_heavy
+		<e' g' b'>16 ^\down_bow_heavy
 		\hideNote c'8 ^\up_bow_heavy
 	}
 } 
@@ -2152,25 +2152,25 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
-		\pizz_head "II III IV" \ppos #0.5 c'8 ^\down_bow_heavy
+		<e' g' b'>8 ^\up_bow_heavy
+		<c' e' g'>8 ^\down_bow_heavy
 		\hideNote c'16 ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II" \ppos #0.5 c'8 ~ ^\down_bow_light
-	\hideNote c'16
-	\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_heavy
+	<g' b'>8 \glissando ^\down_bow_light
+	<g' b'>16
+	<e' g' b'>8 ^\up_bow_heavy
 	\hideNote c'16 ^\down_bow_heavy
 	\times 2/3 {
 		\hideNote c'8 ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
-		\pizz_head "III IV" \ppos #0.5 c'16 ^\up_bow_very_heavy
-		\pizz_head "I II III" \ppos #0.5 c'8  ^\down_bow_heavy
+		<c' e'>16 ^\up_bow_very_heavy
+		<e' g' b'>8  ^\down_bow_heavy
 	}
 } 
 
@@ -2178,44 +2178,44 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 } 
 
@@ -2223,37 +2223,37 @@ violin_II_bichon_frise = {
 {
 	\time 4/4	
 	\times 2/3 {
-		\pizz_head "I II" \ppos #0.5 c'8 ^\down_bow_light ^\sulpont 
+		<g' b'>8 ^\down_bow_light ^\sulpont 
 		\hideNote c'8 ^\up_bow
 		\hideNote c'8 ^\down_bow
 	}
 	\times 2/3 {
 		\draw_line_arrow \up_bow_heavy \up_bow_very_heavy
-		\pizz_head "I" \ppos #0.5 c'16 [  \startTextSpan
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ] \stopTextSpan
+		b'16 [  \startTextSpan
+		g'16
+		e'16 ] \stopTextSpan
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "IV" \ppos #0.8 c'16 [ ^\down_bow_very_heavy
-		\pizz_head "III" \ppos #0.7 c'16
-		\pizz_head "II" \ppos #0.6 c'16 ]
+		c'16 [ ^\down_bow_very_heavy
+		e'16
+		g'16 ]
 	}
 	\times 2/3 {
-		\pizz_head "I" \ppos #0.5 c'16 [  ^\up_bow_very_heavy
-		\pizz_head "II" \ppos #0.6 c'16
-		\pizz_head "III" \ppos #0.7 c'16 ]
+		b'16 [  ^\up_bow_very_heavy
+		g'16
+		e'16 ]
 	}
-	\pizz_head "I II III" \ppos #0.5 c'16 ^\down_bow_very_heavy
+	<e' g' b'>16 ^\down_bow_very_heavy
 	\hideNote c'16 ^\up_bow_very_heavy
 	\revert NoteHead.font-size 
 	\revert TextScript.X-offset
@@ -2261,3 +2261,8 @@ violin_II_bichon_frise = {
 }  
 }
 
+% \score {
+% 	\new StringStaff {
+% 		\violin_II_bichon_frise
+% 	}
+% }

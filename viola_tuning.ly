@@ -1,16 +1,17 @@
 viola_tuning = { 
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
-    \switch-staff \single_line_staff
- \time 6/4
- 	<<
- 		{\tieDown \circles c'2 ^\down_bow ^\angle_bow ^\markup \string-numbers #'( "II III IV" 0 0) ~ c'2 ~ c'2} \\
- 		{\niente s4 \< s4 \! s2 s4 \niente \afterGrace s4 \> {s4 \! }}
- 	>>
+  \time 6/4
+  R1.
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   \time 6/4
-  R1.
+  \switch-staff \single_line_staff
+  \time 6/4
+  <<
+    {\tieDown \circles c'2 ^\down_bow ^\angle_bow ^\markup \string-numbers #'( "II III IV" 0 0) ~ c'2 ~ c'2} \\
+    {\niente s4 \< s4 \! s2 s4 \niente \afterGrace s4 \> {s4 \! }}
+  >>
 
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
   \time 6/4
@@ -478,13 +479,15 @@ viola_tuning = {
   \afterGrace b'8. \glissando {s8} r16 _\bow-mute
 
   %%%%%%VIOLA BICHON FRISE STARTS HERE
-  \override NoteHead.font-size = #1.2
-  \override TextScript.X-offset = #0.5
-  \switch-staff \no_line_staff
+
+  \switch-staff \string-staff
+  
   \stemDown
+
+  \circles
   
   \times 2/3 {
-    \pizz_head "I II III" \ppos #0.5 c'8 \mf \< ^\down_bow_light ^\sulpont ^\markup {
+    <g' b'>8 \mf \< ^\down_bow_light ^\sulpont ^\markup {
         \center-align
         \center-column {
           \bracket
@@ -515,20 +518,20 @@ viola_tuning = {
 
         }
     }
-    \pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_light ^\markup {\translate #'(0 . 10) \italic "(sempre molto legato)"}
-    \pizz_head "I II III" \ppos #0.5 c'8  ^\down_bow_light
+    <g' b'>8 ^\up_bow_light ^\markup {\translate #'(0 . 10) \italic "(sempre molto legato)"}
+    <g' b'>8  ^\down_bow_light
   }
 
   \times 2/3 {
     \draw_line_arrow \up_bow_light \up_bow_very_heavy
-    \pizz_head "I" \ppos #0.5 c'16 [ \startTextSpan
-    \pizz_head "II" \ppos #0.6 c'16
-    \pizz_head "III" \ppos #0.7 c'16 ] \stopTextSpan \fposs
+    b'16 [ \startTextSpan
+    g'16
+    e'16 ] \stopTextSpan \fposs
   }
   \times 2/3 {
-    \pizz_head "IV" \ppos #0.8 c'16  [ ^\down_bow_very_heavy
-    \pizz_head "III" \ppos #0.7 c'16
-    \pizz_head "II" \ppos #0.6 c'16  ]
+    c'16  [ ^\down_bow_very_heavy
+    e'16
+    g'16  ]
   }
 
  %%%%%%%% ============= measure 47 ============= %%%%%%%% 
