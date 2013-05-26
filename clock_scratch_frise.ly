@@ -1,19 +1,19 @@
-\include "/pieces/diotima_quartet/code_files/quartet_template.ly"
+% \include "/pieces/diotima_quartet/code_files/quartet_template.ly"
 
-\pointAndClickOff
+% \pointAndClickOff
 
-%%%%MUSIC
-\include "/pieces/diotima_quartet/music_files/violin_I_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/viola_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/cello_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/violin_I_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/cello_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/violin_I_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/viola_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/cello_tuning.ly"
+% %%%%MUSIC
+% \include "/pieces/diotima_quartet/music_files/violin_I_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_II_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/viola_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/cello_pizz.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_I_pizz_intro.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_II_pizz_intro.ly"
+% \include "/pieces/diotima_quartet/music_files/cello_pizz_intro.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_I_tuning.ly"
+% \include "/pieces/diotima_quartet/music_files/violin_II_tuning.ly"
+% \include "/pieces/diotima_quartet/music_files/viola_tuning.ly"
+% \include "/pieces/diotima_quartet/music_files/cello_tuning.ly"
 
 frise_settings_clock = {
 		#(add-grace-property 'Voice 'Stem 'transparent #t)
@@ -475,6 +475,9 @@ violin_I_bichon_frise = {
 		\circles
 		\stemDown
 
+		\silence \silence \silence
+		\silence \silence \silence
+
 		\silence \four \nine
 		\three \one \eight
 		\five \two \ten
@@ -488,9 +491,20 @@ violin_I_bichon_frise = {
 		\silence \ten \eight
 		\six \seven \silence
 		\silence \five \nine
+
+		\silence \silence \silence
+
 		\silence \one \seven
 		\silence \silence \nine
+
+		\silence \silence \silence
+
 		\five \silence \two
+
+		\silence \silence
+
+		\silence \silence
+
 
 		\frise_settings_clock_revert
 }
@@ -500,6 +514,9 @@ cello_bichon_frise = {
 		\frise_settings_clock
 		\circles
 		\stemDown
+
+		\silence \silence \silence
+		\silence \silence \silence
 
 		\three \two \ten
 		\nine \eight \silence
@@ -514,23 +531,39 @@ cello_bichon_frise = {
 		\six \eight \silence
 		\silence \nine \three
 		\ten \four \silence
+
+		\silence \silence \silence
+
 		\five \silence \five
 		\nine \two \seven
 		\silence \four \silence
+
+		\silence \silence
+		\silence \silence
+		\silence
+
 
 		\frise_settings_clock_revert
 }
 
 
-\score {
-	<<
-	\new Staff {
-		\switch-staff \pizz_staff
-		\frise_settings_clock
-		\circles
-		\stemDown		
-% 		\ten
-		\cello_bichon_frise
-	} 
-	>>
-}
+% \score {
+% 	<<
+% 	\new Staff {
+% 		\switch-staff \pizz_staff
+% 		\frise_settings_clock
+% 		\circles
+% 		\stemDown		
+% % 		\ten
+% 		\cello_bichon_frise
+% 	} 
+% 		\new Staff {
+% 		\switch-staff \pizz_staff
+% 		\frise_settings_clock
+% 		\circles
+% 		\stemDown		
+% % 		\ten
+% 		\violin_I_bichon_frise
+% 	} 
+% 	>>
+% }

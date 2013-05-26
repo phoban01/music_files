@@ -730,6 +730,99 @@ cello_pizz_left = {
 			}
 		\glissSkipOn \afterGrace c16 ] \glissando {\glissSkipOff \slash_grace \ppos #0.3 c8}
 	} 
+
+
+\time 3/8
+
+r4.
+
+\time 4/8
+r2
+
+\time 6/8
+r4. r4.
+
+\time 3/8
+r4.
+
+\time 5/16
+r8 r8.
+
+\time 5/8
+
+r4 r4.
+
+\time 7/16
+
+r4 r8.
+
+\time 3/16
+
+r8.
+
+\time 3/8
+
+r4.
+
+\time 4/8
+
+r4 r4
+
+\time 2/8
+
+r4
+
+\time 3/16
+
+r8.
+
+\time 4/8
+
+r2
+
+\time 9/16
+
+r8. r8. r8.
+
+\time 4/4
+r1
+
+\time 9/8
+
+r4. r4. r4.
+
+\time 4/8
+
+r4 r4
+
+\time 3/16
+
+r8.
+
+\time 4/8
+
+r2
+
+\time 4/8
+
+r2
+
+\time 3/16
+
+r8.
+
+\time 3/4
+
+r2.
+
+\time 4/16
+
+r8 r8
+
+\time 3/8
+
+r4.
+
 }
 
 cello_pizz_section = {

@@ -333,10 +333,10 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   e'''4. ~
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 3/4
-  e'''4 ~ ^\down_bow  \niente \afterGrace e'''4 \> ~ {s8\!} r4
+  e'''2. ~ ^\down_bow  
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 11/16  
-  r4 r4 r8.
+  e'''4 ~  \niente \afterGrace e'''8 \> ~ {s8\!} r8 r8.
   \override NoteHead.no-ledgers = ##f
  %%%%%%% ============= measure 40 ============= %%%%%%%% 
   

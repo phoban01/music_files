@@ -36,13 +36,13 @@ violin_II_bichon_frise = {
 						\circles
 						\override TextScript.padding = #10
 						\override Staff.OttavaBracket.padding = #1.5
-						\override Beam.transparent = ##t \override Stem.transparent = ##t
+						\override Beam.transparent = ##t \override Stem.transparent = ##t \override Flag.transparent = ##t
 						\ottava #1
-						<\parenthesize e'''  a''''>8 ^\markup {\general-align #Y #UP \center-align "I"}
-						<\parenthesize a'' d''''>8 ^\markup {\general-align #Y #UP  \center-align "II"}
+						<\parenthesize e'''  a''''>32 ^\markup {\general-align #Y #UP \center-align "I"}
+						<\parenthesize a'' d''''>32 ^\markup {\general-align #Y #UP  \center-align "II"}
 						\ottava #0
-						<\parenthesize d' g'''>8 ^\markup {\center-align "III"}
-						<\parenthesize g c'''>8 ^\markup {\center-align "IV"}
+						<\parenthesize d' g'''>32 ^\markup {\center-align "III"}
+						<\parenthesize g c'''>32 ^\markup {\center-align "IV"}
 
 					} \layout {} }
 					\vspace #0.25

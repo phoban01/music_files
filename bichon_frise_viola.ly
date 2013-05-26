@@ -20,46 +20,24 @@ viola_bichon_frise = {
 %%%%%%%%%   MEASURE 1   %%%%%%%%% 
 {
 	\time 4/4
-	\override NoteHead.font-size = #1.2
-	\override TextScript.X-offset = #0.5
-	\switch-staff \no_line_staff
-	\stemDown
+% 	\override NoteHead.font-size = #1.2
+% 	\override TextScript.X-offset = #0.5
+% 	\switch-staff \no_line_staff
+% 	\stemDown
 	\tempo "" 4=96~110
+
 	\times 2/3 {
-		\pizz_head "I II III" \ppos #0.5 c'8 \mf \< ^\down_bow_light ^\sulpont ^\markup {
-				\center-align
-				\center-column {
-					\bracket
-					\scale #'(0.7 . 0.7)									
-					\score {
-					\new Staff \with {\remove "Time_signature_engraver"} {
-						\clef treble
-						\circles
-						\override TextScript.padding = #6
-						\override Staff.OttavaBracket.padding = #1.5
-						\override Beam.transparent = ##t \override Stem.transparent = ##t
-						\ottava #1
-						<\parenthesize a''  d''''>8 ^\markup {\general-align #Y #UP \center-align "I"}
-						\ottava #0
-						<\parenthesize d' g'''>8 ^\markup {\general-align #Y #UP  \center-align "II"}
-						<\parenthesize g c'''>8 ^\markup {\center-align "III"}
-						\clef alto
-						<\parenthesize c f''>8 ^\markup {\center-align "IV"}
-
-					} \layout {} }
-					\override #'(font-name . "AdobeCaslonPro") 
-					\fontsize #-2  "(Chaotic, extremely fast trills " 
-					\override #'(font-name . "AdobeCaslonPro") 
-					\fontsize #-2 "between stopped note & open string.)" 
-					\vspace #0
- 					\override #'(trills . (#t #t #t #t))
-					\fingering-diagram #'(("dot" . 0.5) ("dot" . 0.5) ("dot" . 0.5) ("dot" . 0.5))
-
-				}
-		}
-		\pizz_head "I II III" \ppos #0.5 c'8 ^\up_bow_light ^\markup {\translate #'(0 . 10) \italic "(sempre molto legato)"}
-		\pizz_head "I II III" \ppos #0.5 c'8  ^\down_bow_light
+		\draw_line_arrow \up_bow_light \up_bow_very_heavy
+		\pizz_head "I" \ppos #0.5 c'16 [ \startTextSpan
+		\pizz_head "II" \ppos #0.6 c'16
+		\pizz_head "III" \ppos #0.7 c'16 ] \stopTextSpan \fposs
 	}
+	\times 2/3 {
+		\pizz_head "IV" \ppos #0.8 c'16  [ ^\down_bow_very_heavy
+		\pizz_head "III" \ppos #0.7 c'16
+		\pizz_head "II" \ppos #0.6 c'16  ]
+	}
+
 	\times 2/3 {
 		\draw_line_arrow \up_bow_light \up_bow_very_heavy
 		\pizz_head "I" \ppos #0.5 c'16 [ \startTextSpan
