@@ -289,8 +289,7 @@ cello_pizz_right = {
 
  %%%%%%%% ============= measure 85 ============= %%%%%%%% 
   \time 3/8
-  \pizz_head "I II III IV" \ppos #0.65 c16.. [ \mf
-  \pizz_head "I" \ppos #0 c64 \effort "f" ^\fingernail
+  r8
 
   \tuplet 3/2 {
   	r16 [
@@ -299,33 +298,31 @@ cello_pizz_right = {
   }
 
   \pizz_head "II" \ppos #0.75 c16 \mf
-  \pizz_head "I" \ppos #0.85 c16 ]
+  r16 ]
 
  %%%%%%%% ============= measure 86 ============= %%%%%%%% 
 	\time 4/8
-	\pizz_head "II III" \ppos #0.9 c16 [ \p
-	\pizz_head "IV" \ppos #0.8 c16
+	r8 [
 	\arp_pizz_head "IV" "I" \ppos #0.5 c8 \sfz
 	\tuplet 5/4 {
 		\pizz_head "I" \ppos #0.8 c32 \p \< %>
 		\pizz_head "II" \ppos #0.7 c32
-		\pizz_head "III" \ppos #0.6 c32 \mf \>
-		\pizz_head "IV" \ppos #0.5 c32
-		\pizz_head "III" \ppos #0.6 c32 \p
+		\pizz_head "III" \ppos #0.6 c32 \mf 
+    r16
 	}
-	\pizz_head "I II III" \ppos #0.2 c8 ] \effort mf
+  r16.
+	\pizz_head "I II III" \ppos #0.2 c32 ] \effort mf
 
  %%%%%%%% ============= measure 87 ============= %%%%%%%% 
   \time 5/16
-  \pizz_head "III" \ppos #0.65 c16 [ \f
+  r16 [
   \pizz_head "III" \ppos #0.75 c16 \p
 
   \tuplet 5/4  {
   	\pizz_head "I" \ppos #0.4 c32 \effort p
   	\pizz_head "II" \ppos #0.35 c32
   	\pizz_head "III" \ppos #0.3 c32
-  	\pizz_head "IV" \ppos #0.35 c32
-  	\pizz_head "III" \ppos #0.4 c32
+    r16
   }
 
   r16 ]
@@ -742,47 +739,105 @@ r2
 \time 6/8
 r4. r4.
 
-\time 3/8
-r4.
+<<
+    {
+      \switch-staff \pizz_staff
+      \body-clef #'full
 
-\time 5/16
-r8 r8.
+      \override NoteHead.stencil = #scratch-tone
+      \override Glissando.style = #'dashed-line
+      \override Glissando.bound-details.right.padding = #0.35
+      \override Glissando.thickness = #2
 
-\time 5/8
+      \time 3/8
+      \slow-zigzag
+        \ppos #0.8 c'4. \glissando
+      \time 5/16
+        \ppos #0.4 c'4 \glissando 
+        \med-zigzag
+        \ppos #0.8 c'16 \glissando
+      \time 5/8
+        \glissSkipOn \ppos #0.6 c'4 \glissSkipOff 
+        \fast-zigzag
+        \ppos #0.4 c'4. \glissando
 
-r4 r4.
+      \time 7/16
+      \slow-zigzag
+      \ppos #0.8 c'4 \glissando \ppos #0.5 c'8. 
 
-\time 7/16
+      \time 3/16
 
-r4 r8.
+      r8.
 
-\time 3/16
+      \time 3/8
 
-r8.
+      r4.
 
-\time 3/8
+      \time 4/8
 
-r4.
+      r4 r4
 
-\time 4/8
+      \time 2/8
 
-r4 r4
+      r4
 
-\time 2/8
+      \time 3/16
 
-r4
+      r8.
 
-\time 3/16
+      \time 4/8
 
-r8.
+      r2
 
-\time 4/8
+      \time 9/16
 
-r2
+      r8. r8. r8.      
+    } \\
+    \new StringStaff \with {alignAboveContext="cello"} {
+      \time 3/8
+      \circles
+      <e' g'>4. \mf ^\markup {\small \italic "Take bow in both hands."}
+        \glissando 
+      \time 5/16
+      <e' g'>4 \glissando <g' b'>16 \glissando
+      \time 5/8
+      <g' b'>4. \glissando <g' b'>4 \glissando
 
-\time 9/16
+      \time 7/16
+      <e' g'>4 \glissando <e' g'>8.
 
-r8. r8. r8.
+      \time 3/16
+
+      r8.
+
+      \time 3/8
+
+      r4.
+
+      \time 4/8
+
+      r4 r4
+
+      \time 2/8
+
+      r4
+
+      \time 3/16
+
+      r8.
+
+      \time 4/8
+
+      r2
+
+      \time 9/16
+
+      r8. r8. r8.   
+
+    }
+>>
+
+
 
 \time 4/4
 r1

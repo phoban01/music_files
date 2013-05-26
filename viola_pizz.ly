@@ -1394,41 +1394,30 @@ r16 [
 
  %%%%%%%% ============= measure 85 ============= %%%%%%%% 
   \time 3/8
-  \pizz_head "I II III IV" \ppos #0.65 c16.. [ \mf
-  \pizz_head "I" \ppos #0 c64 \effort "f" ^\fingernail
+  \pizz_head "I II III IV" \ppos #0.65 c16 [ \mf
+  r16
 
-  \tuplet 3/2 {
-  	r16 [
-  	\pizz_head "I" \ppos #0 c16 \effort "f"
-  	r16
-  }
+  r8.
 
-  \pizz_head "II" \ppos #0.75 c16 \mf
+  
   \pizz_head "I" \ppos #0.85 c16 ]
 
  %%%%%%%% ============= measure 86 ============= %%%%%%%% 
 	\time 4/8
-	\pizz_head "II III" \ppos #0.9 c16 [ \p
-	\pizz_head "IV" \ppos #0.8 c16
+	r16 [ 
+	\pizz_head "IV" \ppos #0.8 c16 \p
 	\arp_pizz_head "IV" "I" \ppos #0.5 c8 \sfz
-	\tuplet 5/4 {
-		\pizz_head "I" \ppos #0.8 c32 \p \< %>
-		\pizz_head "II" \ppos #0.7 c32
-		\pizz_head "III" \ppos #0.6 c32 \mf \>
-		\pizz_head "IV" \ppos #0.5 c32
-		\pizz_head "III" \ppos #0.6 c32 \p
-	}
+	r8
 	\pizz_head "I II III" \ppos #0.2 c8 ] \effort mf
 
  %%%%%%%% ============= measure 87 ============= %%%%%%%% 
   \time 5/16
-  \pizz_head "III" \ppos #0.65 c16 [ \f
+  r16 [
   \pizz_head "III" \ppos #0.75 c16 \p
 
   \tuplet 5/4  {
-  	\pizz_head "I" \ppos #0.4 c32 \effort p
-  	\pizz_head "II" \ppos #0.35 c32
-  	\pizz_head "III" \ppos #0.3 c32
+  	r16
+  	\pizz_head "III" \ppos #0.3 c32 \effort p
   	\pizz_head "IV" \ppos #0.35 c32
   	\pizz_head "III" \ppos #0.4 c32
   }
@@ -1461,7 +1450,8 @@ r16 [
   }
   r16
   \arp_pizz_head "IV" "I" \ppos #0.15 c16 \effort sfz
-  \pizz_head "I II" \ppos #0.7 c8 ] \mf
+  r16
+  \pizz_head "I II" \ppos #0.7 c16 ] \mf
   
 
  %%%%%%%% ============= measure 93 ============= %%%%%%%% 
@@ -1469,8 +1459,7 @@ r16 [
   \pizz_head "I II" \ppos #0.55 c8. [ \p
   \pizz_head "I" \ppos #0.85 c16 \f
   \tuplet 6/4 {
-  	\pizz_head "III" \ppos #0.8 c32 \p \< %>
-  	\pizz_head "II" \ppos #0.85 c32
+  	r16
   	\pizz_head "I" \ppos #0.9 c32 \f \>
   	\pizz_head "IV" \ppos #0.75 c32
   	\pizz_head "III" \ppos #0.8 c32
@@ -1480,7 +1469,7 @@ r16 [
   \arp_pizz_head "I" "IV" \ppos #0.1 c8 \effort p
 
   \tuplet 6/4 {
-  	\pizz_head "I" \ppos #0.75 c8 \mp
+  	r8
   	\pizz_head "II" \ppos #0.05 c32 \effort "f"
   	\pizz_head "III" \ppos #0 c32
   }
@@ -1494,7 +1483,7 @@ r16 [
  %%%%%%%% ============= measure 94 ============= %%%%%%%% 
   \time 3/8
   \pizz_head "IV" \ppos #0.2 c16 [ \effort "f"
-  \pizz_head "I II III" \ppos #0.8 c16 \p
+  r16
 
   \tuplet 3/2 {
   	r16
@@ -1502,17 +1491,15 @@ r16 [
   	\pizz_head "II" \ppos #0.05 c16
   }
 
-  \pizz_head "I" \ppos #0.3 c16 \effort p
-  \pizz_head "II" \ppos #0.45 c16 ] \effort "f"
+  r8 ]
 
  %%%%%%%% ============= measure 95 ============= %%%%%%%% 
   \time 5/16 
-  \pizz_head "III" \ppos #0.8 c32 [ \f 
+  r32 [ 
   \pizz_head "II" \ppos #0.9 c32 \p
   \pizz_head "III" \ppos #0.7 c16 \mf
-  \pizz_head "IV" \ppos #0.5 c16 \p
-  \pizz_head "III" \ppos #0.1 c64 \effort p
-  \pizz_head "II" \ppos #0 c32.
+  \pizz_head "IV" \ppos #0.4 c16 \p
+  r16
   \pizz_head "I" \ppos #0 c16 ] \mf
 
  %%%%%%%% ============= measure 96 ============= %%%%%%%% 
@@ -1521,26 +1508,24 @@ r16 [
 
  %%%%%%%% ============= measure 97 ============= %%%%%%%% 
   \time 7/16
-  \pizz_head "II III" \ppos #0.4 c8 [ \f
-  \pizz_head "IV" \ppos #0.2 c16 \effort mf
+  \pizz_head "II III" \ppos #0.6 c8 [ \f
+  r16
 
   \tuplet 5/4 {
+  	r16
   	\pizz_head "III" \ppos #0.6 c32 \p
   	\pizz_head "II" \ppos #0.7 c32 \f
   	\pizz_head "I" \ppos #0.8 c32 \p
-  	r16
   }
 
-  \tuplet 5/4 {
-  	\arp_pizz_head "I" "IV" \ppos #0.3 c16 \effort sfz
-  	\pizz_head "III" \ppos #0.3 c32 \p \< %>
-  	\pizz_head "II" \ppos #0.4 c32
-  	\pizz_head "I" \ppos #0.5 c32 ] \f
-  }
+ r16
+  \arp_pizz_head "I" "IV" \ppos #0.4 c16 ] \sfz
+
 
  %%%%%%%% ============= measure 98 ============= %%%%%%%% 
   \time 3/16
-  \pizz_head "IV" \ppos #0.2 c16 [ \effort "f"
+  r32 [
+  \pizz_head "IV" \ppos #0.2 c32 \effort "f"
   \pizz_head "II III" \ppos #0.6 c16.  \p
   \pizz_head "III" \ppos #0 c32 ] ^\fingernail \effort "f"
 
@@ -1573,7 +1558,7 @@ r16 [
   \time 2/8
   \tuplet 3/2 {
   	\pizz_head "III IV" \ppos #0.5 c8 [ \f
-  	\arp_pizz_head "I" "IV" \ppos #-0.15 c8 \effort p
+  	r8
   	\tuplet 3/2 {
   		\pizz_head "III" \ppos #0.8 c16 \f \>
   		\pizz_head "II" \ppos #0.7 c16
@@ -1591,12 +1576,7 @@ r16 [
   	\pizz_head "I" \ppos #0.85 c32 \p
   }
 
-
-  \tuplet 3/2 {
-  	\pizz_head "II" \ppos #0 c32 \effort "f"
-  	\pizz_head "I" \ppos #0 c32
-  	\pizz_head "III" \ppos #0.1 c32 ]
-  }
+  r16]
  %%%%%%%% ============= measure 103 ============= %%%%%%%% 
   \time 4/8
   r8 [
@@ -1619,15 +1599,7 @@ r16 [
   	\pizz_head "II" \ppos #0.55 c32
   	r8
   }
-  \tuplet 6/4 {
-  	\pizz_head "IV" \ppos #0.7 c32 \p \< %>
-  	\pizz_head "III" \ppos #0.75 c32
-  	\pizz_head "II" \ppos #0.8 c32
-  	\pizz_head "III" \ppos #0.75 c32 \f \>
-  	\pizz_head "II" \ppos #0.8 c32
-  	\pizz_head "I" \ppos #0.85 c32 \p
-  }
-
+  r8
   r8. ]
 
  %%%%%%%% ============= measure 105 ============= %%%%%%%% 
@@ -1636,10 +1608,8 @@ r16 [
 
  %%%%%%%% ============= measure 106 ============= %%%%%%%% 
   \time 9/8 
-  r16 [
-  	\pizz_head "II" \ppos #0.9 c16 \f
-  	\pizz_head "I" \ppos #0.8 c16 \p
-  	\pizz_head "III" \ppos #0.7 c16 \pp
+  r8 [
+  r8
  
   \tuplet 3/2 {
   	\pizz_head "IV" \ppos #0.35 c32 \effort "f"
@@ -1654,17 +1624,13 @@ r16 [
   	\pizz_head "IV" \ppos #0.7 c16 \mf
   }
 
-  \pizz_head "IV" \ppos #0 c32 \effort "f"
-  \pizz_head "III" \ppos #0.1 c32
-  \pizz_head "II" \ppos #0.15 c32
-  \pizz_head "I" \ppos #0.05 c32
+  r8
   \pizz_head "III" \ppos #0.7 c8 \p
 
   \pizz_head "II III IV" \ppos #0.85 c8 \mf
 
   \tuplet 5/4 {
-  	\pizz_head "IV" \ppos #0.25 c32 \effort "f"
-  	\pizz_head "III" \ppos #0.2 c32
+  	r16
   	\pizz_head "II" \ppos #0.15 c32
   	\pizz_head "I" \ppos #0.1 c32
   	r32 
@@ -1678,7 +1644,7 @@ r16 [
  %%%%%%%% ============= measure 108 ============= %%%%%%%% 
   \time 3/16
   \pizz_head "III" \ppos #0.6 c32 [ \mf
-  \pizz_head "II" \ppos #0.7 c32
+  r32
 
   \pizz_head "I" \ppos #0.6 c32 \mp
   \pizz_head "II III IV" \ppos #0.6 c16. ] \f
@@ -1742,8 +1708,8 @@ r16 [
 
  %%%%%%%% ============= measure 114 ============= %%%%%%%% 
   \time 3/8 
-  	\arp_pizz_head "I" "IV" \ppos #0.4 c8 [ \mf
-  	\pizz_head "I" \ppos #0 c16. ^\fingernail
+  	r16 [
+  	r16. 
   	\pizz_head "III" \ppos #0 c64 \effort p
   	\pizz_head "IV" \ppos #0 c64
 
@@ -1751,6 +1717,7 @@ r16 [
   		\pizz_head "III IV" \ppos #0.8 c8 \mf
   		\pizz_head "II" \ppos #0.6 c16 ] \p 
   	}
+  	r16
 }
 
 
@@ -3179,11 +3146,11 @@ r8
 
  %%%%%%%% ============= measure 102 ============= %%%%%%%% 
   \time 3/16
-  	\glissSkipOn \afterGrace c8 \glissando
+  	\glissSkipOn \afterGrace c8 [ \glissando
   		_\markup {
   				\fingering-diagram #'(("mute" . 0.5) ("mute" . 0.5) ("mute" . 0.5) ("mute" . 0.5))
   		} {\slash_grace \ppos #0.1 c8}
-  	\ppos #0.3 c16 \glissando
+  	\ppos #0.3 c16 ] \glissando
   		_\markup {
   				\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) ("dot" . 0.6) (#f . 0.5))
   		}

@@ -476,9 +476,10 @@ viola_tuning = {
   }
   \single\circles bqs'16 ) [ b'16 ~] 
   \wavy_vibrato #1.35
-  \afterGrace b'8. \glissando {s8} r16 _\bow-mute
+  \afterGrace b'8. \glissando {s8} \stopStaff r16 _\bow-mute
 
   %%%%%%VIOLA BICHON FRISE STARTS HERE
+
 
   \switch-staff \string-staff
   
@@ -486,6 +487,8 @@ viola_tuning = {
 
   \circles
   
+  \clef treble
+
   \times 2/3 {
     <g' b'>8 \mf \< ^\down_bow_light ^\sulpont ^\markup {
         \center-align

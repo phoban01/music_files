@@ -180,25 +180,54 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
  %%%%%%%% ============= measure 19 ============= %%%%%%%% 
  \time 9/16 
 	\glissSkipOn 
+  \stemDown
 	d,8. [
 	\once \override Dots #'extra-offset = #'(0 . -1)
-	\afterGrace g,8. ]   \glissando 	
+	\afterGrace g,8. ] \glissando 
 		{\glissSkipOff 
 			\transpose d, a, 
 				{<\single\once\override Accidental.transparent = ##t d, \single\hideNote as, \single\hideNote fs \single\hideNote d'>8}}
- 
-	r8. 
- %%%%%%%% ============= measure 20 ============= %%%%%%%% 
-  \compoundMeter #'((4 8 ) (3 16))
-  r4 ^\markup {"cello should have some kind of pizz material here? would make the transistion more smooth..."} r4
-  r8. 
- %%%%%%%% ============= measure 21 ============= %%%%%%%% 
-  \time 4/8
-  r4 r4
+   \stemNeutral 
 
- %%%%%%%% ============= measure 22 ============= %%%%%%%% 
-  \time 4/8
-  r4 r4
+	r8.
+ %%%%%%%% ============= measure 20 ============= %%%%%%%% 
+  << 
+  {
+        \stemDown
+        \compoundMeter #'((4 8) (3 16))
+        \switch-staff \pizz_staff
+        \body-clef #'full
+        \temporary\override NoteHead.stencil = #scratch-tone
+        \temporary\override Glissando.style = #'dashed-line
+        \temporary\override Glissando.bound-details.right.padding = #0.35
+        \temporary\override Glissando.thickness = #2
+        \set Staff.forceClef = ##t
+        \slow-zigzag
+        \ppos #0.8 c'2 \glissando \ppos #0.5 c'8. \glissando
+
+        \time 4/8
+        \fast-zigzag
+        \ppos #0.8 c'2 \glissando
+
+        \time 4/8
+        \med-zigzag
+        \glissSkipOff \afterGrace \ppos #0.5 c'2 \glissando  {\ppos #0.8 c'8}
+        \stemNeutral
+  } \\
+  \new StringStaff \with {alignAboveContext="cello"} {
+        \compoundMeter #'((4 8 ) (3 16))
+        \circles
+        <e' g'>2 \glissando <e' g'>8. \glissando 
+        
+        \time 4/8
+        <g' b'>4.. \glissando <g' b'>16 \glissando
+
+        \time 4/8
+        \afterGrace <e' g'>2 \glissando {<e' g'>8}
+  }
+
+  >> 
+
 
  %%%%%%%% ============= measure 23 ============= %%%%%%%% 
   \time 7/16
@@ -235,10 +264,16 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   \time 3/8
   r4.
 
-
+    \revert NoteHead.stencil 
+    \revert Glissando.style 
+    \revert Glissando.bound-details.right.padding 
+    \revert Glissando.thickness
+    \switch-staff \normal_staff
+    \clef bass
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
   \time 6/8
-   	r8 \tuplet 6/5 { \niente ces,8 [ \< ~ ^\up_bow_light <ces, aqf,>8 ~ 
+   	r8 \set Staff.forceClef = ##t
+    \tuplet 6/5 { \niente ces,8 [ \< ~ ^\up_bow_light <ces, aqf,>8 ~ 
   	<aqf, e>8 ~ <e \single\diamonds gs>8  ~ <e c'>8 ~ ^\down_bow <c' \single\diamonds f'>8 ] ^\up_bow }
 
  %%%%%%%% ============= measure 34 ============= %%%%%%%% 
