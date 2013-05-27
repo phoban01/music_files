@@ -280,7 +280,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   \time 2/8
   \tuplet 18/16 {
       \draw_line_arrow \down_bow \down_bow_very_heavy
-  		e'64[ \startTextSpan aqf, \diamonds ces, \fposs \circles aqf, eqs \diamonds c'32 \glissando a'32 \glissando \circles b64
+  		e64[ \startTextSpan aqf, \diamonds ces, \fposs \circles aqf, eqs \diamonds c'32 \glissando a'32 \glissando \circles b64
   		\diamonds e \stopTextSpan aqf, \circles ces, a, e c' \diamonds e c ]
   	}
 

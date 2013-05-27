@@ -243,12 +243,24 @@ cello_pizz_right = {
 
  %%%%%%%% ============= measure 79 ============= %%%%%%%% 
   \time 6/8
-  r4. r4.
+  \switch-staff \string-staff
+  \set Staff.forceClef = ##t
+  r8 \override Voice.NoteHead.stencil = #circle-head 
+  <c' e'>4 \mp ^\angle_bow ^\down_bow \glissando <c' e'>8 \glissando <c' e' g'>4 \glissando 
+
 
  %%%%%%%% ============= measure 80 ============= %%%%%%%% 
   \time 3/8
-  r8 [ r8
-  r16 
+  \once \override Voice.Beam #'positions = #'(-5 . -5)
+  \stemDown
+  <e' g'>8 [ \glissando
+  \afterGrace <g' b'>16 \glissando {<g' b'>8} r16 ]
+  \switch-staff \pizz_staff
+  \stemUp
+  \revert Staff.NoteHead.Y-offset
+  \override Voice.NoteHead #'stencil = #fingertip-pizz
+  \set Staff.forceClef = ##t
+  r16 [
   \pizz_head "IV" \ppos #0.65 c32 \mf
   \pizz_head "III" \ppos #0.75 c32 ] \p
  %%%%%%%% ============= measure 81 ============= %%%%%%%% 
@@ -596,13 +608,13 @@ cello_pizz_left = {
 
  %%%%%%%% ============= measure 79 ============= %%%%%%%% 
   \time 6/8
-  r4. r4. _\markup {angled bowing}
+  s4. s4.
 
  %%%%%%%% ============= measure 80 ============= %%%%%%%% 
   \time 3/8
-  r8 [
-  r8
-  r16
+  s8
+  s8 
+  r16 [ 
   \ppos #0.45 c16 ] \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.8) (#f . 0.0) ("dot" . 0.4) ("mute" . 0.2))
