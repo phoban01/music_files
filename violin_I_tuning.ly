@@ -504,6 +504,7 @@ violin_I_tuning = {
 
  %%%%%%%% ============= measure 43 ============= %%%%%%%% 
   \time 6/4
+  \slurDown
   \tuplet 5/4 {
     e'16 [ \circles aqs' a' c'' aqf' ~ ] 
   }

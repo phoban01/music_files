@@ -888,10 +888,10 @@ r8 r8
 
 \time 3/8
 
-\switch-staff \single_line_staff
+\switch-staff \string-staff
 \niente
 \stemUp \circles 
-c'8 \< ~ ^\down_bow ^\angle_bow c'4 \mp ~
+<e' g' b'>8 \< \glissando ^\down_bow ^\angle_bow <e' g' b'>4 \mp \glissando
 
 }
 

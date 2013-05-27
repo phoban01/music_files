@@ -3,7 +3,8 @@ cello_tuning = {
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
   \time 6/4
   \circles
-  c'2 ~ c'2 ~ \niente \afterGrace c'2 \> (s8\!)
+  \switch-staff \string-staff  
+  <c' e' g'>2 \glissando <c' e' g'>2 \glissando \niente \afterGrace <e' g' b'>2 \> \glissando (<e' g' b'>8\!)
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   R1.
@@ -11,13 +12,13 @@ cello_tuning = {
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
   <<
   	{s2 s2 \niente s4 \< s4 \mp} \\
-  	{\stemUp \circles r2 r2 c'2 ^\down_bow ^\angle_bow ~}
+  	{\stemUp \circles r2 r2 <e' g' b'>2 ^\down_bow ^\angle_bow \glissando }
   >>
 
  %%%%%%%% ============= measure 4 ============= %%%%%%%% 
   <<
   	{s2 s4 \niente \afterGrace s4 \> {s8 \!}} \\
-  	{\stemUp \circles c'4 ~ c'4 ^\up_bow ~ c'2 r2}
+  	{\stemUp \circles <c' e' g'>4 \glissando <e' g' b'>4 ^\up_bow \glissando <c' e' g'>2 r2}
   >>
 
  %%%%%%%% ============= measure 5 ============= %%%%%%%% 
@@ -26,14 +27,14 @@ cello_tuning = {
  %%%%%%%% ============= measure 6 ============= %%%%%%%% 
   <<
   	{s2 \niente s4 \< s4 \mp s2 } \\ %>
-  	{\stemUp \circles r2 c'2 ^\up_bow ~ c'2 ~}
+  	{\stemUp \circles r2 <e' g' b'>2 ^\up_bow \glissando <c' e' g'>2 \glissando}
   >>
 
  %%%%%%%% ============= measure 7 ============= %%%%%%%% 
   \time 6/4
   <<
   	{s4 \niente \afterGrace s4 \> {s8 \!} s1} \\
-  	{\circles \stemUp c'2 r2 r2}
+  	{\circles \stemUp <e' g' b'>2 r2 r2}
   >>
 
  %%%%%%%% ============= measure 8 ============= %%%%%%%% 
@@ -42,19 +43,19 @@ cello_tuning = {
 
  %%%%%%%% ============= measure 9 ============= %%%%%%%% 
   \time 6/4
-  r8 \circles c'8 ^\down_bow \mp ~ c'4 ~ c'2 ~ c'4 r4
+  r8 \circles <c' e' g'>8 ^\down_bow \mp \glissando <e' g' b'>4 \glissando <e' g' b'>2 \glissando <c' e' g'>4 r4
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
   \time 6/4
-  r2 r4 c'4 ^\up_bow ~ c'2 ^\down_bow 
+  r2 r4 <c' e' g'>4 ^\up_bow \glissando <e' g' b'>2 ^\down_bow 
 
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
   \time 6/4
-  r2. c'4 \mp ^\down_bow ~ c'2 
+  r2. <c' e' g'>4 \mp ^\down_bow \glissando <e' g' b'>2 
 
  %%%%%%%% ============= measure 12 ============= %%%%%%%% 
   \time 6/4
-  r2. c'4 ^\up_bow \mp ~ c'4 ~ c'8 r8
+  r2. <c' e' g'>4 ^\up_bow \mp \glissando <c' e' g'>4 \glissando <e' g' b'>8 r8
 
  %%%%%%%% ============= measure 13 ============= %%%%%%%% 
   \time 6/4
@@ -62,25 +63,24 @@ cello_tuning = {
 
  %%%%%%%% ============= measure 14 ============= %%%%%%%% 
   \time 6/4
-  c'2 \mp ^\down_bow r2 r8 c'8 \mp ^\down_bow ~ c'4
-
+  <c' e' g'>2 \mp ^\down_bow r2 r8 <e' g' b'>8 \mp ^\down_bow \glissando <e' g' b'>4
 
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
   \time 6/4
   R1.
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
   \time 5/4
-  r4 r8 c'8 ^\up_bow \mp ~ c'4 ~ c'2
+  r4 r8 <e' g' b'>8 ^\up_bow \mp \glissando <e' g' b'>4 \glissando <c' e' g'>2
 
  %%%%%%%% ============= measure 17 ============= %%%%%%%% 
   \time 6/4
   \draw_bracket \down_bow
-  c'2 \mp \startTextSpan ~ c'2 ~ \afterGrace c'2 {s8 \stopTextSpan}
+  <e' g' b'>2 \mp \startTextSpan \glissando <c' e' g'>2 \glissando \afterGrace <e' g' b'>2 {s8 \stopTextSpan}
 
  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 6/4
   \draw_bracket \up_bow
-  c'2 \startTextSpan ~ c'2 ~ \afterGrace c'2  {s8 \stopTextSpan}
+  <e' g' b'>2. \startTextSpan \glissando \afterGrace <c' e' g'>2. \glissando {<c' e' g'>8 \stopTextSpan}
 
  %%%%%%%% ============= measure 19 ============= %%%%%%%% 
   \time 5/4
@@ -90,11 +90,11 @@ cello_tuning = {
       \tieDown
       r8
       \draw_tuning_arrow \tuning_peg_third \cello_third
-      c'8 ~ \startTextSpan 
-          ^\up_bow_light ^\altosulpont ^\markup \string-numbers #'( "II III" 0 0)
-      c'4 ~ ^\markup \string-numbers #'( "III" 0 0)
-      c'8 c'8 ^\down_bow ~ c'4 
-      c'8. ~ ^\markup \string-numbers #'( "II III" 0 0) c'16 ~ \stopTextSpan
+      <e' g'>8 \glissando \startTextSpan 
+          ^\up_bow_light ^\altosulpont 
+      e'4 \glissando
+      e'8 e'8 ^\down_bow \glissando e'4 
+      <e' g'>8. \glissando <e' g'>16 \glissando \stopTextSpan
     } \\
     {
       s2
@@ -106,7 +106,8 @@ cello_tuning = {
       \tuplet 3/2 {
         \draw_line_arrow \up_bow_light \up_bow_heavy
         r8 \startTextSpan 
-        \draw_line_arrow \markup {" "} \up_bow_light
+        \draw_line_arrow " " \up_bow_light
+        \span-shift
         r8 \stopTextSpan \startTextSpan r8 \stopTextSpan
       }
       \unHideNotes
@@ -123,17 +124,16 @@ cello_tuning = {
     { 
       \circles
       \tieDown      
-      c'4 ^\down_bow ^\markup \string-numbers #'( "III" 0 0) ~ 
-      c'16 ~ c'16 c'8 ~  ^\up_bow ^\angle_bow
-      c'4 ^\markup \string-numbers #'( "II III" 0 0)
-      c'4 ^\down_bow c'4 ~ ^\up_bow
+      e'4 ^\down_bow \glissando
+      e'16 \glissando <e' g'>16 e'8 \glissando  ^\up_bow ^\angle_bow
+      <e' g'>4 
+      <e' g'>4 ^\down_bow <g' b'>4 ^\up_bow \glissando
     } \\
     {
       \draw_line_arrow \nat \altosulpont
       s4 \startTextSpan s16 s16 \stopTextSpan s8
       s4
-      \draw_line_arrow \markup \string-numbers #'( "II III" 0 0) \markup \string-numbers #'( "I II" 0 0)
-      s4 \startTextSpan s4 \stopTextSpan
+      s2
     }
   >>
 
@@ -143,7 +143,7 @@ cello_tuning = {
     {
       \circles
       \tieDown      
-      c'2. c'2 ^\down_bow ^\markup \string-numbers #'( "III IV" 0 0)
+      <g' b'>2. <c' e'>2 ^\down_bow \glissando
     } \\
     {
       s2 s2 
@@ -158,10 +158,10 @@ cello_tuning = {
     {
       \circles
       \tieDown      
-      c'2 ^\up_bow ^\markup \string-numbers #'( "IV" 0 0) 
-      c'4 ~ ^\down_bow 
+      c'2 ^\up_bow 
+      c'4 \glissando ^\down_bow 
       \draw_line_arrow \down_bow \down_bow_heavy
-      c'8 \startTextSpan c'8 ~ \stopTextSpan
+      c'8 \startTextSpan c'8 \glissando \stopTextSpan
       \draw_line_arrow \up_bow_heavy \up_bow
       c'16 \startTextSpan c'8. \stopTextSpan
     } \\
@@ -184,7 +184,7 @@ cello_tuning = {
     {
       \circles
       \tieDown      
-      c'4 c'2. \pp ^\down_bow c'4 ~ ^\up_bow ^\angle_bow ^\markup \string-numbers #'( "I II" 0 0)
+      c'4 c'2. \pp ^\down_bow <g' b'>4 ^\up_bow ^\angle_bow \glissando
     } \\
     {
       s4 s4 \stopTextSpan s2.
@@ -200,7 +200,7 @@ cello_tuning = {
     {
       \circles
       \tieDown
-      c'4 ~ c'4 ~ c'4 c'2 ~ ^\down_bow ^\markup \string-numbers #'( "II III" 0 0)
+      <g' b'>4 \glissando <g' b'>4 \glissando <g' b'>4 <e' g'>2 \glissando ^\down_bow
     } \\
     {
       \draw_line_arrow \up_bow \up_bow_heavy
@@ -217,10 +217,10 @@ cello_tuning = {
     {
       \circles
       \tieDown
-      c'4 c'2 ~ ^\up_bow ^\altosulpont ^\markup \string-numbers #'( "I" 0 0)
-      c'4 ^\nat 
+      <e' g'>4 b'2 \glissando ^\up_bow ^\altosulpont
+      b'4 ^\nat 
       \draw_line_arrow \down_bow \down_bow_heavy
-      c'4 ~ \startTextSpan 
+      b'4 \glissando \startTextSpan 
     } \\
     {
       s8
@@ -236,8 +236,8 @@ cello_tuning = {
       \circles
       \tieDown      
       \draw_line_arrow " " \down_bow
-      c'16 ~ \stopTextSpan c'8. ~ \startTextSpan c'2 \stopTextSpan 
-      c'2 ^\angle_bow ^\markup \string-numbers #'( "I II" 0 0)
+      <g' b'>16 \glissando \stopTextSpan <g' b'>8. \glissando \startTextSpan b'2 \stopTextSpan \glissando
+      <g' b'>2 ^\angle_bow
     } \\
     {
       s4 s2 \stopTextSpan s2
@@ -253,7 +253,6 @@ cello_tuning = {
   \time 5/4
   <<
     {
-
     \switch-staff \normal_staff
     \clef bass
     \diamonds
@@ -281,11 +280,10 @@ cello_tuning = {
       \circles
       \tieDown
       \stemUp
-      \switch-staff \single_line_staff
+      \switch-staff \string-staff
       r8
-      c'2. ^\angle_bow ^\markup \string-numbers #'( "II III" 0 0) 
-      \draw_line_arrow \markup \string-numbers #'( "II III" 0 0) \markup \string-numbers #'( "I II" 0 0)
-      c'4 ^\down_bow \startTextSpan
+      <e' g'>2. ^\angle_bow  
+      <e' g'>4 ^\down_bow \glissando
 
     } 
     \\
@@ -303,7 +301,7 @@ cello_tuning = {
   \time 5/4
   <<
     {
-      c'2. \stopTextSpan
+      <g' b'>2. 
       \switch-staff \normal_staff
       \stemDown
       \clef bass
@@ -335,9 +333,9 @@ cello_tuning = {
       c32 [ ^\down_bow b, ^\up_bow a, g, ]
       \clef tenor
       ef'32 ^\down_bow ^\up_bow [ c' g bf c' cs' d' cs' )]  r8
-      \switch-staff \single_line_staff
+      \switch-staff \string-staff
       \stemUp
-      c'2. ~ ^\down_bow ^\angle_bow ^\markup \string-numbers #'( "I II" 0 0)
+      <g' b'>2. \glissando ^\down_bow ^\angle_bow
     } \\
     {
       s2 s2.
@@ -352,10 +350,10 @@ cello_tuning = {
       \circles
       \tieDown
       \draw_line_arrow " " \down_bow_heavy
-      c'4 ~ \startTextSpan 
+      <g' b'>4 \glissando \startTextSpan 
       \draw_line_arrow " " \down_bow_light
-      c'4 \stopTextSpan \startTextSpan
-      c'16 \stopTextSpan c'8. ^\up_bow ~ c'2 ~
+      <e g' b'>4 \stopTextSpan \startTextSpan
+      <g' b'>16 \stopTextSpan <e' g' b'>8. ^\up_bow \glissando <c' e' g'>2 \glissando
     }\\
     {s2 s2.}
   >>
@@ -365,12 +363,12 @@ cello_tuning = {
     {   
       \circles 
       \tieDown
-      c'2 
-      c'8 ^\down_bow ^\altosultasto ^\horz_bow c'8 ^\up_bow
+      <c' e' g'>2 
+      <e' g'>8 ^\down_bow ^\altosultasto ^\horz_bow <g' b'>8 ^\up_bow
       \draw_line_arrow \down_bow \down_bow_heavy
-      c'4 ~ \startTextSpan 
+      <g' b'>4 \glissando \startTextSpan 
       \draw_line_arrow " " \down_bow
-      c'4 ~ \stopTextSpan \startTextSpan
+      <g' b'>4 \glissando \stopTextSpan \startTextSpan
     } \\
     {
       s4. 
@@ -391,7 +389,7 @@ cello_tuning = {
   \time 5/4
   <<
     {
-      c'8 \stopTextSpan c'4. ^\up_bow 
+      <g' b'>8 \stopTextSpan <e' g' b'>4. ^\up_bow 
       \switch-staff \normal_staff
       \clef bass
       \set glissandoMap = #'((0 . 0) (1 . 1))

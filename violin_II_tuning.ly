@@ -450,7 +450,7 @@ violin_II_tuning = {
 
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 5/4
-  r8.. [ <cqs''' fqs'''>32 ]
+  r8.. [ <cqs''' \single\diamonds fqs'''>32 ]
   r8 [ csef'8 ] ~ csef'2 ~ csef'8.. [ r32 ] _\bow-mute
 
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
@@ -478,6 +478,7 @@ violin_II_tuning = {
 
  %%%%%%%% ============= measure 44 ============= %%%%%%%% 
   \time 6/4
+  \slurDown
   c''16 [ aqf' \single\diamonds e' gs' )]
 
   \tuplet 3/2 {
