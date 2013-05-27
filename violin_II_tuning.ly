@@ -504,7 +504,9 @@ violin_II_tuning = {
  %%%%%%%% ============= measure 46 ============= %%%%%%%% 
   \time 6/4
   c'2. ~ 
-  c'8 
+  \tuplet 6/4 {
+    c'32 \pp \< ( b32 cqs'32 dqf'32 \mf \> c'32 cqs'32 cs'32 \p )
+  }
   \draw_line_arrow \down_bow_light \down_bow_very_heavy
 
   <c' \single\diamonds f'>4. ~ ^\altosulpont \< \startTextSpan

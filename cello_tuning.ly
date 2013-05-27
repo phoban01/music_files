@@ -535,10 +535,23 @@ cello_tuning = {
       }
       aqf8 \diamonds a8 ) \glissando \glissSkipOn
   }
-  b4 b4 c'8 [ \glissSkipOff cqs'8 ] \glissando 
-  b8 ~ 
+  b4 \glissSkipOff 
+  \draw_line_arrow \down_bow \down_bow_very_heavy
+  #(define afterGraceFraction (cons 3 10))
+  \tuplet 3/2 {
+    b16 \startTextSpan \glissando \afterGrace des8 \glissando {fs8}
+  }
+  \tuplet 6/4 {
+    e32 (f fqs f eqs f) 
+  }
+  \draw_line_arrow " " \down_bow_light
+  \span-shift
+  \trill_harmonic
+  \pitchedTrill b8 [ \stopTextSpan \startTextSpan \startTrillSpan \glissando d'8 cqs'8 ] \glissando \stopTrillSpan \stopTextSpan
+  \draw_line_arrow \down_bow_light \down_bow
+  b8 ~ \startTextSpan
   \wavy_vibrato #1
-  \afterGrace b8 \< \glissando {\hideNotes b8 \f \unHideNotes} r8
+  \afterGrace b8 \stopTextSpan \< \glissando {\hideNotes b8 \f \unHideNotes} r8
  
   
 

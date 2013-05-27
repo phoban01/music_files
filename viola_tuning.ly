@@ -441,9 +441,11 @@ viola_tuning = {
   \tuplet 5/4 {
     \single\diamonds a'8 [ aqf' \diamonds aqs'  gs'8 c'']
   }
+
   \single\circles bqs'16 ) [ b'16 ~] 
+  b'8 [ ~ 
   \wavy_vibrato #1.35
-  \afterGrace b'8. \glissando {s8} \stopStaff r16 _\bow-mute
+  \afterGrace b'16 \< \glissando {\hideNotes b'8 \mf \unHideNotes} \stopStaff r16 ] _\bow-mute %>
 
   %%%%%%VIOLA BICHON FRISE STARTS HERE
 
