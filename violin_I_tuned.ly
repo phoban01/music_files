@@ -4,7 +4,7 @@ violin_I_tuned = {
   \time 3/4
   <<
   	{
-  	  \switch-staff \normal_staff
+  	 \switch-staff \normal_staff
   	  \tieNeutral
 	  \circles
 	  \stemUp
@@ -85,7 +85,9 @@ violin_I_tuned = {
 	  b16 ] ^\fingernail ^\altosulpont
 	  \tuplet 5/4 {
 	  		\circles
-	  		r8 \wavy_line #0.2 \afterGrace a''8 \glissando {a''8} r16
+	  		r8 
+% 	  		\wavy_line #0.2 
+	  		\afterGrace a''8 \glissando {a''8} r16
 	  }
 	  %%%%%%%%%% measure 10 %%%%%%%%%%
 	  \time 5/4
@@ -230,7 +232,9 @@ violin_I_tuned = {
 	  \ottava #0 b''4 b''4
 	 %%%%%%%%%% measure 37 %%%%%%%%%% 
 	 \time 5/4
-	 b''4 b''4 b''4 \glissSkipOff a''8 ~  \wavy_vibrato #1.5 \afterGrace a''8 \glissando {\hideNotes a''8 \unHideNotes } r4
+	 b''4 b''4 b''4 \glissSkipOff a''8 ~  
+% 	 \wavy_vibrato #1.5 
+	 \afterGrace a''8 \glissando {\hideNotes a''8 \unHideNotes } r4
 	 %%%%%%%%%% measure 38 %%%%%%%%%%
 	 \time 2/8
 	 \afterGrace e'''4 \glissando {f''8}
@@ -527,7 +531,7 @@ violin_I_tuned = {
  	fs'''4 ~
  	%%%%%%%%%% measure 92 %%%%%%%%%%
  	\time 2/4
- 	\wavy_vibrato #1.5
+%  	\wavy_vibrato #1.5
  	\afterGrace fs'''8 \glissando {\hideNotes fs'''8 \unHideNotes}
  	\afterGrace <fs''' b'''>16 \startTrillSpan \glissando {<d'' a''>8 \stopTrillSpan}
  	r16 r16 <bf fs' d'' eqs''>8.
@@ -619,7 +623,8 @@ violin_I_tuned = {
  	<bqf'' \single\diamonds eqf'''>8. <bqf'' \single\diamonds eqf'''>16 \glissando
  	<b'' \single\diamonds e'''>4 ~
  	 <b'' \single\diamonds e'''>16 ~ 
- 	\wavy_vibrato #1 \afterGrace <b'' \single\diamonds e'''>8. \glissando {\hideNotes <b'' \single\diamonds e'''>8 \unHideNotes}
+%  	\wavy_vibrato #1 
+ 	\afterGrace <b'' \single\diamonds e'''>8. \glissando {\hideNotes <b'' \single\diamonds e'''>8 \unHideNotes}
  	%%%%%%%%%% measure 109 %%%%%%%%%%
  	\time 5/8
  	r16 [ gs''8. ] \glissando \glissSkipOn \afterGrace g''8 \glissando {\glissSkipOff aqf''8} \stopStaff r4
@@ -919,7 +924,8 @@ violin_I_tuned = {
 	r8 aqf'8 \glissando \tuplet 3/2 {
 		\glissSkipOn a'8 \glissSkipOff g'4
 	}
-	\wavy_vibrato #1 \afterGrace g'8. [ \glissando {\hideNotes g'8 \unHideNotes} r16 ]
+% 	\wavy_vibrato #1 
+	\afterGrace g'8. [ \glissando {\hideNotes g'8 \unHideNotes} r16 ]
 	%%%%%%%%%% measure 166 %%%%%%%%%%
 	\time 5/8
 	\diamonds e''8 r8 
@@ -963,7 +969,9 @@ violin_I_tuned = {
 	\switch-staff \normal_staff
 	\set Staff.forceClef = ##t
 	\ottava #1
-	\circles \wavy_vibrato #1 \afterGrace  b''''16.  \glissando {\ottava #0 \hideNotes b''8 \unHideNotes} r32
+	\circles 
+% 	\wavy_vibrato #1 
+	\afterGrace  b''''16.  \glissando {\ottava #0 \hideNotes b''8 \unHideNotes} r32
 	%%%%%%%%%% measure 174 %%%%%%%%%%
 	\time 2/4
 	\switch-staff \body_staff
@@ -982,7 +990,9 @@ violin_I_tuned = {
 	%%%%%%%%%% measure 177 %%%%%%%%%%
 	\time 3/8
 	\circles
-	r4 \set Staff.forceClef = ##t \ottava #2 \wavy_vibrato #1.25 \afterGrace  b''''8  \glissando {\ottava #0 \hideNotes b''8 \unHideNotes} 
+	r4 \set Staff.forceClef = ##t \ottava #2 
+	\wavy_vibrato #1.25 
+	\afterGrace  b''''8  \glissando {\ottava #0 \hideNotes b''8 \unHideNotes} 
 	%%%%%%%%%% measure 178 %%%%%%%%%%
 	\time 4/4
 	r32 [ \ottava #1 b''''8.. ] \glissando \glissSkipOn \ottava #0  b''4 b''4 b''4

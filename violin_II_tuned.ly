@@ -227,7 +227,12 @@ violin_II_tuned = {
 	  	r4 r4 \ottava #2 \diamonds b''''4 \glissando \ottava #0 \glissSkipOn g''4 g''4
 	  	%%%%%%%%%% measure 37 %%%%%%%%%%
 	  	\time 5/4
-	  	g''4 g''4 \glissSkipOff a''4 ~ a''8. \wavy_vibrato #1.5 a''16 \glissando \glissSkipOn 
+	  	g''4 
+	  	g''4 \glissSkipOff 
+	  	a''4 ~
+	  	a''8. 
+% 	  	\wavy_vibrato #1.5 
+	  	a''16 \glissando \glissSkipOn 
 	  	\afterGrace a''16 [ {\glissSkipOff \hideNotes a''8 \unHideNotes} r8. ]
 	  	%%%%%%%%%% measure 38 %%%%%%%%%%
 	  	\time 2/8
@@ -318,9 +323,8 @@ violin_II_tuned = {
 	  	\diamonds <gqs g' cs'' g''>4 \glissando 
 	  	\transpose gqs aqf {<gqs \single\hideNote g' \single\hideNote  cs'' \single\hideNote  g''> ~} 
 	  	\circles
-	  	\afterGrace 
-	  		\transpose gqs aqf {<gqs \single\hideNote g' \single\hideNote cs'' \single\hideNote g''>2 \glissando}
-	  		{<gqs g' cs'' g''>8}
+	  		\transpose gqs aqf {<gqs \single\hideNote g' \single\hideNote cs'' \single\hideNote g''>4 \glissando \glissSkipOn}
+	  		\afterGrace  g''4 {\glissSkipOff <gqs g' cs'' g''>8}
 	  	%%%%%%%%%% measure 55 %%%%%%%%%%
 	  	\time 3/4
 	  	\afterGrace <d' gqs'>4 \glissando {<ds' aqf'>8}
@@ -535,7 +539,8 @@ violin_II_tuned = {
 	 	dqs'4 ~
 	 	%%%%%%%%%% measure 91 %%%%%%%%%%
 	 	\time 2/4
-	 	\wavy_vibrato #1.25 \afterGrace dqs'8 [ \glissando {\hideNotes dqs'8 \unHideNotes}
+% 	 	\wavy_vibrato #1.25 
+	 	\afterGrace dqs'8 [ \glissando {\hideNotes dqs'8 \unHideNotes}
 	 	\afterGrace <d' aqs'>16 \glissando {<f'' cs'''>8} r16 ]
 	 	\circles
 	 	\set Staff.tieWaitForNote = ##t
@@ -581,7 +586,7 @@ violin_II_tuned = {
 	 	\time 4/4
 	 	\glissSkipOn d'8 [ d'8 ] \glissSkipOff e'4 ~
 	 	\circles
-	 	\wavy_line #1
+% 	 	\wavy_line #1
 	 	e'8 [ \glissando \glissSkipOn e'8 ] 
 	 	e'8 [ \glissSkipOff \diamonds  d'8] \glissando
 	 	%%%%%%%%%% measure 98 %%%%%%%%%%
@@ -622,7 +627,8 @@ violin_II_tuned = {
 	 	%%%%%%%%%% measure 104 %%%%%%%%%%
 	 	\time 5/4
 	 	r4 
-	 	\wavy_line #1.25 fs''4 \glissando 
+% 	 	\wavy_line #1.25
+	 	 fs''4 \glissando 
 	 	\glissSkipOn fs''8 \glissSkipOff gqf''8 \glissando 
 	 	fs''4 ~ \glissSkipOn fs''8 ~ \glissSkipOff \diamonds  fs''8 \glissando \glissSkipOn
 	 	%%%%%%%%%% measure 105 %%%%%%%%%%
@@ -903,8 +909,11 @@ violin_II_tuned = {
 	 			as'8 aqf'8 bqf8 \glissando \glissSkipOn
 	 	}
 	 	d'8 \glissSkipOff c'4
+	 	%%%%%%%%%% measure number %%%%%%%%%%
+	 	\time 5/16
+	 	c8 \glissando \afterGrace cs'8. \glissando {b8}
 	 	%%%%%%%%%% measure 154 %%%%%%%%%%
-	 	\time 4/16
+	 	\time 2/8
 	 	\tuplet 6/4 {
 	 		r16 [ g''8 \glissando \glissSkipOn g''8 \glissSkipOff bef''16 ]
 	 	}
@@ -992,7 +1001,9 @@ violin_II_tuned = {
 	 	\time 2/4
 	 	\switch-staff \normal_staff
 	 	\circles
-	 	r4 r8. [ \ottava #2 \wavy_vibrato #1.25 \afterGrace b''''16 ] \glissando {\ottava #0 \hideNotes b'''8 \unHideNotes}
+	 	r4 r8. [ \ottava #2 
+% 	 	\wavy_vibrato #1.25 
+	 	\afterGrace b''''16 ] \glissando {\ottava #0 \hideNotes b'''8 \unHideNotes}
 	 	%%%%%%%%%% measure 169 %%%%%%%%%%
 	 	\time 4/4
 	 	r4 
@@ -1023,7 +1034,9 @@ violin_II_tuned = {
 	 	\ottava #2 b''''8. ] \glissando \glissSkipOn \ottava #0 b'4 b'4 b'4
 	 	%%%%%%%%%% measure 173 %%%%%%%%%%
 	 	\time 4/4
-	 	b''32 b''8.. b''4 \glissSkipOff \wavy_vibrato #1.25 \afterGrace e'''8 [] \glissando {\hideNotes e'''8 \unHideNotes} r8 ]
+	 	b''32 b''8.. b''4 \glissSkipOff 
+% 	 	\wavy_vibrato #1.25 
+	 	\afterGrace e'''8 [] \glissando {\hideNotes e'''8 \unHideNotes} r8 ]
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
@@ -1059,7 +1072,9 @@ violin_II_tuned = {
 	 	<d' ef'>4 ~ <d' ef'>4 ~ <d' ef'>4 ~ <d' ef'>4 ~
 	 	%%%%%%%%%% measure 180 %%%%%%%%%%
 	 	\time 5/8
-	 	<d' ef'>8. [ r16 ] r16 [ \ottava #2 \wavy_vibrato #1.25 \afterGrace b''''8. ] \glissando {\ottava #0 \hideNotes b'''8 \unHideNotes}
+	 	<d' ef'>8. [ r16 ] r16 [ \ottava #2 
+% 	 	\wavy_vibrato #1.25 
+	 	\afterGrace b''''8. ] \glissando {\ottava #0 \hideNotes b'''8 \unHideNotes}
 	 	r8
 	 	%%%%%%%%%% measure 181 %%%%%%%%%%
 	 	\time 2/1
@@ -1079,6 +1094,617 @@ violin_II_tuned = {
  	}\\
  	{
  		\new BowPositionStaff \with {alignAboveContext="violin_2"} {
+ 				%%%%%%%%%% measure 1 %%%%%%%%%%
+ 				\time 3/4
+ 				\stopStaff
+ 				s2.
+ 				%%%%%%%%%% measure 2 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 3 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 4 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 5 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 6 %%%%%%%%%%
+ 				\time 4/4
+ 				\startStaff
+ 				\tuplet 3/2 {
+ 					\hideNotes r8 \unHideNotes d'8 \glissando a'8 \glissando
+ 				}
+ 				d'4 \glissando 
+ 				\tuplet 3/2 {b'16 \glissando e'16 \glissando b'16 \glissando} e'8 \glissando 
+ 				bs'4 \glissando
+ 				%%%%%%%%%% measure 7 %%%%%%%%%%
+ 				\time 2/16
+ 				\tuplet 3/2 {
+ 					\glissSkipOn a'16 [ \glissSkipOff e'16 \glissando b'16] \glissando
+ 				}
+ 				%%%%%%%%%% measure 8 %%%%%%%%%%
+ 				\time 3/4
+ 				\tuplet 3/2 {
+ 					d'8 \glissando \afterGrace b'4 \glissando {e'8}
+ 				}\stopStaff
+ 				s2
+ 				%%%%%%%%%% measure 9 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 10 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 11 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 12 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s8 \startStaff d'16 \glissando f'16 \glissando d'8 [ \glissando 
+ 				a'8  \glissando \afterGrace e'8 ] \glissando {a'8} s8 \stopStaff
+ 				%%%%%%%%%% measure 13 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 14 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 15 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 16 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 17 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 18 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 19 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 20 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 21 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 22 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 23 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 24 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 25 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 26 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 27 %%%%%%%%%%
+ 				\time 2/4
+ 				s8 \startStaff bs'8 \glissando \glissSkipOn a'8 a'8
+ 				%%%%%%%%%% measure 28 %%%%%%%%%%
+ 				\time 2/4
+ 				a'8 a'8 \glissSkipOff d'8 s8
+ 				%%%%%%%%%% measure 29 %%%%%%%%%% 
+ 				\time 3/8
+ 				s8 s8 bs'8 \glissando
+ 				%%%%%%%%%% measure 30 %%%%%%%%%%
+ 				\time 4/4
+ 				\glissSkipOn a'4 \glissSkipOff 
+ 				\tuplet 3/2 {f'8 \glissando a'8 \glissando \afterGrace e'8 \glissando {b'8}}
+ 				f'4 \glissando \glissSkipOn a'4
+ 				%%%%%%%%%% measure 31 %%%%%%%%%%
+ 				\time 4/4
+ 				a'4 a'4 \glissSkipOff d'4 \glissando d'8. \glissando \afterGrace b'16 \glissando {f'8}
+ 				%%%%%%%%%% measure 32 %%%%%%%%%%
+ 				\time 5/4
+ 				d'4 \glissando \glissSkipOn a'4 a'4 \glissSkipOff bs'4 \glissando \glissSkipOn a'4
+ 				%%%%%%%%%% measure 33 %%%%%%%%%%
+ 				\time 4/4
+ 				\glissSkipOff f'4 \glissando f'4 \glissando \glissSkipOn a'4 a'8 [ \glissSkipOff d'8 ] \glissando
+ 				%%%%%%%%%% measure 34 %%%%%%%%%%
+ 				\time 6/4
+ 				d'4 \glissando e'8 [ \glissando e'8 ] \glissando
+ 				\tuplet 3/2 {
+ 					\glissSkipOn a'8 \glissSkipOff f'8 e'8 \glissando \glissSkipOn
+ 				} a'4 \glissSkipOff bs'4 \glissando \glissSkipOn a'4
+ 				%%%%%%%%%% measure 35 %%%%%%%%%%
+ 				\time 3/8
+ 				\glissSkipOff e'16 s16 \stopStaff s4
+ 				%%%%%%%%%% measure 36 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 37 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 38 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 39 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 40 %%%%%%%%%%
+ 				\time 8/4
+ 				s1 s2 s8 \startStaff d'8 \glissando \glissSkipOn a'4
+ 				%%%%%%%%%% measure 41 %%%%%%%%%%
+ 				\time 6/4
+ 				a'4 \glissSkipOff bs'8 d'8 \glissando \glissSkipOn a'4 a'4 \glissSkipOff bs'4
+ 				d'4 \glissando
+ 				%%%%%%%%%% measure 42 %%%%%%%%%%
+ 				\time 7/4
+ 				\glissSkipOn a'4 a'4 a'4 \glissSkipOff 
+ 				\tuplet 3/2 {
+ 					bs'8 [ d'8 \glissando \glissSkipOn a'8]
+ 				}
+ 				a'4 a'4 a'8. [ \glissSkipOff bs'16 ]
+ 				%%%%%%%%%% measure 43 %%%%%%%%%%
+ 				\time 2/8
+ 				s16 a'8 \glissando \afterGrace f'16 \glissando {b'8}
+ 				%%%%%%%%%% measure 44 %%%%%%%%%%
+ 				\time 5/4
+ 				e'4 \glissando \glissSkipOn a'4 \glissSkipOff b'4 \glissando f'4 s4 \stopStaff
+ 				%%%%%%%%%% measure 45 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 46 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 47 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 48 %%%%%%%%%%
+ 				\time 3/16
+ 				s8.
+ 				%%%%%%%%%% measure 49 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 50 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 51 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 52 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 53 %%%%%%%%%%
+ 				\time 3/16
+ 				s8.
+ 				%%%%%%%%%% measure 54 %%%%%%%%%%
+ 				\time 5/4
+ 				s4 \startStaff a'8 \glissando d'8 \glissando
+ 				\tuplet 3/2 {
+ 					a'8 \glissando d'8 \glissando a'8 \glissando
+ 				}
+ 				e'8. \glissando b'32 \glissando f'32 \glissando 
+ 				bs'8. \glissando e'16
+ 				%%%%%%%%%% measure 55 %%%%%%%%%%
+ 				\time 3/4
+ 				d'8 \glissando \afterGrace f'8 \glissando {e'8}
+ 				s4 \stopStaff s4
+ 				%%%%%%%%%% measure 56 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 57 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 58 %%%%%%%%%%
+ 				\time 5/16
+ 				s4 s16
+ 				%%%%%%%%%% measure 59 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 60 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 61 %%%%%%%%%%
+ 				\time 3/4
+ 				s2 \startStaff s16 d'16 \glissando f'8 \stopStaff
+ 				%%%%%%%%%% measure 62 %%%%%%%%%%	
+ 				\time 3/16
+ 				s8.
+ 				%%%%%%%%%% measure 63 %%%%%%%%%%
+ 				\time 4/4
+ 				\startStaff
+ 				d'4 \glissando \glissSkipOn a'8 [ \glissSkipOff f'8 ]
+ 				\stopStaff s2
+ 				%%%%%%%%%% measure 64 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 65 %%%%%%%%%%
+ 				\time 5/16
+ 				s4 s16
+ 				%%%%%%%%%% measure 66 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 67 %%%%%%%%%%
+ 				\time 5/16
+ 				s4 s16
+ 				%%%%%%%%%% measure 68 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 69 %%%%%%%%%%
+ 				\time 4/4 
+ 				s1
+ 				%%%%%%%%%% measure 70 %%%%%%%%%%
+ 				\time 5/16
+ 				s4 s16
+ 				%%%%%%%%%% measure 71 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 72 %%%%%%%%%%
+ 				\time 6/4
+ 				s1.
+ 				%%%%%%%%%% measure 73 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 74 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 75 %%%%%%%%%%
+ 				\time 4/8
+ 				s4 e'8 \glissando a'8 \glissando
+ 				%%%%%%%%%% measure 76 %%%%%%%%%%
+ 				\time 3/16
+ 				\glissSkipOn \afterGrace a'16 {\glissSkipOff e'8} s8 \stopStaff
+ 				%%%%%%%%%% measure 77 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 78 %%%%%%%%%%
+ 				\time 4/8
+ 				\startStaff d'8 \glissando \glissSkipOn a'8 \glissSkipOff f'8 \glissando \glissSkipOn 
+ 				\afterGrace d'8 {\glissSkipOff d'8}
+ 				%%%%%%%%%% measure 79 %%%%%%%%%%
+ 				\time 5/4
+ 				\stopStaff s4 s4 \startStaff s8. d'16 \glissando \glissSkipOn 
+ 				\tuplet 3/2 {
+ 					a'4 \glissSkipOff f'4 \hideNotes r4 \unHideNotes \stopStaff
+ 				}
+ 				%%%%%%%%%% measure 80 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 81 %%%%%%%%%%
+ 				\time 5/16
+ 				s4 s16
+ 				%%%%%%%%%% measure 82 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 83 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 84 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 85 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 86 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 87 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 88 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 89 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 90 %%%%%%%%%%
+ 				\time 4/16
+ 				s4
+ 				%%%%%%%%%% measure 91 %%%%%%%%%%
+ 				\time 2/4
+ 				s4 \startStaff b'16 \glissando \afterGrace e'8. \glissando {a'8} \stopStaff
+ 				%%%%%%%%%% measure 92 %%%%%%%%%%
+ 				\time 3/16
+ 				s8.
+ 				%%%%%%%%%% measure 93 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 94 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 95 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 96 %%%%%%%%%%
+ 				\time 3/16
+ 				s8.
+ 				%%%%%%%%%% measure 97 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 98 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 99 %%%%%%%%%%
+ 				\time 5/4
+ 				s4 \startStaff
+ 				\tuplet 3/2 {
+ 					\hideNotes r8 \unHideNotes e'4 \glissando \glissSkipOn
+ 				}
+ 				\tuplet 3/2 {
+ 					a'8 \glissSkipOff f'4
+ 				}
+ 				s16 f'8. \glissando \glissSkipOn \afterGrace a'4 {\glissSkipOff e'8} 
+ 				\stopStaff
+ 				%%%%%%%%%% measure 100 %%%%%%%%%%
+ 				\time 3/16
+ 				s8.
+ 				%%%%%%%%%% measure 101 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 102 %%%%%%%%%%
+ 				\time 4/4
+ 				s4 s8 \startStaff d'8 \glissando \glissSkipOn a'4 \glissSkipOff f'4
+ 				%%%%%%%%%% measure 103 %%%%%%%%%%
+ 				\time 3/4
+ 				s8 f'8 \glissando b'4 s4 \stopStaff
+ 				%%%%%%%%%% measure 104 %%%%%%%%%%
+ 				\time 5/4
+ 				s4 \startStaff e'4 \glissando e'8 [ \glissando \glissSkipOn 
+ 				a'8 ] \glissSkipOff g'4 \glissando \glissSkipOn a'8 [ \glissSkipOff b'8 ]
+ 				%%%%%%%%%% measure 105 %%%%%%%%%%
+ 				\time 3/4
+ 				\stopStaff s2.
+ 				%%%%%%%%%% measure 106 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 107 %%%%%%%%%%
+ 				\time 5/4
+ 				s2. \startStaff 
+ 				\tuplet 3/2 {
+ 					\hideNotes r4 r16 \unHideNotes f'16 \glissando
+ 				}
+ 				d'8. [ \glissando e'16 ] \stopStaff
+ 				%%%%%%%%%% measure 108 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 109 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 110 %%%%%%%%%%
+ 				\time 5/4
+ 				s1 s4
+ 				%%%%%%%%%% measure 111 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 112 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 113 %%%%%%%%%%
+ 				\time 2/16
+ 				s8
+ 				%%%%%%%%%% measure 114 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 115 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 116 %%%%%%%%%%
+ 				\time 5/16
+ 				s4 s16
+ 				%%%%%%%%%% measure 117 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 118 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 119 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 120 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 121 %%%%%%%%%%
+ 				\time 5/4
+ 				s1 s4 
+ 				%%%%%%%%%% measure 122 %%%%%%%%%%
+ 				\time 2/4
+ 				s2 
+ 				%%%%%%%%%% measure 123 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure 124 %%%%%%%%%%
+ 				\time 2/4
+ 				s8 \startStaff d'8 \glissando a'16 \glissando d'16 \glissando a'16 s16 \stopStaff
+ 				%%%%%%%%%% measure 125 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 126 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure 127 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 128 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 129 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 130 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 131 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 132 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 133 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 134 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 135 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 136 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure 137 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure 138 %%%%%%%%%%
+ 				\time 3/4
+ 				\startStaff
+ 				e'4 \glissando \glissSkipOn a'4 \glissSkipOff \afterGrace g'4 \glissando {e'8} \stopStaff
+ 				%%%%%%%%%% measure 139 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 140 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 141 %%%%%%%%%%
+ 				\time 4/4
+ 				s8 \startStaff d'8 \glissando a'4 \glissando d'4 \glissando 
+ 				\tuplet 3/2 {b'8 \glissando e'8 \glissando b'8 \glissando}
+ 				%%%%%%%%%% measure 142 %%%%%%%%%%
+ 				\time 3/4
+ 				\glissSkipOn a'8 [ \glissSkipOff e'8 ] \stopStaff s2
+ 				%%%%%%%%%% measure 143 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 144 %%%%%%%%%%
+ 				\time 3/4
+ 				s4 s8. \startStaff e'16 \glissando 
+ 				\tuplet 3/2 {
+ 					e'8 \glissando a'8 \glissando e'8 \glissando
+ 				}
+ 				%%%%%%%%%% measure 145 %%%%%%%%%%
+ 				\time 2/4
+ 				a'8. \glissando d'32 \glissando \afterGrace a'32 \glissando {d'8} \stopStaff
+ 				s4
+ 				%%%%%%%%%% measure 146 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure 147 %%%%%%%%%%
+ 				\time 2/8
+ 				s4
+ 				%%%%%%%%%% measure 148 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 149 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure 150 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 151 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 152 %%%%%%%%%%
+ 				\time 4/8
+ 				s2
+ 				%%%%%%%%%% measure 153 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure number %%%%%%%%%%
+ 				\time 5/16
+ 				s4 s16
+ 				%%%%%%%%%% measure 155 %%%%%%%%%%
+ 				\time 4/16
+ 				s4
+ 				%%%%%%%%%% measure 156 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 157 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 158 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 159 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 160 %%%%%%%%%%
+ 				\time 4/4
+ 				s1 
+ 				%%%%%%%%%% measure 161 %%%%%%%%%%
+ 				\time 5/4 
+ 				s2 s2.
+ 				%%%%%%%%%% measure 162 %%%%%%%%%%
+ 				\time 3/4
+ 				s8. \startStaff e'16 \glissando b'8. \glissando e'16
+ 				d'4 \glissando
+ 				%%%%%%%%%% measure 163 %%%%%%%%%%
+ 				\time 5/8
+ 				\glissSkipOn a'8 a'8 a'8 a'8 \afterGrace a'8 {\glissSkipOff b'8} \stopStaff
+ 				%%%%%%%%%% measure 164 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 165 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 166 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 167 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 168 %%%%%%%%%%
+ 				\time 6/4
+ 				s1.
+ 				%%%%%%%%%% measure 169 %%%%%%%%%%
+ 				\time 5/4
+ 				s2 s2.
+ 				%%%%%%%%%% measure 170 %%%%%%%%%%
+ 				\time 5/8
+ 				s4 s4.
+ 				%%%%%%%%%% measure 171 %%%%%%%%%%
+ 				\time 2/4
+ 				s2
+ 				%%%%%%%%%% measure 172 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 173 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 174 %%%%%%%%%%
+ 				\time 3/8
+ 				s4.
+ 				%%%%%%%%%% measure 175 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 176 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 177 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 178 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 179 %%%%%%%%%%
+ 				\time 3/4
+ 				s2.
+ 				%%%%%%%%%% measure 180 %%%%%%%%%%
+ 				\time 4/4
+ 				s8 \startStaff f'8 \glissando \afterGrace g'4 \glissando {e'8} \stopStaff s4 s4
+ 				%%%%%%%%%% measure 181 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 182 %%%%%%%%%%
+ 				\time 4/4
+ 				s1
+ 				%%%%%%%%%% measure 183 %%%%%%%%%%
+ 				\time 5/8
+ 				s2 s8
+ 				%%%%%%%%%% measure 184 %%%%%%%%%%
+ 				\time 2/1
+ 				s1 s1
+ 				%%%%%%%%%% measure 185 %%%%%%%%%%
+ 				\time 6/4
+ 				s4 s4 s4 s8 \startStaff 
+ 				d'8 \glissando \glissSkipOn \afterGrace e'8. {\glissSkipOff g'8} s16 \stopStaff s4 
 
  		}
  	}
