@@ -3,7 +3,7 @@ violin_II_tuned = {
  <<
  	{
   	 	\switch-staff \normal_staff
-  	 	\tieDown
+  	 	\oneVoice
 	  	\circles
 	  	%%%%%%%%%% measure 1 %%%%%%%%%%
 	  	\time 3/4

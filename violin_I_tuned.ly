@@ -5,7 +5,7 @@ violin_I_tuned = {
   <<
   	{
   	 \switch-staff \normal_staff
-  	  \tieNeutral
+  	  \oneVoice
 	  \circles
 	  \stemUp
 	  \set Staff.tieWaitForNote = ##t
@@ -1081,47 +1081,48 @@ violin_I_tuned = {
  		d'4 \glissando a'4 \glissando d'4
  		%%%measure 2
  		\time 2/4
- 		d'8 \glissando a'16 \glissando d'16 \glissando d'4
+ 		d'8 \glissando a'16 \glissando d'16 \glissando d'4 \stopStaff
  		%%%measure 3
  		\time 5/8
- 		s4. s8 d'8 \glissando
+ 		s4. s8 \startStaff  d'8 \glissando
  		%%%measure 4
  		\time 2/8
  		\tuplet 3/2 {
- 			a'8 \glissando d'8 \glissando a'8
+ 			a'8 \glissando d'8 \glissando a'8 \stopStaff
  		}
  		%%%%%%%%%% measure 5 %%%%%%%%%%
  		\time 4/4
  		s1
  		%%%%%%%%%% measure 6 %%%%%%%%%%
  		\time 4/4
- 		d'4 \glissando f'4 \glissando
+ 		\startStaff d'4 \glissando f'4 \glissando
  		\tuplet 3/2 {
  			d'8 \glissando f'8 \glissando d'8 \glissando
  		}
- 		f'8 \glissando d'8
+ 		f'8 \glissando d'8 \stopStaff
  		%%%%%%%%%% measure 7 %%%%%%%%%%
  		\time 2/16
  		s8
  		%%%%%%%%%% measure 8 %%%%%%%%%%
  		\time 3/4
- 		d'8 \glissando g'8 \glissando d'8 \glissando 
+ 		\startStaff d'8 \glissando g'8 \glissando d'8 \glissando 
  		\tuplet 3/2 {b'16 \glissando f'16 \glissando b'16 \glissando}
  		e'16 \glissando 
- 		\afterGrace a'8. \glissando {d'8}
+ 		\afterGrace a'8. \glissando {d'8} \stopStaff
  		%%%%%%%%%% measure 9 %%%%%%%%%%
  		\time 2/4
- 		r2
+ 		s2
  		%%%%%%%%%% measure 10 %%%%%%%%%%
  		\time 5/4
- 		s4 
- 		d'4 \glissando a'4 \glissando d'8 \glissando f'16 \glissando \afterGrace d'16 \glissando {f'8} \hideNotes r4 \unHideNotes
+ 		s4 \startStaff
+ 		d'4 \glissando a'4 \glissando d'8 \glissando f'16 \glissando \afterGrace d'16 \glissando {f'8} \hideNotes r4 \unHideNotes \stopStaff
  		%%%%%%%%%% measure 11 %%%%%%%%%%
  		\time 4/8
  		s2
  		%%%%%%%%%% measure 12 %%%%%%%%%%
  		\time 5/4
- 		s2. \tuplet 3/2 {d'16 \glissando a'16 \glissando d'16 \glissando } \afterGrace e'8 \glissando {d'8} \hideNotes r4 \unHideNotes
+ 		s2. \startStaff \tuplet 3/2 {d'16 \glissando a'16 \glissando d'16 \glissando } \afterGrace e'8 \glissando {d'8} \hideNotes r4 \unHideNotes
+ 		\stopStaff
  		%%%%%%%%%% measure 13 %%%%%%%%%%
  		\time 2/4
  		s2
@@ -1157,7 +1158,7 @@ violin_I_tuned = {
  		s4 s4.
  		%%%%%%%%%% measure 24 %%%%%%%%%%
  		\time 4/4
- 		bs'4 \glissando \glissSkipOn a'4 a'4 a'4
+ 		\startStaff bs'4 \glissando \glissSkipOn a'4 a'4 a'4
  		%%%%%%%%%% measure 25 %%%%%%%%%%
  		\time 5/4
  		\glissSkipOff d'4 \glissando \glissSkipOn a'4 a'4 a'4 \glissSkipOff e'4 \glissando
@@ -1172,7 +1173,7 @@ violin_I_tuned = {
  		a'4 \afterGrace a'4 {\glissSkipOff d'8}
  		%%%%%%%%%% measure 29 %%%%%%%%%%
  		\time 3/8
- 		s4.
+ 		s4. 
  		%%%%%%%%%% measure 30 %%%%%%%%%%
  		\time 4/4
  		d'4 \glissando \glissSkipOn a'4 a'4 \glissSkipOff a'4 \glissando 
@@ -1191,7 +1192,7 @@ violin_I_tuned = {
  		d'8 \glissando  f'8 \glissando d'4 \glissando \glissSkipOn
  		%%%%%%%%%% measure 35 %%%%%%%%%%
  		\time 3/8
- 		\afterGrace a'16 {\glissSkipOff a'8} \hideNotes r8. r8 \unHideNotes 
+ 		\afterGrace a'16 {\glissSkipOff a'8} \hideNotes r8. r8 \unHideNotes  \stopStaff
  		%%%%%%%%%% measure 36 %%%%%%%%%%
  		\time 5/4
  		s2 s2.
@@ -1208,7 +1209,7 @@ violin_I_tuned = {
  		s1 s1
  		%%%%%%%%%% measure 41 %%%%%%%%%%
  		\time 6/4
- 		d'4 \glissando \glissSkipOn a'4 a'4 
+ 		\startStaff d'4 \glissando \glissSkipOn a'4 a'4 
  		a'4 a'4 \glissSkipOff \afterGrace bs'4 \glissando {bs'8}
  		%%%%%%%%%% measure 42 %%%%%%%%%%
  		\time 7/4
@@ -1216,7 +1217,7 @@ violin_I_tuned = {
  		d'4 \glissando \glissSkipOn a'4 a'4 \glissSkipOff \afterGrace bs'4 \glissando {bs'8}
  		%%%%%%%%%% measure 43 %%%%%%%%%%
  		\time 2/8
- 		s16
+ 		s16 
  		a'8 \glissando \afterGrace e'16 \glissando {b'8}
  		%%%%%%%%%% measure 44 %%%%%%%%%%
  		\time 5/4
