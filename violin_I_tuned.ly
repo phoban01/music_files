@@ -614,7 +614,9 @@ violin_I_tuned = {
  	\ppos #0.75 c'16 [ \glissando \afterGrace \ppos #0.2 c'16] \glissando {\ppos #0.75 c'8}
  	%%%%%%%%%% measure 107 %%%%%%%%%%
  	\time 5/8
- 	r8 \ppos #0.35 c'8 \glissando \glissSkipOn \ppos #0.5 c'8 \glissando  \glissSkipOff \ppos #0.75 c'8 \glissando \ppos #0.85 c'8
+ 	r2 r8
+ 	\time 2/4
+ 	\ppos #0.35 c'8 \glissando \glissSkipOn \ppos #0.5 c'8 \glissando  \glissSkipOff \ppos #0.75 c'8 \glissando \ppos #0.85 c'8
  	%%%%%%%%%% measure 108 %%%%%%%%%%
  	\time 5/4
  	\switch-staff \normal_staff
@@ -1414,8 +1416,11 @@ violin_I_tuned = {
  		\time 3/4
  		\glissSkipOff d'4 \stopStaff s2
  		%%%%%%%%%% measure 105 %%%%%%%%%%
+
  		\time 5/8
  		s4. s4
+ 		\time 2/4
+ 		s2
  		%%%%%%%%%% measure 106 %%%%%%%%%%
  		\time 5/4
  		s2. s2

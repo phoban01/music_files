@@ -1031,13 +1031,13 @@ viola_tuned = {
  		}
  		r8 r4
  		%%%%%%%%%% measure 140 %%%%%%%%%%
- 		\time 2/16 
+ 		\time 5/8 
  		<f' fqs'>8 ~
  		%%%%%%%%%% measure 141 %%%%%%%%%%
- 		\time 2/8
+%  		\time 2/8
  		<f' fqs'>4
  		%%%%%%%%%% measure 142 %%%%%%%%%%
- 		\time 2/8
+%  		\time 2/8
  		\clef treble
  		\diamonds
  		a'8 \glissando \afterGrace cs'' \glissando {a'8}
@@ -1784,10 +1784,10 @@ viola_tuned = {
  			s2
  			%%%%%%%%% measure 141 %%%%%%%%%%
  			\time 4/8
- 			s2
+ 			s4 s8. \startStaff a'16 \glissando \glissSkipOn
  			%%%%%%%%% measure 142 %%%%%%%%%% 
  			\time 4/4
- 			s1
+ 			g'4 \glissSkipOff e'4 s2 \stopStaff
  			%%%%%%%% measure 143 %%%%%%%%%%
  			\time 3/4
  			s4 s8 \startStaff g'8 \glissando b'8 \glissando e'8 \stopStaff
@@ -1806,18 +1806,126 @@ viola_tuned = {
  			\time 2/4
  			g'4 \glissando 
  			\tuplet 3/2 {
- 				d'8 \glissando f'8 \glissando d'8 
+ 				d'8 \glissando f'8 \glissando d'8 \stopStaff
  			}
- 			%%%%%%%%%% measure 147 %%%%%%%%%%
+
  			\time 5/8
- 			s8 \stopStaff s2
- 			%%%%%%%%%% measure 148 %%%%%%%%%%
+ 			s2 s8
+
  			\time 2/8
  			s4
- 			%%%%%%%%%% measure 149 %%%%%%%%%%
+
  			\time 4/4
  			s1
- 			%%%%%%%%%% measure 150 %%%%%%%%%%
+
+ 			%%%%%%%%%% measure 147 %%%%%%%%%%
+ 			\time 5/8
+ 			s8 s2
+ 			%%%%%%%%%% measure 148 %%%%%%%%%%
+ 			\time 3/4
+ 			\startStaff \afterGrace d'4 \glissando {f'8} \hideNotes r2 \unHideNotes
+ 			
+ 			\time 4/4
+ 			s2 e'4 \glissando \afterGrace g'8. \glissando {b'8} \stopStaff \hideNotes r16 \unHideNotes
+ 			\time 4/8
+ 			s2
+ 			\time 5/8
+ 			s2 s8
+ 			\time 5/16 
+ 			s8 \startStaff \afterGrace e'8. \glissando {g'8}
+ 			\stopStaff
+ 			\time 4/16
+ 			s4
+ 			%%%%%%% measure 150 %%%%%%%%%%
+ 			\time 3/4
+ 			s4 \startStaff e'4 \glissando a'4 \glissando
+ 			%%%%%%%%%% measure 151 %%%%%%%%%%
+ 			\time 4/4
+ 			\glissSkipOn a'16 \glissSkipOff e'8.
+ 			s8 b'8 \glissando b'4 \glissando \afterGrace b'8 \glissando {f'8} s8 \stopStaff
+ 			\time 3/8
+ 			s4.
+ 			%%%%%%%%%% measure 152 %%%%%%%%%%
+ 			\time 5/8
+ 			s2 s8
+ 			%%%%%%%% measure 153 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 154 %%%%%%%%%%
+ 			\time 5/4
+ 			s2 s2.
+ 			%%%%%%%%%% measure 155 %%%%%%%%%%
+ 			\time 3/4
+ 			\startStaff bs'4 \glissando \glissSkipOn g'8 \glissSkipOff 
+ 			\tuplet 3/2 {f'16 \glissando \glissSkipOn f'16 f'16} g'16. a'32 a'8
+ 			%%%%%%%%%% measure 164 %%%%%%%%%%
+ 			\time 5/8
+ 			\glissSkipOff b'4 s4 s8 \stopStaff
+ 			%%%%%%%%%% measure 165 %%%%%%%%%%
+ 			\time 5/4
+ 			s2 s8 \startStaff d'8 \glissando f'8 \glissando d'8 \stopStaff s4
+ 			%%%%%%%%%% measure 166 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 167 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 168 %%%%%%%%%%
+ 			\time 4/4 
+ 			s1
+ 			%%%%%%%%%% measure 169 %%%%%%%%%%
+ 			\time 6/4
+ 			s1.
+ 			%%%%%%%%%% measure 170 %%%%%%%%%%
+ 			\time 5/4
+ 			s2 s2.
+ 			%%%%%%%%%% measure 171 %%%%%%%%%%
+ 			\time 5/8
+ 			s2 s8
+ 			%%%%%%%%%% measure 172 %%%%%%%%%%
+ 			\time 2/4
+ 			s2
+ 			%%%%%%%%%% measure 173 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 174 %%%%%%%%%%
+ 			\time 3/8
+ 			s4.
+ 			%%%%%%%%%% measure 175 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 176 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 177 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 178 %%%%%%%%%%
+ 			\time 5/8
+ 			s2 s8
+ 			%%%%%%%%%% measure 179 %%%%%%%%%%
+ 			\time 3/4
+ 			s2.
+ 			%%%%%%%%%% measure 180 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 181 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 182 %%%%%%%%%%
+ 			\time 4/4
+ 			s1
+ 			%%%%%%%%%% measure 183 %%%%%%%%%%
+ 			\time 5/8
+ 			s8 s8 s8 s8 s8
+ 			%%%%%%%%%% measure 184 %%%%%%%%%%
+ 			\time 2/1
+ 			s1 s1
+ 			%%%%%%%%%% measure 185 %%%%%%%%%%
+ 			\time 6/4
+ 			s1. 
  		}
  	}
  >>

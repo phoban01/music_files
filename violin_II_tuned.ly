@@ -2,8 +2,8 @@ violin_II_tuned = {
 
  <<
  	{
+  	 	\oneVoice 		
   	 	\switch-staff \normal_staff
-  	 	\oneVoice
 	  	\circles
 	  	%%%%%%%%%% measure 1 %%%%%%%%%%
 	  	\time 3/4
@@ -40,7 +40,7 @@ violin_II_tuned = {
 	  	\time 4/4
 	  	\tuplet 3/2 {
 	  		r8
-	  		\tieUp
+% 	  		\tieUp
 	  		\set glissandoMap = #'((0 . 0) (1 . 1) (2 . 2)) 
 	  		\set Staff.tieWaitForNote = ##t
 	  		<c' fs' b' eqs'' ~ >4 \glissando \glissSkipOn 
@@ -489,7 +489,10 @@ violin_II_tuned = {
 	  	\tuplet 3/2 {
 	  		g''16 g''8
 	  	}
-	  	gqf''16 gf'' gqs'' gs''
+	  	\afterGrace fs'8 \glissando {b''8} 
+	  	\tuplet 3/2 {
+	  		gs''16 gqs'' a''
+	  	}
 	  	%%%%%%%%%% measure 83 %%%%%%%%%%
 	  	\time 4/8
 	  	b''16 bf''16 a'' gs''
@@ -641,7 +644,10 @@ violin_II_tuned = {
 	 	\ppos #0.75 c'16 \glissando \afterGrace \ppos #0.25 c'16 ] \glissando {\ppos #0.75 c'8}
 	 	%%%%%%%%%% measure 106 %%%%%%%%%%
 	 	\time 5/8
-	 	r4. r16 [ \once\override NoteHead.stencil = #scratch-tone \ppos #0.85 c'8. ]
+	 	s2 s8
+
+	 	\time 2/4
+	 	r4 r16 [ \once\override NoteHead.stencil = #scratch-tone \ppos #0.85 c'8. ]
 	 	%%%%%%%%%% measure 107 %%%%%%%%%%
 	 	\time 5/4
 	 	r4 r4 r8 \circles 
@@ -845,6 +851,7 @@ violin_II_tuned = {
 	 	%%%%%%%%%% measure 143 %%%%%%%%%%
 	 	\time 2/8
 	 	r4
+	 	\tieNeutral
 	 	%%%%%%%%%% measure 144 %%%%%%%%%%
 	 	\time 3/4
 	 	\set glissandoMap = #'((0 . 0 ) (1 . 1) (2 . 2) (3 . 3))
@@ -1456,6 +1463,8 @@ violin_II_tuned = {
  				%%%%%%%%%% measure 106 %%%%%%%%%%
  				\time 5/8
  				s2 s8
+ 				\time 2/4
+ 				s2
  				%%%%%%%%%% measure 107 %%%%%%%%%%
  				\time 5/4
  				s2. \startStaff 
