@@ -128,8 +128,8 @@ violin_I_tuned = {
 	  \ppos #0.7 c'8. [ ~ \ppos #0.7 c'16 ~ ] \ppos #0.7 c'8 [ \stopStaff r8 ]
 	  %%%%%%%%%% measure 14 %%%%%%%%%%
 	  \time 3/8
-	  \switch-staff \body_staff_big
-	  \body-clef #'full
+	  \switch-staff \body_staff
+	  \body-clef #'fingerboard-small
 	  \set Staff.forceClef = ##t
 	  \afterGrace \ppos #0 c'4 \glissando {\ppos #0.95 c'8}
 	  \afterGrace \ppos #0.95 c'16 \glissando {\ppos #0.15 c'8}
