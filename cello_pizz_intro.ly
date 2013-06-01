@@ -196,7 +196,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
         \stemDown
         \compoundMeter #'((4 8) (3 16))
         \switch-staff \pizz_staff
-        \body-clef #'full
+        \body-clef #'fingerboard
         \temporary\override NoteHead.stencil = #scratch-tone
         \temporary\override Glissando.style = #'dashed-line
         \temporary\override Glissando.bound-details.right.padding = #0.35
@@ -216,7 +216,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   } \\
   \new StringStaff \with {alignAboveContext="cello"} {
         \compoundMeter #'((4 8 ) (3 16))
-        \circles
+        \circleheads
         <e' g'>2 \glissando <e' g'>8. \glissando 
         
         \time 4/8

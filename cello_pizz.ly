@@ -9,21 +9,27 @@ cello_pizz_right = {
   r8 
   \tuplet 3/2 {
   	\tuplet 5/4 {
-	  	\arp_pizz_head "III" "I" \ppos #0.4 c16 [ \effort sfz
-	  	\pizz_head "III" \ppos #0.2 c32 \effort mf
+      \dxy #'(-4.5 . 5)
+	  	\arp_pizz_head "III" "I" \ppos #-0.15 c16 [ \effort sfz
+	  	 \dxy #'(0 . 1.5)
+      \pizz_head "III" \ppos #0.2 c32 \effort mf
 	  	\pizz_head "II" \ppos #0.1 c32
 	  	\pizz_head "I" \ppos #0.0 c32 ]
   	}
   \tuplet 3/2 {
+    \dxy #'(0 . 2.3)
   	\pizz_head "III" \ppos #0.45 c16 [ \p
   	\pizz_head "II" \ppos #0.475 c16
   	\pizz_head "I" \ppos #0.575 c16 ]
   }
   \tuplet 5/4 {
+    \dxy #'(0 . 5)
   	\pizz_head "IV" \ppos #0.8 c32 [ \f \>
   	\pizz_head "I" \ppos #0.95 c32
   	\pizz_head "II" \ppos #0.9 c32
+    \dxy #'(0 . 5)
   	\pizz_head "III" \ppos #0.85 c32 \p
+    \dxy #'(0 . 3)
   	\arp_pizz_head "I" "IV" \ppos #0.4 c32 ] \mf	
   }
 }
