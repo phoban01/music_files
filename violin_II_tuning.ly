@@ -421,7 +421,7 @@ violin_II_tuning = {
         \tuplet 3/2 {
           e'16 [ \glissSkipOff 
   			  d'16  \glissando 
-          \afterGrace a'16 ] \glissand {e'8}
+          \afterGrace a'16 ] \glissando {e'8}
         }
         \stopStaff \hideNotes r4 \unHideNotes \startStaff
         \afterGrace a'4 \glissando {d'8}
