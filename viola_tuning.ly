@@ -278,7 +278,7 @@ viola_tuning = {
   		\draw_line_arrow \down_bow \down_bow_heavy
   		s4 \startTextSpan s8 \stopTextSpan 
 		\draw_line_arrow \down_bow_heavy \down_bow
-  		s8  s4 
+  		s8 \startTextSpan  s4 \stopTextSpan
 
   		\new BowPositionStaff \with {alignAboveContext="viola"} {
   			\bezier_gliss #'(0.99 . 3) #'(0 0 0 0)
@@ -318,17 +318,18 @@ viola_tuning = {
 
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
   \time 5/4
-  <<
-    {
+%   <<
+%     {
       r4
       \tieDown
       \switch-staff \normal_staff
       \set Staff.forceClef = ##t
+      \draw_bracket \tremolo_markup
       \tuplet 12/8 {
       		\niente
           \clef alto
           \slurDown
-      		b16 [ ( \< a f' e' d' c' b gs \f \> f e ef df ) ] ~ \ppp
+      		b16 [ ^\down_bow_light ^\altosulpont \startTextSpan ( \< a f' e' d' c' b gs \f \> f e ef df \stopTextSpan ) ] ~ \ppp
       	}
       \wavy_line #1
       \draw_line_arrow \down_bow \down_bow_heavy
@@ -336,27 +337,28 @@ viola_tuning = {
       \niente 
       \wavy_line #1
       \afterGrace df4 \f \> \stopTextSpan \glissando { df8 \!}
-      } \\
-      {
-        s4
-        \new Staff \with {
-            \remove "Time_signature_engraver"
-            alignAboveContext="viola"
-            \override VerticalAxisGroup.staff-staff-spacing = #'
-                  ((basic-distance . 2)
-                    (minimum-distance . 2)
-                    (padding . 3)
-                    (stretchability . 0))
+%       } 
+%       \\
+%       {
+%         s4
+%         \new Staff \with {
+%             \remove "Time_signature_engraver"
+%             alignAboveContext="viola"
+%             \override VerticalAxisGroup.staff-staff-spacing = #'
+%                   ((basic-distance . 2)
+%                     (minimum-distance . 2)
+%                     (padding . 3)
+%                     (stretchability . 0))
 
-        } {
-              \once \override TextScript.extra-offset = #'(0 . 2.5)
-              \circles
-              \switch-staff \single_line_staff
-              c'2:32 ^\down_bow_light ^\altosulpont
-              \stopStaff
-        }
-      } 
-  >>
+%         } {
+%               \once \override TextScript.extra-offset = #'(0 . 2.5)
+%               \circles
+%               \switch-staff \single_line_staff
+%               c'2:32 ^\down_bow_light ^\altosulpont
+%               \stopStaff
+%         }
+%       } 
+%   >>
 
  %%%%%%% ============= measure 34 ============= %%%%%%%% 
   \time 5/4

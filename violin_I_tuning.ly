@@ -191,18 +191,14 @@ violin_I_tuning = {
  		<e' g' b'>2. \stopTextSpan <e' g' b'>2 ^\vertical_bow 
  	} \\
  	{
- 		\stemUp
- 	    s2.
- 		\new BowPositionStaff \with {
- 			alignAboveContext = "violin_1"
- 		} {
- 		c'8 [ \glissando \glissSkipOn e'8 \glissSkipOff b'8 \glissando f'8 ]
-    \stopStaff
+ 		\new BowPositionStaff \with {alignAboveContext = "violin_1"} {
+ 		   c'8 [ \glissando \glissSkipOn e'8 \glissSkipOff b'8 \glissando f'8 ] \stopStaff
  		}
  	}
  >>
 
  %%%%%%%% ============= measure 24 ============= %%%%%%%% 
+ \time 5/4
   <<
   	{
   		\tieDown
@@ -218,9 +214,10 @@ violin_I_tuning = {
   >>
 
  %%%%%%%% ============= measure 25 ============= %%%%%%%% 
- \time 5/4
+\time 5/4
  <<
- 	{\tieDown
+ 	{
+    \tieDown
  		g'4 ^\nat \glissando g'8 [ \glissando g'8 ^\down_bow \glissando ] g'2 \stopTextSpan \niente g'4 \< ^\up_bow ^\sulpont \glissando
  		\bar "|"
  		\niente g'8 \mf \> r8 \! <g' b'>2 \glissando ^\down_bow ^\angle_bow <g' b'>2 
@@ -252,7 +249,6 @@ violin_I_tuning = {
 				)	
  			alignAboveContext = "violin_1"
  		} {
- 			\time 5/4
  			\once \override Staff.Clef.transparent = ##t
  			\stopStaff
  			s1
@@ -262,57 +258,31 @@ violin_I_tuning = {
  			\diamonds
  			\afterGrace b'4 ^\startTrillSpan \glissando 
  				{\once\override Accidental.transparent=##t\once\override NoteColumn.glissando-skip = ##t \parenthesize d''8}  
- 			\bar "|"
- 			s8 \afterGrace fs''8 {\once\override Accidental.transparent=##t \parenthesize a''8 \stopTrillSpan}
- 			\stopStaff s1
+ 			\time 5/4
+      s8 \afterGrace fs''8 {\once\override Accidental.transparent=##t \parenthesize a''8 \stopTrillSpan}
+ 			\stopStaff \hideNotes r1 \unHideNotes
  		}
 
  	}
  >>  
 
- %%%%%%%% ============= measure 26 ============= %%%%%%%% 
- \time 5/4
- <<
- 	{
+ %%%%%%% ============= measure 26 ============= %%%%%%%% 
+
+  \time 5/4
  	\tieDown
  	\circles
  	<g' b'>2 ^\up_bow
- 	\once\override Staff.TextScript.extra-offset = #'(0 . 3)
-	<e' g' b'>2. \glissando ^\markup {\down_bow_light} ^\aldita
- 	}
- 	\\
- 	{  
- 		\new Staff \with {
- 			\remove "Bar_number_engraver"
- 			\remove "Time_signature_engraver"
- 			fontSize = #-3
-			\override StaffSymbol #'staff-space = #(magstep -3)
- 			\override BarLine.transparent = ##t
- 			\override Stem.transparent = ##t
- 			\override Flag.transparent = ##t
-			\override VerticalAxisGroup #'staff-staff-spacing =
-				#'((basic-distance . 1)
-				(minimum-distance . 0)
-				(padding . 5)
-			    (stretchability . 0)
-				)	
+	<e' g' b'>2. \glissando ^\markup {\down_bow_light} ^\aldita 
+    _\markup {
+        \center-align
+        \center-column {
+          \small \italic "au sillet"
+          \fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
+        }
+    }
+ 
 
- 			alignAboveContext = "violin_1"
- 		} {
- 			\once \override Staff.Clef #'stencil = ##f
- 			\stopStaff
- 			s2
- 			\startStaff
- 			\set Staff.forceClef = ##t
- 			\diamonds <ges des' aes' ees''>16   ^\markup {\center-align \italic (barré)}
- 			\stopStaff
- 			s8. s2
- 		}
- 	}
-	
- >>	
   
-
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
  \time 5/4
@@ -331,13 +301,14 @@ violin_I_tuning = {
   		<e' g' b'>4. \glissando ^\up_bow
   	}\\
   	{	
-  		\stemUp
-  		#(define afterGraceFraction (cons 9 10))
+      s4
   			\new BowPositionStaff \with {alignAboveContext="violin_1"} {
-  				  s4 
+          \stemUp
+          #(define afterGraceFraction (cons 9 10))          
   				c'8 [ \glissando \glissSkipOn e'8 g'8 \glissSkipOff \afterGrace b'8 ] \glissando {f'8}
   				\stopStaff
-  			} s2
+          \hideNotes r2 \unHideNotes
+  			} 
   	}\\
   	{
   		\draw_line_arrow \down_bow \down_bow_heavy
@@ -383,25 +354,24 @@ violin_I_tuning = {
   >>
 
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
-  \time 5/4
+ \time 5/4
   <<
   	{
   		\circles
   		\tieDown
   		\override TextSpanner.bound-details.right.padding = #-1
   		\draw_line_arrow \down_bow \down_bow_heavy
-  		c'4 \glissando ^\up_bow \glissando c'4 \glissando c'8 <c' e'>8 ^\up_bow ^\angle_bow ^\frog  
-  		<c' e'>4 \glissando \startTextSpan \afterGrace <c' e'>4 \glissando \stopTextSpan {<c' e'>8 ^\down_bow}
+  		c'4 ^\up_bow \glissando c'4 \glissando c'8 <c' e'>8 ^\up_bow ^\angle_bow ^\frog  
+  		<c' e'>4 \glissando \startTextSpan \afterGrace <c' e'>4 \stopTextSpan \glissando  {<c' e'>8 ^\down_bow}
   	}
   	\\
   	{
   		s4 s4 \stopTextSpan s2.
-  	} \\
+  	}\\ 
     {
       s2 
       \new BowPositionStaff \with {alignAboveContext="violin_1"} {
-        \time 3/4
-        r8 [ g'8 ]  \glissando  
+        s8  g'8   \glissando  
         c'8 [ \glissando \glissSkipOn e'8 ] \glissSkipOff 
         b'8 [ \glissando \glissSkipOn \afterGrace g'8 ] {\glissSkipOff c'8}
         \stopStaff
@@ -413,17 +383,17 @@ violin_I_tuning = {
   \time 5/4
   <<
   	{
-  		\switch-staff \normal_staff
-%   		\set Staff.middleCPosition = #0
+  		\set Staff.middleCPosition = #0
   		r2
+      \switch-staff \normal_staff      
   		\set Staff.forceClef = ##t
   		\circles
   		\once\override Glissando.bound-details.left.padding = #2
   		\afterGrace <bqs fs' c'' fs''>2. ^\circular_bow ^\markup \string-numbers #'( "I II III IV" -0.5 0)
   		 		\glissando {\transpose fs'' b'' {<\single\hideNote bqs \single\hideNote fs' \single\hideNote c'' fs''>8}}
   	} \\ 
-  	{
-  		s2
+  	{  
+      s2
   		\new BowPositionStaff \with {alignAboveContext="violin_1"}{
   			\tuplet 3/2 {
   				d'8 [ \glissando a'8 \glissando d'8 ] \glissando  \glissSkipOn
@@ -482,11 +452,11 @@ violin_I_tuning = {
     a'8 [ \glissando bqf'8 \glissando \glissSkipOn \afterGrace c''8] {\glissSkipOff cses''8}
   }
 
- %%%%%%%% ============= measure 41 ============= %%%%%%%% 
+ %%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 4/4
   r8. [ <dqf'' cs''>16 ~ ] <dqf'' cs''>8 <dqf'' cs''>8 ~ <dqf'' cs''>2 ~
 
- %%%%%%%% ============= measure 42 ============= %%%%%%%% 
+ %%%%%%% ============= measure 42 ============= %%%%%%%% 
   \time 5/4
   <dqf'' cs''>8 ~ <dqf'' cs''>8 \glissando \glissSkipOn
   \tuplet 3/2 {

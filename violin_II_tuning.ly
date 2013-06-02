@@ -138,7 +138,8 @@ violin_II_tuning = {
   	{
   		\draw_line_arrow " " \down_bow
   		s4 \stopTextSpan \startTextSpan s4 \stopTextSpan s2.
-  	}\\
+  	}
+    \\
   	{
   		\draw_line_arrow \sulpont \nat
   		s4 \startTextSpan s4 \stopTextSpan
@@ -148,7 +149,7 @@ violin_II_tuning = {
   	}
   >>
 
- %%%%%%%% ============= measure 21 ============= %%%%%%%% 
+ %%%%%% ============= measure 21 ============= %%%%%%%% 
   \time 5/4
   <<
   	{
@@ -178,7 +179,7 @@ violin_II_tuning = {
   	}
   >>
 
- %%%%%%%% ============= measure 23 ============= %%%%%%%% 
+ %%%%%%% ============= measure 23 ============= %%%%%%%% 
   \time 5/4
   <<
   	{
@@ -208,7 +209,8 @@ violin_II_tuning = {
   		\circles
   		\tieDown
   		\niente e'2 \< ^\up_bow ^\altosulpont 
-  		\niente \afterGrace e'4 \mp ^\down_bow \> \glissando {e'8 \!}
+  		\niente 
+      \afterGrace e'4 \mp ^\down_bow \> \glissando {e'8 \!}
   		<c' e'>2 ^\up_bow ^\angle_bow
   	}\\
   	{
@@ -222,7 +224,7 @@ violin_II_tuning = {
 					    (stretchability . 0)
 						)
   		} {
-  			\diamonds dqs'4 \glissando s4 \afterGrace b'4 \glissando {e'8}
+  			\diamonds dqs'4 \glissando s4 \afterGrace b'4 \glissando {e'8} \hideNotes r2 \unHideNotes
   		}
   	}
   >>
@@ -242,17 +244,19 @@ violin_II_tuning = {
   	}
   >>
 
- %%%%%%%% ============= measure 26 ============= %%%%%%%% 
+ %%%%%%% ============= measure 26 ============= %%%%%%%% 
   \time 5/4
   <<
   	{
+      \oneVoice
+      \circleheads
   		b'8 \glissando ^\up_bow ^\altosulpont ^\horz_bow \glissando b'8 \glissando \stopTextSpan
   		\draw_tuning_arrow \tuning_peg_first \violin_first
   		b'16 \glissando <g' b'>8.  \startTextSpan
-  		b'2. \glissando ^\down_bow
+  		b'2. ^\down_bow \glissando 
   	}\\
   	{
-  		s2 
+  		s2
   		\draw_line_arrow \altosulpont \nat
   		s2 \startTextSpan s4 \stopTextSpan
   	}
@@ -265,20 +269,22 @@ violin_II_tuning = {
   		\circles
   		\tieDown
       \glissSkipOn
-  		\niente \afterGrace b'4 \> \stopTextSpan \glissando {\glissSkipOff b'8\!}
+  		\niente \afterGrace 
+      b'4 \> \stopTextSpan \glissando {\glissSkipOff b'8\!}
   		\switch-staff \normal_staff
   		\set Staff.forceClef = ##t
   		\diamonds
-  		 g'4 ^\markup {\small \italic "pizz."} ^\markup \string-numbers #'( "IV" 1.5 0) \ff \laissezVibrer
-  		\switch-staff \string-staff
+  		g'4 ^\markup {\small \italic "pizz."} ^\markup \string-numbers #'( "IV" 1.5 0) \ff \laissezVibrer
   		r4
+      \switch-staff \string-staff
       \circles
-  		<c' e'>4 \glissando ^\down_bow ^\angle_bow 
-  	}\\
+  		<c' e'>2 \glissando ^\down_bow ^\angle_bow 
+  	} \\
   	{
-  		s2. s4 \draw_tuning_arrow \tuning_peg_fourth \tuning_fermata
+      s2. s4 
+      \draw_tuning_arrow \tuning_peg_fourth \tuning_fermata
   		s4 \startTextSpan 
-  	}
+  	} 
   >>
 
  %%%%%%%% ============= measure 28 ============= %%%%%%%% 
@@ -300,7 +306,7 @@ violin_II_tuning = {
   	}
   >>
 
- %%%%%%%% ============= measure 29 ============= %%%%%%%% 
+ %%%%%% ============= measure 29 ============= %%%%%%%% 
   \time 5/4
   <<	
   	{
@@ -309,7 +315,7 @@ violin_II_tuning = {
   		<c' e'>2. ^\down_bow \glissando <c' e'>2 \glissando
   	} \\
   	{
-  		s4 s4 \stopTextSpan 
+      s4 s4 \stopTextSpan 
   		\draw_line_arrow \nat \altosulpont
   		s4 \startTextSpan 
   		\draw_line_arrow "" \altosultasto
@@ -318,39 +324,41 @@ violin_II_tuning = {
   	}
   >>
 
- %%%%%%%% ============= measure 30 ============= %%%%%%%% 
+ %%%%%%% ============= measure 30 ============= %%%%%%%% 
  \time 5/4
   <<
   	{
   		\circles
   		\tieDown
-  		\niente \afterGrace <c' e'>4 \> \glissando {<c' e'>8 \!} \stopStaff r4
+  		\niente \afterGrace <c' e'>4 \> \glissando {<c' e'>8 \!} r4
   		\tieNeutral
-  		\switch-staff \normal_staff
   		r8  [
+      \switch-staff \normal_staff
   		\set Staff.forceClef = ##t
   		\niente
   		<bf ees' aqs' eqs''>8 ] ~ \< ^\circular_bow ^\markup \string-numbers #'( "I II III IV" 0 0)
   		<bf ees' aqs' eqs''>8 [ ~
   		<bf ees' aqs' eqs''>8 ] \glissando
   		\transpose eqs'' g'' {
-  			\niente \afterGrace <\single\hideNote bf \single\hideNote  ees' \single\hideNote  aqs' eqs''>4 \mf  \>\glissando
+  			\niente \afterGrace <\single\hideNote bf \single\hideNote  ees' \single\hideNote  aqs' eqs''>4 \mf  \> \glissando
  				{ \transpose g'' f'' {
   			  		<\single\hideNote bf \single\hideNote  ees' \single\hideNote  aqs' eqs''>8 \! 
   			  	}}
   			  }
-  	}\\
+  	} \\
   	{
-  		s2
+      s2 s8
   		\new BowPositionStaff \with {alignAboveContext = "violin_2"} {
-  			r8 [ \glissando d'8 \glissando g'8 \glissando d'8  \glissando
-  			g'8  \glissando \glissSkipOn \afterGrace e'8 ] {\glissSkipOff  d'8}
+  			d'8 \glissando 
+        g'8 \glissando d'8  \glissando
+  			g'8 [ \glissando \glissSkipOn 
+        \afterGrace e'8 ] {\glissSkipOff  d'8}
         \stopStaff
   		}
   	}
   >>
 
- %%%%%%%% ============= measure 31 ============= %%%%%%%% 
+ %%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 5/4
   \stemNeutral
   \tieNeutral
@@ -383,7 +391,8 @@ violin_II_tuning = {
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
  \time 5/4
   <<
-  	{r8 [ \niente
+  	{
+        r8 [ \niente
   		\circles
   		<bqs fs' c'' fs''>8 ] \< ^\circular_bow ^\markup \string-numbers #'( "I II III IV" -1 0) \glissando 
   		\stemUp
@@ -402,17 +411,21 @@ violin_II_tuning = {
   	}
   	\\
   	{
-      r8
   		\new BowPositionStaff \with {alignAboveContext="violin_2"} {
-        c'8
+%         \time 5/4
+        s8 c'8 \glissando
   			\tuplet 3/2 {
-  				a'16 [ \glissando d'16 \glissando a'16 ] \glissando \glissSkipOn
+  				a'16 [ \glissando d'16 \glissando a'16  \glissando \glissSkipOn
   			}
-  			g'8 [ e'8 ] \glissSkipOff 
-  			\afterGrace d'8 \glissando {a'8}
-        \stopStaff r4 \startStaff
+  			g'8 ] 
+        \tuplet 3/2 {
+          e'16 [ \glissSkipOff 
+  			  d'16  \glissando 
+          \afterGrace a'16 ] \glissand {e'8}
+        }
+        \stopStaff \hideNotes r4 \unHideNotes \startStaff
         \afterGrace a'4 \glissando {d'8}
-%         \stopStaff
+        \stopStaff
   		}
   	}
   >>
