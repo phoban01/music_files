@@ -1,17 +1,26 @@
 violin_II_tuned = { 
-
- <<
- 	{
   	 	\oneVoice 		
   	 	\switch-staff \normal_staff
 	  	\circles
 	  	%%%%%%%%%% measure 1 %%%%%%%%%%
 	  	\time 3/4
-	  	r2 r8 <cs'' \single\diamonds g''>8 ~
+	  	r2 r8 
+	  	<<	
+	  		{\niente <cs'' \single\diamonds g''>8 ~ \<}
+	  	 	\\
+	  	 	{}
+	  	>>
 	  	%%%%%%%%%% measure 2 %%%%%%%%%%
 	  	\time 2/4
-	  	<cs'' \single\diamonds g''>4.
-	  	\afterGrace <ds' \single\diamonds gs'>8 \glissando {<d' \single\diamonds g'>8}
+	  	<<{
+	  		#(define afterGraceFraction (cons 9 10))
+	  		\afterGrace <cs'' \single\diamonds g''>8 ~ {s8 \mfp} \niente \afterGrace <cs'' \single\diamonds g''>4 \> {s8\!}	  		
+	  		\afterGrace <ds' \single\diamonds gs'>8 \glissando {<d' \single\diamonds g'>8}
+	  	} \\ 
+	  	{
+	  		s4.
+	  		\niente s16 \< \niente \afterGrace s16 \p \> {s8\!}
+	  	}>>
 	  	%%%%%%%%%% measure 3 %%%%%%%%%%
 	  	\time 5/8
 	  	r4 
@@ -20,79 +29,83 @@ violin_II_tuned = {
 	  	\body-clef #'bow-area-small
 	  	r16 [
 	  	\set Staff.forceClef = ##t
-	  	\afterGrace \ppos #0.75 c'16  \glissando {\ppos #0.2 c'8}
+	  	\afterGrace \ppos #0.75 c'16 \p  \glissando {\ppos #0.2 c'8}
 	  	r8
 	  	\switch-staff \normal_staff
 	  	\set Staff.forceClef = ##t
-	  	\diamonds c'8 ] \glissando
+	  	\diamonds c'8 ] \p \< \glissando
 	  	%%%%%%%%%% measure 4 %%%%%%%%%%
 	  	\time 2/8
 	  	\tuplet 3/2 {
 	  		\glissSkipOn 
-	  		c'8 \glissSkipOff \circles cs'4 \glissando
+	  		c'8 \glissSkipOff \circles cs'4 \mfpp \glissando
 	  	}
 	  	%%%%%%%%%% measure 5 %%%%%%%%%%
 	  	\time 4/4
 	  	\diamonds
-	  	g'4 \glissando \glissSkipOn \afterGrace a'4 {\glissSkipOff c''8}
+	  	f'4 \glissando \glissSkipOn \afterGrace a'4 {\glissSkipOff c''8}
 	  	r2
 	  	%%%%%%%%%% measure 6 %%%%%%%%%%
 	  	\time 4/4
-	  	\tuplet 3/2 {
+	  	<<{
+	  		\tuplet 3/2 {
 	  		r8
-% 	  		\tieUp
 	  		\set glissandoMap = #'((0 . 0) (1 . 1) (2 . 2)) 
 	  		\set Staff.tieWaitForNote = ##t
-	  		<c' fs' b' eqs'' ~ >4 \glissando \glissSkipOn 
-	  	} \stemUp g''4 \glissSkipOff \diamonds 
+	  		\circles
+	  		\niente 
+	  		<c' fs' b' eqs'' ~ >4 \< \glissando \glissSkipOn 
+	  	} \stemUp g''4 \mf  \glissSkipOff \diamonds 
 	  	\stemNeutral
-	  	<bf ees' aqs' eqs''>4.. ~ 
+	  	\diamonds
+	  	<bf ees' aqs' eqs''>4.. ~ \> 
 		\set Staff.tieWaitForNote = ##f
 		\set glissandoMap = #'((0 . 0) (1 . 1) (2 . 2) (3 . 3))  
-	  	\circles <bf ees' aqs' eqs''>16 \glissando \glissSkipOn
+	  	\circles <bf ees' aqs' eqs''>16 \p \glissando \glissSkipOn} \\ {}>>
 	  	%%%%%%%%%% measure 7 %%%%%%%%%%
 	  	\time 2/16
-	  	a''8
+	  	<<{\stemUp a''8 \stemNeutral} \\ {}>>
 	  	%%%%%%%%%% measure 8 %%%%%%%%%%
 	  	\time 3/4
-	  	\glissSkipOff 
-	  	\diamonds <d' gses' dqf'' aqf''>4
-	  	\afterGrace <gses' dqf''>8 \glissando {<ees' aqs'>8}
-	  	\circles \afterGrace d'16 \glissando {dqs'8}
+	  	<<{\glissSkipOff \diamonds <d' gses' dqf'' aqf''>4} \\ {\hideNotes \tweak #'stencil ##f \tuplet 3/2 {r8\mf r8\f\> \afterGrace r8 {r8\pp}} \unHideNotes}>>
+	  	\afterGrace <gses' dqf''>8 \p \< \glissando {<ees' aqs'>8 \mf}
+	  	\circles \afterGrace d'16 \p \> \glissando {dqs'8 \ppp}
 	  	\wavy_vibrato #1.35 \diamonds aqf''16 \glissando \glissSkipOn
-	  	\afterGrace a''8 [ {\glissSkipOff \hideNotes a''8 \unHideNotes } r8 ]
+	  	\flare_width \afterGrace a''8 [ \< {\glissSkipOff \hideNotes a''8 \flare_mf \unHideNotes } r8 ]
 	  	%%%%%%%%%% measure 9 %%%%%%%%%%
 	  	\time 2/4
 	  	r4 \tuplet 5/4 {
 	  		\circles
-	  		\afterGrace bqf8 \glissando {bes}
-	  		r16 \afterGrace d''16. \glissando {cs''8} r32
+	  		\afterGrace bqf8 \mp [ \glissando {bes}
+	  		r16 \afterGrace dqs''16. \p \> \glissando {cs''8 \pp} r32 ]
 	  	}
 	  	%%%%%%%%%% measure 10 %%%%%%%%%%
 	  	\time 5/4
-	  	\diamonds \afterGrace c'4 \glissando {dqf'8}
+	  	\diamonds \afterGrace c'4 \mp \glissando {\circles dqf'8}
 	  	\switch-staff \body_staff
 	  	\body-clef #'fingerboard-small
 	  	\set Staff.forceClef = ##t
 	  	\circleheads
-	  	\ppos #0.2 c'4 \glissando \glissSkipOn \ppos #0.5 c'4 
-	  	\ppos #0.5 c'4 \afterGrace \ppos #0.5 c'4 {\glissSkipOff \ppos #0.75 c'8 }
+	  	\ppos #0.2 c'4 \pp \glissando \glissSkipOn \ppos #0.5 c'4 
+	  	\ppos #0.5 c'4 \< \afterGrace \ppos #0.5 c'4 \mp \> {\glissSkipOff \ppos #0.75 c'8 }
 	  	%%%%%%%%%% measure 11 %%%%%%%%%%
 	  	\time 4/8
-	  	\ppos #0.75 c'4 ~ \ppos #0.75 c'4 ~ 
+	  	\ppos #0.75 c'4 \ppp ~ \ppos #0.75 c'4 ~ 
 	  	%%%%%%%%%% measure 12 %%%%%%%%%%
 	  	\time 5/4
 	  	\tuplet 3/2 {
-	  		\ppos #0.75 c'4 \ppos #0.75 c'8	~
-	  	} \ppos #0.75 c'8. [ r16 ]
+	  		\ppos #0.75 c'4 \ppos #0.75 c'8	~ \<
+	  	} \afterGrace \ppos #0.75 c'8. [ {s8\ff} r16 ]
 	  	\switch-staff \normal_staff
 	  	\circles
 	  	r8 \set Staff.forceClef = ##t
-	  	<bf fs' b' eqs''>8 \glissando
-	  	\transpose eqs'' a'' {\diamonds <\single\hideNote bf \single\hideNote  fs' \single\hideNote  b' eqs''>4 \glissando \glissSkipOn}
-	  	\afterGrace g''8 {
+	  	\niente
+	  	<bf fs' b' eqs''>8 \< \glissando
+	  	\transpose eqs'' a'' {\diamonds <\single\hideNote bf \single\hideNote  fs' \single\hideNote  b' eqs''>4 \mf \glissando \glissSkipOn}
+	  	\niente
+	  	\afterGrace g''8 \> {
 	  		\glissSkipOff
-	  		\transpose eqs'' fs'' {\diamonds <\single\hideNote bf \single\hideNote  fs' \single\hideNote  b' eqs''>8}
+	  		\transpose eqs'' fs'' {\diamonds <\single\hideNote bf \single\hideNote  fs' \single\hideNote  b' eqs''>8 \!}
 	  	} r8
 	  	%%%%%%%%%% measure 13 %%%%%%%%%%
 	  	\time 2/4
@@ -104,54 +117,66 @@ violin_II_tuned = {
 	  		\body-clef #'bow-area-small
 	  		\set Staff.forceClef = ##t
 	  		\circleheads
-	  		\ppos #0.75 c'16 \glissando \afterGrace \ppos #0.3 c'16 \glissando {\ppos #0.75 c'8}
+	  		\niente
+	  		\ppos #0.75 c'16 \f \glissando \afterGrace \ppos #0.3 c'16 \glissando {\ppos #0.75 c'8}
 	  	}
 	  	%%%%%%%%%% measure 14 %%%%%%%%%%
 	  	\time 3/8
 	  	\body-clef #'fingerboard-small
 	  	\set Staff.forceClef = ##t
-	  	\ppos #0.75 c'8 \glissando \ppos #0.4 c'8 \glissando \ppos #0.9 c'8 \glissando \glissSkipOn
+	  	\ppos #0.75 c'8 \p \glissando \ppos #0.4 c'8 \glissando \ppos #0.9 c'8 \glissando \glissSkipOn
 	  	%%%%%%%%%% measure 15 %%%%%%%%%%
 	  	\time 4/4
-	  	\afterGrace \ppos #0.8 c'8 [ {\glissSkipOff \ppos #0.7 c'8} r16 \ppos #0.7 c'16 ] \glissando \glissSkipOn 
+	  	\afterGrace \ppos #0.8 c'8 [ {\glissSkipOff \ppos #0.7 c'8} r16 \ppos #0.7 c'16 ] \< \glissando \glissSkipOn 
 	  	\afterGrace \ppos #0.7 c'8. [ {\glissSkipOff \ppos #0.5 c'8} r16 ]
-	  	\ppos #0.5 c'4 \glissando \ppos #0.25 c'16 [ r16 \afterGrace \ppos #0.2 c'8 ] \glissando {\ppos #0.75 c'8}
+	  	\ppos #0.5 c'4 \glissando \ppos #0.25 c'16 [ r16 \afterGrace \ppos #0.2 c'8 ] \glissando {\ppos #0.75 c'8 \f}
 	  	%%%%%%%%%% measure 16 %%%%%%%%%%
 	  	\time 2/4
 	  	\switch-staff \normal_staff
 	  	\tuplet 3/2 {
 	  		r8 r16 \circles \set Staff.forceClef  = ##t
-	  		\afterGrace bqs16 \glissando {bes8} r8
+	  		<<
+	  			{\afterGrace bqs16 \glissando {bes8} r8}\\{\niente s32 \< \niente \afterGrace s32 \pp \> {s8\!}}
+	  		>>
 	  	}
-	  	r8  [ r32 \afterGrace cqf'''16. ] \glissando {b''8}
+	  	r8  [ r32 \afterGrace cqf'''16. ] \p \> \glissando {b''8 \ppp}
 	  	%%%%%%%%%% measure 17 %%%%%%%%%%
 	  	\time 4/8
 	  	\diamonds
 	  	\tuplet 6/4 {
-	  		d'4 \circles bqf'16 ( dqf''16)
+	  		d'4 \ppp \< \circles bqf'16 \mf ( dqf''16)
 	  	}
-	  	gs'32 [ \afterGrace c'8.. ] \glissando {as8}
+	  	gs'32 [ \afterGrace c'8.. \p \> ] \glissando {as8 \ppp}
 	  	%%%%%%%%%% measure 18 %%%%%%%%%%
 	  	\time 4/4
-	  	\diamonds <f' e''>4 \glissando 
-	  	\tuplet 3/2 {
-	  		<e' ds''>4 ~ <e' ds''>8 \glissando
-	  	}
-	  	\glissSkipOn
-	  	g''4
-	  	\tuplet 3/2 {
-	  		g''8 \glissSkipOff <a' gs''>8
-	  		\switch-staff \body_staff
-	  		\body-clef #'fingerboard-small
-	  		\circleheads
-	  		\set Staff.forceClef = ##t
-	  		\tuplet 3/2 {
-	  			\ppos #0.2 c'16 \glissando \ppos #0.75 c'16 \glissando \afterGrace \ppos #0.2 c'16 \glissando {\ppos #0.75 c'8}
-	  		}
-	  	}
+	  	<<
+	  	{
+	  		\niente \circles <f'\harmonic e''>4  \glissando 
+		  	\tuplet 3/2 {
+		  		<e'\harmonic ds''>4 ~ <e'\harmonic ds''\harmonic>8 \glissando
+		  	}
+		  	\diamonds
+		  	\glissSkipOn
+		  	g''4
+		  	\tuplet 3/2 {
+		  		g''8 \glissSkipOff <a' gs''>8
+		  		\switch-staff \body_staff
+		  		\body-clef #'fingerboard-small
+		  		\circleheads
+		  		\set Staff.forceClef = ##t
+		  		\tuplet 3/2 {
+		  			\ppos #0.2 c'16 \mf \glissando \ppos #0.75 c'16 \glissando \afterGrace \ppos #0.2 c'16 \glissando {\ppos #0.75 c'8}
+		  		}
+		  	}
+		} \\
+		{	
+			\niente s8 \< s8 \p \> s4 \ppp s4 s4
+		}>>
 	  	%%%%%%%%%% measure 19 %%%%%%%%%%
 	  	\time 4/4
-	  	r4 r16 \ppos #0.5 c'8. \glissando 
+	  	<<{
+	  		\circleheads
+	  		r4 r16 \ppos #0.5 c'8. \glissando 
 	  				_\markup {
 	  						\center-align
 	  						\center-column {
@@ -160,11 +185,16 @@ violin_II_tuned = {
 	  						}
 	  				}
 	  	\glissSkipOn \afterGrace \ppos #0.7 c'4 {\glissSkipOff \ppos #0.75 c'8}
-	  	r8. [ \ppos #0.75 c'16 ~ ]
+	  	r8. [ \ppos #0.75 c'16 \pp ~ ]
+	  	} \\ 
+	  	{
+	  		s4 s16 s8 \p s16 \< \afterGrace s4 \mf \> {s8\pp} s4
+	  	}>>
 	  	%%%%%%%%%% measure 20 %%%%%%%%%%
 	  	\time 2/4
+	  	\circleheads
 	  	\ppos #0.75 c'8 [ r8 ]
-	  	r8.[ \ppos #0.75 c'16 ~ ]
+	  	r8.[ \ppos #0.75 c'16 \mf ~ ]
 	  	%%%%%%%%%% measure 21 %%%%%%%%%%
 	  	\time 2/4
 	  	\tuplet 3/2 {
@@ -172,59 +202,68 @@ violin_II_tuned = {
 	  	}
 	  	%%%%%%%%%% measure 22 %%%%%%%%%%
 	  	\time 2/8
-	  	\ppos #0.75 c'8.. r32 _\bow-mute
+	  	\ppos #0.75 c'8.. \ff [ r32 ] _\bow-mute
 	  	%%%%%%%%%% measure 23 %%%%%%%%%%
 	  	\time 5/8
-	  	r4 \ppos #0.8 c'4. 
+	  	r4 \ppos #0.8 c'4. \f
 	  	%%%%%%%%%% measure 24 %%%%%%%%%
 	  	\time 4/4
-	  	r8 [ \ppos #0.75 c'8 ]
+	  	r8 [ \ppos #0.75 c'8 \f ]
 	  	\switch-staff \normal_staff
 	  	r4 r8 [ \set Staff.forceClef = ##t 
-	  	\squares <a'' aqs''>8 ~ ] <a'' aqs''>8. \tuplet 3/2 {g''32 g'' g''}
+	  	\niente 
+	  	\squares <a'' aqs''>8 ~ ] \< <a'' aqs''>8. \pp \tuplet 3/2 {g''32 g'' g''}
 	  	%%%%%%%%%% measure 25 %%%%%%%%%%
 	  	\time 5/4
-	  	r8 [ \diamonds \ottava #1 b'''8 ] \glissando \glissSkipOn
-	  	\ottava #0 g''4 g''4 g''4 g''4
+	  	r8 [ \niente \diamonds \ottava #1 b'''8 ] \< \glissando \glissSkipOn %>
+	  	\ottava #0 g''4 g''4 \pp g''4 
+	  	<< {g''4} \\ {s16 \< s8 \mp \> s16 \!} >>
 	  	%%%%%%%%%% measure 26 %%%%%%%%%%
 	  	\time 3/4
-	  	g''4 \glissSkipOff fs'' \glissando \glissSkipOn \afterGrace g''4 {\glissSkipOff g''8}
+	  	g''4 \pp \glissSkipOff fs'' \glissando \glissSkipOn \niente \afterGrace g''4 \> {\glissSkipOff g''8 \!}
 	  	%%%%%%%%%% measure 27 %%%%%%%%%%
 	  	\time 2/4
-	  	\circles 
-	  	\afterGrace <bf fs' d'' eqs''>2 \glissando 
+	  	<<{
+		  	\circles 
+		  	\once \override Staff.DynamicText.direction = #UP
+	  		\afterGrace <bf fs' d'' eqs''>2 \effort mf \glissando 
 	  		{\transpose eqs'' g'' {<bf fs' d'' eqs''>8}}
+	  	} \\ {
+	  		r8 \niente s8 \< s8 s8 \p
+	  	}>>
 	  	%%%%%%%%%% measure 28 %%%%%%%%%%
 	  	\time 2/4
-	  	\squares <bf fs' d'' eqs''>4. r8
+	  	\squares \niente \afterGrace <bf fs' d'' eqs''>4. \> {s8\!} r8
 	  	%%%%%%%%%% measure 29 %%%%%%%%%%
 	  	\time 3/8
-	  	\diamonds <e'' e'''>16 r16 r8
-	  	\squares <bf fs' d'' eqs''>8 ~
+	  	\diamonds <e'' e'''>16 [ \ff r16 ] r8
+	  	\squares <bf fs' d'' eqs''>8 \pp ~
 	  	%%%%%%%%%% measure 30 %%%%%%%%%%
 	  	\time 4/4
-	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ \glissSkipOn <bf fs' d'' eqs''>4 ~
+	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8 ~ \<  <bf fs' d'' eqs''>8 ~ \mf \>  <bf fs' d'' eqs''>4 \p ~ <bf fs' d'' eqs''>4 ~
 	  	%%%%%%%%%% measure 31 %%%%%%%%%%
 	  	\time 4/4
-	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8. ~ <bf fs' d'' eqs''>16
+	  	<bf fs' d'' eqs''>8 \< ~ <bf fs' d'' eqs''>8 \mf \> ~ <bf fs' d'' eqs''>4 \p ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8. \< ~ 
+	  	\afterGrace <bf fs' d'' eqs''>16 \f \> {s8\pp}
 	  	%%%%%%%%%% measure 32 %%%%%%%%%%
 	  	\time 5/4
-	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4:32 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4
+	  	<bf fs' d'' eqs''>8  ~ <bf fs' d'' eqs''>8 \< ~ <bf fs' d'' eqs''>4:32 \mf \> ~ <bf fs' d'' eqs''>4 \pp ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ \<
 	  	%%%%%%%%%% measure 33 %%%%%%%%%% 
 	  	\time 4/4
-	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8
+	  	<bf fs' d'' eqs''>4 \mp ~ <bf fs' d'' eqs''>4 \sub_pp ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 ~
 	  	%%%%%%%%%% measure 34 %%%%%%%%%%
 	  	\time 6/4
-	  	<bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 ~
+	  	<bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 \mp ~ <bf fs' d'' eqs''>8 ~ \pp
 	  	\tuplet 3/2 {
-	  		<bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 ~
-	  	} <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8:64
+	  		<bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8 \mf ~ <bf fs' d'' eqs''>8 \pp ~
+	  	} <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8 ~ <bf fs' d'' eqs''>8:64 \mf ~
 	  	%%%%%%%%%% measure 35 %%%%%%%%%%
 	  	\time 3/8
-	  	\glissSkipOff <bf fs' d'' eqs''>16 r16  r16 \diamonds <e'' e'''>16 \circles <e'' eqf''>8
+	  	\glissSkipOff \niente \afterGrace <bf fs' d'' eqs''>16 [ \> {s8\!} r16 ]  r16 [ \diamonds <e'' e'''>16  \f 
+	  	\circles \niente \flare_width \afterGrace <e'' eqf''>8 ] \< {s8 \flare_sfz} %>
 	  	%%%%%%%%%% measure 36 %%%%%%%%%%
 	  	\time 5/4
-	  	r4 r4 \ottava #2 \diamonds b''''4 \glissando \ottava #0 \glissSkipOn g''4 g''4
+	  	r4 r4 \ottava #2 \diamonds \niente b''''4 \< \glissando \ottava #0 \glissSkipOn g''4 \pp g''4
 	  	%%%%%%%%%% measure 37 %%%%%%%%%%
 	  	\time 5/4
 	  	g''4 
@@ -232,48 +271,52 @@ violin_II_tuned = {
 	  	a''4 ~
 	  	a''8. 
 % 	  	\wavy_vibrato #1.5 
-	  	a''16 \glissando \glissSkipOn 
-	  	\afterGrace a''16 [ {\glissSkipOff \hideNotes a''8 \unHideNotes} r8. ]
+	  	a''16 \< \glissando \glissSkipOn 
+	  	\afterGrace a''16 [ {\glissSkipOff \hideNotes a''8 \mf \unHideNotes} r8. ]
 	  	%%%%%%%%%% measure 38 %%%%%%%%%%
 	  	\time 2/8
-	  	r32 \afterGrace d'''8.. \glissando {f''8}
+	  	r32 \niente \afterGrace d'''8.. \< \glissando {f''8 \f}
 	  	%%%%%%%%%% measure 39 %%%%%%%%%%
 	  	\time 4/4
 	  	r8 \tuplet 3/2 {
-	  			r8 [ <e'' e'''>16 ]
+	  			r8 [ <e'' e'''>16  \f ]
 	  	}
-	  	\afterGrace e'''8. [ \glissando {f''8} r16 ]
+	  	\afterGrace e'''8. [ \mf  \> \glissando {f''8 \pp } r16 ]
 	  	r4 r4
 	  	%%%%%%%%%% measure 40 %%%%%%%%%%
 	  	\time 8/4
-	  	r2 r2 r2 r8 \squares <bf fs' d'' eqs''>8 ~ \glissSkipOn <bf fs' d'' eqs''>4
+	  	r2 r2 r2 r8 \squares \niente <bf fs' d'' eqs''>8 ~ \<  <bf fs' d'' eqs''>4 \pp
 	  	%%%%%%%%%% measure 41 %%%%%%%%%%
 	  	\time 6/4
 	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8 <bf fs' d'' eqs''>8 ~ 
 	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4
 	  	%%%%%%%%%% measure 42 %%%%%%%%%%
 	  	\time 7/4
-	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~
+	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ \<
 	  	\tuplet 3/2 {
-	  		<bf fs' d'' eqs''>8 <bf fs' d'' eqs''>4 ~
+	  		<bf fs' d'' eqs''>8 <bf fs' d'' eqs''>4 ~ \sub_p
 	  	}
-	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8. ~ \glissSkipOff <bf fs' d'' eqs''>16
+	  	<bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>8. ~  <bf fs' d'' eqs''>16
 	  	%%%%%%%%%% measure 43  %%%%%%%%%%
 	  	\time 2/8
 	  	\tuplet 7/4 {
 	  		\diamonds
-	  		fs''64 c'' gs' gqs' fs' c'' fs''
+	  		\niente	
+	  		fs''64 [ \< c'' fs' gqs \fposs \> fs' c'' fs'' ]
 	  	}
-	  	<as' f''>8 \glissando \afterGrace <f'' d'''>16 \glissando {<as' f''>}
+	  	<as' f''>8 [ \pp \< \glissando \afterGrace <f'' d'''>16 ] \mf \> \glissando {<as' f''>8 \pp}
 	  	%%%%%%%%%% measure 44 %%%%%%%%%%
 	  	\time 5/4
-	  	<gqs'' af''>4 \glissando \glissSkipOn g''4 g''4 g''8 g''8 \glissSkipOff <e'' fqf''>4
+	  	\circles
+	  	\niente
+	  	<gqs'' af''>4 \< \glissando \glissSkipOn g''4 g''4 \mf \> g''8 \pp g''8 \< \glissSkipOff 
+	  	\niente \afterGrace <e'' fqf''>4 \mp \> {s8\!}
 	  	%%%%%%%%%% measure 45 %%%%%%%%%%
 	  	\time 5/8
 	  	\switch-staff \body_staff
 	  	\body-clef #'bow-area-small
 	  	r8 \set Staff.forceClef = ##t
-	  	\ppos #0.75 c'4 \ppos #0.75 c'4 ~
+	  	\ppos #0.75 c'4 \ppos #0.75 c'4 \glissando
 	  	%%%%%%%%%% measure 46 %%%%%%%%%%
 	  	\time 2/8
 	  	\ppos #0.75 c'4
@@ -283,9 +326,10 @@ violin_II_tuned = {
 	  	r8 \set Staff.forceClef = ##t
 	  	\tuplet 3/2 {
 	  		\circles
-	  		\afterGrace bqs'8 \glissando {c''8}
-	  		cs'8 \glissando
-	  		\afterGrace dqf'8 \glissando {cqs'8}
+	  		\niente
+	  		\afterGrace bqs'8 \< \glissando {c''8}
+	  		\niente cs'8 \p \> \glissando
+	  		\afterGrace dqf'8 \glissando {cqs'8 \!}
 	  	} r8
 	  	%%%%%%%%%% measure 48 %%%%%%%%%%
 	  	\time 3/16
@@ -293,56 +337,64 @@ violin_II_tuned = {
 	  	%%%%%%%%%% measure 49 %%%%%%%%%%
 	  	\time 5/4
 	  	\tuplet 3/2 {
-	  		r8 \diamonds f'4 ~ ^\tilt_bow ^\altosulpont ^\markup \string-numbers #'( "IV" 3 0)
-	  	} f'4 ~ f'4 \circles 
-	  	d''16 \glissando cef''16 ~ <cef'' aqf''~>8 aqf''4
+	  		r8 \diamonds f'4 \f \> ~ ^\tilt_bow ^\altosulpont ^\markup \string-numbers #'( "IV" 3 0)
+	  	} f'4 \pp ~ f'4 \circles 
+	  	d''16 \pp \< \glissando cef''16 \mf ~ <cef'' aqf''~>8 \niente \afterGrace aqf''4 \> {s8\!}
 	  	%%%%%%%%%% measure 50 %%%%%%%%%% 
 	  	\time 3/4
-	  	r4 \afterGrace cs'8 \glissando {cqs'8} r16 <cqs' fqs'\harmonic>16 ~ <cqs' fqs'\harmonic>4 ~
+	  	r4  
+	  	<<
+	  		{\afterGrace cs'8 \glissando {cqs'8}} \\ {\niente s16 \< \niente \afterGrace s16 \p \> {s8\!}}
+	  	>>
+	  	r16 \niente <cqs' fqs'\harmonic>16 \< ~ <cqs' fqs'\harmonic>4 \ppp ~
 	  	%%%%%%%%%% measure 51 %%%%%%%%%%
 	  	\time 3/8
-	  	<cqs' fqs'\harmonic>8 
-	  	\afterGrace f'4 ^\tilt_bow ^\altosulpont ^\markup \string-numbers #'( "IV" 3 0) \glissando {fs'8}
+	  	<cqs' fqs'\harmonic>8 \<
+
+	  	\afterGrace f'4 \ff ^\tilt_bow ^\altosulpont ^\markup \string-numbers #'( "IV" 3 0) \glissando {fs'8}
 	  	%%%%%%%%%% measure 52 %%%%%%%%%%
 	  	\time 4/8
 	  	\tuplet 3/2 {
-	  		r8 bqf'4 \glissando \glissSkipOn
-	  	} \afterGrace b'8 [ {\glissSkipOff a'8} r16 
+	  		r8 \niente bqf'4 \< \glissando \glissSkipOn
+	  	} \niente \afterGrace b'8 \pp \> [ {\glissSkipOff a'8 \!} r16 
 	  	\switch-staff \body_staff
 	  	\body-clef #'fingerboard-small
 	  	\set Staff.forceClef = ##t
-	  	\ppos #0.2 c'16 ] \glissando \glissSkipOn
+	  	\niente
+	  	\ppos #0.2 c'16 ] \< \glissando \glissSkipOn %>
 	  	%%%%%%%%%% measure 53 %%%%%%%%%%
 	  	\time 3/16
-	  	\ppos #0.5 c'8.
+	  	\ppos #0.5 c'8. \mp
 	  	%%%%%%%%%% measure 54 %%%%%%%%%%
 	  	\time 5/4
-	  	\afterGrace \ppos #0.5 c'4 \glissando {\glissSkipOff \ppos #0.6 c'8}
+	  	\niente \afterGrace \ppos #0.5 c'4 \> \glissando {\glissSkipOff \ppos #0.6 c'8\!}
 	  	\switch-staff \normal_staff
 	  	\set Staff.forceClef = ##t
-	  	\diamonds <gqs g' cs'' g''>4 \glissando 
+	  	\niente
+	  	\diamonds <gqs g' cs'' g''>4 \< \glissando 
 	  	\transpose gqs aqf {<gqs \single\hideNote g' \single\hideNote  cs'' \single\hideNote  g''> ~} 
 	  	\circles
-	  		\transpose gqs aqf {<gqs \single\hideNote g' \single\hideNote cs'' \single\hideNote g''>4 \glissando \glissSkipOn}
-	  		\afterGrace  g''4 {\glissSkipOff <gqs g' cs'' g''>8}
+	  		\transpose gqs aqf {<gqs \single\hideNote g' \single\hideNote cs'' \single\hideNote g''>4 \p \glissando \glissSkipOn}
+	  		\afterGrace  g''4 \> {\glissSkipOff <gqs g' cs'' g''>8 \pp}
 	  	%%%%%%%%%% measure 55 %%%%%%%%%%
 	  	\time 3/4
-	  	\afterGrace <d' gqs'>4 \glissando {<ds' aqf'>8}
-	  	\diamonds <e' b'>16 [ \glissando <c' g'> \glissando <e' b'> \glissando <c' g'>16 ]
+	  	\afterGrace <d' gqs'>4 \mp \glissando {<ds' aqf'>8}
+	  	\diamonds <e' b'>16 \< [ \glissando <c' g'> \glissando <e' b'> \glissando <c' g'>16 \f ]
 	  	\circles
-	  	<cqs' fqs'\harmonic>4 ~ 
+	  	<cqs' fqs'\harmonic>4 ~ \sub_ppp
 	  	%%%%%%%%%% measure 56 %%%%%%%%%%
 	  	\time 3/8
 	  	<cqs' fqs'\harmonic>4. ~
 	  	%%%%%%%%%% measure 57 %%%%%%%%%%
 	  	\time 4/8
-	  	<cqs' fqs'\harmonic>16 ~ <cqs' fqs'\harmonic>8. ~ <cqs' fqs'\harmonic>8 <cqs' fqs'\harmonic>8 ~
+	  	<cqs' fqs'\harmonic>16 ~ 
+	  	\flare_width <cqs' fqs'\harmonic>8. \<  ~ \afterGrace <cqs' fqs'\harmonic>8 {s8 \flare_sfz} <cqs' fqs'\harmonic>8 ~ \ppp
 	  	%%%%%%%%%% measure 58 %%%%%%%%%%
 	  	\time 5/16
-	  	<cqs' fqs'\harmonic>4 \glissando <c' f'\harmonic>16 ~
+	  	<cqs' fqs'\harmonic>4 \< \glissando <c' f'\harmonic>16 ~ \p \>
 	  	%%%%%%%%%% measure 59 %%%%%%%%%%
 	  	\time 3/8
-	  	<c' f'\harmonic>4 ~ \afterGrace <c' f'\harmonic>8 \glissando {<cqs' fqs'\harmonic>8}
+	  	<c' f'\harmonic>4 \pp ~ \niente \afterGrace <c' f'\harmonic>8 \> \glissando {<cqs' fqs'\harmonic>8 \!}
 	  	%%%%%%%%%% measure 60 %%%%%%%%%%
 	  	\time 2/8
 	  	r4
@@ -351,51 +403,59 @@ violin_II_tuned = {
 	  	\switch-staff \body_staff
 	  	\body-clef #'fingerboard-small
 	  	\set Staff.forceClef = ##t
-	  	\ppos #0.4 c'8 \glissando \glissSkipOn \ppos #0.5 c'8 
-	  	\ppos#0.65 c'8 \afterGrace \ppos #0.7 c'32 {\glissSkipOff \ppos #0.75 c'8} \ppos #0.75 c'32 r16
+	  	\ppos #0.4 c'8 \effort mf \glissando \glissSkipOn \ppos #0.5 c'8 
+	  	\ppos#0.65 c'8 \afterGrace \ppos #0.7 c'32 {\glissSkipOff \ppos #0.75 c'8} \ppos #0.75 c'32 \effort "f" r16
 	  	\switch-staff \normal_staff
 	  	r16 [ \set Staff.forceClef = ##t 
-	  	\squares ges8. ]
+	  	\squares ges8. ] \mp 
 	  	%%%%%%%%%% measure 62 %%%%%%%%%%
 	  	\time 3/16
 	  	\switch-staff \body_staff
 	  	\body-clef #'fingerboard-small
 	  	\set Staff.forceClef = ##t
 	  	\circleheads
-	  	\afterGrace \ppos #0.3 c'8 [ \glissando {\ppos #0.6 c'8} r16 ]
+	  	\afterGrace \ppos #0.3 c'8 \pp [ \glissando {\ppos #0.6 c'8} r16 ]
 	  	%%%%%%%%%% measure 63 %%%%%%%%%%
 	  	\time 4/4
 	  	\switch-staff \normal_staff
-	  	\squares gqs4 ~ gqs4 \diamonds 
-	  	\afterGrace g''8 [ \glissando {c'''8} r8 ]
-	  	r16 [ \circles cqs'8. ]
+	  	\squares gqs4 \p \< ~ \afterGrace gqs4 {s8\mf} 
+	  	\diamonds 
+	  	\afterGrace g''8 \f [ \glissando {c'''8} r8 ]
+	  	<<
+	  		{r16 [ \circles cqs'8. ]}
+	  		\\
+	  		{s16 \niente s16 \< s16 \p \niente \afterGrace s16 \> {s8 \!}}
+	  	>>
 	  	%%%%%%%%%% measure 64 %%%%%%%%%%
 	  	\time 5/8
-	  	\diamonds c'4 ~ c'8 \glissando \glissSkipOn c'8 \afterGrace c'8 {\glissSkipOff bf8}
+	  	\diamonds 
+	  	\niente c'4 \< ~ c'8 \pp \glissando \glissSkipOn c'8 \< \niente \afterGrace c'8 \mp \> {\glissSkipOff bf8 \!}
 	  	%%%%%%%%%% measure 65 %%%%%%%%%%
 	  	\time 5/16
 	  	\circles
-	  	r8 r16 [ dqf'' \glissando cs''16 ] \glissando
+	  	r8 r16 [ \niente  dqf'' \< \glissando cs''16 \p ] \glissando
 	  	%%%%%%%%%% measure 66 %%%%%%%%%%
 	  	\time 2/8
-	  	dqf''4
+	  	<<{dqf''4} \\ {s8 \niente \afterGrace s8 \> {s8\!}}>>
 	  	%%%%%%%%%% measure 67 %%%%%%%%%%
 	  	\time 5/16
-	  	<b'' eqf'''\harmonic>4 ~ <b'' eqf'''\harmonic>16
+	  	<bqf'' eqf'''\harmonic>4 \pp ~ <bqf'' eqf'''\harmonic>16
 	  	%%%%%%%%%% measure 68 %%%%%%%%%%
 	  	\time 3/4
-	  	<b'' eqf'''\harmonic>8.  <b'' eqf'''\harmonic>16 ~
-	  	<b'' eqf'''\harmonic>2 
+	  	<bqf'' eqf'''\harmonic>8.  <bqf'' eqf'''\harmonic>16 ~ \mfpp
+	  	<bqf'' eqf'''\harmonic>2 
 	  	%%%%%%%%%% measure 69 %%%%%%%%%%
 	  	\time 4/4
 	  	\tuplet 10/8 {
-	  		r16 [ eqs''16 ~ <eqs'' aqs''\harmonic>8 <b'~ e''\harmonic> b' ~ <b' fs'~> 
-	  		<fs' as'\harmonic> ~ <c' fs' as'\harmonic>8 ~ <c' fs' as'\harmonic>8 <bf f'\harmonic>16 bf16 <fs' b'\harmonic>8 ] 
+	  		r16 [ 
+	  		\niente
+	  		eqs''16 \< ~ <eqs'' aqs''\harmonic>8 <b'~ e''\harmonic> b' ~ <b' fs'~> 
+	  		<fs' as'\harmonic> ~ <c' fs' as'\harmonic>8 ~ <c' fs' as'\harmonic>8 <bf f'\harmonic>16 bf16 <fs' b'\harmonic>8 \fposs ] 
 	  	}
 	  	%%%%%%%%%% measure 70 %%%%%%%%%%
 	  	\time 5/16
 	  	\tuplet 21/20 {
-	  		b'64 [ eqs'' b' \diamonds fs' c' b' eqs'' \circles b' fs' \diamonds bf \circles fs' \diamonds b' \circles eqs''
+	  		b'64 [  eqs'' b' \diamonds fs' c' b' eqs'' \circles b' fs' \diamonds bf \circles fs' \diamonds b' \circles eqs''
 	  		g \diamonds b' \circles fs' g fs' \diamonds  b' fs' c' ]
 	  	}
 	  	%%%%%%%%%% measure 71 %%%%%%%%%%
@@ -403,23 +463,23 @@ violin_II_tuned = {
 	  	\tuplet 6/4 {
 	  		fs'64 [ b' eqs'' \circles b' fs' \diamonds c']
 	  	}
-	  	\circles <a'' aqs''>8 \glissando \glissSkipOn g''16 g''16 \glissSkipOff <f'' fqs''>16 \glissando 
-	  	\glissSkipOn g''16  \glissando \glissSkipOff <g'' aqf''>16 \glissando \glissSkipOn \afterGrace g''16  \glissando {\glissSkipOff <g'' gqs''>8}
+	  	\circles <a'' aqs''>8 \f \glissando \glissSkipOn g''16 g''16 \glissSkipOff <f'' fqs''>16 \glissando 
+	  	\glissSkipOn g''16  \glissando \glissSkipOff <g'' aqf''>16 \glissando \glissSkipOn \afterGrace g''16 \< \glissando {\glissSkipOff <g'' gqs''>8}
 
 	  	\tuplet 13/12 {
-	  		eqs''64 [ b' \diamonds fs' \circles bf fs' b' \diamonds eqs'' b' fs' \circles bf \diamonds fs' \circles b' e'']
+	  		eqs''64 [  b' \diamonds fs' \circles bf \fposs fs' b' \diamonds eqs'' b' fs' \circles bf \diamonds fs' \circles b' e'']
 	  	}
 	  	%%%%%%%%%% measure 72 %%%%%%%%%%
 	  	\time 6/4
 	  	\tuplet 3/2 {
-	  		r8 <d'' dqs''>4 \glissando \glissSkipOn
+	  		r8 <d'' dqs''>4 \f \< \glissando \glissSkipOn
 	  	}
 	  	\tuplet 3/2 {
-	  		d''8 [ d''8 \glissSkipOff <f'' fqs''>8 ] ~
+	  		d''8 [ d''8 \ff \> \glissSkipOff <f'' fqs''>8 ] ~
 	  	}
-	  	<f'' fqs''>8 [ <b'' bqs''>8 ] \glissando
-	  	\glissSkipOn g''8 [ g''8 ] g''8. [ \glissSkipOff <c'' cqs''>16 ] \glissando
-	  	\glissSkipOn c''8 [ \glissSkipOff <d'' dqs''>8 ]
+	  	<f'' fqs''>8 [ \mf <b'' bqs''>8 ] \f \glissando
+	  	\glissSkipOn g''8 [ \< g''8 ] g''8. [ \ff \> \glissSkipOff <c'' cqs''>16 ] \p \< \glissando
+	  	\niente \glissSkipOn c''8 [ \f \> \glissSkipOff \afterGrace <d'' dqs''>8 ] {s8\!}
 	  	%%%%%%%%%% measure 73 %%%%%%%%%%
 	  	\time 3/4
 	  	r2.
@@ -428,50 +488,54 @@ violin_II_tuned = {
 	  	r2 r2.
 	  	%%%%%%%%%% measure 75 %%%%%%%%%%
 	  	\time 4/8
-	  	\squares b8 ~ b8 
-	  	\diamonds cqs'32 [ c' cs' d' ]
+	  	\squares b8 \mp ~ b8 
+	  	\niente \diamonds cqs'32 ( \< [ c' cs' d' ]
 	  	\tuplet 5/4 {
-	  		dqf'32 [ c' cqs' b bqs ]
+	  		dqf'32 [ \p c' cqs' b bqs ]
 	  	}
 	  	%%%%%%%%%% measure 76 %%%%%%%%%%
 	  	\time 3/16
 	  	\tuplet 3/2 {
-	  		c'32 cs'32 d'32 
-	  	} r16
+	  		c'32 \> cs'32 \niente \afterGrace d'32 ) \> {s8\!}
+	  	} r16 [
 	  	\switch-staff \body_staff
 	  	\body-clef #'fingerboard-small
 	  	\set Staff.forceClef = ##t
 	  	\circles
-	  	\ppos #0.2 c'16 \glissando
+	  	\niente
+	  	\ppos #0.2 c'16 ] \< \glissando
 	  	%%%%%%%%%% measure 77 %%%%%%%%%%
 	  	\time 5/8
 	  	\stemDown
-	  	\glissSkipOn \ppos #0.3 c'8 \ppos #0.4 c'8 \afterGrace \ppos #0.5 c'8 {\glissSkipOff \ppos #0.75 c'8} r8
+	  	\glissSkipOn \ppos #0.3 c'8 \ppos #0.4 c'8 \mf \> \afterGrace \ppos #0.5 c'8 \pp {\glissSkipOff \ppos #0.75 c'8} r8
 	  	\switch-staff \normal_staff
 	  	\set Staff.forceClef = ##t
 	  	\stemNeutral
-	  	\squares d'8
+	  	\niente
+	  	\squares d'8 \<
 	  	%%%%%%%%%% measure 78 %%%%%%%%%%
 	  	\time 4/8
 	  	\tuplet 6/4 {
-	  		f''16 eqs''16 f''
+	  		f''16 \mp eqs''16 f''
 	  		ds'' cs'' dqf''
 	  	} c'' b' bqf' c''
 	  	%%%%%%%%%% measure 79 %%%%%%%%%%
 	  	\time 5/4
 	  	\tuplet 3/2 {
 	  		cqs''8 ds'' d''
-	  	} dqs''4
-	  	r8. cqs'16 ~ 
+	  	} 
+	  	\flare_width \niente \afterGrace dqs''4 \< {s8 \flare_sfz}
+	  	r8. 
+	  	\niente cqs'16 ~ \<
 	  	\slurDashed
 	  	\tuplet 3/2 {
-	  		cqs'4 ( \circles cqs'4)  \squares  cqs'8 r8
+	  		cqs'4 ( \circles cqs'4) \mp \squares  cqs'8 \sub_pp r8
 	  	}
 	  	%%%%%%%%%% measure 80 %%%%%%%%%%
 	  	\time 4/8
 	  	\tuplet 3/2 {
-	  		r16 gs'' gqs''
-	  	} aqf'' af''
+	  		r16 \niente gs'' \< gqs'' 					%>
+	  	} aqf'' \mp af''
 	  	\tuplet 6/4 {
 	  		a'' b'' bqs'' g'' gqf'' fs''
 	  	}
@@ -481,95 +545,112 @@ violin_II_tuned = {
 	  	%%%%%%%%%% measure 82 %%%%%%%%%%
 	  	\time 5/8
 	  	\tuplet 3/2 {
-	  		bqf''16 a''8
+	  		bqf''16 \mf a''8 \p
 	  	}
 	  	\tuplet 3/2 {
-	  		aqf''16 g''8
+	  		aqf''16 \mf g''8 \p
 	  	}
 	  	\tuplet 3/2 {
-	  		g''16 g''8
+	  		g''16 \mf g''8 \p
 	  	}
-	  	\afterGrace fs'8 \glissando {b''8} 
+	  	\afterGrace fs'8 \< ^\markup \string-numbers #'( "IV" 3 0) \glissando {d''8 } 
 	  	\tuplet 3/2 {
-	  		gs''16 gqs'' a''
+	  		gs''16 \mf gqs'' a''
 	  	}
 	  	%%%%%%%%%% measure 83 %%%%%%%%%%
 	  	\time 4/8
 	  	b''16 bf''16 a'' gs''
 	  	\tuplet 6/4 {
-	  		a''4 \glissando cs'''16 d'''
+	  		a''4 \> \glissando cs'''16 \p d'''
 	  	}
 	  	%%%%%%%%%% measure 84 %%%%%%%%%%
 	  	\time 3/4
 	  	\tuplet 3/2 {
 	  		cqs'''8 g'' bqf''
 	  	}
-	  	a''8 e''8 
-	  	fqs'' g''
+	  	\afterGrace a'8 \p \< \glissando {fs''8 \mf} e''8 
+	  	fqs'' \afterGrace g' \p \< \glissando {e''8 \mf}
 	  	%%%%%%%%%% measure 85 %%%%%%%%%%
 	  	\time 3/8
-	  	c'''16 b'' bqf'' \diamonds a'' aqs'' b''
+	  	c'''16 \p \> b'' bqf'' \diamonds a'' aqs'' b''
 	  	%%%%%%%%%% measure 86 %%%%%%%%%%
 	  	\time 3/4
 	  	\tuplet 6/4 {
-	  		b''16 a'' g'' gqf'' fs'' g''
+	  		b''16 \ppp a'' g'' gqf'' fs'' g''
 	  	}
 	  	\tuplet 6/4 {
-	  		a'' b'' c''' cs''' d''' b''
+	  		a'' \< b'' c''' cs''' d''' b''
 	  	}
 	  	\tuplet 7/4 {
 	  		a'' g'' gqf'' g'' a'' bf'' c'''
 	  	}
 	  	%%%%%%%%%% measure 87 %%%%%%%%%%
 	  	\time 2/4
-	  	a''32 af'' g'' fs'' 
-	  	e'' d'' cs'' e''
+	  	a''32 \f  af'' \> g'' fs'' 
+	  	e'' d'' cs'' \ppp e''
 
-	  	\tweak #'direction #DOWN \tuplet 9/8 {f'' fs'' a'' b'' cs''' d''' e''' fs''' a'''}
+	  	\tweak #'direction #DOWN \tuplet 9/8 {f'' fs'' \< a'' b'' cs''' d''' e''' fs''' a''' \f}
 	  	%%%%%%%%%% measure 88 %%%%%%%%%%
 	  	\time 2/4
 	  	\tuplet 6/4 {
-	  		e'''16 d''' cs''' b'' a'' gs'' 
+	  		e'''16 \pp \< d''' cs''' b'' a'' gs'' 
 	  	}
 	 	\tuplet 6/4 {
-	 		fs'' e'' d'' cs'' e'' fs''
+	 		fs'' \mf \> e'' d'' cs'' e'' fs'' \ppp
 	 	}
 	 	%%%%%%%%%% measure 89 %%%%%%%%%%
 	 	\time 4/8
-	 	fs''4 \glissando \glissSkipOn  e'8. [ \glissSkipOff dqs'16 ~ ]
+	 	<<
+	 		{fs''4 \glissando \glissSkipOn  e'8. [ \glissSkipOff dqs'16 ~ ]}
+	 		\\
+	 		{\niente s32 \< s8.. \sfz s8. \> s16 \ppp}
+	 	>>
 	 	%%%%%%%%%% measure 90 %%%%%%%%%%
 	 	\time 4/16
 	 	dqs'4 ~
 	 	%%%%%%%%%% measure 91 %%%%%%%%%%
 	 	\time 2/4
 % 	 	\wavy_vibrato #1.25 
-	 	\afterGrace dqs'8 [ \glissando {\hideNotes dqs'8 \unHideNotes}
-	 	\afterGrace <d' aqs'>16 \glissando {<f'' cs'''>8} r16 ]
+	 	\afterGrace dqs'8 [ \< \glissando {\hideNotes dqs'8 \unHideNotes}
+	 	\afterGrace <d' aqs'>16 \sfz \glissando {<f'' cs'''>8} r16 ]
 	 	\circles
 	 	\set Staff.tieWaitForNote = ##t
-	 	\tieDashed
-	 	\afterGrace <bf fs' d'' eqs''>4 \glissando {
-	 		\transpose eqs'' g'' {<\single\hideNote bf \single\hideNote fs' \single\hideNote d'' eqs''>8 ~ }
-	 	}
+
+	 	<<
+	 		{
+	 			\tieDashed
+	 			\afterGrace <bf fs' d'' eqs''>4 \glissando {
+	 			\transpose eqs'' g'' {<\single\hideNote bf \single\hideNote fs' \single\hideNote d'' eqs''>8 ~ }}
+	 		} \\
+	 		{
+	 			\niente s8 \<  s16 \mf \niente \afterGrace s16 \> {s8\!}
+	 		}
+	 	>>
 	 	%%%%%%%%%% measure 92 %%%%%%%%%%
 	 	\time 3/16
-	 	r16  [
-	 	\afterGrace 
-	 		\transpose eqs'' g'' {<\single\hideNote bf \single\hideNote fs' \single\hideNote d'' eqs''>16 \glissando }
-	 		{<bf fs' d'' eqs''>8} r16 ]
-	 	\set Staff.tieWaitForNote = ##f
-	 	\tieSolid	
+	 	<<
+	 		{r16  [\afterGrace 
+	 			\transpose eqs'' g'' {
+	 				<\single\hideNote bf \single\hideNote fs' \single\hideNote d'' eqs''>16 \glissando }
+	 					{<bf fs' d'' eqs''>8} r16 ]
+	 				\set Staff.tieWaitForNote = ##f
+	 				\tieSolid	
+	 		} \\
+	 		{
+	 			s16 \niente s32 \<  \niente \afterGrace s32 \mf \> {s8\!} s16
+	 		}
+	 	>>
 	 	%%%%%%%%%% measure 93 %%%%%%%%%%
 	 	\time 2/4
 	 	r4 \tuplet 6/4 {
-	 			r16 \squares g'16 f' eqs' e' d'
+	 			r16 \squares g'16 ( \p f' eqs' e' d'
 	 	}
 	 	%%%%%%%%%% measure 94 %%%%%%%%%%
 	 	\time 4/4
 	 	\tieDown
 	 	\set Staff.tieWaitForNote = ##t
 	 	\tieDashed
-	 	cqs'8 c'8 ~ \glissSkipOn 
+	 	cqs'8 c'8 ) ~ \glissSkipOn 
 	 	cs'8 \glissSkipOff \circles c'8 ~
 	 	\glissSkipOn cs'8 \glissSkipOff \diamonds 
 	 	\tieSolid
@@ -587,26 +668,26 @@ violin_II_tuned = {
 	 	c'16 [ \glissando a' \glissando b16] \glissando
 	 	%%%%%%%%%% measure 97 %%%%%%%%%%
 	 	\time 4/4
-	 	\glissSkipOn d'8 [ d'8 ] \glissSkipOff e'4 ~
+	 	\glissSkipOn d'8 [ d'8 ] \glissSkipOff e'4 ~ \<
 	 	\circles
 % 	 	\wavy_line #1
-	 	e'8 [ \glissando \glissSkipOn e'8 ] 
-	 	e'8 [ \glissSkipOff \diamonds  d'8] \glissando
+	 	e'8 [ \glissando \glissSkipOn e'8 ] \mf
+	 	e'8 [ \glissSkipOff \diamonds  d'8] \> \glissando
 	 	%%%%%%%%%% measure 98 %%%%%%%%%%
 	 	\time 3/4
-	 	e'4 \glissando \glissSkipOn e'4 \afterGrace d'4 {\glissSkipOff b8}
+	 	e'4 \pp \glissando \glissSkipOn \niente e'4 \> \afterGrace d'4 {\glissSkipOff b8 \!}
 	 	%%%%%%%%%% measure 99 %%%%%%%%%%
 	 	\time 5/4
 	 	\tieSolid
 	 	r4
 	 	\tuplet 3/2 {
-	 		r8 \circles b'4 \glissando
+	 		r8 \circles \niente b'4 \< \glissando
 	 	}
 	 	\tuplet 3/2 {
-	 		\glissSkipOn b'8 \glissSkipOff cqs''4 ~
+	 		\glissSkipOn b'8 \glissSkipOff cqs''4 \p ~
 	 	}
-	 	cqs''16 [ ~ cqs''8. ] \glissando \glissSkipOn
-	 	\afterGrace b'4 \glissando {\glissSkipOff a'8}
+	 	cqs''16 [ ~ \niente cqs''8. ] \> \glissando \glissSkipOn
+	 	\afterGrace b'4 \glissando {\glissSkipOff a'8 \!}
 	 	%%%%%%%%%% measure 100 %%%%%%%%%%
 	 	\time 3/16
 	 	r16 [ \squares cqs''8 ] \mp 
@@ -617,58 +698,70 @@ violin_II_tuned = {
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads	 	
-	 	\ppos #0.6 c'16 \glissando \afterGrace \ppos #0.2 c'16 \glissando {\ppos #0.75 c'8}
+	 	\ppos #0.6 c'16 \mf \glissando \afterGrace \ppos #0.2 c'16 \glissando {\ppos #0.75 c'8}
 	 	r8
 	 	%%%%%%%%%% measure 102 %%%%%%%%%%
 	 	\time 4/4
 	 	\switch-staff \normal_staff
-	 	r4 r8 \set Staff.forceClef = ##t \squares e'8 \glissando \glissSkipOn
-	 	e'4 \glissSkipOff \circles fqs'4 \glissando \glissSkipOn
+	 	r4 r8 \set Staff.forceClef = ##t 
+	 	\squares 
+	 	\niente
+	 	e'8 \< \glissando \glissSkipOn
+	 	e'4 \glissSkipOff \circles fqs'4 \p \> \glissando \glissSkipOn
 	 	%%%%%%%%%% measure 103 %%%%%%%%%%
 	 	\time 3/4
-	 	f'8 f'8 \glissSkipOff \diamonds b4 ~ \afterGrace b4 \glissando {d'8}
+	 	f'8 \pp f'8 \< \glissSkipOff \diamonds b4 \mp ~ \niente \afterGrace b4 \> \glissando {d'8\!}
 	 	%%%%%%%%%% measure 104 %%%%%%%%%%
 	 	\time 5/4
 	 	r4 
 % 	 	\wavy_line #1.25
-	 	 fs''4 \glissando 
+	 	\niente fs''4 \< \glissando 
 	 	\glissSkipOn fs''8 \glissSkipOff gqf''8 \glissando 
-	 	fs''4 ~ \glissSkipOn fs''8 ~ \glissSkipOff \diamonds  fs''8 \glissando \glissSkipOn
+	 	fs''4 \mp ~ \glissSkipOn fs''8 ~ \glissSkipOff \diamonds  fs''8 \> \glissando \glissSkipOn
 	 	%%%%%%%%%% measure 105 %%%%%%%%%%
 	 	\time 3/4
-	 	b'8 [ a'8 ] g'8 [ f'8 ] \afterGrace e'8 [{ \glissSkipOff des'8} 
+	 	b'8 [ a'8 ] \ppp g'8 [ f'8 ] \afterGrace e'8 [{ \glissSkipOff des'8} 
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circles
-	 	\ppos #0.75 c'16 \glissando \afterGrace \ppos #0.25 c'16 ] \glissando {\ppos #0.75 c'8}
+	 	\ppos #0.75 c'16 \mf \glissando \afterGrace \ppos #0.25 c'16 ] \glissando {\ppos #0.75 c'8}
 	 	%%%%%%%%%% measure 106 %%%%%%%%%%
 	 	\time 5/8
 	 	s2 s8
 
 	 	\time 2/4
-	 	r4 r16 [ \once\override NoteHead.stencil = #scratch-tone \ppos #0.85 c'8. ]
+	 	r4 r16 [ \niente \once\override NoteHead.stencil = #scratch-tone 
+	 	\flare_width \afterGrace \ppos #0.85 c'8. \< ] {s8 \flare_sfz}
 	 	%%%%%%%%%% measure 107 %%%%%%%%%%
+	 	\tieNeutral
 	 	\time 5/4
 	 	r4 r4 r8 \circles 
 	 	\switch-staff \normal_staff
 	 	\set Staff.forceClef = ##t
-	 	bqf'''16 [ bqf'''16 ] ~ 
+	 	bqf'''16 [ \mp bqf'''16 ] ~ \pp \<
 	 	\tuplet 3/2 {
-	 		bqf'''8 [ bef'8 r16 cses''16 ] \glissando 
+	 		\niente bqf'''8 [ \p \> \afterGrace bef'8 {s8\!} r16 cses''16 \pp \< ] \glissando 
 	 	}
-	 	\squares d''8. \circles cs''16 \glissando
+	 	\squares d''8. \mf \circles cs''16 \mp \glissando
 	 	%%%%%%%%%% measure 108 %%%%%%%%%%
 	 	\time 5/8
-	 	\glissSkipOn \afterGrace c'8 [ {\glissSkipOff def''8} r8 ]
+	 	\niente \glissSkipOn \afterGrace e''8 \> [ {\glissSkipOff def''8 \!} r8 ]
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	r8
 	 	\set Staff.forceClef = ##t 
-	 	\circleheads \ppos #0.2 c'4 ~
+	 	\circleheads \ppos #0.2 c'4 ~ \effort mf
 	 	%%%%%%%%%% measure 109 %%%%%%%%%%
 	 	\time 3/8
 	 	\ppos #0.2 c'4. ~
+	 		_\markup {
+	 				\center-align 
+	 				\center-column {
+	 				\small \italic "au sillet"
+	 					\fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
+	 				}
+	 		}
 	 	%%%%%%%%%% measure 110 %%%%%%%%%%
 	 	\time 5/4
 	 	\ppos #0.2 c'8. \ppos #0.2 c'16 ~
@@ -693,13 +786,14 @@ violin_II_tuned = {
 	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4
 	 	%%%%%%%%%% measure 115 %%%%%%%%%%
 	 	\time 3/8
-	 	\ppos #0.2 c'8 ~ \ppos #0.2 c'16 ~ \ppos #0.2 c'16 ~
+	 	\ppos #0.2 c'8 ~ \ppos #0.2 c'16 ~ 
+	 	\flare_width \ppos #0.2 c'16 ~ \<
 	 	\tuplet 3/2 {
-	 		\ppos #0.2 c'8 r16
+	 		\afterGrace \ppos #0.2 c'8 {s8\! \flare_sfz} r16
 	 	}
 	 	%%%%%%%%%% measure 116 %%%%%%%%%%
 	 	\time 5/16
-	 	r8 \ppos #0.3 c'8. ~
+	 	r8 \ppos #0.3 c'8. \effort mf ~
 	 	%%%%%%%%%% measure 117 %%%%%%%%%%
 	 	\time 2/4
 	 	\tuplet 3/2 {
@@ -711,7 +805,7 @@ violin_II_tuned = {
 	 	\afterGrace \ppos #0.25 c'16 \glissando {\ppos #0.75 c'8}
 	 	%%%%%%%%%% measure 119 %%%%%%%%%%
 	 	\time 2/4
-	 	r8. \ppos #0.75 c'16 \glissando \glissSkipOn \ppos #0.6 c'8 \ppos #0.4 c'8
+	 	r8. \ppos #0.75 c'16 \effort mf \glissando \glissSkipOn \ppos #0.6 c'8 \ppos #0.4 c'8
 	 	%%%%%%%%%% measure 120 %%%%%%%%%%
 	 	\time 2/8
 	 	\glissSkipOff
@@ -723,44 +817,47 @@ violin_II_tuned = {
 	 	\time 2/4
 	 	\tuplet 3/2 {
 	 		\glissSkipOff \ppos #0.5 c'8 \ppos #0.5 c'8 \ppos #0.65 c'8
-	 	} \ppos #0.5 c'8 \ppos #0.35 c'8
+	 	} \flare_width \ppos #0.5 c'8 \p \< \ppos #0.35 c'8
 	 	%%%%%%%%%% measure 123 %%%%%%%%%%
 	 	\time 5/8
-	 	\ppos #0.2 c'8 r8 
-	 	\afterGrace \ppos #0.75 c'4. \glissando {\ppos #0.2 c'8}
+	 	\afterGrace \ppos #0.2 c'8 {s8 \flare_sfz} r8 
+	 	\afterGrace \ppos #0.75 c'4. \effort mf \glissando {\ppos #0.2 c'8}
 	 	%%%%%%%%%% measure 124 %%%%%%%%%%
 	 	\time 2/4
 	 	r8 
 	 	\switch-staff \normal_staff
 	 	\set Staff.forceClef = ##t
 	 	\circles
-	 	b8 \glissando \glissSkipOn \afterGrace b8. {\glissSkipOff d'8} r16
+	 	\niente
+	 	b8 \< \glissando \glissSkipOn \niente \afterGrace b8. \p \> {\glissSkipOff d'8 \!} r16
 	 	%%%%%%%%%% measure 125 %%%%%%%%%%
 	 	\time 3/4
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.75 c'4 \glissando \glissSkipOn \ppos #0.5 c'8 \afterGrace \ppos #0.5 c'8 {\glissSkipOff \ppos #0.2 c'8} r4
+	 	\ppos #0.75 c'4 \effort mf \glissando \glissSkipOn \ppos #0.5 c'8 \afterGrace \ppos #0.5 c'8 {\glissSkipOff \ppos #0.2 c'8} r4
 	 	%%%%%%%%% measure 126 %%%%%%%%%%
 	 	\time 5/8
-	 	\ppos #0.5 c'8. r16 \ppos #0.3 c'32 \ppos #0.3 c'16. \glissando \glissSkipOn c'8 c'8 
+	 	\niente \flare_width
+	 	\afterGrace \ppos #0.5 c'8. \< {s8 \flare_sfz} r16 \ppos #0.3 c'32 \mf \ppos #0.3 c'16. \glissando \glissSkipOn c'8 c'8 
 	 	%%%%%%%%%% measure 127 %%%%%%%%%%
 	 	\time 5/4
 	 	\afterGrace \ppos #0.5 c'8 {\glissSkipOff c'8} r8
-	 	\ppos #0.3 c'4 \glissando \glissSkipOn \afterGrace \ppos #0.5 c'8 {\glissSkipOff \ppos #0.65 c'8} r8
+	 	\ppos #0.3 c'4 \p \< \glissando \glissSkipOn \afterGrace \ppos #0.5 c'8 \mf \> {\glissSkipOff \ppos #0.65 c'8 \p} r8
 	 	\afterGrace \ppos #0.75 c'16 \glissando {\ppos #0.2 c'8} r8.
 	 	\switch-staff \normal_staff
 	 	\set Staff.forceClef = ##t 
-	 	\circles
-	 	\afterGrace gqs'4 \glissando {gqf'8}
+	 	<<
+	 		{\circles \afterGrace gqs'4 \glissando {gqf'8}} \\ {\niente s8 \< \afterGrace s8 \p \> {s8\!} }
+	 	>>
 	 	%%%%%%%%%% measure 128 %%%%%%%%%%
 	 	\time 2/4
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\circleheads
 	 	\tuplet 3/2 {
-	 		r4 \set Staff.forceClef = ##t \ppos #0.65 c'8 \glissando
+	 		r4 \set Staff.forceClef = ##t \ppos #0.65 c'8 \p \glissando
 	 	}
 	 	\glissSkipOn \ppos #0.5 c'8 \glissSkipOff \ppos #0.5 c'8 ~
 	 	%%%%%%%%%% measure 129 %%%%%%%%%%
@@ -781,7 +878,7 @@ violin_II_tuned = {
 	 	\time 3/4
 	 	\ppos #0.25 c'4 ~ \ppos #0.25 c'16 \ppos #0.25 c'8.:64 
 	 	\tuplet 3/2 {
-	 		\ppos #0.4 c'8 \ppos #0.4 c'8 \ppos #0.2 c'8
+	 		\ppos #0.4 c'8 ( \ppos #0.4 c'8 \ppos #0.2 c'8
 	 	}
 	 	%%%%%%%%%% measure 132 %%%%%%%%%%
 	 	\time 4/8
@@ -789,7 +886,7 @@ violin_II_tuned = {
 	 		\ppos #0.2 c'8 \ppos #0.3 c'8 \ppos #0.4 c'8
 	 	}
 	 	\tuplet 3/2 {
-	 		\ppos #0.3 c'8 \ppos #0.2 c'4 ~
+	 		\ppos #0.3 c'8 \ppos #0.2 c'4 ) ~
 	 	}
 	 	%%%%%%%%%% measure 133 %%%%%%%%%%
 	 	\time 3/4
@@ -800,12 +897,12 @@ violin_II_tuned = {
 	 	\switch-staff \normal_staff
 	 	r16 [
 	 	\set Staff.forceClef = ##t
-	 	\diamonds g'8. ]
+	 	\niente \diamonds \afterGrace g'8. ] {s8\p}
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.75 c'4 \glissando
+	 	\ppos #0.75 c'4 \mf \glissando
 	 	%%%%%%%%%% measure 135 %%%%%%%%%%
 	 	\time 2/8
 	 	\glissSkipOn \afterGrace \ppos #0.5 c'8 {\glissSkipOff \ppos #0.2 c'8}
@@ -816,7 +913,9 @@ violin_II_tuned = {
 	 	%%%%%%%%%% measure 136 %%%%%%%%%%
 	 	\time 5/8
 	 	\ppos #0.4 c'4 ~ \ppos #0.4 c'8 
-	 	\ppos #0.75 c'8 \ppos #0.75 c'16 \glissando \afterGrace \ppos #0.4 c'16 \glissando {\ppos #0.75 c'8}
+	 	\afterGrace \ppos #0.75 c'8 \< {s8\sf}
+	 	\ppos #0.75 c'16 \glissando 
+	 	\afterGrace \ppos #0.4 c'16 \mf \glissando {\ppos #0.75 c'8}
 	 	%%%%%%%%%% measure 137 %%%%%%%%%%
 	 	\time 5/8
 	 	\ppos #0.3 c'8 \glissando \glissSkipOn \ppos #0.4 c'8 \ppos #0.5 c'8 \glissSkipOff
@@ -827,27 +926,29 @@ violin_II_tuned = {
 	 	\set Staff.forceClef = ##t
 	 	\circles
 	 	\set glissandoMap = #'((1 . 1))
-	 	<g'~ g'>4 \glissando \glissSkipOn a'4 \afterGrace a'4 {\glissSkipOff <g' af'>8 ~}
+	 	\niente
+	 	<g'~ g'>4 \< \glissando \glissSkipOn a'4 \afterGrace a'4 \p \> {\glissSkipOff <g' af'>8 \pp ~}
 	 	%%%%%%%%%% measure 139 %%%%%%%%%%
 	 	\time 4/8
-	 	<g'~ af'>4 \glissando <g' gqs'>4
+	 	<g'~ af'>4 \< \glissando <g' gqs'>8 ~ \mp \niente \afterGrace <g' gqs'>8 \> {s8\!}
 	 	%%%%%%%%%% measure 140 %%%%%%%%%%
 	 	\time 4/8
-	 	r16 [ <g''~ gqs''>8. ] \glissando \afterGrace <g'' g''>8. [ \glissando {<g'' gqf''>8} r16 ]
+	 	r16 [ \niente <g''~ gqs''>8. ] \< \glissando \niente \afterGrace <g'' g''>8. \mp \> [ \glissando {<g'' gqf''>8 \!} r16 ]
 	 	%%%%%%%%%% measure 141 %%%%%%%%%%
 	 	\time 4/4
 	 	r8  [
 	 	\set glissandoMap = #'((0 . 0 ) (1 . 1) (2 . 2) (3 . 3))
-	 	\diamonds \transpose eqs'' aqs'' {<bf ees' aqs' eqs''>8 ] \glissando } 
-	 	\glissSkipOn g''4 g''4 \glissSkipOff <\single\hideNote bf \single\hideNote ees' \single\hideNote aqs' eqs''>4 \glissando
+	 	\diamonds \transpose eqs'' aqs'' {
+	 		\niente <bf ees' aqs' eqs''>8 ] \< \glissando } 
+	 	\glissSkipOn g''4 g''4 \f \> \glissSkipOff <\single\hideNote bf \single\hideNote ees' \single\hideNote aqs' eqs''>4 \glissando
 	 	%%%%%%%%%% measure 142 %%%%%%%%%%
 	 	\time 3/4
 	 	\glissSkipOn g''8 \glissSkipOff 
 	 	\tieUp
-	 	\transpose eqs'' fs'' {<\single\hideNote bf \single\hideNote ees' \single\hideNote aqs' eqs'' ~ >8}
+	 	\transpose eqs'' fs'' {<\single\hideNote bf \single\hideNote ees' \single\hideNote aqs' eqs'' ~ >8 \p}
 	 	\tieUp
 	 	\set glissandoMap = #'((1 . 1))
-	 	\circles \afterGrace <fs''~ e''>4 \glissando {<fs'' dqs'' >8} r4
+	 	\circles \niente \afterGrace <fs''~ e''>4 \> \glissando {<fs'' dqs'' >8 \!} r4
 	 	%%%%%%%%%% measure 143 %%%%%%%%%%
 	 	\time 2/8
 	 	r4
@@ -855,107 +956,115 @@ violin_II_tuned = {
 	 	%%%%%%%%%% measure 144 %%%%%%%%%%
 	 	\time 3/4
 	 	\set glissandoMap = #'((0 . 0 ) (1 . 1) (2 . 2) (3 . 3))
-	 	r4 r8. [ <bf ees' aqs' eqs''>16 ] ~  <bf ees' aqs' eqs''>8 [ ~
-	 	<bf ees' aqs' eqs''> ] \glissando
+	 	r4 r8. [ \niente <bf ees' aqs' eqs''>16 \< ] ~  <bf ees' aqs' eqs''>8 \p [ ~
+	 	<bf ees' aqs' eqs''>8 ] \< \glissando 					%>
 	 	%%%%%%%%%% measure 145 %%%%%%%%%%
 	 	\time 2/4
 	 	\afterGrace 
-	 		\transpose e'' g'' {<\single\hideNote bf \single\hideNote ees' \single\hideNote aqs' eqs''>4 \glissando }
-	 		{<bf ees' aqs' eqs''>8}
-	 		\afterGrace c'16 [ \glissando {cs'8} 
-	 		\diamonds d'8. ] \glissando
+	 		\transpose e'' g'' {
+	 			\niente
+	 			<\single\hideNote bf \single\hideNote ees' \single\hideNote aqs' eqs''>4 \mf \> \glissando }
+	 		{<bf ees' aqs' eqs''>8 \!}
+	 		\afterGrace c'16 \pp [ \glissando {cs'8} 
+	 		\niente \diamonds d'8. ] \< \glissando
 	 	%%%%%%%%%% measure 146 %%%%%%%%%%
 	 	\time 5/8
-	 	\glissSkipOn d'8 \glissSkipOff <c' fs'>8 \glissando \glissSkipOn c'8 c'8 
-	 	\afterGrace c'8 {\glissSkipOff <gqs ds'>8}
+	 	\glissSkipOn d'8 \mp \glissSkipOff <c' fs'>8 \glissando \glissSkipOn c'8 c'8 
+	 	\niente \afterGrace c'8 \> {\glissSkipOff <gqs ds'>8 \! }
 	 	%%%%%%%%%% measure 147 %%%%%%%%%%
 	 	\time 2/8 r4
 	 	%%%%%%%%%% measure 148 %%%%%%%%%%
 	 	\time 4/4
 	 	\slurSolid
 	 	r8 \tuplet 5/4 {
-	 			dqs'32 ( d' dqf' d' ef' ~
+	 		\niente
+	 			dqs'32 ( \< d' dqf' d' ef' ~
 	 	}
 	 	\tieDown
 	 	\set glissandoMap = #'((1 . 1))
-	 	\afterGrace <d'~ ef'>4 ) \glissando {<d'~ dqs'>8}
-	 	d'16 [ dqs'8 r16 ] r4
+	 	\afterGrace <d'~ ef'>4 ) \mp \glissando {<d'~ dqs'>8}
+	 	d'16 [ \< dqs'8 \mf r16 ] r4
 	 	%%%%%%%%%% measure 149 %%%%%%%%%%
 	 	\time 5/8
-	 	r16 [ <eqs'' e''>16 ] ~ 
+	 	\tieNeutral
+	 	r16 [ \niente <eqs'' e''>16 ] \< ~ 
 	 	\tuplet 3/2 {
-	 		<eqs'' e''>8 ~ <eqs'' e''>4
+	 		\glissSkipOn <eqs'' e''>8 ~ \glissSkipOff <eqs'' e''>4 \mf
 	 	} 
 	 	\diamonds
 	 	\ottava #1
 	 	\set glissandoMap = #'((0 . 0))
-	 	\afterGrace  e''''4 \glissando {\ottava #0 cs''8}
+	 	\flare_width \afterGrace  e''''4 \f \< \glissando {\ottava #0 cs''8 \flare_sfz}
 	 	%%%%%%%%%% measure 150 %%%%%%%%%%
 	 	\time 3/4
 	 	\tieNeutral
 	 	\circles
-	 	r8.. [ gs''32 ~ ] gs''16 [ cs''16 \afterGrace fs''8 ] \glissando {gef''8}
-	 	gs'4 \glissando
+	 	r8.. [ \niente gs''32 \< ~ ] gs''16 \p [ cs''16 \mf \niente \afterGrace fs''8 \> ] \glissando {gef''8 \!}
+	 	\niente gs'4 \< \glissando
 	 	%%%%%%%%%% measure 151 %%%%%%%%%%
 	 	\time 4/4
-	 	\glissSkipOn \afterGrace b'8 [ \glissando {\glissSkipOff aef'8} 
-	 	\afterGrace gqs''8 ] \glissando {g''8}
-	 	\afterGrace ds''8 [ \glissando  {d''8}
-	 	gs'8 ] \glissando 
+	 	\glissSkipOn \niente \afterGrace b'8 [ \p \> \glissando {\glissSkipOff aef'8 \!} 
+	 	\niente \afterGrace gqs''8 ] \<  \glissando {g''8 \mf \>}
+	 	\afterGrace ds''8 [ \pp \< \glissando  {d''8}
+	 	gs'8 ] \mp \glissando 
 	 	\tuplet 3/2 {
-	 		\afterGrace aqf'4 \glissando {gqs'8}
-	 		cqs''8 ~
+	 		\afterGrace aqf'4 \sub_pp \< \glissando {gqs'8 \f}
+	 		cqs''8 ~ \>
 	 	}
-	 	cqs''4 ~
+	 	cqs''4 \p ~
 	 	%%%%%%%%%% measure 152 %%%%%%%%%%
 	 	\time 4/8
-	 	cqs''4 ~ cqs''8 r8
+	 	cqs''4 ~ \niente \afterGrace cqs''8 \> {s8\!} r8
 	 	%%%%%%%%%% measure 153 %%%%%%%%%%
 	 	\time 5/8
 	 	\tuplet 3/2 {
-	 			as'8 aqf'8 bqf8 \glissando \glissSkipOn
+	 			\niente as'16 ( [ \< aqf'16 ] \afterGrace bqf4 ) \p \glissando {s8 \< }\glissSkipOn
 	 	}
-	 	d'8 \glissSkipOff c'4
+	 	\afterGrace d'8 \mf {\niente s8\>} \glissSkipOff \afterGrace c'4 {s8\!}
 	 	%%%%%%%%%% measure number %%%%%%%%%%
 	 	\time 5/16
-	 	c8 \glissando \afterGrace cs'8. \glissando {b8}
+	 	\niente  c'8 \< \glissando \niente \afterGrace cs'8. \p \> \glissando {b8 \!}
 	 	%%%%%%%%%% measure 154 %%%%%%%%%%
 	 	\time 2/8
 	 	\tuplet 6/4 {
-	 		r16 [ g''8 \glissando \glissSkipOn g''8 \glissSkipOff bef''16 ]
+	 		r16 [ \niente g''8 \< \glissando \glissSkipOn \niente g''8 \p \> \glissSkipOff \afterGrace bef''16 ] {s8\!}
 	 	}
 	 	%%%%%%%%%% measure 153 %%%%%%%%%%
 	 	\time 3/4
-	 	r8. <b'' e'''\harmonic>16 
-	 	r4 \diamonds g'4
+	 	r8. <b'' e'''\harmonic>16 \pp
+	 	r4 \niente \diamonds \afterGrace g'4 \< {s8\f}
 	 	%%%%%%%%%% measure 154 %%%%%%%%%%
 	 	\time 4/4
-	 	r16 \circles gs''8. ~ gs''4 ~ gs''16 ~ <gs'' cs'''\harmonic>8. ~ <gs'' cs'''\harmonic>4 ~
+	 	r16 \circles \niente gs''8. \< ~ gs''4 \p ~ gs''16 ~ <gs'' cs'''\harmonic>8. \> ~ <gs'' cs'''\harmonic>4 \ppp ~
 	 	%%%%%%%%%% measure 155 %%%%%%%%%%
 	 	\time 3/8
-	 	<gs'' cs'''\harmonic>4.
+	 	<gs'' cs'''\harmonic>4 \< ~ \afterGrace <gs'' cs'''\harmonic>8 \mf \> {s8\!}
 	 	%%%%%%%%%% measure 156 %%%%%%%%%%
 	 	\time 5/8
-	 	r16. <cs'' fs''\harmonic>32 ~ <cs'' fs''\harmonic>8 r8
+	 	r16. \flare_width <cs'' fs''\harmonic>32 \p \< ~ \afterGrace <cs'' fs''\harmonic>8 {s8 \flare_sfz} r8
 	 	\diamonds
-	 	d''8 [ r8]
+	 	\flare_width \afterGrace d''8 [ \p \< {s8 \flare_sfz} r8]
 	 	%%%%%%%%%% measure 157 %%%%%%%%%%
 	 	\time 4/4
-	 	r16 [ d''8. ] 
-	 	r8. [ g'16 ]
+	 	r16 [ \niente \afterGrace d''8. \< ] {s8 \p} 
+	 	r8. [ g'16 ] \p
 	 	r4 r4
 	 	%%%%%%%%%% measure 158 %%%%%%%%%%
 	 	\time 5/4
-	 	r16 [ \circles \afterGrace dqf''8. ] \glissando {c''8}
-	 	r16 [ \diamonds b''8. ~ ] b''4 ~ b''4 ~ b''8 ~ b''8
+	 	<<
+	 		{r16 [ \circles \afterGrace dqf''8. ] \glissando {c''8}}
+	 		\\
+	 		{s16 \niente s16 \< s16 \mp \niente \afterGrace s16 \> {s8\!}}
+	 	>>
+	 	r16 [ \diamonds b''8. \ppp ~ ] b''4 ~ b''4 ~ b''8 ~ \afterGrace b''8 \< {s8\p}
 	 	%%%%%%%%%% measure 159 %%%%%%%%%%
 	 	\time 3/4
-	 	r8. [ af''16 ] \glissando \glissSkipOn g''8. [ \glissSkipOff gef''16 ] 
+	 	r8. [ \niente af''16 ] \< \glissando \glissSkipOn g''8. [ \p \glissSkipOff gef''16 ] 
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.2 c'4 \glissando _\markup {
+	 	\ppos #0.2 c'4 \pp \glissando _\markup {
 	 			\center-align
 	 			\center-column {
 	 				\small \italic "au sillet"
@@ -965,19 +1074,19 @@ violin_II_tuned = {
 	 	%%%%%%%%%% measure 160 %%%%%%%%%%
 	 	\time 5/8
 	 	\glissSkipOn
-	 	\ppos #0.3 c'8 \ppos #0.4 c'8 \ppos #0.5 c'8  \ppos #0.6 c'8 \afterGrace \ppos #0.6 c'8 {\glissSkipOff \ppos #0.75 c'8}
+	 	\ppos #0.3 c'8 \ppos #0.4 c'8 \ppos #0.5 c'8  \ppos #0.6 c'8 \niente \afterGrace \ppos #0.6 c'8 \> {\glissSkipOff \ppos #0.75 c'8\!}
 	 	%%%%%%%%%% measure 161 %%%%%%%%%%
 	 	\time 5/4
 	 	\switch-staff \normal_staff
 	 	\set Staff.forceClef = ##t
-	 	r8 [ c'8 ~ ] c'4 ~ \tuplet 3/2 {
-	 		c'8 \glissando cqs'8 \glissando \glissSkipOn \afterGrace c'8 {\glissSkipOff b8}
+	 	r8 [ c'8 \ppp ~ ] c'4 ~ \tuplet 3/2 {
+	 		c'8 \< \glissando cqs'8 \mp \glissando \glissSkipOn \niente \afterGrace c'8 \> {\glissSkipOff b8 \!}
 	 	}
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.2 c'4 ~ _\markup {
+	 	\ppos #0.2 c'4 \pp ~ _\markup {
 	 			\center-align
 	 			\center-column {
 	 				\small \italic "au sillet"
@@ -1003,14 +1112,14 @@ violin_II_tuned = {
 	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
 	 	%%%%%%%%%% measure 167 %%%%%%%%%%
 	 	\time 5/8
-	 	\ppos #0.2 c'8 ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'16 ~ \ppos #0.2 c'16 ]  r8
+	 	\ppos #0.2 c'8 ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'16 ~ \ppos #0.2 c'16 \mf ]  r8
 	 	%%%%%%%%%% measure 168 %%%%%%%%%%
 	 	\time 2/4
 	 	\switch-staff \normal_staff
 	 	\circles
 	 	r4 r8. [ \ottava #2 
 % 	 	\wavy_vibrato #1.25 
-	 	\afterGrace b''''16 ] \glissando {\ottava #0 \hideNotes b'''8 \unHideNotes}
+	 	\flare_width \niente \afterGrace b''''16 \< ] \glissando {\ottava #0 \hideNotes b'''8 \flare_sf \unHideNotes}
 	 	%%%%%%%%%% measure 169 %%%%%%%%%%
 	 	\time 4/4
 	 	r4 
@@ -1018,7 +1127,7 @@ violin_II_tuned = {
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.2 c'4 ~ _\markup {
+	 	\ppos #0.2 c'4 \pp ~ _\markup {
 	 			\center-align
 	 			\center-column {
 	 				\small \italic "au sillet"
@@ -1031,24 +1140,25 @@ violin_II_tuned = {
 	 	\ppos #0.2 c'8. ~ \ppos #0.2 c'16 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
 	 	%%%%%%%%%% measure 171 %%%%%%%%%% 
 	 	\time 3/8
-	 	\ppos #0.2 c'8 [ ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'16 r16 ]
+	 	\ppos #0.2 c'8 [ ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'16 \mf r16 ]
 	 	%%%%%%%%%% measure 172 %%%%%%%%%% 
 	 	\time 4/4
 	 	\switch-staff \normal_staff 
 	 	r16 [ 
 	 	\set Staff.forceClef = ##t
 	 	\circles
-	 	\ottava #2 b''''8. ] \glissando \glissSkipOn \ottava #0 b'4 b'4 b'4
+	 	\ottava #2 b''''8. ] \fposs \glissando \glissSkipOn  b'4 b'4 b'4
 	 	%%%%%%%%%% measure 173 %%%%%%%%%%
 	 	\time 4/4
 	 	b''32 b''8.. b''4 \glissSkipOff 
 % 	 	\wavy_vibrato #1.25 
-	 	\afterGrace e'''8 [] \glissando {\hideNotes e'''8 \unHideNotes} r8 ]
+	 	\flare_width \afterGrace e'''8 \p  \< [ \glissando {\hideNotes e'''8 \flare_sfz \unHideNotes} r8 ]
+	 	\ottava #0
 	 	\switch-staff \body_staff
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.2 c'8. [  _\markup {
+	 	\ppos #0.2 c'8.:64 \p [  _\markup {
 	 			\center-align
 	 			\center-column {
 	 				\small \italic "au sillet"
@@ -1057,32 +1167,39 @@ violin_II_tuned = {
 	 	} r16 ]
 	 	%%%%%%%%%% measure 174 %%%%%%%%%%
 	 	\time 4/4 
-	 	r4 \ppos #0.2 c'4 ~ \ppos #0.2 c'8. [ r16 ] r4
+	 	r4 \ppos #0.2 c'4 \p ~ \ppos #0.2 c'8. [ r16 ] r4
 	 	%%%%%%%%%% measure 175 %%%%%%%%%%
 	 	\time 5/8
 	 	r4 r4.
 	 	%%%%%%%%%% measure 176 %%%%%%%%%%
 	 	\time 3/4
-	 	r16 [ \ppos #0.2 c'8. ] ~ \ppos #0.2 c'8[ r8]
+	 	r16 [ \ppos #0.2 c'8. \mp ] ~ \ppos #0.2 c'8[ r8]
 	 	r4
 	 	%%%%%%%%%% measure 177 %%%%%%%%%%
 	 	\time 4/4
 	 	\switch-staff \normal_staff
 	 	r8 
 	 	\set Staff.forceClef = ##t 
-	 	bqf \glissando \afterGrace cs'4 \glissando {\glissSkipOff c'8} r4 r4
+	 	<< {
+	 		bqf8 \glissando \afterGrace cs'4 \glissando {\glissSkipOff c'8} 
+	 		} \\
+	 		{
+	 			\niente s8 \< s8. \niente \afterGrace s16 \p \> {s8\!}
+	 		}
+	 	>>
+	 	r4 r4
 	 	%%%%%%%%%% measure 178 %%%%%%%%%%
 	 	\time 4/4
 	 	R1
 	 	%%%%%%%%%% measure 179 %%%%%%%%%%
 	 	\time 4/4 
-	 	<d' ef'>4 ~ <d' ef'>4 ~ <d' ef'>4 ~ <d' ef'>4 ~
+	 	<d' ef'>4 \ppp ~ <d' ef'>4 ~ <d' ef'>4 \< ~ <d' ef'>4 \mf ~
 	 	%%%%%%%%%% measure 180 %%%%%%%%%%
 	 	\time 5/8
-	 	<d' ef'>8. [ r16 ] r16 [ \ottava #2 
+	 	\niente \afterGrace <d' ef'>8. \> [ {s8\!} r16 ] r16 [ \ottava #2 
 % 	 	\wavy_vibrato #1.25 
-	 	\afterGrace b''''8. ] \glissando {\ottava #0 \hideNotes b'''8 \unHideNotes}
-	 	r8
+	 	\niente \flare_width \afterGrace b''''8. \<  \glissando {\ottava #0 \hideNotes b'''8 \flare_sfz \unHideNotes}
+	 	r8 ]
 	 	%%%%%%%%%% measure 181 %%%%%%%%%%
 	 	\time 2/1
 	 	r1 r1
@@ -1092,15 +1209,17 @@ violin_II_tuned = {
 		\body-clef #'bow-area-small
 		\set Staff.forceClef = ##t
 		\tuplet 3/2 {
-			r4 \pizz_head "II III" \ppos #0.4 c8 ~
-		} \pizz_head "II III" \ppos #0.4 c4 ~
+			r4 \niente \pizz_head "II III" \ppos #0.4 c8 ~ \< 					%>
+		} 
+		\pizz_head "II III" \ppos #0.4 c4 \mp ~
 		\pizz_head "II III" \ppos #0.4 c4 ~
-		\pizz_head "II III" \ppos #0.4 c8 ~ \pizz_head "II III" \ppos #0.4 c8 ~ \pizz_head "II III" \ppos #0.4 c8. [ r16 ]  r4
+		\niente \pizz_head "II III" \ppos #0.4 c8 [ \> ~ \pizz_head "II III" \ppos #0.4 c8 ] ~  
+		\pizz_head "II III" \ppos #0.4 c8. [  r16 \! ]  r4
 		\bar "|."	 	
+}
 
- 	}\\
- 	{
- 		\new BowPositionStaff \with {alignAboveContext="violin_2"} {
+violin_two_pos_tuned = { 
+	\new BowPositionStaff \with {alignAboveContext="violin_2"} {
  				%%%%%%%%%% measure 1 %%%%%%%%%%
  				\time 3/4
  				\stopStaff
@@ -1713,10 +1832,7 @@ violin_II_tuned = {
  				%%%%%%%%%% measure 185 %%%%%%%%%%
  				\time 6/4
  				s4 s4 s4 s8 \startStaff 
- 				d'8 \glissando \glissSkipOn \afterGrace e'8. {\glissSkipOff g'8} s16 \stopStaff s4 
+ 				d'8 \glissando \glissSkipOn \afterGrace e'8. {\glissSkipOff g'8} \stopStaff \hideNotes r16 s4 \unHideNotes
 
  		}
  	}
- >>
-
-}
