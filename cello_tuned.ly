@@ -772,7 +772,7 @@ cello_tuned = {
 			%%%%%%%%%% measure 92 %%%%%%%%%%
 			\time 4/4
 			\glissSkipOn
-			f,8 [ cqs, ~] \tuplet 3/2 {
+			f,8 [ \glissSkipOff cqs, ~] \tuplet 3/2 {
 				cqs,8 \circles \tieDashed cqs,8 ~ \squares cqs,8 \glissando \glissSkipOn
 			}
 			\tieSolid
@@ -836,35 +836,35 @@ cello_tuned = {
 			%%%%%%%%%% measure 91 %%%%%%%%%%
 			\time 5/4
 			\tieSolid
-			r8 [ \niente \squares cqs8 ] \< \glissando
+			r8 [ \niente \squares \afterGrace cqs8 ] \< \glissando {s8\pp}
 			\diamonds c8 \< ~ c8 \mf \> \glissando \squares
 			\tuplet 3/2 {
-				cs4 \glissando \diamonds c8 ~
+				cs4 \p \glissando \diamonds c8 ~ \<
 			}
 			\set Staff.tieWaitForNote = ##t
-			\glissSkipOn cs8 [ \glissSkipOff c8 ] ~
+			\glissSkipOn cs8 [ \glissSkipOff c8 \mf ] ~
 			\tuplet 3/2 {
-				c4 ~ c8 \glissando
+				c4 ~ c8 \> \glissando
 			}
 			%%%%%%%%%% measure 92 %%%%%%%%%%
 			\time 3/4
 			\tuplet 3/2 {
-				\glissSkipOn a,8 \glissSkipOff a,8 \glissando \afterGrace a8 \glissando {gqs,}
+				\glissSkipOn a,8 \pp \glissSkipOff a,8 \glissando \flare_width \afterGrace a8 \< \glissando {gqs,}
 			}
 			\clef treble
-			b4 \glissando \glissSkipOn \afterGrace a'8 [ \glissando {\glissSkipOff f''8} r8 ]
+			b4 \glissando \glissSkipOn \afterGrace a'8 [ \glissando {\glissSkipOff f''8 \flare_sfz} r8 ]
 			%%%%%%%%%% measure 93 %%%%%%%%%%
 			\time 5/8
 			\switch-staff \body_staff
 			\body-clef #'bow-area-small
 			\circleheads
 			\set Staff.forceClef = ##t
-			\ppos #0.5 c'4 \glissando \glissSkipOn \ppos #0.6 c'4 \ppos #0.6 c'8
+			\ppos #0.5 c'4 \pp \glissando \glissSkipOn \ppos #0.6 c'4 \ppos #0.6 c'8 \<
 			%%%%%%%%%% measure 94 %%%%%%%%%%
 			\time 2/4
 			\ppos #0.6 c'8 [ \glissSkipOff 
 			\override NoteHead.stencil = #scratch-tone
-			\ppos #0.95 c'8 ~ ] \ppos #0.95 c'16 [ r8. ]
+			\ppos #0.95 c'8  \mf ~ ] \ppos #0.95 c'16 [ r8. ]
 			%%%%%%%%%% measure 95 %%%%%%%%%%
 			\time 5/4
 			\switch-staff \normal_staff
@@ -873,14 +873,21 @@ cello_tuned = {
 			\clef treble
 			\set Staff.forceClef = ##t
 			\tuplet 3/2 {
-				\afterGrace ds''8 \glissando {eqf''}
-				bqs'4 ~
+				\niente
+				\afterGrace ds''8 \< \glissando {eqf''}
+				bqs'4 ~ \p
 			}
-			\afterGrace bqs'4 \glissando {aqs'8} 
+			\niente \afterGrace bqs'4 \> \glissando {aqs'8\!} 
 			%%%%%%%%%% measure 96 %%%%%%%%%%
 			\time 5/8
 			r4
-			bf16 [ \glissando \afterGrace b8.] \glissando {bqf8} r8
+			<<
+				{bf16 [ \glissando \afterGrace b8.] \glissando {bqf8} r8}
+				\\
+				{
+					\niente s16 \< s16 s16 \p \niente \afterGrace s16 \> {s8\!} s8
+				}
+			>>
 			%%%%%%%%%% measure 97 %%%%%%%%%%
 			\time 3/8
 			r4
@@ -889,10 +896,11 @@ cello_tuned = {
 			\set Staff.forceClef = ##t
 			\clef treble
 			\circleheads
-			\ppos #0.5 c'8 ~
+			\niente
+			\ppos #0.5 c'8 ~ \<
 			%%%%%%%%%% measure 98 %%%%%%%%%%
 			\time 5/4
-			\ppos #0.5 c'4 ~ \ppos #0.5 c'4 ~ \ppos #0.5 c'4 ~
+			\ppos #0.5 c'4 \effort mf ~ \ppos #0.5 c'4 ~ \ppos #0.5 c'4 ~
 			\ppos #0.5 c'4 ~ \ppos #0.5 c'8 \ppos #0.5 c'8 ~
 			%%%%%%%%%% measure 99 %%%%%%%%%%
 			\time 2/4
@@ -902,11 +910,11 @@ cello_tuned = {
 			\ppos #0.5 c'16 \ppos #0.5 c'16 \ppos #0.5 c'4 ~
 			%%%%%%%%%% measure 101 %%%%%%%%%%
 			\time 2/16
-			\afterGrace \ppos #0.5 c'8 \glissando {\ppos #1.05 c'16 [ \glissando \ppos #0.75 c'16 ] }
+			\flare_width \afterGrace \ppos #0.5 \< c'8 \glissando {\ppos #1.05 c'16 [ \glissando \ppos #0.75 c'16 \flare_mf ] }
 			%%%%%%%%%% measure 102 %%%%%%%%%%
 			\time 4/4
 			r16 [
-			\ppos #0.85 c'16 \glissando \ppos #0.5 c'8 ] ~  
+			\ppos #0.85 c'16 \effort mf \> \glissando \ppos #0.5 c'8 ] ~  
 			\ppos #0.5 c'4 ~
 			\tuplet 3/2 {
 				\ppos #0.5 c'8 \ppos #0.5 c'8 \ppos #0.5 c'8 ~
@@ -914,8 +922,8 @@ cello_tuned = {
 			\ppos #0.5 c'4 ~
 			%%%%%%%%%% measure 103 %%%%%%%%%%
 			\time 3/8
-			\ppos #0.5 c'8 ~ \afterGrace \ppos #0.5 c'8 ~ {\ppos #0.5 c'8}
-			r16 [ \ppos #0.5 c'16 ] ~
+			\ppos #0.5 c'8 ~ \flare_width \afterGrace \ppos #0.5 c'8 ~ \< {\ppos #0.5 c'8 \flare_mf}
+			r16 [ \ppos #0.5 c'16 ] \effort mf ~
 			%%%%%%%%%% measure 104 %%%%%%%%%%
 			\time 5/16
 			\ppos #0.5 c'16 ~ 
@@ -937,46 +945,53 @@ cello_tuned = {
 			\ppos #0.7 c'8 \glissando \ppos #1.05 c'8 \glissando
 			%%%%%%%%%% measure 108 %%%%%%%%%%
 			\time 2/8
-			\ppos #0.75 c'8  r8
+			\flare_width \afterGrace \ppos #0.75 c'8 \< {s8\flare_mf}  r8
 			%%%%%%%%%% measure 109 %%%%%%%%%%
 			\time 5/4
-			\ppos #0.5 c'4 \glissando \glissSkipOn
+			\ppos #0.5 c'4 \effort mf \glissando \glissSkipOn
 			\ppos #0.75 c'4
 			\glissSkipOff 
 			\afterGrace \ppos #1.05 c'8 [ \glissando {\ppos #0.5 c'8}
 			\ppos #0.5 c'8 ] ~
 			\ppos #0.5 c'4 ~
-			\ppos #0.5 c'8 [  \ppos #0.5 c'8 ~ ]
+			\ppos #0.5 c'8 [ \flare_width \ppos #0.5 c'8 ~  ]
 			%%%%%%%%%% measure 110 %%%%%%%%%%
 			\time 2/4
 			\tuplet 3/2 {
 				\ppos #0.5 c'4
 				\ppos #0.85 c'8
 			}
-			\ppos #0.75 c'8 [ \ppos #0.65 c'8 ]
+			\ppos #0.75 c'8 [ \flare_width \ppos #0.65 c'8 ] \<
 			%%%%%%%%%% measure 111 %%%%%%%%%%
 			\time 5/8
-			\ppos #0.5 c'8 [ r16 
-			\afterGrace \ppos #0.5 c'16 \glissando \ppos #1.05 c'8
-			r8 r8 \ppos #0.75 c'8 ] \glissando
+			\afterGrace \ppos #0.5 c'8 [ {s8 \flare_mf} r16 
+			\afterGrace \ppos #0.5 c'16  \glissando {\ppos #1.05 c'8 \effort "f"}
+			r8 r8 \ppos #0.75 c'8 ] \effort mf \glissando
 			%%%%%%%%%% measure 112 %%%%%%%%%%
 			\time 2/4
 			\glissSkipOn \ppos #0.5 c'4 
 			\afterGrace \ppos #0.75 c'4  {\glissSkipOff \ppos #1.05 c'8}
 			%%%%%%%%%% measure 113 %%%%%%%%%%
 			\time 3/4
-			r4 \afterGrace \ppos #0.5 c'4.. \glissando {\ppos #1.05 c'8} r16
+			r4 
+			<<
+				{\afterGrace \ppos #0.5 c'4.. \glissando {\ppos #1.05 c'8} r16}\\
+				{
+					\niente s4 \< \niente \afterGrace s8. \mf \> {s8\!} s16
+				}
+			>>
 			%%%%%%%%%% measure 114 %%%%%%%%%%
 			\time 5/8
-			\ppos #0.6 c'8 r8 r8 r8 \ppos #0.75 c'8:64 ~
+			\flare_width \niente \afterGrace \ppos #0.6 c'8 \< {s8\flare_mf}
+			r8 r8 r8 \ppos #0.75 c'8:64 ~ \effort "f"
 			%%%%%%%%%% measure 115 %%%%%%%%%%
 			\time 5/4
 			\ppos #0.75 c'8:64 [ r8 ]
-			\ppos #0.5 c'4 \glissando
+			\ppos #0.5 c'4 \effort p \glissando
 			\glissSkipOn \afterGrace \ppos #0.75 c'8 [ {\glissSkipOff \ppos #0.95 c'8} r16 
-			\afterGrace \ppos #0.95 c'16 ] {\ppos #0.5 c'8}
-			r16 [ \ppos #0.75 c'8.:64 ] 
-			r8 [ \ppos #0.9 c'8] ~
+			\afterGrace \ppos #0.95 c'16 ] \glissando {\ppos #0.5 c'8}
+			r16 [ \ppos #0.75 c'8.:64 ] \effort "mf"
+			r8 [ \ppos #0.9 c'8] ~ \effort p
 			%%%%%%%%%% measure 116 %%%%%%%%%%
 			\time 2/4
 			\ppos #0.9 c'8 [ \ppos #0.75 c'8 ] ~ 
@@ -985,13 +1000,13 @@ cello_tuned = {
 			\time 5/4
 			\ppos #0.8 c'4
 			r8 [ \ppos #1.05 c'8 ] ~ 
-			\ppos #1.05 c'8 ~ \ppos #1.05 c'8 ~ \ppos #1.05 c'8 ~ \ppos #1.05 c'8
+			\ppos #1.05 c'8 ~ \flare_width \ppos #1.05 c'8 \< ~ \ppos #1.05 c'8 ~ \afterGrace \ppos #1.05 c'8 {s8\sfz}
 			r8 \ppos #1.05 c'8 \glissando \glissSkipOn
 			%%%%%%%%%% measure 118 %%%%%%%%%%
 			\time 4/4
-			\afterGrace \ppos #0.75 c'8 [ {\glissSkipOff \ppos #0.5 c'8}
+			\afterGrace \ppos #0.75 c'8 [ \effort mf {\glissSkipOff \ppos #0.5 c'8}
 			r8 ]
-			r8 [ \ppos #0.5 c'8 ] \glissando 
+			r8 [ \ppos #0.5 c'8 ] \effort mf \glissando 
 			\ppos #0.9 c'8 \glissando \ppos #0.5 c'8 \glissando
 			\ppos #0.75 c'8 \glissando \ppos #0.75 c'8 ~
 			%%%%%%%%%% measure 119 %%%%%%%%%%
@@ -1018,21 +1033,31 @@ cello_tuned = {
 			\ppos #0.75 c'16 \glissando \ppos #1.05 c'16 ~ 
 			%%%%%%%%%% measure 122 %%%%%%%%%%
 			\time 4/4
-			\ppos #1.05 c'8. \ppos #1.05 c'16 ~ 
-			\ppos #1.05 c'4
-			\ppos #0.75 c'4 ~ \ppos #0.75 c'4:32
+			\ppos #1.05 c'8. 
+			\niente \ppos #1.05 c'16 ~ \<
+			\afterGrace \ppos #1.05 c'4 {s8\sfz}
+			\ppos #0.75 c'4 \effort mp ~ 
+			\ppos #0.75 c'4:32
 			%%%%%%%%%% measure 123 %%%%%%%%%%
 			\time 2/8
-			\afterGrace \ppos #0.5 c'8. [ \glissando {\ppos #0.8 c'8} r16 ]
+			\afterGrace \ppos #0.5 c'8. [ \mf 
+				_\markup {
+						\center-align
+						\center-column {
+							\small \italic "au sillet"
+							\fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
+						}
+				}
+			\glissando {\ppos #0.8 c'8} r16 ]
 			%%%%%%%%%% measure 124 %%%%%%%%%%
 			\time 5/8
-			\ppos #0.8 c'8 [ \glissando \ppos #0.55 c'8 \glissando
-			\ppos #1.05 c'8 \glissando \glissSkipOn \ppos #0.85 c'8 \glissSkipOff \ppos #0.55 c'8 ]
+			\ppos #0.8 c'8 [ \effort p \glissando \ppos #0.55 c'8 \glissando
+			\ppos #1.05 c'8 \< \glissando \glissSkipOn \ppos #0.85 c'8 \effort mf \> \glissSkipOff \ppos #0.55 c'8 ] \effort p
 			%%%%%%%%%% measure 125 %%%%%%%%%%
 			\time 5/8
 			\ppos #0.55 c'8 [ ~ \ppos #0.55 c'16 ~ 
-			\afterGrace \ppos #0.55 c'16 \glissando {\ppos #1.05 c'8}
-			r16 \ppos #1.05 c'16 ] ~
+			\afterGrace \ppos #0.55 c'16 \< \glissando {\ppos #1.05 c'8 \effort mf}
+			r16 \ppos #1.05 c'16 ] ~ \effort mf
 			\ppos #1.05 c'4
 			%%%%%%%%%% measure 126 %%%%%%%%%%
 			\time 3/4
@@ -1040,18 +1065,18 @@ cello_tuned = {
 			%%%%%%%%%% measure 127 %%%%%%%%%%
 			\time 4/8
 			\ppos #1.05 c'8 [
-			\afterGrace \ppos #1.05 c'8 ] \glissando {\ppos #0.5 c'8}
+			\afterGrace \ppos #1.05 c'8 ] \effort mf \glissando {\ppos #0.5 c'8}
 			r16 [
 			\switch-staff \normal_staff
 			\clef bass
 			\set Staff.forceClef = ##t
 			\diamonds
-			aes16  \glissando \glissSkipOn d'8 ]
+			aes16 \mfpp \glissando \glissSkipOn d'8 ]
 			%%%%%%%%%% measure 128 %%%%%%%%%%
 			\time 4/8
 			a8 \glissSkipOff cs'8 ~ cs'8 ~ 
 			\wavy_vibrato #1.25 
-			\afterGrace cs'8 \glissando {\hideNotes cs'8 \unHideNotes}
+			\flare_width \afterGrace cs'8 \< \glissando {\hideNotes cs'8 \flare_f \unHideNotes}
 			%%%%%%%%%% measure 129 %%%%%%%%%%
 			\time 4/4
 			\stopStaff
@@ -1067,12 +1092,12 @@ cello_tuned = {
 				\circleheads
 				\set Staff.forceClef = ##t
 				\body-clef #'fingerboard-small				
-				\ppos #1.05 c'4
+				\ppos #1.05 c'4 \effort mf
 			}
-			\ppos #0.6 c'4 ~ \ppos #0.6 c'4 ~ \ppos #0.6 c'8. \ppos #0.6 c'16:64 ~
+			\ppos #0.6 c'4 ~ \ppos #0.6 c'4 ~ \ppos #0.6 c'8. \ppos #0.6 c'16:64 ~ \effort "f"
 			%%%%%%%%%% measure 130 %%%%%%%%%%
 			\time 3/4
-			\ppos #0.6 c'8:64 \ppos #0.65 c'8 ~
+			\ppos #0.6 c'8:64 \ppos #0.65 c'8 ~ \effort mf
 			\tuplet 3/2 {\ppos #0.65 c'8 ~ \ppos #0.65 c'8 ~ \ppos #0.65 c'8}
 			\afterGrace \ppos #0.5 c'16 [ \glissando {\ppos #1.05 c'8}
 			r16
@@ -1081,7 +1106,7 @@ cello_tuned = {
 			%%%%%%%%%% measure 131 %%%%%%%%%%
 			\time 2/8
 			\tuplet 3/2 {
-				r8 [ \ppos #0.8 c'8 r8]
+				r8 [ \ppos #0.8 c'8 \effort "f" r8]
 			}
 			%%%%%%%%% measure 132 %%%%%%%%%%
 			\time 3/4
@@ -1115,39 +1140,40 @@ cello_tuned = {
 			\clef treble
 			\set Staff.forceClef = ##t
 			\diamonds
-			\afterGrace a''4 \glissando {e'''8} r8
+			\flare_width \afterGrace a''4 \f \< \glissando {e'''8 \flare_sf} r8
 			%%%%%%%%%% measure 138 %%%%%%%%%%
 			\time 3/4
 			r4 
 			\clef bass
 			\tuplet 5/4 {
 				\circles
-				r8 \afterGrace c'8. \glissando {bef8}
+				r8 \niente c'8 ~ \< \niente \afterGrace c'16 \mp \> \glissando {bef8\!}
 			}
-			g4 ~
+			\niente
+			g4 ~ \<
 			%%%%%%%%% measure 139 %%%%%%%%%%
 			\time 4/4
-			g8 [ r8 ]
-			r32 [ \afterGrace b8.. ] \glissando {bf8 ~}
-			bf16 [ r8.] r4
+			\flare_width \afterGrace g8 [ {s8\flare_sf} r8 ]
+			r32 [ \flare_width \afterGrace b8.. ] \< \glissando {bf8 ~ \p \> }
+			\afterGrace bf16 [ {s8\!} r8.] r4
 			%%%%%%%%%% measure 140 %%%%%%%%%%
 			\time 4/8
-			r8 [ cqs'8 \glissando c'8 \glissando cs'8 ] \glissando
+			r8 [ \niente cqs'8 \< \glissando \niente c'8 \mp \> \glissando cs'8 \pp ] \glissando
 			%%%%%%%%%% measure 141 %%%%%%%%%%
 			\time 5/8
-			\glissSkipOff
+			\glissSkipOn
 			\afterGrace b8 [ {\glissSkipOff as8 ~}
-			as8 ~ as8 ] r4
+			as8 ~ \niente \afterGrace as8 ] \> {s8\!} r4
 			%%%%%%%%%% measure 142 %%%%%%%%%%
 			\time 5/16
-			b4 \glissando \afterGrace cqs'16 \glissando {c'8}
+			\niente b4 \< \glissando \niente \afterGrace cqs'16 \p \> \glissando {c'8\!}
 			%%%%%%%%%% measure 143 %%%%%%%%%%
 			\time 4/16
 			\clef bass
-			cqs,4
+			<<{cqs,4}\\{\niente s32 \< s8. \p \niente \afterGrace s32 \> {s8\!}}>>
 			%%%%%%%%%% measure 144 %%%%%%%%%%
 			\time 3/4
-			r16 [ cqs,8 ~ cqs,16] ~ cqs,2
+			r16 [ \niente cqs,8 \< ~ cqs,16] \pp ~ cqs,4. ~ \niente \afterGrace cqs,8 \> {s8\!}
 			%%%%%%%%%% measure 145 %%%%%%%%%%
 			\time 4/4
 			R1
@@ -1159,48 +1185,56 @@ cello_tuned = {
 			r4 r4.
 			%%%%%%%%%% measure 148 %%%%%%%%%%
 			\time 4/4
-			r8. [ \clef treble gs'16 ] \glissando 
-			\afterGrace aqf'4 \glissando {g'8}
-			r32 [ f''8..:64 ] r4
+			r8. [ \clef treble gs'16 \f ] \glissando 
+			\niente \afterGrace aqf'4 \> \glissando {g'8\!}
+			r32 [ \niente \afterGrace f''8..:64 \mf  ] {s8\!} r4
 			%%%%%%%%%% measure 149 %%%%%%%%%%
 			\time 5/4
-			r8. [ \clef bass bqf16 ] \glissando 
+			r8. [ \clef bass \niente bqf16 ] \< \glissando 
 			\tuplet 3/2 {
-				\glissSkipOn b8 [ \glissSkipOff c'8 \glissando \glissSkipOn 
-				\afterGrace b8 ] {\glissSkipOff bqs8}
+				\glissSkipOn b8 [ \glissSkipOff c'8 \mf \glissando \glissSkipOn 
+				\niente \afterGrace b8 ] \> {\glissSkipOff bqs8\!}
 			} r2.
 			%%%%%%%%%% measure 150 %%%%%%%%%%
 			\time 3/4
 			\clef treble
 			\tuplet 5/6 {
 				\diamonds
-				c'8 \glissando g'8 \glissando d'8 \glissando b'8 \glissando 
-				\wavy_vibrato #1.5 \afterGrace e'8 \glissando {\hideNotes e'8 \unHideNotes}
+				\niente c'8 \< \glissando g'8 \pp \glissando d'8 \glissando b'8 \glissando 
+				\wavy_vibrato #1.5 \flare_width \afterGrace e'8 \< \glissando {\hideNotes e'8 \flare_sfz \unHideNotes}
 			}
 			%%%%%%%%%% measure 151 %%%%%%%%%%
 			\time 5/8
-			r16 [ \diamonds fs16  \laissezVibrer r8 ]
+			r16 [ \diamonds fs16 \p  \laissezVibrer r8 ]
 			r4 
-			<fs ef'>8
+			\clef bass
+			<fs ef'>8 \p
 			%%%%%%%%%% measure 152 %%%%%%%%%%
 			\time 5/4
-			r8. [ <fs, d>16 ] r4 
-			\clef treble
+			r8. [ <g, e>16 ] \mf r4 
+			<<
+			{\clef treble
 			\tuplet 3/2 {
-				\circles r8 d''4 \glissando
+				\circles r8 \niente d''4 \< \glissando
 			}
-			cs''8 \glissando dqf''8 ~ <dqf'' gqf''\harmonic>4
+			cs''8 \p \glissando dqf''8 ~ <dqf'' gqf''\harmonic>4
+			}\\{
+				s4 s4 \niente s8. \< \afterGrace s16 \f \> {s8\!}
+			}>>
 			%%%%%%%%%% measure 153 %%%%%%%%%%
 			\time 4/4
 			\diamonds
-			r2. r8.. [ \clef bass fs32 ] \laissezVibrer 
+			r2. r8.. [ \clef bass fs32 ] \f \laissezVibrer 
 			%%%%%%%%%% measure 154 %%%%%%%%%%
 			\time 4/4
-			r8 [ c'8 ] ~ c'16 [ r8. ] r4 r4
-			%%%%%%%%%% measure 155 %%%%%%%%%%
+			r8 [ c'8 ] \ppp \< ~ c'16 [ \p r8. ] r4 r4
+			%>%%%%%%%%% measure 155 %%%%%%%%%%
 			\time 4/4
 			r4
-			\clef treble <aef' def''\harmonic>4 r4 r4
+			\clef treble 
+			\niente 
+			\flare_width
+			\afterGrace <aef' def''\harmonic>4 \< {s8\flare_sf} r4 r4
 			%%%%%%%%%% measure 156 %%%%%%%%%%
 			\time 6/4
 			r2. 		
@@ -1209,7 +1243,8 @@ cello_tuned = {
 			\set Staff.forceClef = ##t
 			\circleheads
 			\clef treble
-			\ppos #0.55 c'4 ~ 
+			\niente
+			\ppos #0.55 c'4 \< ~ 
 				_\markup {
 						\center-align
 						\center-column {
@@ -1220,11 +1255,11 @@ cello_tuned = {
 			\ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~
 			%%%%%%%%%% measure 157 %%%%%%%%%%
 			\time 5/4
-			\ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~
+			\ppos #0.55 c'4 \effort mp ~ \ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~
 			\ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~
 			%%%%%%%%%% measure 158 %%%%%%%%%%
 			\time 5/8
-			\ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~ \ppos #0.55 c'16 [ r16 ]
+			\ppos #0.55 c'4 ~ \ppos #0.55 c'4 \mf ~ \ppos #0.55 c'16 [ r16 ]
 			%%%%%%%%%% measure 159 %%%%%%%%%%
 			\time 2/4	
 			r2
@@ -1234,7 +1269,7 @@ cello_tuned = {
 			\clef bass
 			\set Staff.forceClef = ##t
 			\diamonds
-			<fs ef'>4 ~ <fs ef'>16 r8. r2
+			<fs ef'>4 \mf ~ <fs ef'>16 r8. r2
 			%%%%%%%%%% measure 161 %%%%%%%%%%
 			\time 4/4
 			R1
@@ -1242,7 +1277,7 @@ cello_tuned = {
 			\time 3/8
 			r4 
 			\tuplet 3/2 {
-				r16 [ \clef bass ces,16 r16 ]
+				r16 [ \clef bass ces,16 \f r16 ]
 			}
 			%%%%%%%%%% measure 163 %%%%%%%%%%
 			\time 4/4
@@ -1255,7 +1290,7 @@ cello_tuned = {
 			\set Staff.forceClef = ##t
 			\circleheads
 			\clef treble
-			\ppos #0.55 c'16. ~ 
+			\ppos #0.55 c'16.  \f
 				_\markup {
 						\center-align
 						\center-column {
@@ -1274,7 +1309,7 @@ cello_tuned = {
 			\set Staff.forceClef = ##t
 			\circleheads
 			\clef treble
-			\ppos #0.55 c'8:64 ~ [
+			\ppos #0.55 c'8:64 ~ \effort mp  [
 				_\markup {
 						\center-align
 						\center-column {
@@ -1292,19 +1327,20 @@ cello_tuned = {
 			r2
 			\circles
 			\clef bass
-			dqf'16 [ ~ dqf'8. ] ~
-			dqf'8. ~ [ dqf'16 ] ~
+			dqf'16 [ \mf \> ~ dqf'8. \pp ] ~
+			dqf'8. ~ [ dqf'16 ] ~ \<
 			%%%%%%%%%% measure 169 %%%%%%%%%%
 			\time 4/4
-			dqf'4 ~ dqf'8 ~ dqf'8 ~ dqf'4 ~ dqf'8:64 [ r8 ]
+			dqf'4 \mp ~ dqf'8 \> ~ dqf'8 ~ dqf'4 \pp ~ \afterGrace dqf'8:64 [ \glissando {cqs'8} r8 ]
 			%%%%%%%%%% measure 170 %%%%%%%%%%
 			\time 4/4
 			r4 
 			\diamonds
-			d2 ~ d4 ~
+			\niente
+			d2 \< ~ d4 \p ~
 			%%%%%%%%%% measure 171 %%%%%%%%%%
 			\time 5/8
-			d4 ~ d4 ~ d8 ~
+			d4 ~ d4 \> ~ d8 \ppp ~
 			%%%%%%%%%% measure 172 %%%%%%%%%%
 			\time 2/1
 			\circles
@@ -1312,9 +1348,9 @@ cello_tuned = {
 			\diamonds
 			%%%%%%%%%% measure 173 %%%%%%%%%%
 			\time 6/4
-			d8 ~ d8 d4 ~ 
+			d8 \< ~ d8 d4 ~ 
 			\wavy_vibrato #1
-			\afterGrace d8. [ \glissando {\hideNotes d8 \unHideNotes} r16 ]
+			\afterGrace d8. \mp [ \glissando {\hideNotes d8 \unHideNotes} r16 ]
 			r2. \bar "|."
 }
 
@@ -1956,10 +1992,8 @@ cello_pos_tuned = {
 				s4 s8 \startStaff g'8 \glissando b'4 \stopStaff s4
 				%%%%%%%%%% measure 171 %%%%%%%%%%
 				\time 4/4
-				\tuplet 3/2 {
-					\startStaff \hideNotes r4 \unHideNotes b'8 \glissando \glissSkipOn
-				}
-				a'4 \glissSkipOff g'4 \stopStaff s4
+				s4 \startStaff  b'4 \glissando \glissSkipOn
+				a'4 \glissSkipOff g'4 \stopStaff 
 				%%%%%%%%%% measure 172 %%%%%%%%%%
 				\time 5/8
 				s4 \startStaff g'4 \glissando b'8 \stopStaff
