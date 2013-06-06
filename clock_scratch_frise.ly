@@ -472,7 +472,7 @@ silence = {
 violin_I_bichon_frise = {
 		\switch-staff \pizz_staff
 		\frise_settings_clock
-		\circles
+		\circleheads
 		\stemDown
 
 		\silence \silence \silence
@@ -512,7 +512,7 @@ violin_I_bichon_frise = {
 cello_bichon_frise = {
 		\switch-staff \pizz_staff
 		\frise_settings_clock
-		\circles
+		\circleheads
 		\stemDown
 
 		\silence \silence \silence
@@ -540,6 +540,8 @@ cello_bichon_frise = {
 
 		\silence \silence
 		\silence \silence
+		\silence
+		\silence
 		\silence
 
 

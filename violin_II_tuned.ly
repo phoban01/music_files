@@ -4,21 +4,29 @@ violin_II_tuned = {
 	  	\circles
 	  	%%%%%%%%%% measure 1 %%%%%%%%%%
 	  	\time 3/4
-	  	r2 r8 
+	  	r2 
 	  	<<	
-	  		{\niente <cs'' \single\diamonds g''>8 ~ \<}
+	  		{
+	  		\oneVoice
+	  		\draw_line_arrow \up_bow_light \up_bow_heavy
+	  		r8 [ <cs'' \single\diamonds g''>8 ] \startTextSpan ~ ^\angle_bow ^\markup \string-numbers #'( "I II" 0 0) ^\markup {\small \italic "(very slow bow)"}
+	  		}
 	  	 	\\
-	  	 	{}
+	  	 	{s8 \niente s8 \<}
 	  	>>
 	  	%%%%%%%%%% measure 2 %%%%%%%%%%
 	  	\time 2/4
 	  	<<{
+	  		\oneVoice
 	  		#(define afterGraceFraction (cons 9 10))
-	  		\afterGrace <cs'' \single\diamonds g''>8 ~ {s8 \mfp} \niente \afterGrace <cs'' \single\diamonds g''>4 \> {s8\!}	  		
-	  		\afterGrace <ds' \single\diamonds gs'>8 \glissando {<d' \single\diamonds g'>8}
+	  		<cs'' \single\diamonds g''>8 ~  
+	  		\draw_line_arrow " " \up_bow_light
+	  		\span-shift-x #1
+	  		\niente \afterGrace <cs'' \single\diamonds g''>4 \stopTextSpan \startTextSpan  {s8}	  		
+	  		\afterGrace <ds' \single\diamonds gs'>8 \glissando {<d' \single\diamonds g'>8 \stopTextSpan}
 	  	} \\ 
 	  	{
-	  		s4.
+	  		s8 \niente \afterGrace s4 \mfp \> {s8\!}
 	  		\niente s16 \< \niente \afterGrace s16 \p \> {s8\!}
 	  	}>>
 	  	%%%%%%%%%% measure 3 %%%%%%%%%%
