@@ -1689,14 +1689,12 @@ r16 [
 			\barre-diagram #'(0.2 0.8)
 		}
 	\ppos #0.4 c8 \glissando
-	\glissSkipOn c8 ] \glissando
+	\afterGrace \glissSkipOn c8 ] \glissando {\glissSkipOff  \slash_grace \ppos #0.75 c8}
 
 
  %%%%%%%% ============= measure 107 ============= %%%%%%%% 
   \time 4/8
-   \afterGrace c8 [ \glissando {\glissSkipOff  \slash_grace \ppos #0.75 c8}
-  	r8 ]
-  	r4
+  r4 r4
 
  %%%%%%%% ============= measure 108 ============= %%%%%%%% 
   \time 3/16
