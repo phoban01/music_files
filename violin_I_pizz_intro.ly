@@ -8,7 +8,7 @@ violin_I_pizz_intro = {
   \bezier_gliss #'(0.9 . -3) #'(0.75 1.1 0 -0.5)
   \once \override Glissando.bound-details.right.attach-dir = #-1
   \afterGrace d8 ^\markup \vertical_bow _\markup {\translate #'(-3 . 0) \mute-sign} ^\markup \string-numbers #'( "III II"  -1.25 2)  \< [ \glissando 
-    {\stopStaff a'8 \effort mf} 
+    {a'8 \effort mf} 
   \switch-staff \normal_staff
   \once \override Staff.Clef #'extra-offset = #'(-1.5 . 0)
   \bracket-clef
@@ -108,11 +108,12 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
 }
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
 \compoundMeter #'((3 8 ) (5 16))
-\squares c''16 ( ^\altosultasto [ \p d'' \diamonds e'' ) \staccato \accent \mf r16 \squares fs'' () g'' ]
+\squares c''16 ( ^\altosultasto [ \p d'' \diamonds e'' ) \staccato \accent \mf r16 \squares fs'' ( g'' ]
 \diamonds a''16 [ \mf \staccato \accent \squares b'' \p g'' \> fs'' f'' ) \ppp ]
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
  \time 3/8 
  \switch-staff \single_line_staff
+ \stemDown
  \clockhead c'8 [ ^\down_bow_very_heavy ^\nat \sfz r16 
  \switch-staff \normal_staff
  \bracket-clef
@@ -121,6 +122,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
  \bezier_gliss #'(0.99 . 2.5) #'(0.5 1 0 -0.5)
  \afterGrace a''16. \pp \< \glissando {fs'''8 \flare_sf } 
  r32 ] 
+ \stemNeutral
  %>%%%%%%% ============= measure 12 ============= %%%%%%%% 
  \time 5/16 
   r16 [
@@ -139,6 +141,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
  gqs8 [ \< ~ 
  \niente \afterGrace gqs16 ] \mf \> \stopTextSpan {s8 \!}
  \switch-staff \single_line_staff
+ \stemDown
  r16   [
  \clockhead c'16] ^\down_bow_very_heavy ^\nat ^\markup \string-numbers #'("III" 0.5 0) \f 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
@@ -158,6 +161,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   a'16 [ ^\vertical_bow ^\flat_bow \effort mf  \glissando \no-gliss-pad \afterGrace c' ] \glissando {a'8}
 
  \time 9/16
+ \stemNeutral
  r8. r8. r8.
 
  \compoundMeter #'((4 8) (3 16))
@@ -331,7 +335,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   \natural_notehead c'''4 ~ 
   \niente
   \natural_notehead 
-  \afterGrace c'''4 ~ \> {s8 \!}
+  \afterGrace c'''4  \> {s8 \!}
   r4
   \revert Staff.NoteHead.no-ledgers 
   \revert Staff.Accidental.stencil
