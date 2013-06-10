@@ -1,15 +1,17 @@
 violin_II_pizz_intro = { 
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
-\switch-staff \body_staff
 \time 5/16
+\switch-staff \body_staff
 r8
+\body-clef #'fingerboard-small
+\set Staff.forceClef = ##t
 \squares
 \no-gliss-pad
 a'8. \p ^\markup \vertical_bow _\markup {\translate #'(-3 . 0) \mute-sign} 
 	^\markup \string-numbers #'( "IV III"  -2 0)
 \glissando 
- %%%%%%%% ============= measure 2 ============= %%%%%%%% 
+%  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
  \time 4/8
  \glissSkipOn \afterGrace c'8 [ \glissando {\stopStaff \glissSkipOff b8 }
  \switch-staff \normal_staff
@@ -41,7 +43,7 @@ g''8 [ \glissando a''8 \glissando \glissSkipOff aqs''8 ] ~
  \time 5/16
  a''16 _\bow-mute [ r8 
  \once \override Hairpin #'circled-tip = ##t
- \wavy_vibrato #1.5
+%  \wavy_vibrato #1.5
  \afterGrace a''8 \< ] ^\markup \string-numbers #'("I" 1.5 0) ^\sulpont
  	\glissando {\hideNotes a''8 \mf _\bow-mute \unHideNotes}  %>
 
@@ -106,18 +108,24 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
   \time 2/8
   \tuplet 3/2 {
-  	r16 [ \clockhead c'32 \f ^\sultasto ^\down_bow_very_heavy ^\markup \string-numbers #'("III" 0 0) \anti-clockhead c'32 r8 r16 \anti-clockhead c'16 ] ~ \mf \< %>
+  	r16 [ \clockhead 
+    c'32 \f ^\sultasto ^\down_bow_very_heavy ^\markup \string-numbers #'("III" 0 0) 
+    \anti-clockhead c'32 r8 r16 
+    \anti-clockhead c'16 ] \glissando \mf \< %>
   }
  %%%%%%%% ============= measure 17 ============= %%%%%%%% 
   \time 3/16
-  \anti-clockhead c'16 \ff  r8
- %%%%%%%% ============= measure 18 ============= %%%%%%%% 
+  \anti-clockhead c'16 \ff [  r8 ]
+%  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 4/8
-  \squares
   \switch-staff \body_staff 
-  a'4 ~ \mf  ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0)   
+  \squares
+  \set Staff.forceClef = ##t
+  \body-clef #'fingerboard-small
+  a'4 \glissando \mf  ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0)   
   \no-gliss-pad
-  a'8. [  ^\vertical_bow ^\flat_bow \effort mf  \glissando \no-gliss-pad \afterGrace g16 ] \glissando {e'8}
+  a'8. [  ^\vertical_bow ^\flat_bow \effort mf \glissando 
+  \no-gliss-pad \afterGrace g16 ] \glissando {e'8}
 
  %%%%%%% ============= measure 19 ============= %%%%%%%% 
   \time 9/16
