@@ -217,7 +217,8 @@ violin_I_tuned = {
 	  \ppos #0.75 c'8. [ 
 	  \glissando 
 	  \ppos #0.75 c'16 \f \stopTextSpan \glissando ] 
-	  \ppos #0.7 c'8 [ r8 _\bow-mute ]
+	  \ppos #0.7 c'8 [ ^\markup {\center-column {\italic \fontsize #3 "5\"" \fontsize #6 \musicglyph #"scripts.ufermata" }}
+	  r8 _\bow-mute ]
 	  %%%%%%%%%% measure 14 %%%%%%%%%%
 	  \time 3/8
 	  \switch-staff \body_staff
@@ -338,10 +339,10 @@ violin_I_tuned = {
 	  \time 4/4
 	  <gqs g' cs'' g''>4 \pp ^\down_bow_light ~   <gqs g' cs'' g''>4 ~  <gqs g' cs'' g''>4 \< ~ 
 
-	  <gqs g' cs'' g''>4 ^\trill ^\markup {
-	  					\override #'(line-width . 5)
+	  <gqs g' cs'' g''>4 ^\trill _\markup {
+	  					\override #'(line-width . 30)
 	  					\translate #'(-1.5 . 0) 
-	  					\small \italic \justify {"Randomly trill all strings between stopped position & open string."}} \mp \>
+	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}} \mp \>
 	  %%%%%%%%%% measure 31 %%%%%%%%%%
 	  \time 4/4
 	   \once \override TextScript.extra-offset =  #'(-1.5 . 0)
