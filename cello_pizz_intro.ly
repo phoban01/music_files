@@ -73,13 +73,14 @@ r4
 			 		{<\single\once\override Accidental.transparent = ##t d, \single\hideNote as, \single\hideNote fs \single\hideNote d'>8
  					\sfz _\bow-mute }
 			 }
-	} 
+	} \\ {
 	\new BowPositionStaff \with {alignAboveContext = "cello"} {
 		\stemUp
 		\draw_line_arrow \markup {\center-align \italic \tiny "legno battuto "} \markup {\center-align \italic \tiny " arco crine"}
 		s16 r8 d8 [ \startTextSpan \glissando \accent \mp
 		 a'8 ] \stopTextSpan  
 	} 
+}
 
 >>
 
