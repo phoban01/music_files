@@ -1,8 +1,12 @@
 violin_I_pizz_intro = { 
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
-  \switch-staff \body_staff
   \time 5/16
+
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1 40) 
+  
+  \switch-staff \body_staff
+
   \squares
   \once \override Hairpin #'circled-tip = ##t
   \bezier_gliss #'(0.9 . -3) #'(0.75 1.1 0 -0.5)
@@ -25,13 +29,13 @@ violin_I_pizz_intro = {
   \afterGrace f''8  ^\markup {\center-align \parenthesize \down_bow_heavy} \f \> \glissando {\move-markup #'(2 . 0) \glissSkipOff fs'' ^\circular_bow ^\flat_bow }
   \circles
   <<
-  	\new BowPositionStaff \with {
+  	{\new BowPositionStaff \with {
   		alignAboveContext = #"violin_1"
   	} {
   		\tuplet 3/2 {
   			d'16 [ \glissando a'16 \glissando d'16]
   		}
-  	}
+  	}} 
   	{<b' g''>8 \mf } 
 
   >>
@@ -63,7 +67,7 @@ r8
 <<
 	{r16
 		\bezier_gliss #'(0.7 . -1) #'(1 2.5 0 0)  
-		\afterGrace aqf'8. ^\down_bow  \glissando {a'8} r16}
+		\afterGrace aqf'8. ^\down_bow  \glissando {a'8} r16} \\
 	{s16 \once \override Hairpin #'circled-tip = ##t s16 \< \once \override Hairpin #'circled-tip = ##t s16 \pp \> 
 		\afterGrace s16 {s8 \!}}
 >>
@@ -77,12 +81,16 @@ r8
 	\afterGrace 
 	<gs e' cs'' a''>4 ^\stopped \effort "f" \glissando 
 		{\transpose gs b {< \single \once \override Accidental.stencil = ##f gs \single\hideNote  e' \single \hideNote cs'' \single \hideNote a'' >8 }}
-	}
-	\new HiddenStaff \with {alignAboveContext = #"violin_1"} {
+	} 
+	\new HiddenStaff \with {
+    alignAboveContext = #"violin_1" 
+  } {
 		\stemUp
 		\circles
 		\override Staff.NoteHead #'transparent = ##t
-		r8 \offset_dyn #-1 c'32 \staccato \mp [ ^\altosultasto ^\markup {\center-align \small \italic "jeté"} c'32 \staccato c'32 \staccato c'32 ] \staccato
+		s8
+    \offset_dyn #-1 
+    c'32 \staccato \mp [ ^\altosultasto ^\markup {\center-align \small \italic "jeté"} c'32 \staccato c'32 \staccato c'32 ] \staccato
 	}
 >>
 r8.
@@ -161,6 +169,9 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   a'16 [ ^\vertical_bow ^\flat_bow \effort mf  \glissando \no-gliss-pad \afterGrace c' ] \glissando {a'8}
 
  \time 9/16
+  
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1 70)
+
  \stemNeutral
  r8. r8. r8.
 

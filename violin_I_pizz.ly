@@ -46,7 +46,7 @@ violin_I_pizz_right_one = {
 
 violin_I_pizz_left_one = { 
 	 %%%%%%%% ============= measure 26 ============= %%%%%%%% 
-	\time 5/4
+% 	\time 5/4
 	r8. [
 	\ppos #0.5 c16 \glissando
 		_\markup {
@@ -837,7 +837,7 @@ r8 ]
 violin_I_pizz_left = { 
 
  %%%%%%%% ============= measure 50 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r8 [ r8 
   \ppos #0.1 c8 ] \glissando
   	_\markup {
@@ -846,7 +846,7 @@ violin_I_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 51 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   \ppos #0.7 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("mute" . 0.8) (#f . 0.5) ("dot" . 0.4) ("dot" . 0.2))
@@ -857,7 +857,7 @@ violin_I_pizz_left = {
   			\fingering-diagram #'(("dot" . 0.5) ("dot" . 0.5) ("dot" . 0.5) ("dot" . 0.5))
   	}
  %%%%%%%% ============= measure 52 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   \ppos #0.175 c8 [  \glissando
   \afterGrace \ppos #0.75 c8 \glissando 
   	_\markup {
@@ -875,7 +875,7 @@ violin_I_pizz_left = {
   \ppos #0.35 c8 ] \glissando
 
  %%%%%%%% ============= measure 53 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   \glissSkipOn c8 [ \glissando
   	_\markup {
   			\override #'(trills . (#t #t #t #t))
@@ -899,7 +899,7 @@ violin_I_pizz_left = {
   	{\slash_grace \ppos #0.2 c8}
 
  %%%%%%%% ============= measure 54 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   \ppos #0.65 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.8) ("dot" . 0.6) (#f . 0.5) ("dot" . 0.2))
@@ -911,7 +911,7 @@ violin_I_pizz_left = {
   			\fingering-diagram #'(("mute" . 0.8) ("mute" . 0.6) ("dot" . 0.4) (#f . 0.5))
   	}
  %%%%%%%% ============= measure 55 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
 	\glissSkipOn  \afterGrace c8 [ \glissando 
 		_\markup {
 				\override #'(extender-IV . (#t . "dot"))
@@ -926,7 +926,7 @@ violin_I_pizz_left = {
 		}
 		{\slash_grace \ppos #0.15 c8}
  %%%%%%%% ============= measure 56 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r8 [
   \ppos #0.25 c16 \glissando
   	_\markup {
@@ -944,7 +944,7 @@ violin_I_pizz_left = {
   	}
   	{\glissSkipOff \slash_grace \ppos #0.6 c8}
  %%%%%%%% ============= measure 57 ============= %%%%%%%% 
-  \time 7/16
+%   \time 7/16
 	r16 
 	\ppos #0.75 c8 [ \glissando
 		_\markup {
@@ -960,7 +960,7 @@ violin_I_pizz_left = {
 		{\slash_grace \ppos #0.65 c8}
 
  %%%%%%%% ============= measure 58 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   	\ppos #0.5 c8 [ \glissando 
   		_\markup {
   				\fingering-diagram #'(("mute" . 0.2) ("dot" . 0.4) ("dot" . 0.6) ("dot" . 0.8))
@@ -973,7 +973,7 @@ violin_I_pizz_left = {
   		{\glissSkipOff \slash_grace \ppos #0.7 c8}
 
  %%%%%%%% ============= measure 59 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   \afterGrace \ppos #0.75 c16 [ \glissando 
   		_\markup {
   				\fingering-diagram #'(("dot" . 0.8) ("dot" . 0.6) ("mute" . 0.2) (#f . 0.5))
@@ -991,7 +991,7 @@ violin_I_pizz_left = {
   	}
   	{\slash_grace \ppos #0.1 c8}
  %%%%%%%% ============= measure 60 ============= %%%%%%%% 
-  \time 7/16  
+%   \time 7/16  
   r4
   \afterGrace \ppos #0.25 c8 [ \glissando 
   	_\markup {
@@ -1001,7 +1001,7 @@ violin_I_pizz_left = {
   \afterGrace \ppos #0.55 c16 ] \glissando 
   	{\slash_grace \ppos #0.1 c8}
  %%%%%%%% ============= measure 61 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   	\ppos #0.15 c8 [ \glissando
   		_\markup {
   				\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) ("mute" . 0.5) ("mute" . 0.5))
@@ -1010,7 +1010,7 @@ violin_I_pizz_left = {
 	c8
 	\afterGrace c8 ] \glissando {\glissSkipOff \slash_grace \ppos #0.65 c8}
  %%%%%%%% ============= measure 62 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   \bezier_gliss #'(0.9 . 2) #'(0 1 0 0)
   \ppos #0.6 c8 [ \glissando
   	_\markup {
@@ -1025,7 +1025,7 @@ violin_I_pizz_left = {
   \afterGrace \ppos #0.1 c16 ] \glissando {\slash_grace \ppos #0.4 c8}
   
  %%%%%%%% ============= measure 63 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   \ppos #0.2 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'((#f . 0.5) ("dot" . 0.4) ("dot" . 0.6) ("dot" . 0.8))
@@ -1044,7 +1044,7 @@ violin_I_pizz_left = {
   	{\glissSkipOff \slash_grace \ppos #0.55 c8}
 
  %%%%%%%% ============= measure 64 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   \ppos #0.1 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("mute" . 0.8) ("dot" . 0.6) (#f . 0.5) ("dot" . 0.2))
@@ -1059,7 +1059,7 @@ violin_I_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 65 ============= %%%%%%%% 
- \time 5/16
+%  \time 5/16
  	\afterGrace \ppos #0.25 c8 [ \glissando 
  		_\markup {
  				\fingering-diagram #'(("dot" . 0.8) ("mute" . 0.6) ("dot" . 0.4) ("dot" . 0.2))
@@ -1072,7 +1072,7 @@ violin_I_pizz_left = {
 		}
 		{\slash_grace \ppos #0.375 c8}
  %%%%%%%% ============= measure 66 ============= %%%%%%%% 
-  \time 4/4
+%   \time 4/4
   	\ppos #0.7 c8 [ \glissando
   		_\markup {
   				\override #'(trills . (#t #t #t #t))
@@ -1098,7 +1098,7 @@ violin_I_pizz_left = {
   	\afterGrace \ppos #0.275 c8 ] \glissando {\slash_grace \ppos #0.2 c8}
   	r4
  %%%%%%%% ============= measure 67 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   	\ppos #0.5 c8 [ \glissando
   		_\markup {
   				\override #'(extender-III . (#t . "dot"))
@@ -1110,7 +1110,7 @@ violin_I_pizz_left = {
 				\fingering-diagram #'(("mute" . 0.5) ("mute" . 0.5) ("mute" . 0.5) ("mute" . 0.5))
 		}
  %%%%%%%% ============= measure 68 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   \glissSkipOn \afterGrace c8 [ \glissando {\glissSkipOff \slash_grace \ppos #0.1 c8}
   r8 r8
   r16
@@ -1121,7 +1121,7 @@ violin_I_pizz_left = {
   \glissSkipOn \afterGrace c16 \glissando {\glissSkipOff \slash_grace \ppos #0.75 c8}
   \afterGrace \ppos #0.8 c16 ] \glissando {\slash_grace \ppos #0.1 c8}
  %%%%%%%% ============= measure 69 ============= %%%%%%%% 
-  \time 3/4
+%   \time 3/4
   r4
   \tuplet 3/2 {
   	r8 [
@@ -1139,7 +1139,7 @@ violin_I_pizz_left = {
   r8 ]
 
  %%%%%%%% ============= measure 70 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   \afterGrace \ppos #0.75 c8 [ \glissando 
   	_\markup {
   		\override #'(top-barre . "mute")
@@ -1162,11 +1162,11 @@ violin_I_pizz_left = {
   		}
   	{\slash_grace \ppos #0.2 c8}
  %%%%%%%% ============= measure 71 ============= %%%%%%%% 
-  \time 2/4
+%   \time 2/4
   r4 r4
 
  %%%%%%%% ============= measure 72 ============= %%%%%%%% 
-  \time 3/4
+%   \time 3/4
   r8 [
   \ppos #0.7 c8 \glissando
   	_\markup {
@@ -1190,7 +1190,7 @@ violin_I_pizz_left = {
   r8 ]
 
  %%%%%%%% ============= measure 73 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   r8 [
   \ppos #0.9 c8 \glissando
   	_\markup {
@@ -1205,7 +1205,7 @@ violin_I_pizz_left = {
   \glissSkipOn c8 ] \glissando
 
  %%%%%%%% ============= measure 74 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   	\glissSkipOff \ppos #0.8 c8 [ \glissando
  	\tuplet 3/2 {
  		\ppos #0.35 c16 \glissando
@@ -1218,7 +1218,7 @@ violin_I_pizz_left = {
  	}
  	r8 r8 ]
  %%%%%%%% ============= measure 75 ============= %%%%%%%% 
-  \time 7/8
+%   \time 7/8
   	\ppos #0.55 c8 [ \glissando
   		_\markup {
   				\override #'(trills . (#t #t #t #t))
@@ -1237,7 +1237,7 @@ violin_I_pizz_left = {
 	\glissSkipOn \afterGrace c8 \glissando {\glissSkipOff \slash_grace \ppos #0.1 c8}
 	r8 r8 ]
  %%%%%%%% ============= measure 76 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   \ppos #0.3 c16 \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.2) ("mute" . 0.4) (#f . 0.5) ("dot" . 0.8))
@@ -1261,7 +1261,7 @@ violin_I_pizz_left = {
   \afterGrace \ppos #0.55 c16 ] \glissando {\slash_grace \ppos #0.15 c8}
 
  %%%%%%%% ============= measure 77 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   r8 [
   r8 r8
   \ppos #0.25 c16 \glissando
@@ -1274,7 +1274,7 @@ violin_I_pizz_left = {
   r8 ]
 
  %%%%%%%% ============= measure 78 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   r8 [
   r8
   \ppos #0.4 c8 \glissando
@@ -1290,11 +1290,11 @@ violin_I_pizz_left = {
   r8 ]
 
  %%%%%%%% ============= measure 79 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   r4. r4.
 
  %%%%%%%% ============= measure 80 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   \ppos #0.1 c8 [ \glissando
   	_\markup {
   			\override #'(trills . (#t #t #t #t))
@@ -1311,23 +1311,23 @@ violin_I_pizz_left = {
   	} {\slash_grace \ppos #0.45 c8}
 
  %%%%%%%% ============= measure 81 ============= %%%%%%%% 
-  \time 2/8
+%   \time 2/8
   r4
 
  %%%%%%%% ============= measure 82 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   r8 r8.
 
  %%%%%%%% ============= measure 83 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 84 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r4. 
 
  %%%%%%%% ============= measure 85 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   \ppos #0.4 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.8) ("dot" . 0.6) (#f . 0.5) ("mute" . 0.2))
@@ -1337,7 +1337,7 @@ violin_I_pizz_left = {
 
 
  %%%%%%%% ============= measure 86 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
 
   \afterGrace \ppos #0.75 c16 [ \glissando {\slash_grace \ppos #0.1 c8}
   \ppos #0.3 c16 \glissando
@@ -1357,7 +1357,7 @@ violin_I_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 87 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
 
   \ppos #0.35 c8 [ \glissando
       _\markup {
@@ -1369,11 +1369,11 @@ violin_I_pizz_left = {
   \afterGrace \ppos #0.6 c16 ] \glissando {\ppos #0.85 c'8}
 
  %%%%%%%% ============= measure 88 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 89 ============= %%%%%%%% 
-  \time 7/16
+%   \time 7/16
   	\ppos #0.8 c16 [ \glissando
   		_\markup {
   				\fingering-diagram #'(("dot" . 0.2) ("mute" . 0.4) ("dot" . 0.6) ("dot" . 0.8))
@@ -1391,7 +1391,7 @@ violin_I_pizz_left = {
 	\ppos #0.45 c16 ] \glissando
 
  %%%%%%%% ============= measure 90 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
 	\glissSkipOn c8 [ \glissando
 	\glissSkipOff \ppos #0.8 c8 \glissando
 		_\markup {
@@ -1411,98 +1411,98 @@ violin_I_pizz_left = {
 	}
 
  %%%%%%%% ============= measure 91 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   	r4.  
   
  %%%%%%%% ============= measure 92 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
  %%%%%%%% ============= measure 93 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   r4. r4.
 
  %%%%%%%% ============= measure 94 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r4.
 
  %%%%%%%% ============= measure 95 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   r8 r8.
 
  %%%%%%%% ============= measure 96 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   r4 r4.
 
  %%%%%%%% ============= measure 97 ============= %%%%%%%% 
-  \time 7/16
+%   \time 7/16
   r4 r8.
 
  %%%%%%%% ============= measure 98 ============= %%%%%%%% 
-  \time 3/16
+%   \time 3/16
   r8.
 
  %%%%%%%% ============= measure 99 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r4.
 
  %%%%%%%% ============= measure 100 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 101 ============= %%%%%%%% 
-  \time 2/8
+%   \time 2/8
   r4
 
  %%%%%%%% ============= measure 102 ============= %%%%%%%% 
-  \time 3/16
+%   \time 3/16
   r8.
 
  %%%%%%%% ============= measure 103 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 104 ============= %%%%%%%% 
-  \time 9/16
+%   \time 9/16
   r8. r8. r8.
 
  %%%%%%%% ============= measure 105 ============= %%%%%%%% 
-  \time 4/4
+%   \time 4/4
   r1
 
  %%%%%%%% ============= measure 106 ============= %%%%%%%% 
-  \time 9/8
+%   \time 9/8
   r4. r4. r4.
 
  %%%%%%%% ============= measure 107 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 108 ============= %%%%%%%% 
-  \time 3/16
+%   \time 3/16
   r8.
 
  %%%%%%%% ============= measure 109 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 110 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 111 ============= %%%%%%%% 
-  \time 3/16
+%   \time 3/16
   r8.
 
  %%%%%%%% ============= measure 112 ============= %%%%%%%% 
-  \time 3/4
+%   \time 3/4
   r4 r4 r4
 
  %%%%%%%% ============= measure 113 ============= %%%%%%%% 
-  \time 4/16
+%   \time 4/16
   r4
 
  %%%%%%%% ============= measure 114 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r4.  	
 }
 
@@ -1510,9 +1510,11 @@ violin_I_pizz_left = {
 violin_I_second_pizz = {
 	<<
 		\new RightHandVoice = "upper" {
+      \voiceOne
 			\violin_I_pizz_right
 		} 
 		\new LeftHandVoice = "lower" {
+      \voiceTwo
 			\violin_I_pizz_left
 		}
 	>>	

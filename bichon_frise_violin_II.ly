@@ -24,7 +24,7 @@ violin_II_bichon_frise = {
 	\stemDown		
 	\circles
 	
-	<e' g' b'>8 ^\up_bow_very_heavy ^\sulpont
+	<e' g' b'>8 \< ^\up_bow_very_heavy ^\sulpont
 			^\markup {
 				\center-align
 				\center-column {
@@ -56,7 +56,7 @@ violin_II_bichon_frise = {
 
 				}
 		}
-	\hideNote c'8 ^\down_bow_heavy
+	\hideNote c'8 \fposs ^\down_bow_heavy
 	\times 2/3 {
 		<e' g'>8 ^\down_bow_light
 		\hideNote c'16 ^\up_bow_light

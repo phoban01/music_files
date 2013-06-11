@@ -9,15 +9,15 @@ viola_tuning = {
   \time 6/4
   \time 6/4
   <<
-    {\oneVoice \tieDown \circles <c' e' g'>2 ^\down_bow ^\angle_bow \glissando <c' e' g'>2 \glissando <c' e' g'>2} \\
-    {\niente s4 \< s4 \! s2 s4 \niente \afterGrace s4 \> {s4 \! }}
+    {\oneVoice \tieDown \circleheads <c' e' g'>2 ^\down_bow ^\angle_bow \glissando <c' e' g'>2 \glissando <c' e' g'>2} \\
+    {\niente s4 \< s4 \mp s2 s4 \niente \afterGrace s4 \> {s4 \! }}
   >>
 
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
   \time 6/4
   <<
   	{\niente s4 \< s4 \mp s2 s4 \niente \afterGrace s4 \> {s8\!} } \\
-  	{\oneVoice \circles <e' g' b'>2 ^\up_bow \glissando <c' e' g'>2 \glissando <c' e' g'>2}
+  	{\oneVoice \circleheads <e' g' b'>2 ^\up_bow \glissando <c' e' g'>2 \glissando <c' e' g'>2}
   >>
 
  %%%%%%%% ============= measure 4 ============= %%%%%%%% 
@@ -32,7 +32,7 @@ viola_tuning = {
   \time 6/4
    <<
   	{\niente s4 \< s4 \mp s2 \niente \afterGrace s4 \> {s8\!} } \\
-  	{\oneVoice \circles <c' e' g'>2 ^\down_bow \glissando <c' e' g'>2 \glissando <e' g' b'>4 r4}
+  	{\oneVoice \circleheads <c' e' g'>2 ^\down_bow \glissando <c' e' g'>2 \glissando <e' g' b'>4 r4}
    >>
 
  %%%%%%%% ============= measure 7 ============= %%%%%%%% 
@@ -41,11 +41,11 @@ viola_tuning = {
 
  %%%%%%%% ============= measure 8 ============= %%%%%%%% 
   \time 3/4
-  r2 r8 \circles <c' e' g'>8 ^\down_bow \mp \glissando
+  r2 r8 \niente \circleheads <c' e' g'>8 \< ^\down_bow \mp \glissando
 
  %%%%%%%% ============= measure 9 ============= %%%%%%%% 
   \time 6/4
-  <c' e' g'>2 \glissando <e' g' b'>4 r4 <c' e' g'>2 \mp ^\down_bow \glissando
+  <c' e' g'>2 \mp \glissando <e' g' b'>4 r4 <c' e' g'>2 \mp ^\down_bow \glissando
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
   \time 6/4
@@ -57,18 +57,18 @@ viola_tuning = {
 
  %%%%%%%% ============= measure 12 ============= %%%%%%%% 
   \time 6/4
-  r2 r2 r8 <c' e' g'>8 \mp ^\down_bow \glissando <c' e' g'>4 \glissando
+  r2 r2 r8 \niente <c' e' g'>8 \< ^\down_bow \glissando <c' e' g'>4 \mp \glissando
 
  %%%%%%%% ============= measure 13 ============= %%%%%%%% 
   \time 6/4
   <e' g' b'>2 r2 r4 <c' e' g'>4 ^\down_bow \mp \glissando
 
  %%%%%%%% ============= measure 14 ============= %%%%%%%% 
-  <c' e' g'>4 r4 r8 <e' g' b'>8 ^\up_bow \glissando <c' e' g'>4 ^\down_bow \glissando <e' g' b'>4 r4
+  <c' e' g'>4 r4 r8 \niente <e' g' b'>8 \< ^\up_bow \glissando <c' e' g'>4 \mp ^\down_bow \glissando \niente <e' g' b'>4 \> r4 \!
 
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
   \time 6/4
-  <e' g' b'>4 ^\up_bow \glissando <c' e' g'>8 r8 r2 r4 <c' e' g'>4 ^\down_bow \mp \glissando
+  <e' g' b'>4 \mp ^\up_bow \glissando <c' e' g'>8 r8 r2 r4 <c' e' g'>4 ^\down_bow \mp \glissando
 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
   \time 5/4
@@ -94,7 +94,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-      \circles
+      \circleheads
   		<c' e' g'>2 ^\down_bow  
   		\draw_tuning_arrow \tuning_peg_fourth \tuning_fermata
   		<e' g'>4 \glissando ^\up_bow \startTextSpan
@@ -108,7 +108,7 @@ viola_tuning = {
   <<
   {
     \oneVoice 
-  	\circles
+  	\circleheads
   	\tieDown
 	   c'4 \glissando ^\altosultasto ^\horz_bow  
 	   c'8 c'8 \glissando ^\down_bow \stopTextSpan
@@ -136,7 +136,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown
   		c'8 ^\down_bow 
       \stopTextSpan \glissando c'4  
@@ -157,7 +157,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown  		
   		e'8 \glissando e'8 \glissando e'4 \stopTextSpan
   		<e' g'>4 \pp \< ^\up_bow ^\angle_bow 
@@ -174,7 +174,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown  		
   		c'2. \mf \> \glissando <e' g' b'>2 \p ^\up_bow \glissando
   	} \\
@@ -188,7 +188,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown  		
   		<e' g' b'>2. \glissando <e' g' b'>4 c'16 [ \effort "f"  ^\markup {\center-align \small \italic "pizz."}  ^\altosulpont ^\fingernail  
   			r8. ]
@@ -208,7 +208,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown  		
   		<g' b'>2. \pp ^\up_bow ^\angle_bow ^\markup {\italic \small "(arco)"}
   		<g' b'>2  ^\down_bow \glissando
@@ -223,7 +223,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown  		
   		\draw_tuning_arrow \tuning_peg_second \tuning_fermata
   		<g' b'>8 \glissando 
@@ -252,7 +252,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown  		
   		g'4 ^\up_bow \glissando g'4 \pp \stopTextSpan \glissando g'8 <c' e' g'>8 \glissando ^\down_bow ^\angle_bow 
   		<c' e' g'>2 \glissando
@@ -269,7 +269,7 @@ viola_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		\tieDown  		
   		<c' e' g'>4 <c' e' g'>2 \< \glissando ^\up_bow <e' g' b'>2 \mf
   	} \\
@@ -283,8 +283,7 @@ viola_tuning = {
   <<
   	{	
       \oneVoice 
-  		\circles
-  		\tieDown
+  		\circleheads
   		<g' b'>4 \glissando <g' b'>4 \glissando <g' b'>8 
   		\draw_tuning_arrow \tuning_peg_first \viola_first
   		<g' b'>8 \pp \startTextSpan ^\up_bow ^\horz_bow \glissando
@@ -304,13 +303,14 @@ viola_tuning = {
  \time 5/4
   <<
   	{
+      \time 5/4
       \oneVoice 
-  		\circles
-  		\tieDown
-  		b'4 b'2. \mf ^\down_bow b'4 \> \stopTextSpan ^\up_bow \glissando \bar "|" 
-      \tieDown
-      \circles
-     b'4 \glissando  b'8 [ \glissando b'8 \glissando ] <g' b'>4 \glissando \niente <g' b'>4 \> r4 \!
+  		\circleheads
+  		b'4 b'2. \mf ^\down_bow b'4 \stopTextSpan ^\up_bow \glissando 
+      \bar "|" 
+      \time 5/4
+      \circleheads
+      b'4 \glissando  b'8 [ \glissando b'8 \glissando ] \niente <g' b'>4 \> \glissando  <g' b'>4 r4 \!
   	}  \\
   	{
 
@@ -321,8 +321,7 @@ viola_tuning = {
 
  %%%%%%%% ============= measure 33 ============= %%%%%%%% 
   \time 5/4
-  <<
-    {
+
       r4
       \tieDown
       \switch-staff \normal_staff
@@ -332,6 +331,7 @@ viola_tuning = {
       		\niente
           \clef alto
           \slurDown
+          \circles
       		b16 [ ^\down_bow_light ^\altosulpont \startTextSpan ( \< a f' e' d' c' b gs \f \> f e ef df \stopTextSpan ) ] ~ \ppp
       	}
       \wavy_line #1
@@ -340,31 +340,7 @@ viola_tuning = {
       \niente 
       \wavy_line #1
       \afterGrace df4 \f \> \stopTextSpan \glissando { df8 \!}
-      } 
-      \\
-      {
-        \new Staff \with {
-            \remove "Time_signature_engraver"
-            \override VerticalAxisGroup.staff-staff-spacing = #'
-                  ((basic-distance . 2)
-                    (minimum-distance . 2)
-                    (padding . 3)
-                    (stretchability . 0))
-            alignAboveContext="viola"
 
-        } {
-          \time 5/4
-              \stopStaff s4
-              \startStaff
-              \once \override TextScript.extra-offset = #'(0 . 2.5)
-              \circles
-              \switch-staff \single_line_staff
-              c'2:32 ^\down_bow_light ^\altosulpont
-              \stopStaff
-              s2
-        }
-      } 
-  >>
 
  %%%%%%% ============= measure 34 ============= %%%%%%%% 
   \time 5/4
@@ -450,17 +426,18 @@ viola_tuning = {
   \stemNeutral
   \circles gs2 \stopTextSpan \mf ~ gs8 ~ gs8 ~ gs4 ~ gs8 \>
   \tuplet 3/2 {
-    \diamonds a'16 ( \pp af'16 b'16
+    \draw_line_arrow \sultasto \sulpont
+    \diamonds a'16 ( \startTextSpan \pp af'16 b'16
   }
   \tuplet 5/4 {
-    \single\circles aqs'16 c''16 \single\circles a'16 aqf'16 d'16 
+    \single\circles aqs'16 c''16 \single\circles a'16 aqf'16 d'16 \stopTextSpan
   }
 
  %%%%%%%% ============= measure 46 ============= %%%%%%%% 
   \time 6/4
   \tuplet 6/4 {
       \circles
-      a'32 [ aqs' gs' a' \single\diamonds d' aqs']
+      a'32 [ \< aqs' gs' a' \f \> \single\diamonds d' aqs'] \mp
   }
   \tuplet 5/4 {
     \single\diamonds a'8 [ aqf' \diamonds aqs'  gs'8 c'']
@@ -469,7 +446,7 @@ viola_tuning = {
   \single\circles bqs'16 ) [ b'16 ~] 
   b'8 [ ~ 
   \wavy_vibrato #1.35
-  \afterGrace b'16 \< \glissando {\hideNotes b'8 \mf \unHideNotes} \stopStaff r16 ] _\bow-mute %>
+  \afterGrace b'16 \< \glissando {\hideNotes b'8 \f \unHideNotes} \stopStaff r16 ] _\bow-mute %>
 
   %%%%%%VIOLA BICHON FRISE STARTS HERE
 
@@ -478,7 +455,7 @@ viola_tuning = {
   
   \stemDown
 
-  \circles
+  \circleheads
   
   \clef treble
 
@@ -514,7 +491,7 @@ viola_tuning = {
 
         }
     }
-    <g' b'>8 ^\up_bow_light ^\markup {\translate #'(0 . 10) \italic "(sempre molto legato)"}
+    <g' b'>8 ^\up_bow_light _\markup {\small \italic \translate #'(0 . 10) \italic {(sempre molto legato)}}
     <g' b'>8  ^\down_bow_light
   }
 

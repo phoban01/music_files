@@ -2,6 +2,8 @@ violin_I_tuned = {
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
   	\time 3/4
+  	\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
+
   	<< 
   		{
   	\switch-staff \normal_staff

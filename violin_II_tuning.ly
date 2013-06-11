@@ -4,13 +4,14 @@ violin_II_tuning = {
 
   \time 6/4
   \switch-staff \string-staff
+  \circleheads
   r1.
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   \time 6/4
   r2 
   \niente
-  \circles <e' g' b'>2 \glissando ^\up_bow ^\angle_bow \< <c' e' g'>2 \mp \glissando
+  <e' g' b'>2 \glissando ^\up_bow ^\angle_bow \< <c' e' g'>2 \mp \glissando
 
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
   \time 6/4
@@ -21,21 +22,21 @@ violin_II_tuning = {
  \time 6/4
   << 
   	{\niente s4 \< s4 \mp s2 s4 \niente \afterGrace s4 \> {s8 \!}} \\
-  	{\oneVoice \circles  <c' e' g'>2 ^\down_bow \glissando <c' e' g'>2 \glissando <e' g' b'>2}
+  	{\oneVoice \circleheads  <c' e' g'>2 ^\down_bow \glissando <c' e' g'>2 \glissando <e' g' b'>2}
   >>
 
  %%%%%%%% ============= measure 5 ============= %%%%%%%% 
  \time 6/4
   << 
   	{s2 s2 \niente s4 \< s4 \mp} \\ %>
-  	{\oneVoice  r2 r2 \circles <e' g' b'>2 ^\up_bow \glissando }
+  	{\oneVoice  r2 r2 \circleheads <e' g' b'>2 ^\up_bow \glissando }
   >>
 
  %%%%%%%% ============= measure 6 ============= %%%%%%%% 
  \time 6/4
   <<
   	{s2 \niente s4 \> s4 \! s2} \\
-  	{\oneVoice  \circles <e' b' g'>2 \glissando <c' e' g'>4 r4 r2}
+  	{\oneVoice  \circleheads <e' b' g'>2 \glissando <c' e' g'>4 r4 r2}
   >>
 
  %%%%%%%% ============= measure 7 ============= %%%%%%%% 
@@ -44,41 +45,41 @@ violin_II_tuning = {
 
  %%%%%%%% ============= measure 8 ============= %%%%%%%% 
   \time 3/4
-  r2 r8 <c' e' g'>8 \glissando ^\down_bow \mp
+  r2 r8 \niente <c' e' g'>8 \glissando ^\down_bow \<
 
  %%%%%%%% ============= measure 9 ============= %%%%%%%% 
   \time 6/4
   <<
-  {s2 \niente \afterGrace s4 \> {s8\!} s4 s2}
-  {\oneVoice \circles \stemUp <c' e' g'>2 \glissando <e' g' b'>4 r2.}
+  {s2 \niente \afterGrace s4 \mp \> {s8\!} s4 s2}
+  {\oneVoice \circleheads  <c' e' g'>2 \glissando <e' g' b'>4 r2.}
   >>
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
   \time 6/4
   <<
   	{s2 \mp s2 s4 \niente \afterGrace s4 \> {s8\!}} \\
-  	{\oneVoice \circles \stemUp <c' e' g'>2. ^\down_bow \glissando <e' g' b'>2. }
+  	{\oneVoice \circleheads \stemUp <c' e' g'>2. ^\down_bow \glissando <e' g' b'>2. }
   >>
 
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
   \time 6/4
   <<
   	{s1.} \\
-  	{\oneVoice r2 \circles \stemUp <c' e' g'>2 ^\down_bow \glissando <e' g' b'>2 ^\up_bow \glissando }
+  	{\oneVoice r2 \circleheads \niente <c' e' g'>2 \< ^\down_bow \glissando <e' g' b'>2 \mp ^\up_bow \glissando }
   >>
 
  %%%%%%%% ============= measure 12 ============= %%%%%%%% 
  \time 6/4
   <<
   	{s4 \niente \afterGrace s4 \> {s8\!} s2 s2} \\
-  	{\oneVoice \circles \stemUp <c' e' g'>2 r2 r2}
+  	{\oneVoice \circleheads \stemUp <c' e' g'>2 r2 r2}
   >>
 
  %%%%%%%% ============= measure 13 ============= %%%%%%%% 
   \time 6/4
   <<
   	{s2 s2 s2} \\
-  	{\oneVoice \circles \stemUp <c' e' g'>2 ^\down_bow \mp \glissando <c' e' g'>4 r4 <e' g' b'>2 ^\up_bow \mp}
+  	{\oneVoice \circleheads \stemUp <c' e' g'>2 ^\down_bow \mp \glissando <c' e' g'>4 r4 <e' g' b'>2 ^\up_bow \mp}
   >>
 
  %%%%%%%% ============= measure 14 ============= %%%%%%%% 
@@ -111,7 +112,7 @@ violin_II_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
       \niente
   		<e' g'>4 \<  ^\up_bow ^\angle_bow
@@ -134,7 +135,7 @@ violin_II_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		g'4 \pp \glissando g'16 \< \glissando c'8. \glissando \stopTextSpan c'4 \mf \glissando
   		<e' g'>4 ^\up_bow \glissando 
@@ -159,7 +160,7 @@ violin_II_tuning = {
   <<
   	{
       \oneVoice 
-  		\circles
+  		\circleheads
   		<c' e'>2 
       <c' e'>4 \< ^\up_bow \glissando <e' g'>2 \mp \glissando
   	}\\
@@ -172,7 +173,7 @@ violin_II_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		\draw_tuning_arrow \tuning_peg_third \tuning_fermata
   		<e' g'>8 ^\down_bow \startTextSpan <e' g'>8 \> \glissando ^\up_bow
@@ -190,7 +191,7 @@ violin_II_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		e'8 \mf e'8 \stopTextSpan \glissando ^\up_bow 
   		\draw_tuning_arrow \tuning_peg_third \violin_third
@@ -213,7 +214,7 @@ violin_II_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		\niente e'2 \< ^\up_bow ^\altosulpont 
   		\niente 
@@ -247,7 +248,7 @@ violin_II_tuning = {
   <<
   	{
   		\oneVoice 
-  		\circles
+  		\circleheads
   		<c' e'>2 \<
       <c' e' g'>4. \mf \glissando  ^\down_bow
   		\draw_tuning_arrow \tuning_peg_first \tuning_fermata
@@ -281,7 +282,7 @@ violin_II_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
       \glissSkipOn
   		\niente \afterGrace 
@@ -292,7 +293,7 @@ violin_II_tuning = {
   		g'4 ^\markup {\small \italic "pizz."} ^\markup \string-numbers #'( "IV" 2 0) \effort "ff" \laissezVibrer
   		r4
       \switch-staff \string-staff
-      \circles
+      \circleheads
   		<c' e'>2 \glissando ^\down_bow ^\angle_bow 
   	} \\
   	{
@@ -306,7 +307,7 @@ violin_II_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		\draw_line_arrow " " \down_bow_heavy
   		<c' e'>4 \startTextSpan \glissando <c' e'>8 \stopTextSpan <c' e'>8 ^\up_bow_light ^\horz_bow \glissando <c' e'>4 \glissando 
@@ -325,7 +326,7 @@ violin_II_tuning = {
   \time 5/4
   <<	
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		<c' e'>2. ^\down_bow \glissando <c' e'>2 \glissando
   	} \\
@@ -343,7 +344,7 @@ violin_II_tuning = {
  \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		\niente \afterGrace <c' e'>4 \> \glissando {<c' e'>8 \!} r4
   		\tieNeutral
@@ -351,6 +352,7 @@ violin_II_tuning = {
       \switch-staff \normal_staff
   		\set Staff.forceClef = ##t
   		\niente
+      \circles
   		<bf ees' aqs' eqs''>8 ] ~ \< ^\circular_bow ^\markup \string-numbers #'( "I II III IV" 0 0)
   		<bf ees' aqs' eqs''>8 [ ~
   		<bf ees' aqs' eqs''>8 ] \glissando

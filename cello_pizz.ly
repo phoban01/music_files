@@ -378,7 +378,7 @@ cello_pizz_right = {
 cello_pizz_left = { 
 
  %%%%%%%% ============= measure 50 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r8
   \tuplet 3/2 {
   	\ppos #0.475 c8 [ \glissando
@@ -398,91 +398,91 @@ cello_pizz_left = {
   }
 
  %%%%%%%% ============= measure 51 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   r8 r8.
 
  %%%%%%%% ============= measure 52 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 53 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   r4 r4.
 
  %%%%%%%% ============= measure 54 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 55 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   r8 r8.
 
  %%%%%%%% ============= measure 56 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 57 ============= %%%%%%%% 
-  \time 7/16
+%   \time 7/16
   r4 r8.
 
  %%%%%%%% ============= measure 58 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r4.
 
  %%%%%%%% ============= measure 59 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 60 ============= %%%%%%%% 
-  \time 7/16
+%   \time 7/16
   r4 r8.
 
  %%%%%%%% ============= measure 61 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 62 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r4.
 
  %%%%%%%% ============= measure 63 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 64 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   r4 r4.
 
  %%%%%%%% ============= measure 65 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   r8 r8.
 
  %%%%%%%% ============= measure 66 ============= %%%%%%%% 
-  \time 4/4
+%   \time 4/4
   r1
 
  %%%%%%%% ============= measure 67 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
   r8 r8.
 
  %%%%%%%% ============= measure 68 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   r4 r4.
 
  %%%%%%%% ============= measure 69 ============= %%%%%%%% 
-  \time 3/4
+%   \time 3/4
   r2.
 
  %%%%%%%% ============= measure 70 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r4.
 
  %%%%%%%% ============= measure 71 ============= %%%%%%%% 
-  \time 2/4
+%   \time 2/4
   r4 r4
 
  %%%%%%%% ============= measure 72 ============= %%%%%%%% 
-   \time 3/4
+%    \time 3/4
   r4 r4
   \tuplet 3/2 {
     \bezier_gliss #'(0.8 . 2) #'(0 1 0 0)
@@ -495,7 +495,7 @@ cello_pizz_left = {
   }
 
  %%%%%%%% ============= measure 73 ============= %%%%%%%% 
-  \time 5/8
+%   \time 5/8
   r4
   \ppos #0.3 c8 [ \glissando
   	_\markup {
@@ -512,7 +512,7 @@ cello_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 74 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   \glissSkipOn \afterGrace c8 [ \glissando {\glissSkipOff \slash_grace \ppos #0.3 c8}
   \afterGrace \ppos #0.1 c8 ] \glissando
   	_\markup {
@@ -522,7 +522,7 @@ cello_pizz_left = {
   r4
 
  %%%%%%%% ============= measure 75 ============= %%%%%%%% 
-  \time 7/8
+%   \time 7/8
   \ppos #0.175 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) ("mute" . 0.6) ("dot" . 0.8))
@@ -546,7 +546,7 @@ cello_pizz_left = {
   	}
   	{\slash_grace \ppos #0.5 c8}
  %%%%%%%% ============= measure 76 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   r8 [
   \afterGrace \ppos #0.1 c8 \glissando 
   	_\markup {
@@ -562,7 +562,7 @@ cello_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 77 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   \glissSkipOn \afterGrace c8 [ \glissando {\glissSkipOff \slash_grace \ppos #0.1 c8}
   \afterGrace \ppos #0.25 c8 \glissando 
   	_\markup {
@@ -584,7 +584,7 @@ cello_pizz_left = {
   	{\slash_grace \ppos #0.4 c8}
 
  %%%%%%%% ============= measure 78 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   \ppos #0.4 c8 [ \glissando
   	_\markup {
   			\fingering-diagram #'(("dot" . 0.2) ("dot" . 0.4) ("mute" . 0.6) ("dot" . 0.8))
@@ -608,11 +608,11 @@ cello_pizz_left = {
   r8 ]
 
  %%%%%%%% ============= measure 79 ============= %%%%%%%% 
-  \time 6/8
+%   \time 6/8
   s4. s4.
 
  %%%%%%%% ============= measure 80 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   s8
   s8 
   r16 [ 
@@ -622,7 +622,7 @@ cello_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 81 ============= %%%%%%%% 
-  \time 2/8
+%   \time 2/8
   \ppos #0.1 c8 [ \glissando
   \ppos #0.5 c16 \glissando
   \afterGrace \ppos #0.1 c16 ] \glissando 
@@ -632,7 +632,7 @@ cello_pizz_left = {
   	{\slash_grace \ppos #0.4 c8}
 
  %%%%%%%% ============= measure 82 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
 
   	\ppos #0.5 c8 [ \glissando
   		_\markup {
@@ -642,7 +642,7 @@ cello_pizz_left = {
 	\ppos #0.7 c16 ] \glissando
 
  %%%%%%%% ============= measure 83 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   \ppos #0.5 c8 [ \glissando
   	_\markup {
   			\override #'(trills . (#t #t #t #f))
@@ -655,11 +655,11 @@ cello_pizz_left = {
   \ppos #0.1 c8. \glissando
   \afterGrace \ppos #0.4 c16 ] \glissando {\slash_grace \ppos #0.2 c8}
  %%%%%%%% ============= measure 84 ============= %%%%%%%% 
-  \time 3/8 
+%   \time 3/8 
   r4.
 
  %%%%%%%% ============= measure 85 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
   r8 [ 
   \ppos #0.5 c8 \glissando
         _\markup {
@@ -671,7 +671,7 @@ cello_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 86 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
 
   \afterGrace \ppos #0.75 c16 [ \glissando {\slash_grace \ppos #0.1 c8}
   \ppos #0.3 c16 \glissando
@@ -690,7 +690,7 @@ cello_pizz_left = {
   	}
 
  %%%%%%%% ============= measure 87 ============= %%%%%%%% 
-  \time 5/16
+%   \time 5/16
 
   \ppos #0.45 c8 [ \glissando
   \afterGrace \ppos #0.8 c8 \glissando
@@ -701,11 +701,11 @@ cello_pizz_left = {
   r16 ]
 
  %%%%%%%% ============= measure 88 ============= %%%%%%%% 
-  \time 4/8
+%   \time 4/8
   r4 r4
 
  %%%%%%%% ============= measure 89 ============= %%%%%%%% 
-  \time 7/16
+%   \time 7/16
   	\ppos #0.65 c16 [ \glissando
   		_\markup {
   				\fingering-diagram #'(("dot" . 0.2) ("mute" . 0.4) ("dot" . 0.6) ("dot" . 0.8))
@@ -723,7 +723,7 @@ cello_pizz_left = {
 	\ppos #0.5 c16 ] \glissando
 
  %%%%%%%% ============= measure 90 ============= %%%%%%%% 
-  \time 3/8
+%   \time 3/8
 	\glissSkipOn c8 [ \glissando
 	\glissSkipOff \ppos #0.75 c8 \glissando
 		_\markup {
@@ -743,14 +743,14 @@ cello_pizz_left = {
 	} 
 
 
-\time 3/8
+% \time 3/8
 
 r4.
 
-\time 4/8
+% \time 4/8
 r2
 
-\time 6/8
+% \time 6/8
 r4. r4.
 
 <<
@@ -809,7 +809,7 @@ r4. r4.
     } \\
     \new StringStaff \with {alignAboveContext="cello"} {
       \time 3/8
-      \circles
+      \circleheads
       <e' g'>4. \mf ^\markup {\small \italic "Take bow in both hands."}
         \glissando 
       \time 5/16
@@ -853,42 +853,42 @@ r4. r4.
 
 
 
-\time 4/4
+% \time 4/4
 r1
 
-\time 9/8
+% \time 9/8
 
 r4. r4. r4.
 
-\time 4/8
+% \time 4/8
 
 r4 r4
 
-\time 3/16
+% \time 3/16
 
 r8.
 
-\time 4/8
+% \time 4/8
 
 r2
 
-\time 4/8
+% \time 4/8
 
 r2
 
-\time 3/16
+% \time 3/16
 
 r8.
 
-\time 3/4
+% \time 3/4
 
 r2.
 
-\time 4/16
+% \time 4/16
 
 r8 r8
 
-\time 3/8
+% \time 3/8
 
 \switch-staff \string-staff
 \niente
