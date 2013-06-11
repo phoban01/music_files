@@ -399,7 +399,7 @@ violin_I_tuned = {
 	 \time 6/4
 	 \squares
 	 <bf fs' d'' eqs''>4 \pp ^\down_bow_light 
-	 		^\markup {\override #'(line-width .20) 
+	 		^\markup {\override #'(line-width . 20) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 	 ~  <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~
