@@ -3,7 +3,6 @@ violin_I_pizz_intro = {
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
   \time 5/16
 
-  \set Score.proportionalNotationDuration = #(ly:make-moment 1 40) 
   
   \switch-staff \body_staff
   \body-clef #'fingerboard-small
@@ -176,7 +175,6 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
 
  \time 9/16
   
-  \set Score.proportionalNotationDuration = #(ly:make-moment 1 70)
 
  \stemNeutral
  r8. r8. r8.
