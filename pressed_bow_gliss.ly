@@ -70,7 +70,8 @@ violin_two_pressed_bow = {
 			\time 3/4
 			\med-zigzag
 			\niente \afterGrace c'4 \> {\glissSkipOff \ppos #0.4 c'8\!}
-			r2
+			r8. [ \ppos #0.8 c'16 ] \glissando \glissSkipOn
+			c'4
 		}
 		\\
 		{
@@ -82,7 +83,7 @@ violin_two_pressed_bow = {
 				<g' b'>2 ^\markup {\large \italic "Repeat ad lib."}
 				\time 3/4	
 				\afterGrace <g' b'>4 \glissando {<e' g'>8}
-				r2
+				r8. <g' b'>16 \glissando <g' b'>8 \glissando <e' g'>8
 			}
 		}
 	>>
@@ -171,4 +172,13 @@ cello_pressed_bow = {
 		}
 	>>
 
+}
+
+skips_pressed_bow = {
+	\time 2/4
+	s2
+	\time 2/4
+	s2
+	\time 3/4
+	s2.
 }

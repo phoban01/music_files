@@ -182,7 +182,7 @@ viola_tuned = {
 		 \body-clef #'fingerboard-small
 		 \tuplet 3/2 {
 		 	\circleheads
-		 	r4 
+		 	r4 ^\markup {\translate #'(-0.5 . 0) \left-align \center-column {\fontsize #2 " 5\"" \fontsize #2 \musicglyph #"scripts.ufermata" }}
 		 	\set Staff.forceClef = ##t
 		 	\clef treble
 		 	\flare_width \niente \afterGrace \ppos #0.75 c'8 \< ^\tilt_bow ^\frog ^\markup \string-numbers #'( "I" 2 0) {s8\flare_f}
@@ -328,7 +328,8 @@ viola_tuned = {
 		 r8 [ \clef alto
 		 \squares
 		 <ces aqf e' c''>8 \mp \>] ~ ^\down_bow
-		 <ces aqf e' c''>4 \pp ~ <ces aqf e' c''> ~ <ces aqf e' c''> ~
+		 		^\markup {\override #'(line-width . 12) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+		 <ces aqf e' c''>4 ^\down_bow_light \pp ~ <ces aqf e' c''> ~ <ces aqf e' c''> ~
 		 %%%%%%%%%% measure 25 %%%%%%%%%%
 		 \time 5/4
 		 <ces aqf e' c''>4 ~ <ces aqf e' c''> ^\up_bow_light ~ <ces aqf e' c''> ~
@@ -395,7 +396,7 @@ viola_tuned = {
 		 \transpose ces  e {<ces aqf e' c''>4 ~ }
 		 \transpose ces  e {<ces aqf e' c''>8 ~ }
 		 \transpose ces  e {<ces aqf e' c''>8 ~ }
-		 \transpose ces  e {<ces aqf e' c''>8 ~ \mf}
+		 \transpose ces  e {<ces aqf e' c''>8 ~ \mf ^\jete}
 		 \transpose ces  e {<ces aqf e' c''>8 ~ \p \<}
 		 \transpose ces  e {<ces aqf e' c''>4 ~ }
 		 \tuplet 3/2 {
@@ -434,6 +435,9 @@ viola_tuned = {
 		 \time 8/4
 		 r1 r2. \clef alto \squares 
 		 \niente <ces aqf e' c''>4 ~ \< ^\down_bow_light
+		 	 		^\markup {\override #'(line-width . 20) 
+	 					\small \italic \justify {
+	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 		 %%%%%%%%%% measure 41 %%%%%%%%%%
 		 \time 6/4
 		 <ces aqf e' c''>4 \pp ~ <ces aqf e' c''>4 ~
@@ -457,7 +461,10 @@ viola_tuned = {
 		 \niente 
 		 <f'' fqs''>4 \< ^\sulpont
 		 \glissando \glissSkipOn 
-		 f''4  f''8 \mf \> f''8 \pp f''4 \< \glissSkipOff \niente \afterGrace <d'' dqf''>4 \mp \> {s8\!}
+		 f''4  f''8 \mf \> f''8 \pp f''4 \< \glissSkipOff \niente 
+		 \afterGrace <d'' dqf''>4 \mp  
+		 	^\markup {\translate #'(-0.5 . 0) \left-align \center-column {\fontsize #2 " 10\"" \fontsize #2 \musicglyph #"scripts.ufermata" }}
+		 \> {s8\!}
 		 %%%%%%%%%% measure 45 %%%%%%%%%%
 		 \time 5/8
 		 \circles
@@ -596,7 +603,10 @@ viola_tuned = {
 		 cqs8 \pp ~
 		 %%%%%%%%%% measure 59 %%%%%%%%%%
 		 \time 3/8
-		 cqs4. 
+		 cqs8 ~ cqs4 ~
+ 					^\markup {\translate #'(-0.5 . 0) \left-align 
+ 						\center-column {
+ 							\fontsize #2 " 15\"" \scale #'(1.35 . 1) \fontsize #2 \musicglyph #"scripts.ulongfermata" }}
 		 %%%%%%%%%% measure 60 %%%%%%%%%%
 		 \time 2/8
 		 cqs4 ~ ^\down_bow_light
@@ -734,7 +744,7 @@ viola_tuned = {
 		 \set Staff.forceClef = ##t
 		 \clef alto
 		 \diamonds
-		 <ces ges>4 \pp \< \startTrillSpan ^\vertical_bow ^\markup \string-numbers #'( "III IV" 1.5 0) 
+		 <ces ges>4 \pp \< \startTrillSpan ^\vertical_bow ^\markup \string-numbers #'( "III IV" 0 0) ^\jete 
 		 	\glissando 
 		 \tuplet 3/2 {
 		 	<a e'>8 [ \mf \> ^\circular_bow \stopTrillSpan \glissando \glissSkipOn 
@@ -901,7 +911,8 @@ viola_tuned = {
 		 }
 		 %%%%%%%%%% measure 90 %%%%%%%%%%
 		 \time 4/16
-		 d'''4 ~ \pp
+		 d'''4 ~ \pp ^\markup {\translate #'(-0.5 . 0) \left-align 
+ 						\center-column {\fontsize #2 " 10\"" \scale #'(1.35 . 1) \fontsize #2 \musicglyph #"scripts.ulongfermata" }}
 		 %%%%%%%%%% measure 91 %%%%%%%%%%
 		 \time 2/4
 % 		 \wavy_vibrato #1
@@ -1764,7 +1775,7 @@ viola_tuned = {
 						\fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 					}
 			} r16 _\bow-mute ]
-		r4 r4
+		r4 r4 ^\markup {\translate #'(-0.5 . 0) \left-align \fontsize #2 \musicglyph #"scripts.ufermata" }
 		%%%%%%%%%% measure 173 %%%%%%%%%%
 		\time 4/4
 		\switch-staff \normal_staff
@@ -1787,7 +1798,9 @@ viola_tuned = {
 		<dqf' d'>4 ~ <dqf' d'>4 \< ~ <dqf' d'>8 ~ <dqf' d'>8 \mf ~
 		%%%%%%%%%% measure 176 %%%%%%%%%%
 		\time 5/8
-		<dqf' d'>4 ~ <dqf' d'>16 ~ \afterGrace <dqf' d'>8 ^\sultasto \mf \> {s8\p} r16 r8
+		<dqf' d'>4 ~ ^\markup {\translate #'(-0.5 . 0) \left-align \fontsize #2 \musicglyph #"scripts.ufermata" }
+		<dqf' d'>16 ~ 
+		\afterGrace <dqf' d'>8 ^\sultasto ^\jete \mf \> {s8\p} r16 r8
 		%%%%%%%%%% measure 177 %%%%%%%%%%
 		\time 2/1
 		r2 r2 r2 r2
@@ -1810,7 +1823,6 @@ viola_tuned = {
 }
 
 viola_pos_tuned = {
- 		\new BowPositionStaff = "viola_bow_staff" \with {alignAboveContext="viola"} {
  			%%%%%%%%%% measure 1 %%%%%%%%%%
  			\time 3/4
  			\tuplet 3/2 {
@@ -2483,5 +2495,4 @@ viola_pos_tuned = {
  			%%%%%%%%%% measure 185 %%%%%%%%%%
  			\time 6/4
  			s4 s4 \startStaff g'16 [ \glissando e'16 \glissando g'8] \stopStaff s2. 
- 		}
  	}

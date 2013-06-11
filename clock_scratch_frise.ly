@@ -470,7 +470,7 @@ silence = {
 }
 
 violin_I_bichon_frise = {
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
 
 		\switch-staff \pizz_staff
 		\frise_settings_clock
@@ -481,7 +481,7 @@ violin_I_bichon_frise = {
 		\silence \silence \silence
 
 		\silence 
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 100)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
 		\four \nine
 		\three \one \eight
 		\five \two \ten

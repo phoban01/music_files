@@ -22,7 +22,7 @@ violin_II_bichon_frise = {
 	\time 4/4
 	\switch-staff \string-staff
 	\stemDown		
-	\circles
+	\circleheads
 	
 	<e' g' b'>8 \< ^\up_bow_very_heavy ^\sulpont
 			^\markup {

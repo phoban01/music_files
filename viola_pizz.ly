@@ -221,7 +221,8 @@ r32
 \arp_pizz_head "IV" "I" \ppos #0.2 c16 ] \effort "f"
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-\compoundMeter #'((3 8) (5 16))
+% \compoundMeter #'((3 8) (5 16))
+\time 3/8
 
 \pizz_head "I" \ppos #0.025 c32 [	\effort mf
 \pizz_head "III IV" \ppos #0.75 c16. ] \mf
@@ -234,6 +235,8 @@ r32
 	\pizz_head "III" \ppos #0.075 c16
 	]
 }
+
+\time 5/16
 \tuplet 6/4 {
 	\pizz_head "IV" \ppos #0.6 c32 [ \p
 	\pizz_head "I" \ppos #0.8 c32 \mf \>
@@ -419,7 +422,8 @@ r32 ]
 }
 
  %%%%%%%% ============= measure 20 ============= %%%%%%%% 
- \compoundMeter #'((4 8 ) (3 16))
+%  \compoundMeter #'((4 8 ) (3 16))
+\time 4/8
 r16 [
 	\pizz_head "IV" \ppos #0.8 c16 \mf
 	\arp_pizz_head "I" "IV" \ppos #0.3 c16 \effort "f"
@@ -432,6 +436,7 @@ r16 [
 \arp_pizz_head "I" "IV" \ppos #0.3 c32 \pp
 \pizz_head "III" \ppos #0.2 c32 ] \effort mf
 
+\time 3/16
 \pizz_head "IV" \ppos #0.8 c32 [ \f
 \pizz_head "I" \ppos #0.9 c32
 \pizz_head "II" \ppos #0.8 c32
@@ -1905,7 +1910,8 @@ viola_pizz_left = {
 	{\glissSkipOff \slash_grace \ppos #0.85 c8}
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-\compoundMeter #'((3 8) (5 16))  
+% \compoundMeter #'((3 8) (5 16))  
+\time 3/8
 \ppos #0.3 c8 [ \glissando
 	_\markup {
 			\fingering-diagram #'(("dot" . 0.8) ("dot" . 0.6) ("dot" . 0.4) ("dot" . 0.2))
@@ -1916,6 +1922,7 @@ viola_pizz_left = {
 			\fingering-diagram #'(("mute" . 0.8) (#f . 0.5) ("mute" . 0.4) ("dot" . 0.2))
 	}
 	{\glissSkipOff \slash_grace \ppos #0.2 c8}
+\time 5/16	
 \ppos #0.45 c8 [ \glissando
 \glissSkipOn 
 \temporary \override Dots.extra-offset = #'(0 . -12)
@@ -2072,7 +2079,8 @@ c16 [
  	}
 
  %%%%%%%% ============= measure 20 ============= %%%%%%%% 
-\compoundMeter #'((4 8 ) (3 16))
+% \compoundMeter #'((4 8 ) (3 16))
+\time 4/8
 \glissSkipOn \afterGrace c16 [ \glissando {\glissSkipOff \slash_grace \ppos #0.5 c8}
 \ppos #0.3 c16 \glissando
 	_\markup {
@@ -2090,9 +2098,11 @@ c16 [
 	_\markup {
 			\fingering-diagram #'(("dot" . 0.8) ("mute" . 0.6) ("mute" . 0.4) ("dot" . 0.2))
 	}
-\afterGrace \ppos #0.05 c16 \glissando {\slash_grace \ppos #0.6 c8}
+\afterGrace \ppos #0.05 c16 ] \glissando {\slash_grace \ppos #0.6 c8}
 
-\afterGrace \ppos #0.1 c8 \glissando 
+\time 3/16
+
+\afterGrace \ppos #0.1 c8 [ \glissando 
 	_\markup {
 			\override #'(trills . (#t #t #t #t))
 			\fingering-diagram #'(("mute" . 0.8) ("mute" . 0.6) ("mute" . 0.4) ("mute" . 0.4))

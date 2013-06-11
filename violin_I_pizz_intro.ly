@@ -6,21 +6,24 @@ violin_I_pizz_intro = {
   \set Score.proportionalNotationDuration = #(ly:make-moment 1 40) 
   
   \switch-staff \body_staff
+  \body-clef #'fingerboard-small
 
-  \squares
+  \circleheads
   \once \override Hairpin #'circled-tip = ##t
-  \bezier_gliss #'(0.9 . -3) #'(0.75 1.1 0 -0.5)
+  \bezier_gliss #'(0.9 . -3) #'(0 1 0 0)
   \once \override Glissando.bound-details.right.attach-dir = #-1
-  \afterGrace d8 ^\markup \vertical_bow _\markup {\translate #'(-3 . 0) \mute-sign} ^\markup \string-numbers #'( "III II"  -1.25 2)  \< [ \glissando 
+  \afterGrace d8 ^\vertical_bow _\nutmute ^\markup \string-numbers #'( "III II"  -1.25 2)  \< [ \glissando 
     {a'8 \effort mf} 
   \switch-staff \normal_staff
   \once \override Staff.Clef #'extra-offset = #'(-1.5 . 0)
   \bracket-clef
-  r8 ^\horz_bow
+  r8 
+    \set Staff.forceClef = ##t
+
   \ottava #1
   \diamonds 
   \bezier_gliss #'(0 . 3.5) #'(1 3 0 0)
-  b'''16 ] \glissando ^\markup {\center-align \line {\altosulpont "  " \tilt_bow }} \p \<
+  b'''16 ]^\horz_bow  \glissando ^\markup {\center-align \line {\altosulpont "  " \tilt_bow }} \p \<
   \ottava #0
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
@@ -115,8 +118,11 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   fs'' [ \< ^\down_bow_heavy ( f''\startTextSpan a'' e'' cs''' d'' c'' ] \flare_mf ) \stopTextSpan
 }
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-\compoundMeter #'((3 8 ) (5 16))
-\squares c''16 ( ^\altosultasto [ \p d'' \diamonds e'' ) \staccato \accent \mf r16 \squares fs'' ( g'' ]
+% \compoundMeter #'((3 8 ) (5 16))
+\time 3/8
+\squares c''16 ( ^\altosultasto [ \p \< d'' \diamonds e'' ) \staccato \accent \mf r16 \squares fs'' ( g'' ]
+
+\time 5/16
 \diamonds a''16 [ \mf \staccato \accent \squares b'' \p g'' \> fs'' f'' ) \ppp ]
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
  \time 3/8 
@@ -175,8 +181,11 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
  \stemNeutral
  r8. r8. r8.
 
- \compoundMeter #'((4 8) (3 16))
- r4 r4 r8.
+%  \compoundMeter #'((4 8) (3 16))
+\time 4/8
+ r4 r4 
+\time 3/16
+ r8.
 
  \time 4/8
  r4 r4

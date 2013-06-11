@@ -25,7 +25,7 @@ viola_bichon_frise = {
 % 	\switch-staff \string-staff
 	\stemDown
 
-	\circles
+	\circleheads
 
 	\tempo "" 4=96~110
 

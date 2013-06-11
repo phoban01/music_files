@@ -2,7 +2,7 @@ violin_I_tuned = {
 
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
   	\time 3/4
-  	\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
+  	\set Score.proportionalNotationDuration = #(ly:make-moment 1 36)
 
   	<< 
   		{
@@ -219,7 +219,8 @@ violin_I_tuned = {
 	  \ppos #0.75 c'8. [ 
 	  \glissando 
 	  \ppos #0.75 c'16 \f \stopTextSpan \glissando ] 
-	  \ppos #0.7 c'8 [ ^\markup {\center-column {\italic \fontsize #3 "5\"" \fontsize #6 \musicglyph #"scripts.ufermata" }}
+	  \ppos #0.7 c'8 [ 
+	  		^\markup {\translate #'(-0.5 . 0) \left-align \center-column {\fontsize #2 " 5\"" \fontsize #2 \musicglyph #"scripts.ufermata" }}
 	  r8 _\bow-mute ]
 	  %%%%%%%%%% measure 14 %%%%%%%%%%
 	  \time 3/8
@@ -313,7 +314,7 @@ violin_I_tuned = {
 	  \clef treble
 	  \once \override TextScript.extra-offset = #'(-1.5 . 0)
 	  <c' fs' b' eqs''>4 \mp ^\down_bow_light 
-	  		^\markup {\override #'(line-width . 5) \justify \small \italic {"*Slowly & smoothly vary strings ad. libitum"}}
+	  		^\markup {\override #'(line-width . 12) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 	   \> ~  <c' fs' b' eqs''>4 \pp ~  <c' fs' b' eqs''>4 ~  <c' fs' b' eqs''>4 ~
 	  %%%%%%%%%% measure 25 %%%%%%%%%%
 	  \time 5/4
@@ -397,7 +398,10 @@ violin_I_tuned = {
 	 %%%%%%%%%% measure 41 %%%%%%%%%%
 	 \time 6/4
 	 \squares
-	 <bf fs' d'' eqs''>4 \pp ^\down_bow_light ^\markup {\override #'(line-width . 5) \small \italic \justify {"*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times. "}} 
+	 <bf fs' d'' eqs''>4 \pp ^\down_bow_light 
+	 		^\markup {\override #'(line-width .20) 
+	 					\small \italic \justify {
+	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 	 ~  <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~
 	 <bf fs' d'' eqs''> ~ <bf fs' d'' eqs''> ~ <bf fs' d'' eqs''> ~
 	 %%%%%%%%%% measure 42 %%%%%%%%%%
@@ -424,7 +428,8 @@ violin_I_tuned = {
 	 \circles
 	 \niente
 	 <aqf'' gs''>4 \< ^\down_bow ^\horz_bow \glissando \glissSkipOn d''8 d''8 \mf d''8 \> d''8 \pp d''8 d''8 \< ^\up_bow
-	 \glissSkipOff <eqs'' e''>8. \mp ^\markup {\center-column {\italic \fontsize #3 "6\"" \fontsize #6 \musicglyph #"scripts.ufermata" }}
+	 \glissSkipOff <eqs'' e''>8. \mp 
+	 	^\markup {\translate #'(-0.5 . 0) \left-align \center-column {\fontsize #2 " 10\"" \fontsize #2 \musicglyph #"scripts.ufermata" }}
 	 ~ <eqs'' e''>16 \> ~
 	 %%%%%%%%%% measure 45 %%%%%%%%%%
 	 \time 5/8
@@ -483,6 +488,7 @@ violin_I_tuned = {
  	 %%%%%%%%%% measure 56 %%%%%%%%%%
  	 \time 3/4
  	 \switch-staff \normal_staff
+ 	 \circles
  	 \tuplet 3/2 {
  	 	r4
  	 	\set Staff.forceClef = ##t
@@ -516,7 +522,11 @@ violin_I_tuned = {
  		{\oneVoice \diamonds e'4 ~ \niente \afterGrace e'8 \> \glissando {g''8 \!}}
  		\\
  		{
- 			s8 s8 ^\markup {\center-column {\italic \fontsize #3 "10\"" " " \fontsize #6 \musicglyph #"scripts.ulongfermata" }} s8
+ 			s8 s8
+ 					^\markup {\translate #'(-0.5 . 0) \left-align 
+ 						\center-column {
+ 							\fontsize #2 " 15\"" \scale #'(1.35 . 1) \fontsize #2 \musicglyph #"scripts.ulongfermata" }}
+ 				s8
  		}
  	>>
  	%%%%%%%%%% measure 61 %%%%%%%%%%
@@ -567,7 +577,7 @@ violin_I_tuned = {
  	\switch-staff \normal_staff
  	\clef treble
  	\diamonds
- 	\afterGrace b'8 ] \mf ^\altosultasto ^\markup \string-numbers #'( "I" 2.5 0)
+ 	\afterGrace b'8 ] \effort "ff" ^\altosultasto ^\markup \string-numbers #'( "I" 0.5 0) ^\jete
  		\glissando {g''8}
  	\tuplet 3/2 {
  		r4 \niente dqf'8 \< ^\altosulpont ^\up_bow_light
@@ -784,7 +794,8 @@ violin_I_tuned = {
  	>>
  	%%%%%%%%%% measure 91 %%%%%%%%%%
  	\time 2/8
- 	fs'''4 ~ ^\markup {\center-column {\italic \fontsize #3 "8-10\"" " " \fontsize #6 \musicglyph #"scripts.ulongfermata" }}
+ 	fs'''4 ~ ^\markup {\translate #'(-0.5 . 0) \left-align 
+ 						\center-column {\fontsize #2 " 10\"" \scale #'(1.35 . 1) \fontsize #2 \musicglyph #"scripts.ulongfermata" }}
  	%%%%%%%%%% measure 92 %%%%%%%%%%
  	\time 2/4
 %  	\wavy_vibrato #1.5
@@ -792,7 +803,7 @@ violin_I_tuned = {
  	\afterGrace <fs''' b'''>16 \sfz ^\trill \glissando {<d'' a''>8 }
  	r16 r16 
  	<<
- 		{<bf fs' d'' eqs''>8.} \\ {
+ 		{<bf fs' d'' eqs''>8. ^\jete } \\ {
  			\niente s16 \< \niente s16 \mf \> s16 \!
  		}
  	>>
@@ -1141,8 +1152,8 @@ violin_I_tuned = {
 		\glissando \ppos #0.25 c'32 
 			\glissando \ppos #0.75 c'32 \glissando \ppos #0.25 c'32 \glissando \ppos #0.75 c'32 ]
 	}
-	\ppos #0.5 c'32 ( \staccato [ ^\horz_bow
-		\ppos #0.5 c'32 \staccato  \ppos #0.5 c'32 \staccato \ppos #0.5 c'32 ) \staccato  ]
+	\ppos #0.5 c'32 ( -. [ ^\horz_bow ^\markup {\small \italic jeté}
+		\ppos #0.5 c'32 -.  \ppos #0.5 c'32 -. \ppos #0.5 c'32 ) -.  ]
 	%%%%%%%%%% measure 139 %%%%%%%%%%
 	\time 3/4
 	\switch-staff \normal_staff
@@ -1165,7 +1176,7 @@ violin_I_tuned = {
 	\circles
 	\switch-staff \body_staff
 	\body-clef #'fingerboard-small
-	\ppos #0.5 c'32 ( \effort mf [ -.  ^\markup \string-numbers #'( "II III" 3 0) ^\nutmute
+	\ppos #0.5 c'32 ( \effort mf [ -. ^\markup {\small \italic jeté}  ^\markup \string-numbers #'( "II III" 3 0) ^\nutmute
 		\ppos #0.5 c'32 -. \ppos #0.5 c'32 -. \ppos #0.5 c'32 -. ] )
 	\ppos #0.75 c'16 [ ^\vertical_bow \glissando \afterGrace \ppos #0.2 c'16 ] \glissando {\ppos #0.75 c'8}
 	\ppos #0.25 c'4 ~ \ppos #0.25 c'4 
@@ -1424,7 +1435,7 @@ violin_I_tuned = {
 	%%%%%%%%%% measure 182 %%%%%%%%%%
 	\time 3/4
 	\switch-staff \normal_staff 
-	r2 r4 ^\markup {\center-column {\italic \fontsize #3 "10\"" \fontsize #6 \musicglyph #"scripts.ufermata" }}
+	r2 r4 ^\markup {\translate #'(-0.5 . 0) \left-align \fontsize #2 \musicglyph #"scripts.ufermata" }
 	%%%%%%%%%% measure 183 %%%%%%%%%%
 	\time 4/4
 	\slurSolid
@@ -1464,7 +1475,7 @@ violin_I_tuned = {
 	%%%%%%%%%% measure 186 %%%%%%%%%%
 	\time 5/8
 	<<	{
-			d'4 ^\markup {\center-column {\italic \fontsize #3 "20\"" \fontsize #6 \musicglyph #"scripts.ufermata" }}
+			d'4 ^\markup {\translate #'(-0.5 . 0) \left-align \fontsize #2 \musicglyph #"scripts.ufermata" }
 			} \\ {dqs'4}
 	>>
 	\switch-staff \body_staff

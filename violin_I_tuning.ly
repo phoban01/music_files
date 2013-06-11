@@ -5,7 +5,7 @@ violin_I_tuning = {
   \time 6/4
   \tempo " " 4=52~56
   \newSpacingSection
-  \set Score.proportionalNotationDuration = #(ly:make-moment 1 18)
+  \set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
   << 
   	{\oneVoice r2 r2  \circleheads <c' e'>2 \glissando ^\down_bow ^\angle_bow } \\ 
   	{s2 s2 \niente s4 \< s4 \mp}
@@ -116,6 +116,8 @@ violin_I_tuning = {
 
  %%%start of tuning section 
  %%%%%%%% ============= measure 19 ============= %%%%%%%% 
+ \set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
+
   \time 5/4
   <<
   	{	\oneVoice 

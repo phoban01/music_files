@@ -3,12 +3,13 @@ violin_II_pizz_intro = {
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
 \time 5/16
 \switch-staff \body_staff
+\once\override Staff.Clef.transparent = ##t
 r8
 \body-clef #'fingerboard-small
 \set Staff.forceClef = ##t
-\squares
+\circleheads
 \no-gliss-pad
-a'8. \p ^\markup \vertical_bow _\markup {\translate #'(-3 . 0) \mute-sign} 
+a'8. \p ^\markup \vertical_bow _\nutmute 
 	^\markup \string-numbers #'( "IV III"  -2 0)
 \glissando 
 %  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
@@ -18,6 +19,7 @@ a'8. \p ^\markup \vertical_bow _\markup {\translate #'(-3 . 0) \mute-sign}
  \bracket-clef
  \circles
  \once \override Hairpin #'circled-tip = ##t 
+ \set Staff.forceClef = ##t
  \afterGrace eqf''8 ] ^\up_bow_light ^\aldita \< \glissando {dqs''8 \p} %>
  \tweak #'padding #1.25
  \tuplet 3/2 {
@@ -70,10 +72,12 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
  \mute_head c'8:64 r8 r8]
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-  \compoundMeter #'((3 8 ) (5 16))
+%   \compoundMeter #'((3 8 ) (5 16))
+\time 3/8
   \draw_line_arrow \sultasto \altosulpont
   d''16 ( \startTextSpan [ \p  dqf''16 cs'' d'' e'' ) \mf ^\staccato ^\accent \stopTextSpan r16 ]
 
+  \time 5/16
   \draw_line_arrow \altosulpont \altosultasto
   c'32 [( \ppp \< ^\markup \string-numbers #'("IV" 1 0) b  cqs' c' b cs' \mf \> \startTextSpan bqf d' cs' bqs \pp  \stopTextSpan )]
 
@@ -131,8 +135,11 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
   \time 9/16
   r8. r8. r8.
  %%%%%%%% ============= measure 20 ============= %%%%%%%% 
-  \compoundMeter #'((4 8 ) (3 16))
-  r4 r4 r8.
+%   \compoundMeter #'((4 8 ) (3 16))
+\time 4/8
+  r4 r4 
+  \time 3/16
+  r8.
 
  %%%%%%% ============= measure 21 ============= %%%%%%%% 
   \time 4/8

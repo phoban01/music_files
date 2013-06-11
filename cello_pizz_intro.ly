@@ -77,7 +77,7 @@ r4
 	\new BowPositionStaff \with {alignAboveContext = "cello"} {
 		\stemUp
 		\draw_line_arrow \markup {\center-align \italic \tiny "legno battuto "} \markup {\center-align \italic \tiny " arco crine"}
-		s16 r8 d8 [ \startTextSpan \glissando \accent \mp
+		s8. d'8 [ \startTextSpan \glissando \accent \mp
 		 a'8 ] \stopTextSpan  
 	} 
 }
@@ -106,13 +106,16 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   }
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-  \compoundMeter #'((3 8) (5 16))
+%   \compoundMeter #'((3 8) (5 16))
+\time 3/8
   \clef tenor
   \draw_line_arrow \down_bow_light \down_bow_heavy
   \diamonds <b fs'>4. \ppp \< ^\altosulpont ^\markup \string-numbers #'("II III" -0.5 0) \glissando \startTextSpan \glissSkipOn 				%%%> 
-  \niente g8 \mf \stopTextSpan \> \glissSkipOff 
+  
+  \time 5/16
+  \niente g8 [ \mf \stopTextSpan \> \glissSkipOff 
   \draw_line_arrow \altosulpont \altosultasto
-  \afterGrace <c g>8. \startTextSpan \glissando {<g d'>8 \! ^\down_bow_light \stopTextSpan}
+  \afterGrace <c g>8. ] \startTextSpan \glissando {<g d'>8 \! ^\down_bow_light \stopTextSpan}
 
  %%%%%%%% ============= measure 11 ============= %%%%%%%% 
   \time 3/8
@@ -195,7 +198,8 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   << 
   {
         \stemDown
-        \compoundMeter #'((4 8) (3 16))
+%         \compoundMeter #'((4 8) (3 16))
+        \time 4/8
         \switch-staff \pizz_staff
         \body-clef #'fingerboard
         \temporary\override NoteHead.stencil = #scratch-tone
@@ -204,7 +208,10 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
         \temporary\override Glissando.thickness = #2
         \set Staff.forceClef = ##t
         \slow-zigzag
-        \ppos #0.8 c'2 \glissando \ppos #0.5 c'8. \glissando
+        \ppos #0.8 c'2 \glissando 
+
+        \time 3/16
+        \ppos #0.5 c'8. \glissando
 
         \time 4/8
         \fast-zigzag
@@ -216,9 +223,12 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
         \stemNeutral
   } \\
   \new StringStaff \with {alignAboveContext="cello"} {
-        \compoundMeter #'((4 8 ) (3 16))
+%         \compoundMeter #'((4 8 ) (3 16))
+        \time 4/8
         \circleheads
-        <e' g'>2 \glissando <e' g'>8. \glissando 
+        <e' g'>2 \glissando 
+        \time 3/16
+        <e' g'>8. \glissando 
         
         \time 4/8
         <g' b'>4.. \glissando <g' b'>16 \glissando
