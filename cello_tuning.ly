@@ -7,7 +7,7 @@ cello_tuning = {
   <c' e' g'>2 \glissando <c' e' g'>2 \glissando \niente \afterGrace <e' g' b'>2 \> \glissando (<e' g' b'>8\!)
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
-  R1.
+  R1. ^\attach_tuner _\lay_flat
 
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
   <<
@@ -263,7 +263,8 @@ cello_tuning = {
     \diamonds
     r8.[ 
 
-    g16] \laissezVibrer \effort "ff" ^\markup {\small \italic "pizz."} ^\markup \string-numbers #'( "III" 1.5 0.5) r4 r4
+    g16] \laissezVibrer \effort "ff" ^\markup {\small \italic "pizz."} ^\markup \string-numbers #'( "III" 1.5 0.5) 
+    r4 ^\remove_tuner r4
     \squares
     r8 \tweak #'direction #-1 \tuplet 3/2 {
     r16 [ 

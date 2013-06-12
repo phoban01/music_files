@@ -87,6 +87,7 @@ r4
  %%%%%%%% ============= measure 7 ============= %%%%%%%% 
  \time 3/8
 r8
+\bracket-clef
 \clef treble
 \squares
 a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^\up_bow_light a'16 ^\down_bow_light a'16 \accent ^\up_bow_heavy \mp]
@@ -140,15 +141,17 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
 
  %%%%%%%% ============= measure 14 ============= %%%%%%%% 
  \time 3/8
+ \stemDown
  \tuplet 13/12 {
  	g'32 \mp \> [ fs' g' a' 
  	b' a' g' fs' 
  	e' d' e' fs' g' \ppp ] )
  }
  \slurNeutral
+ \stemNeutral
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
   \time 5/16
-  cs'''4 ^\markup \string-numbers #'("I" 0 0) \glissando 
+  cs'''4 ^\markup \string-numbers #'("I" 1.5 0) \glissando 
   #(define afterGraceFraction (cons 49 50))
   \wavy_vibrato #1
   \afterGrace cs''16 \glissando {\hideNotes cs''8 \unHideNotes}
@@ -171,7 +174,8 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 4/8
   \circles
-  	\switch-staff \normal_staff  
+  	\switch-staff \normal_staff 
+    \bracket-clef 
   	\clef bass
 
   	r4 r8.. [
@@ -208,10 +212,10 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
         \temporary\override Glissando.thickness = #2
         \set Staff.forceClef = ##t
         \slow-zigzag
-        \ppos #0.8 c'2 \glissando 
+        \ppos #0.8 c'2 \< \glissando 
 
         \time 3/16
-        \ppos #0.5 c'8. \glissando
+        \ppos #0.5 c'8. \mf \glissando
 
         \time 4/8
         \fast-zigzag
@@ -219,7 +223,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
 
         \time 4/8
         \med-zigzag
-        \glissSkipOff \afterGrace \ppos #0.5 c'2 \glissando  {\ppos #0.8 c'8}
+        \niente \glissSkipOff \afterGrace \ppos #0.5 c'2 \> \glissando  {\ppos #0.8 c'8\!}
         \stemNeutral
   } \\
   \new StringStaff \with {alignAboveContext="cello"} {
@@ -280,6 +284,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
     \revert Glissando.bound-details.right.padding 
     \revert Glissando.thickness
     \switch-staff \normal_staff
+    \bracket-clef
     \clef bass
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
   \time 6/8
@@ -321,6 +326,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
  %%%%%%% ============= measure 37 ============= %%%%%%%% 
   \time 3/16
   r8 
+  \bracket-clef
   \clef bass
   \tuplet 10/8 {
   	\niente

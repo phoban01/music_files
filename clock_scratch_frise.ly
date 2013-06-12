@@ -1,19 +1,19 @@
-% \include "/pieces/diotima_quartet/code_files/quartet_template.ly"
+\include "/pieces/diotima_quartet/code_files/quartet_template.ly"
 
-% \pointAndClickOff
+\pointAndClickOff
 
-% %%%%MUSIC
-% \include "/pieces/diotima_quartet/music_files/violin_I_pizz.ly"
-% \include "/pieces/diotima_quartet/music_files/violin_II_pizz.ly"
-% \include "/pieces/diotima_quartet/music_files/viola_pizz.ly"
-% \include "/pieces/diotima_quartet/music_files/cello_pizz.ly"
-% \include "/pieces/diotima_quartet/music_files/violin_I_pizz_intro.ly"
-% \include "/pieces/diotima_quartet/music_files/violin_II_pizz_intro.ly"
-% \include "/pieces/diotima_quartet/music_files/cello_pizz_intro.ly"
-% \include "/pieces/diotima_quartet/music_files/violin_I_tuning.ly"
-% \include "/pieces/diotima_quartet/music_files/violin_II_tuning.ly"
-% \include "/pieces/diotima_quartet/music_files/viola_tuning.ly"
-% \include "/pieces/diotima_quartet/music_files/cello_tuning.ly"
+%%%%MUSIC
+\include "/pieces/diotima_quartet/music_files/violin_I_pizz.ly"
+\include "/pieces/diotima_quartet/music_files/violin_II_pizz.ly"
+\include "/pieces/diotima_quartet/music_files/viola_pizz.ly"
+\include "/pieces/diotima_quartet/music_files/cello_pizz.ly"
+\include "/pieces/diotima_quartet/music_files/violin_I_pizz_intro.ly"
+\include "/pieces/diotima_quartet/music_files/violin_II_pizz_intro.ly"
+\include "/pieces/diotima_quartet/music_files/cello_pizz_intro.ly"
+\include "/pieces/diotima_quartet/music_files/violin_I_tuning.ly"
+\include "/pieces/diotima_quartet/music_files/violin_II_tuning.ly"
+\include "/pieces/diotima_quartet/music_files/viola_tuning.ly"
+\include "/pieces/diotima_quartet/music_files/cello_tuning.ly"
 
 frise_settings_clock = {
 		#(add-grace-property 'Voice 'Stem 'transparent #t)
@@ -46,12 +46,13 @@ frise_settings_clock_revert = {
 
 one = {
 	\time 4/4
+	\tweak #'positions #'(-12 . -12)
 	\tuplet 3/2 {
 		\draw_line_arrow \tilt_bow \flat_bow
 		\bezier_gliss #'(0.8 . 1) #'(0 1 0 0)
-		\pposr #0.35 c'8 [ \p \< ^\vertical_bow ^\markup \string-numbers #'( "I II III" 0 0) ^\markup {\small \italic "[Toujours à la hausse]"} \startTextSpan
+		\pposr #0.35 c'8 [ \p \< ^\vertical_bow ^\frog ^\markup \string-numbers #'( "I II III" 0 0)  \startTextSpan
 			\glissando
-		\span-shift
+		\span-shift-x #1.5
 		\draw_line_arrow " " \tilt_bow
 		\bezier_gliss #'(0.2 . 1) #'(-0.25 1 0 0)
 		\pposr #0.95 c'8 \f \> \stopTextSpan \startTextSpan \glissando
@@ -67,6 +68,7 @@ one = {
 	\afterGrace \pposr #0.4 c'16 ] \glissando 
 		{\pposr #1 c'8 \stopTextSpan }
 
+	\tweak #'positions #'(-12 . -12)
 	\tuplet 3/2 {
 		r16 [
 		\afterGrace \pposr #0.8 c'16 ^\tilt_bow ^\vertical_bow ^\markup \string-numbers #'( "III IV" 0 0)
@@ -87,11 +89,11 @@ one = {
 	}
 
 	\tuplet 5/4 {
-		\pposr #1.025 c'32 [ -. \sfz ^\horz_bow ^\flat_bow ^\markup \string-numbers #'( "II III" 3 0) 
+		\pposr #1.025 c'32 ( [ -. \sfz ^\horz_bow ^\flat_bow ^\markup \string-numbers #'( "II III" 3 0) 
 		\pposr #1.025 c'32 -.
 		\pposr #1.025 c'32 -.
 		\pposr #1.025 c'32 -.
-		\pposr #1.025 c'32 ] -.
+		\pposr #1.025 c'32 ) ] -.
 		
 	}
 }
@@ -99,10 +101,11 @@ one = {
 two = {
 	\time 4/4
 
+
 	\tuplet 3/2 {
 			r4 
 			\bezier_gliss #'(0.5 . 3) #'(0 1.25 0 0)
-			\afterGrace \pposr #0.2 c'8 \mf \>  ^\tilt_bow ^\vertical_bow ^\markup \string-numbers #'( "IV" 2 0)
+			\afterGrace \pposr #0.2 c'8 \mf \>  ^\tilt_bow ^\frog ^\vertical_bow ^\markup \string-numbers #'( "IV" 2 0)
 					\glissando {\pposr #0.8 c'8 \pp}
 		}
 	\bezier_gliss #'(0.5 . -2) #'(0 1 0 0)	
@@ -113,6 +116,7 @@ two = {
 		\glissando {\pposr #0.9 c'8 \f}
 	r8 ]
 
+	\tweak #'positions #'(-11.5 . -11.5)
 	\tuplet 3/2 {
 		\bezier_gliss #'(0.7 . -2) #'(0 1 0 0)
 		\draw_line_arrow \tilt_bow \flat_bow
@@ -133,7 +137,7 @@ three = {
 
 	r8. [
 	\bezier_gliss #'(0.1 . 1) #'(-0.25 1 0 0)
-	\afterGrace \pposr #0.85 c'16 ]  \mf ^\circular_bow ^\tilt_bow ^\markup \string-numbers #'( "II III IV" -2 0)
+	\afterGrace \pposr #0.85 c'16 ]  \mf ^\circular_bow ^\frog ^\tilt_bow ^\markup \string-numbers #'( "II III IV" -2 0)
 		\glissando {\pposr #0.45 c'8}
 	\tuplet 3/2 {
 		\afterGrace \pposr #0.3 c'16 ^\vertical_bow ^\markup \string-numbers #'( "III" 4 0)
@@ -144,7 +148,7 @@ three = {
 			\glissando {\pposr #0.9 c'8}
 	}
 	\tuplet 10/8 {
-		\pposr #1.025 c'32 -. [ \sf ^\down_bow_heavy ^\flat_bow  ^\markup \string-numbers #'( "II III" 3 0)
+		\pposr #1.025 c'32 -. ( [ \sf ^\down_bow_heavy ^\flat_bow  ^\markup \string-numbers #'( "II III" 3 0)
 		\pposr #1.025 c'32 -.
 		\pposr #1.025 c'32 -.
 		\pposr #1.025 c'32 -.
@@ -153,7 +157,7 @@ three = {
 		\pposr #1.025 c'32 -.
 		\pposr #1.025 c'32 -.
 		\pposr #1.025 c'32 -.
-		\pposr #1.025 c'32 -. ]
+		\pposr #1.025 c'32 -. ] )
 	}
 	\tuplet 3/2 {
 		\afterGrace \pposr #0.25 c'16. \p \< ^\vertical_bow ^\tilt_bow ^\markup \string-numbers #'( "III IV" -2 0)
@@ -179,10 +183,11 @@ four = {
 	\time 4/4
 
 	r8. [
-	\afterGrace \pposr #0.5 c'32 \f ^\vertical_bow ^\flat_bow ^\markup \string-numbers #'( "II III" 3 0)
+	\afterGrace \pposr #0.5 c'32 \f ^\vertical_bow ^\frog ^\flat_bow ^\markup \string-numbers #'( "II III" 3 0)
 		\glissando {\pposr #0.6 c'8}
 	\afterGrace \pposr #0.5 c'32 ] \glissando {\pposr #0.35 c'8}
 	
+	\tweak #'positions #'(-12 . -12)
 	\tuplet 3/2 {
 		\draw_line_arrow \tilt_bow \flat_bow
 		\bezier_gliss #'(0.8 . -0.7) #'(0 1 0 0)
@@ -216,12 +221,13 @@ five = {
 
 	\tuplet 3/2 {
 		r8 [
-		\afterGrace \pposr #0.75 c'8 \mf \> ^\vertical_bow ^\tilt_bow ^\markup \string-numbers #'( "II III" 0 0)
+		\afterGrace \pposr #0.75 c'8 \mf \> ^\vertical_bow ^\frog ^\tilt_bow ^\markup \string-numbers #'( "II III" 0 0)
 			\glissando {\pposr #0.5 c'8}
 		\pposr #0.3 c'32 \p \< ( -. ^\horz_bow ^\flat_bow %>
 			\pposr #0.35 c'32 -. \pposr #0.4 c'32 -. \pposr #0.45 c'32 \f -. ) ]
 	}
 
+	\tweak #'positions #'(-11.5 . -11.5)
 	\tuplet 5/4 {
 		r32 [
 		\afterGrace \pposr #0.95 c'32 \mf \> ^\markup \string-numbers #'( "III IV" 0 0)
@@ -265,18 +271,19 @@ six = {
 	r4.
 
 	r32 [
-	\afterGrace \pposr #1.025 c'32 ^\horz_bow \mf ^\tilt_bow ^\markup \string-numbers #'( "II III" 0 0)
+	\afterGrace \pposr #1.025 c'32 ^\horz_bow \mf  ^\frog ^\tilt_bow ^\markup \string-numbers #'( "II III" 0 0)
 		\glissando {\pposr #1.025 c'8 }
 	r32 
 	\afterGrace \pposr #0.3 c'32 ]  ^\vertical_bow \mp
 		\glissando {\pposr #0.15 c'8}
 
+	\tweak #'positions #'(-12 . -12)
 	\tuplet 3/2 {
 		\bezier_gliss #'(0.8 . -1) #'(0 1 0 0)
 		\draw_line_arrow \flat_bow \tilt_bow
 		\pposr #0.6 c'8 \mf \< ^\circular_bow ^\markup \string-numbers #'( "II III IV" 0 0) \startTextSpan  %>
 			\glissando 
-		\span-shift
+		\span-shift-x #1.5
 		\bezier_gliss #'(0.7 . -5) #'(0 1 0 0)
 		\draw_line_arrow " " \flat_bow
 		\afterGrace \pposr #0.8 c'8 \ff \> \stopTextSpan \startTextSpan \glissando {\pposr #0.4 c'8 \p \stopTextSpan } 
@@ -291,7 +298,7 @@ seven = {
 
 	\tuplet 3/2 {
 		\bezier_gliss #'(1 . 1) #'(0 1.5 0 0)
-		\afterGrace \pposr #0.35 c'16 \p [ ^\circular_bow ^\tilt_bow ^\markup \string-numbers #'( "II III" 3 0)
+		\afterGrace \pposr #0.35 c'16 \p [ ^\circular_bow ^\tilt_bow ^\frog ^\markup \string-numbers #'( "II III" 3 0)
 			\glissando {\pposr #0.8 c'8}
 		r16
 		\bezier_gliss #'(0.5 . 0) #'(0 1 0 0.1)
@@ -327,7 +334,7 @@ seven = {
 		\draw_line_arrow \tilt_bow \flat_bow
 		\afterGrace \pposr #0.3 c'16 [ \f \> ^\vertical_bow ^\markup \string-numbers #'( "II III IV" 0 0) \startTextSpan
 			\glissando {\pposr #0.1 c'8}
-		\span-shift
+		\span-shift-x #1.5
 		\draw_line_arrow " " \tilt_bow
 		\afterGrace \pposr #0.05 c'16 \p \< \stopTextSpan \startTextSpan ^\horz_bow 
 			\glissando {\pposr #0.05 c'8}
@@ -348,7 +355,7 @@ eight = {
 	\tuplet 3/2 {
 		\bezier_gliss #'(0.2 . -1.5) #'(-0.25 1 0 0)
 		\draw_line_arrow \flat_bow \tilt_bow
-		 \afterGrace \pposr #0.9 c'16 \mf [ ^\circular_bow ^\markup \string-numbers #'( "III IV" 0 0) \startTextSpan
+		 \afterGrace \pposr #0.9 c'16 \mf [ ^\circular_bow ^\frog ^\markup \string-numbers #'( "III IV" -1.5 0) \startTextSpan
 		 	\glissando {\pposr #0.7 c'8}
 		 \bezier_gliss #'(0.2 . -3) #'(-0.25 1 0 0)
 		 \afterGrace \pposr #0.5 c'16 \stopTextSpan 
@@ -363,7 +370,7 @@ eight = {
 		\glissando {\pposr #1.025 c'8 \f \> }
 
 	\tuplet 5/4 {
-		\pposr #0.8 c'32 ( [ \mp ^\flat_bow ^\vertical_bow ^\markup {\small \italic "(pressing bow)"}
+		\pposr #0.8 c'32 ( [ \mp ^\flat_bow ^\vertical_bow 
 		\pposr #0.7 c'32
 		\pposr #0.6 c'32
 		\pposr #0.5 c'32
@@ -376,11 +383,12 @@ nine = {
 
 	r4
 
+	\tweak #'positions #'(-12 . -12)
 	\tuplet 3/2 {
 		\draw_line_arrow \tilt_bow \flat_bow
-		\pposr #0.9 c'16 ^\vertical_bow \p \< ^\markup \string-numbers #'( "II III" 0 0) \startTextSpan
+		\pposr #0.9 c'16 ^\vertical_bow \p \< ^\frog ^\markup \string-numbers #'( "II III" 0 0) \startTextSpan
 			\glissando
-		\span-shift
+		\span-shift-x #1.5
 		\bezier_gliss #'(0.5 . 3) #'(0 1 0 0)
 		\draw_line_arrow " " \tilt_bow
 		\pposr #0.4 c'8 \f \> ^\circular_bow \stopTextSpan \startTextSpan
@@ -390,6 +398,7 @@ nine = {
 			\glissando {\pposr #0.4 c'8 \mf \stopTextSpan }
 	}
 
+	\tweak #'positions #'(-12 . -12)
 	\tuplet 5/4 {
 		r32 [
 		\afterGrace \pposr #0.95 c'32 \mf ^\horz_bow ^\tilt_bow ^\markup \string-numbers #'( "I II" 0 0)
@@ -425,20 +434,21 @@ ten = {
 	\time 4/4
 
 	r8. [
-	\afterGrace \pposr #0.25 c'16 ] \p ^\horz_bow ^\tilt_bow ^\markup \string-numbers #'( "II III" -2 0)
+	\afterGrace \pposr #0.25 c'16 ] \p ^\horz_bow ^\frog ^\tilt_bow ^\markup \string-numbers #'( "II III" -2 0)
 		\glissando {\pposr #0.25 c'8}
 
+	\tweak #'positions #'(-11.5 . -11.5)
 	\tuplet 3/2 {
 		\bezier_gliss #'(0.5 . 0) #'(0 1 0 0)
 		\draw_line_arrow \tilt_bow \flat_bow
 		\pposr #0.5 c'8 \pp \< ^\circular_bow  ^\markup \string-numbers #'( "II III IV" 0 0) \startTextSpan
 			\glissando
-		\span-shift
+		\span-shift-x #1.5
 		\bezier_gliss #'(0.5 . -6) #'(0 1.25 0 0)
 		\draw_line_arrow " " \tilt_bow
 		\pposr #1.025 c'8 \mf \> ^\markup \string-numbers #'( "I II III" 0 0) \stopTextSpan \startTextSpan
 			\glissando
-		\span-shift
+		\span-shift-x #1.5
 		\bezier_gliss #'(0.8 . 6) #'(0 1 0 0)
 		\draw_line_arrow " " \flat_bow
 		\afterGrace \pposr #0 c'8 \p \< \stopTextSpan \startTextSpan
@@ -470,7 +480,8 @@ silence = {
 }
 
 violin_I_bichon_frise = {
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 40)
 
 		\switch-staff \pizz_staff
 		\frise_settings_clock
@@ -481,6 +492,7 @@ violin_I_bichon_frise = {
 		\silence \silence \silence
 
 		\silence 
+		\newSpacingSection
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
 		\four \nine
 		\three \one \eight
@@ -501,13 +513,16 @@ violin_I_bichon_frise = {
 		\silence \one \seven
 		\silence \silence \nine
 
+		\newSpacingSection
+% 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 40)
 		\silence \silence \silence
 
 		\five \silence \two
 
 		\silence \silence
 
-		\silence \silence
+		\silence 
+% 		\silence
 
 
 		\frise_settings_clock_revert
@@ -546,7 +561,7 @@ cello_bichon_frise = {
 		\silence \silence
 		\silence
 		\silence
-		\silence
+% 		\silence
 
 
 		\frise_settings_clock_revert
@@ -558,18 +573,19 @@ cello_bichon_frise = {
 % 	\new Staff {
 % 		\switch-staff \pizz_staff
 % 		\frise_settings_clock
-% 		\circles
-% 		\stemDown		
-% % 		\ten
-% 		\cello_bichon_frise
+% % 		\circles
+% % 		\stemDown		
+% % % 		\ten
+% % 		\cello_bichon_frise
+% 		\ten
 % 	} 
-% 		\new Staff {
-% 		\switch-staff \pizz_staff
-% 		\frise_settings_clock
-% 		\circles
-% 		\stemDown		
-% % 		\ten
-% 		\violin_I_bichon_frise
-% 	} 
+% % 		\new Staff {
+% % 		\switch-staff \pizz_staff
+% % 		\frise_settings_clock
+% % 		\circles
+% % 		\stemDown		
+% % % 		\ten
+% % 		\violin_I_bichon_frise
+% % 	} 
 % 	>>
 % }

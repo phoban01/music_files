@@ -7,7 +7,7 @@ violin_I_tuning = {
   \newSpacingSection
   \set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
   << 
-  	{\oneVoice r2 r2  \circleheads <c' e'>2 \glissando ^\down_bow ^\angle_bow } \\ 
+  	{\oneVoice r2 ^\attach_tuner _\lay_flat r2  \circleheads <c' e'>2 \glissando ^\down_bow ^\angle_bow } \\ 
   	{s2 s2 \niente s4 \< s4 \mp}
   >>
 
@@ -19,7 +19,7 @@ violin_I_tuning = {
 
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
  \time 6/4
- R1.
+ R1. 
 
  %%%%%%%% ============= measure 4 ============= %%%%%%%% 
  \time 6/4
@@ -122,20 +122,26 @@ violin_I_tuning = {
   <<
   	{	\oneVoice 
   		\circles
+      \once \override Voice.TextSpanner.outside-staff-priority = #10
   		\draw_tuning_arrow \tuning_peg_third \violin_third
       \niente
   		<e' g'>8 \glissando ^\altosulpont ^\horz_bow \<
       <e' g'>8 \glissando \startTextSpan 
       <e' g'>4 \mf \glissando e'4 
   		e'4 \glissando <e' g'>4 \> \glissando  		
-  	} \\ {
+  	} 
+    \\ 
+    {
   		s4
   		\draw_line_arrow " " \nat
   		s4 \startTextSpan 
   		s4 \stopTextSpan
   		\draw_line_arrow \up_bow \up_bow_heavy
   		s4 \startTextSpan s4 \stopTextSpan
-  	} \\ {
+  	} 
+    \\ 
+    {
+      \once \override Voice.TextSpanner.outside-staff-priority = #5
   		\draw_line_arrow " " \sulpont
   		s2. s4 \startTextSpan s4 \stopTextSpan
   	}
@@ -281,14 +287,8 @@ violin_I_tuning = {
  	\tieDown
  	\circleheads
  	<g' b'>2 ^\up_bow
-	<e' g' b'>2. \pp \glissando ^\markup {\down_bow_light} ^\aldita 
-    _\markup {
-        \center-align
-        \center-column {
-          \small \italic "au sillet"
-          \fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
-        }
-    }
+	<e' g' b'>2. \pp \glissando ^\down_bow
+
  
 
   
@@ -380,7 +380,8 @@ violin_I_tuning = {
   		c'4 ^\up_bow \<
       \glissando 
       c'4 \glissando c'8 <c' e'>8 \mf \> ^\up_bow ^\angle_bow ^\frog  
-  		<c' e'>4 \glissando \startTextSpan \afterGrace <c' e'>4 \pp \stopTextSpan \glissando  {<c' e'>8 ^\down_bow}
+  		<c' e'>4 \glissando \startTextSpan 
+      \afterGrace <c' e'>4 \pp \stopTextSpan \glissando  {<c' e'>8 ^\down_bow}
   	}
   	\\
   	{
@@ -393,7 +394,7 @@ violin_I_tuning = {
   <<
   	{
   		\set Staff.middleCPosition = #0
-  		r2
+  		r2 ^\normal_hold _\remove_tuner
       \switch-staff \normal_staff      
   		\set Staff.forceClef = ##t
   		\circles
@@ -557,5 +558,5 @@ violin_I_tuning = {
 
  %%%%%%%% ============= measure 46 ============= %%%%%%%% 
   
-
+ \slurNeutral
 }

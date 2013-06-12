@@ -5,7 +5,7 @@ violin_II_tuning = {
   \time 6/4
   \switch-staff \string-staff
   \circleheads
-  r1.
+  R1. ^\attach_tuner _\lay_flat
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   \time 6/4
@@ -328,7 +328,7 @@ violin_II_tuning = {
   	{
   		\circleheads
   		\oneVoice 
-  		<c' e'>2. ^\down_bow \glissando <c' e'>2 \glissando
+  		<c' e'>2. ^\down_bow \glissando <c' e'>2 _\remove_tuner \glissando
   	} \\
   	{
       s4 s4 \stopTextSpan 
@@ -346,7 +346,8 @@ violin_II_tuning = {
   	{
   		\circleheads
   		\oneVoice 
-  		\niente \afterGrace <c' e'>4 \> \glissando {<c' e'>8 \!} r4
+  		\niente \afterGrace <c' e'>4 \> \glissando {<c' e'>8 \!} 
+      r4 ^\normal_hold
   		\tieNeutral
   		r8  [
       \switch-staff \normal_staff
@@ -485,7 +486,7 @@ violin_II_tuning = {
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   \time 5/4
   r8 [ 
-  \niente gqs8 ] ~ ^\up_bow_light \< gqs2 \p ~ \niente \afterGrace gqs8 \> {s8\!} r8 r4
+  \niente gqs8 ] ~ ^\up_bow_light ^\altosulpont \< gqs2 \p ~ \niente \afterGrace gqs8 \> {s8\!} r8 r4
 
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 5/4
@@ -570,7 +571,8 @@ violin_II_tuning = {
   \draw_line_arrow \down_bow_light \down_bow_very_heavy
 
   <c' \single\diamonds f'>4. ~ ^\altosulpont \< \startTextSpan
-  \afterGrace <c' \single\diamonds f'>8.  \f {s8\stopTextSpan} r16
+  \afterGrace <c' \single\diamonds f'>8.  \f {s8\stopTextSpan} 
+  \stopStaff r16
 
 
 }

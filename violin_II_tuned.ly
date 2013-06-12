@@ -287,13 +287,17 @@ violin_II_tuned = {
 	  	%%%%%%%%%% measure 29 %%%%%%%%%%
 	  	\time 3/8
 	  	\diamonds <e'' e'''>16 [ \ff ^\up_bow r16 ] r8
+	\once\override Staff.TextScript.outside-staff-priority = #100000
+
 	  	\squares <bf fs' d'' eqs''>8 \pp ~ ^\up_bow_light
-	  			_\markup {\override #'(line-width . 18) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+	  			_\markup {\override #'(line-width . 26) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 	  	%%%%%%%%%% measure 30 %%%%%%%%%%
 	  	\time 4/4
 	  	<bf fs' d'' eqs''>4 ~ 
+	    \once\override Staff.TextScript.outside-staff-priority = #100000
+
 	  	<bf fs' d'' eqs''>8 ^\circular_bow ^\trill  _\markup {
-	  					\override #'(line-width . 20)
+	  					\override #'(line-width . 26)
 	  					\translate #'(-1.5 . -1) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}}
 	  	~ \<  <bf fs' d'' eqs''>8 ~ \mf \>  
@@ -363,8 +367,11 @@ violin_II_tuned = {
 	  	r4 r4
 	  	%%%%%%%%%% measure 40 %%%%%%%%%%
 	  	\time 8/4
-	  	r2 r2 r2 r8 \squares \niente <bf fs' d'' eqs''>8 ~ \< ^\aldita ^\down_bow_light 
-	  		 		_\markup {\override #'(line-width . 20) 
+	  	r2 r2 r2 r8 [
+		\once\override Staff.TextScript.outside-staff-priority = #100000
+
+	  	\squares \niente <bf fs' d'' eqs''>8  ] ~ \< ^\aldita ^\down_bow_light 
+	  		 		_\markup {\override #'(line-width . 26) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 	  	 <bf fs' d'' eqs''>4 \pp
@@ -906,53 +913,53 @@ violin_II_tuned = {
 	 	\body-clef #'fingerboard-small
 	 	r8
 	 	\set Staff.forceClef = ##t 
-	 	\circleheads \ppos #0.2 c'4 ~ \effort mf
+	 	\circleheads \ppos #0.2 c'4 \glissando \effort mf
 	 	%%%%%%%%%% measure 109 %%%%%%%%%%
 	 	\time 3/8
-	 	\ppos #0.2 c'4. ~
+	 	\ppos #0.2 c'4. \glissando
 	 	%%%%%%%%%% measure 110 %%%%%%%%%%
 	 	\time 5/4
-	 	\ppos #0.2 c'8. \ppos #0.2 c'16 ~ ^\up_bow_light
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'8 \ppos #0.2 c'8 ~
+	 	\ppos #0.2 c'8. \ppos #0.2 c'16 \glissando ^\up_bow_light
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'8 \ppos #0.2 c'8 \glissando
 	 	\tuplet 3/2 {
-	 		\ppos #0.2 c'8. \ppos #0.2 c'16 ^\down_bow_light \ppos #0.2 c'8 ~
+	 		\ppos #0.2 c'8. \ppos #0.2 c'16 ^\down_bow_light \ppos #0.2 c'8 \glissando
 	 	}
-	 	\ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 111 %%%%%%%%%%
 	 	\time 2/4
-	 	\ppos #0.2 c'8. \ppos #0.2 c'16 ^\up_bow_light \ppos #0.2 c'4 ~ ^\down_bow_light
+	 	\ppos #0.2 c'8. \ppos #0.2 c'16 ^\up_bow_light \ppos #0.2 c'4 \glissando ^\down_bow_light
 	 	%%%%%%%%%% measure 112 %%%%%%%%%%
 	 	\time 3/8
-	 	\ppos #0.2 c'8 \glissando \ppos #0.5 c'8 \glissando \ppos #0.2 c'8 ~
+	 	\ppos #0.2 c'8 \glissando \ppos #0.5 c'8 \glissando \ppos #0.2 c'8 \glissando
 	 	%%%%%%%%%% measure 113 %%%%%%%%%%
 	 	\time 2/16
-	 	\ppos #0.2 c'8 ~
+	 	\ppos #0.2 c'8 \glissando
 	 	%%%%%%%%%% measure 114 %%%%%%%%%%
 	 	\time 4/4
-	 	\ppos #0.2 c'4 ~ 
+	 	\ppos #0.2 c'4 \glissando 
 	 	\ppos #0.2 c'16 
-	 	\ppos #0.2 c'8. ~ ^\up_bow_light
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4
+	 	\ppos #0.2 c'8. \glissando ^\up_bow_light
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'4
 	 	%%%%%%%%%% measure 115 %%%%%%%%%%
 	 	\time 3/8
-	 	\ppos #0.2 c'8 ~ \ppos #0.2 c'16 ~ 
-	 	\flare_width \ppos #0.2 c'16 ~ \<
+	 	\ppos #0.2 c'8 \glissando \ppos #0.2 c'16 \glissando 
+	 	\flare_width \ppos #0.2 c'16 \glissando \<
 	 	\tuplet 3/2 {
 	 		\afterGrace \ppos #0.2 c'8 {s8\! \flare_sfz} r16
 	 	}
 	 	%%%%%%%%%% measure 116 %%%%%%%%%%
 	 	\time 5/16
-	 	r8 \ppos #0.3 c'8. \effort mf ~
+	 	r8 \ppos #0.3 c'8. \effort mf \glissando
 	 	%%%%%%%%%% measure 117 %%%%%%%%%%
 	 	\time 2/4
 	 	\tuplet 3/2 {
-	 		\ppos #0.3 c'2 ~ \ppos #0.3 c'8. 
+	 		\ppos #0.3 c'2 \glissando \ppos #0.3 c'8. 
 	 		\afterGrace \ppos #0.3 c'16 ^\vertical_bow 
 	 			\glissando {\ppos #0.75 c'8}
 	 	}
 	 	%%%%%%%%%% measure 118 %%%%%%%%%%
 	 	\time 5/8
-	 	\ppos #0.7 c'4 ^\horz_bow \glissando \ppos #0.25 c'4 ~ \ppos #0.25 c'16 ~ 
+	 	\ppos #0.7 c'4 ^\horz_bow \glissando \ppos #0.25 c'4 \glissando \ppos #0.25 c'16 \glissando 
 	 	\afterGrace \ppos #0.25 c'16 ^\vertical_bow \glissando {\ppos #0.75 c'8}
 	 	%%%%%%%%%% measure 119 %%%%%%%%%%
 	 	\time 2/4
@@ -963,7 +970,7 @@ violin_II_tuned = {
 	 	\ppos #0.3 c'8 ^\horz_bow \ppos #0.3 c'16 \ppos #0.3 c'16
 	 	%%%%%%%%%% measure 121 %%%%%%%%%%
 	 	\time 5/4
-	 	\ppos #0.25 c'4 ~ \ppos #0.25 c'4 \ppos #0.25 c'4 ^\vertical_bow \glissando 
+	 	\ppos #0.25 c'4 \glissando \ppos #0.25 c'4 \ppos #0.25 c'4 ^\vertical_bow \glissando 
 	 	\ppos #0.75 c'4 ^\horz_bow \glissando \glissSkipOn \ppos #0.5 c'4
 	 	%%%%%%%%%% measure 122 %%%%%%%%%%
 	 	\time 2/4
@@ -1032,18 +1039,18 @@ violin_II_tuned = {
 	 		\ppos #0.65 c'8 \p 
 	 			\glissando
 	 	}
-	 	\glissSkipOn \ppos #0.5 c'8 \glissSkipOff \ppos #0.5 c'8 ~
+	 	\glissSkipOn \ppos #0.5 c'8 \glissSkipOff \ppos #0.5 c'8 \glissando
 	 	%%%%%%%%%% measure 129 %%%%%%%%%%
 	 	\time 5/4
-	 	\ppos #0.5 c'4 ~ 
+	 	\ppos #0.5 c'4 \glissando 
 	 	\tuplet 3/2 {
 	 		\ppos #0.5 c'4 
-	 			\ppos #0.5 c'8 ~
+	 			\ppos #0.5 c'8 \glissando
 	 				^\markup {
 	 							\fingering-diagram #'((#f . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 	 				}
 	 	}
-	 	\ppos #0.5 c'4 ~ \ppos #0.5 c'4 ~ \ppos #0.5 c'4
+	 	\ppos #0.5 c'4 \glissando \ppos #0.5 c'4 \glissando \ppos #0.5 c'4
 	 		^\markup {
 	 					\fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 	 				}
@@ -1052,19 +1059,19 @@ violin_II_tuned = {
 	 	\tuplet 3/2 {
 	 		r4 \ppos #0.5 c'8:32 ^\vertical_bow \glissando \glissSkipOn
 	 	}
-	 	\ppos #0.5 c'8 ^\horz_bow \glissSkipOff \ppos #0.25 c'8 ~
-	 	\ppos #0.25 c'4 ~ 
+	 	\ppos #0.5 c'8 ^\horz_bow \glissSkipOff \ppos #0.25 c'8 \glissando
+	 	\ppos #0.25 c'4 \glissando 
 	 		^\markup {
 	 					\fingering-diagram #'((#f . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 	 				}
-	 	\ppos #0.25 c'8 ~ 
-	 	\ppos #0.25 c'8 ~
+	 	\ppos #0.25 c'8 \glissando 
+	 	\ppos #0.25 c'8 \glissando
 	 		^\markup {
 	 					\fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 	 				}
 	 	%%%%%%%%% measure 131 %%%%%%%%%%
 	 	\time 3/4
-	 	\ppos #0.25 c'4 ~ \ppos #0.25 c'16 \ppos #0.25 c'8.:64  ^\vertical_bow
+	 	\ppos #0.25 c'4 \glissando \ppos #0.25 c'16 \ppos #0.25 c'8.:64  ^\vertical_bow
 	 	\tuplet 3/2 {
 	 		\ppos #0.4 c'8 ( ^\horz_bow \ppos #0.4 c'8 \ppos #0.2 c'8
 	 	}
@@ -1074,19 +1081,19 @@ violin_II_tuned = {
 	 		\ppos #0.2 c'8 \ppos #0.3 c'8 \ppos #0.4 c'8
 	 	}
 	 	\tuplet 3/2 {
-	 		\ppos #0.3 c'8 \ppos #0.2 c'4 ) ~
+	 		\ppos #0.3 c'8 \ppos #0.2 c'4 ) \glissando
 	 	}
 	 	%%%%%%%%%% measure 133 %%%%%%%%%%
 	 	\time 3/4
-	 	\ppos #0.2 c'8 ~ \ppos #0.2 c'8 ~ 
+	 	\ppos #0.2 c'8 \glissando \ppos #0.2 c'8 \glissando 
 	 		^\markup {
 	 					\fingering-diagram #'((#f . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 	 				}
 
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 134 %%%%%%%%%%
 	 	\time 4/4
-	 	\ppos #0.2 c'8 ~ \ppos #0.2 c'8 ~ 
+	 	\ppos #0.2 c'8 \glissando \ppos #0.2 c'8 \glissando 
 	 		^\markup {
 	 							\fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 	 				}
@@ -1111,7 +1118,7 @@ violin_II_tuned = {
 	 	}
 	 	%%%%%%%%%% measure 136 %%%%%%%%%%
 	 	\time 5/8
-	 	\ppos #0.4 c'4 ~ 
+	 	\ppos #0.4 c'4 \glissando 
 	 		^\markup {
 	 							\fingering-diagram #'((#f . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 	 				}
@@ -1307,29 +1314,29 @@ violin_II_tuned = {
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.2 c'4 \pp ~ _\nutharm ^\up_bow_light ^\markup \string-numbers #'( "I II III" 0 0)
-	 	\ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'4 \pp \glissando _\nutharm ^\up_bow_light ^\markup \string-numbers #'( "I II III" 0 0)
+	 	\ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 162 %%%%%%%%%%	 	
 	 	\time 4/4
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 163 %%%%%%%%%%
 	 	\time 4/4
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'16 
-	 	\ppos #0.2 c'8.:32 ~ 
-	 	\ppos #0.2 c'32 ^\down_bow \ppos #0.2 c'8.. ~ ^\up_bow_light \ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'16 
+	 	\ppos #0.2 c'8.:32 \glissando 
+	 	\ppos #0.2 c'32 ^\down_bow \ppos #0.2 c'8.. \glissando ^\up_bow_light \ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 164 %%%%%%%%%%
 	 	\time 4/4
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'8. \ppos #0.2 c'16 ^\down_bow_light ~ \ppos #0.2 c'4 ~ ^\up_bow_light
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'8. \ppos #0.2 c'16 ^\down_bow_light \glissando \ppos #0.2 c'4 \glissando ^\up_bow_light
 	 	%%%%%%%%%% measure 165 %%%%%%%%%%
 	 	\time 6/4
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'16 ^\up_bow_heavy \ppos #0.2 c'8. ~ ^\down_bow_light
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'16 ^\up_bow_heavy \ppos #0.2 c'8. \glissando ^\down_bow_light
 	 	%%%%%%%%%% measure 166 %%%%%%%%%%
 	 	\time 5/4
-	 	\ppos #0.2 c'4 ~  \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'4 \glissando  \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 167 %%%%%%%%%%
 	 	\time 5/8
-	 	\ppos #0.2 c'8 ~ ^\up_bow_light \ppos #0.2 c'8 ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'16 ~ \ppos #0.2 c'16 \mf ]  r8
+	 	\ppos #0.2 c'8 \glissando ^\up_bow_light \ppos #0.2 c'8 \glissando \ppos #0.2 c'8 \glissando \ppos #0.2 c'16 \glissando \ppos #0.2 c'16 \mf ]  r8
 	 	%%%%%%%%%% measure 168 %%%%%%%%%%
 	 	\time 2/4
 	 	\switch-staff \normal_staff
@@ -1346,14 +1353,14 @@ violin_II_tuned = {
 	 	\body-clef #'fingerboard-small
 	 	\set Staff.forceClef = ##t
 	 	\circleheads
-	 	\ppos #0.2 c'4 \pp ~ ^\down_bow_light ^\aldita ^\markup \string-numbers #'( "I II III" 0 0) _\nutharm
-	 	\ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'4 \pp \glissando ^\down_bow_light ^\aldita ^\markup \string-numbers #'( "I II III" 0 0) _\nutharm
+	 	\ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 170 %%%%%%%%%%
 	 	\time 4/4
-	 	\ppos #0.2 c'8. ~ \ppos #0.2 c'16 ~ ^\up_bow_light \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~ \ppos #0.2 c'4 ~
+	 	\ppos #0.2 c'8. \glissando \ppos #0.2 c'16 \glissando ^\up_bow_light \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando \ppos #0.2 c'4 \glissando
 	 	%%%%%%%%%% measure 171 %%%%%%%%%% 
 	 	\time 3/8
-	 	\ppos #0.2 c'8 [ ~ \ppos #0.2 c'8 ~ \ppos #0.2 c'16 \mf ^\down_bow_very_heavy r16 ]
+	 	\ppos #0.2 c'8 [ \glissando \ppos #0.2 c'8 \glissando \ppos #0.2 c'16 \mf ^\down_bow_very_heavy r16 ]
 	 	%%%%%%%%%% measure 172 %%%%%%%%%% 
 	 	\time 4/4
 	 	\switch-staff \normal_staff 
@@ -1374,13 +1381,13 @@ violin_II_tuned = {
 	 	\ppos #0.2 c'8.:64 \p [ _\nutmute ^\aldita ^\markup \string-numbers #'( "III IV" 2.5 0) r16 ]
 	 	%%%%%%%%%% measure 174 %%%%%%%%%%
 	 	\time 4/4 
-	 	r4 \ppos #0.2 c'4 \p ^\markup \string-numbers #'( "I II III" 2.5 0) ~ \ppos #0.2 c'8. [ r16 ] r4
+	 	r4 \ppos #0.2 c'4 \p ^\markup \string-numbers #'( "I II III" 2.5 0) \glissando \ppos #0.2 c'8. [ r16 ] r4
 	 	%%%%%%%%%% measure 175 %%%%%%%%%%
 	 	\time 5/8
 	 	r4 r4.
 	 	%%%%%%%%%% measure 176 %%%%%%%%%%
 	 	\time 3/4
-	 	r16 [ \ppos #0.2 c'8. \mp ] ^\aldita ^\down_bow_light ~ \ppos #0.2 c'8[ r8]
+	 	r16 [ \ppos #0.2 c'8. \mp ] ^\aldita ^\down_bow_light \glissando \ppos #0.2 c'8[ r8]
 	 	r4 ^\markup {\translate #'(-0.5 . 0) \left-align \fontsize #2 \musicglyph #"scripts.ufermata" }
 	 	%%%%%%%%%% measure 177 %%%%%%%%%%
 	 	\time 4/4
@@ -1421,11 +1428,11 @@ violin_II_tuned = {
 		\body-clef #'bow-area-small
 		\set Staff.forceClef = ##t
 		\tuplet 3/2 {
-			r4 \niente \pizz_head "II III" \ppos #0.4 c8 ~ \< 					%>
+			r4 \niente \pizz_head "II III" \ppos #0.4 c8 \glissando \< 					%>
 		} 
-		\pizz_head "II III" \ppos #0.4 c4 \mp ~
-		\pizz_head "II III" \ppos #0.4 c4 ~
-		\niente \pizz_head "II III" \ppos #0.4 c8 [ \> ~ \pizz_head "II III" \ppos #0.4 c8 ] ~  
+		\pizz_head "II III" \ppos #0.4 c4 \mp \glissando
+		\pizz_head "II III" \ppos #0.4 c4 \glissando
+		\niente \pizz_head "II III" \ppos #0.4 c8 [ \> \glissando \pizz_head "II III" \ppos #0.4 c8 ] \glissando  
 		\pizz_head "II III" \ppos #0.4 c8. [  r16 \! ]  r4
 		\bar "|."	 	
 }

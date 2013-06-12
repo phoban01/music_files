@@ -9,11 +9,22 @@ violin_one_pressed_bow = {
 			\override Glissando.style = #'dashed-line
 			\override Glissando.bound-details.right.padding = #0.35
 			\override Glissando.thickness = #2
+			\time 4/4
+			r4
+			\slow-zigzag
+			\ppos #0.8 c'4 \p \< \glissando \glissSkipOn 
+			\ppos #0.6 c'8 [ \glissSkipOff 
+			\med-zigzag
+			\ppos #0.5 c'8] \glissando \glissSkipOn
+			\ppos #0.6 c'4
+
 			\time 2/4
 			\stemDown
-			r4 r8 [  
+			\afterGrace \ppos #0.6 c'8 [ {\glissSkipOff \ppos #0.9 c'8}
+			r8 ] r8 [  
 			\slow-zigzag
 			\ppos #0.8 c'8 ] \p \< \glissando \glissSkipOn 
+
 			\set Score.repeatCommands = #'(start-repeat)
 			\time 2/4
 			\med-zigzag
@@ -21,8 +32,11 @@ violin_one_pressed_bow = {
 				\mf {\glissSkipOff \ppos #0.4 c'8}
 			r16 ] 
 			\ppos #0.8 c'4 \glissando 
+
 			\set Score.repeatCommands = #'(end-repeat)
+			
 			\time 3/4
+			
 			\fast-zigzag
 			\ppos #0.35 c'4 \glissando 
 			\ppos #0.9 c'4 \glissando \glissSkipOn
@@ -31,9 +45,17 @@ violin_one_pressed_bow = {
 		\\
 		{
 		    \new StringStaff \with {alignAboveContext="violin_1"} {
+		    	\time 4/4
+		    	\circleheads
+		    	s4 <g' b'>4 \glissando
+		    	<e' g'>4 \glissando
+		    	<e' g'>4 \glissando
+
 				\time 2/4
 				\circleheads
-				s4. <e' g'>8
+				\afterGrace <c' e'>8 \glissando {<g' b'>8} s8 
+				s8 <e' g'>8
+
 				\time 2/4
 				<e' g'>2 ^\markup {\large \italic "Repeat ad lib."}
 				\time 3/4	
@@ -58,14 +80,18 @@ violin_two_pressed_bow = {
 			\time 2/4
 			\stemDown
 			r4   
+			\set Staff.forceClef = ##t
 			\slow-zigzag
 			\ppos #0.8 c'4 \p \< \glissando \glissSkipOn 
+			
 			\set Score.repeatCommands = #'(start-repeat)
+
 			\time 2/4
 			\fast-zigzag
 			\afterGrace c'8 [  \mf {\glissSkipOff \ppos #0.4 c'8}
 			\ppos #0.8 c'8  ] \glissando  \glissSkipOn
 			c'4
+
 			\set Score.repeatCommands = #'(end-repeat)
 			\time 3/4
 			\med-zigzag
@@ -78,7 +104,7 @@ violin_two_pressed_bow = {
 		    \new StringStaff \with {alignAboveContext="violin_2"} {
 				\time 2/4
 				\circleheads
-				r4 <g' b'>4
+				r4 <g' b'>8 [ \glissando <e' g'>8 ] \glissando
 				\time 2/4
 				<g' b'>2 ^\markup {\large \italic "Repeat ad lib."}
 				\time 3/4	
@@ -142,9 +168,19 @@ cello_pressed_bow = {
 			\override Glissando.style = #'dashed-line
 			\override Glissando.bound-details.right.padding = #0.35
 			\override Glissando.thickness = #2
+			\time 4/4
+			\slow-zigzag
+			\set Staff.forceClef = ##t
+			\ppos #0.8 c'4 \glissando 
+			\med-zigzag
+			\ppos #0.5 c'4 \glissando
+			\fast-zigzag
+		 	\ppos #0.9 c'4. \glissando
+			\ppos #0.6 c'8 \glissando
 			\time 2/4
 			\stemDown
-			r2
+			\slow-zigzag
+			\afterGrace \ppos #0.8 c'4. \glissando {\ppos #0.65 c'8} r8
 			\set Score.repeatCommands = #'(start-repeat)
 			\time 2/4
 			\fast-zigzag
@@ -161,9 +197,11 @@ cello_pressed_bow = {
 		\\
 		{
 		    \new StringStaff \with {alignAboveContext="cello"} {
-				\time 2/4
+		    	\time 4/4
 				\circleheads
-				s2
+		    	<e' g'>4 \glissando <e' g'>4 \glissando <c' e'>4 \glissando <c' e'>8 \glissando <e' g'>8 \glissando
+				\time 2/4
+				<e' g'>8 \glissando <g' b'>4 s8
 				\time 2/4
 				<e' g'>2 ^\markup {\large \italic "Repeat ad lib."}
 				\time 3/4	
@@ -176,6 +214,8 @@ cello_pressed_bow = {
 
 skips_pressed_bow = {
 	\time 2/4
+	\my_mark "N"
+	\tempo "" 4=60
 	s2
 	\time 2/4
 	s2

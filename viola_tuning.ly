@@ -3,7 +3,7 @@ viola_tuning = {
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
   \time 6/4
   \switch-staff \string-staff
-  R1.
+  R1. ^\attach_tuner _\lay_flat
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   \time 6/4
@@ -22,7 +22,7 @@ viola_tuning = {
 
  %%%%%%%% ============= measure 4 ============= %%%%%%%% 
   \time 6/4
-  R1.
+  R1. 
 
  %%%%%%%% ============= measure 5 ============= %%%%%%%% 
   \time 6/4
@@ -310,7 +310,8 @@ viola_tuning = {
       \bar "|" 
       \time 5/4
       \circleheads
-      b'4 \glissando  b'8 [ \glissando b'8 \glissando ] \niente <g' b'>4 \> \glissando  <g' b'>4 r4 \!
+      b'4 \glissando  b'8 [ \glissando b'8 \glissando ] \niente <g' b'>4 \> \glissando  <g' b'>4 
+      r4 \! ^\normal_hold _\remove_tuner
   	}  \\
   	{
 
@@ -363,12 +364,17 @@ viola_tuning = {
  %%%%%%%% ============= measure 36 ============= %%%%%%%% 
   \time 4/4
   cef''16 [ aqf'16 gs'8 ) ] \> \glissando
-  g'16[ asef'8 \clef alto bqf16 ] \ppp \glissando \glissSkipOn
+  \draw_line_arrow " " \sultasto
+  g'16[ \startTextSpan asef'8 
+  \clef alto bqf16 ] \stopTextSpan \ppp \glissando \glissSkipOn
   b4  c4
 
  %%%%%%%% ============= measure 37 ============= %%%%%%%% 
   \time 6/4
-  \glissSkipOff cs'4 \< ~ cs'2. \mp ~ cs'8 ~ cs'8 \glissando \glissSkipOn 
+  \tieNeutral
+  \glissSkipOff cs'4 \< ~ 
+  cs'2. \mp ~ ^\sultasto
+  cs'8 ~ cs'8 \glissando \glissSkipOn 
   \afterGrace d'4 \> {\glissSkipOff fs'8 \pp}
 
 
@@ -377,7 +383,7 @@ viola_tuning = {
   r16 [ 
   \clef treble
   \flare_width 
-  \afterGrace as'8] \pp \< {s8 \flare_sfz} %>
+  \afterGrace as'8] ^\altosulpont \pp \< {s8 \flare_sfz} %>
 
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   \time 5/4
@@ -426,6 +432,7 @@ viola_tuning = {
   \stemNeutral
   \circles gs2 \stopTextSpan \mf ~ gs8 ~ gs8 ~ gs4 ~ gs8 \>
   \tuplet 3/2 {
+    \slurNeutral
     \draw_line_arrow \sultasto \sulpont
     \diamonds a'16 ( \startTextSpan \pp af'16 b'16
   }

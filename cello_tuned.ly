@@ -249,8 +249,10 @@ cello_tuned = {
 			\set Staff.forceClef = ##t
 			\squares
 			\niente 
+	\once\override Staff.TextScript.outside-staff-priority = #100000
+
 			<ces, ges, eqf bqf>2 ~ \<  ^\up_bow_light	
-						_\markup {\override #'(line-width . 18) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+						_\markup {\override #'(line-width . 26) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 						%>
 			%%%%%%%%%% measure 25 %%%%%%%%%%
 			\time 5/4
@@ -290,9 +292,13 @@ cello_tuned = {
 			%%%%%%%%%% measure 31 %%%%%%%%%%
 			\time 4/4
 			<ces, ges, eqf bqf>4 ~ <ces, ges, eqf bqf>4 ~
-			<ces, ges, eqf bqf>8 \< ~ <ces, ges, eqf bqf>8:64 ~ ^\trill \mp \>
+			<ces, ges, eqf bqf>8 \< ~ 
+		
+			\once\override Staff.TextScript.outside-staff-priority = #100000
+
+			<ces, ges, eqf bqf>8:64 ~ ^\trill \mp \>
 						_\markup {
-	  					\override #'(line-width . 20)
+	  					\override #'(line-width . 26)
 	  					\translate #'(-1.5 . 0) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}
 		 		}
@@ -362,8 +368,11 @@ cello_tuned = {
 			\clef bass
 			\squares
 			\niente 
+
+		\once\override Staff.TextScript.outside-staff-priority = #100000
+
 			<ces, ges, eqf bqf>4 \< ~ ^\down_bow_light
-				 		_\markup {\override #'(line-width . 20) 
+				 		_\markup {\override #'(line-width . 26) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 			<ces, ges, eqf bqf>4 \pp ~
@@ -1595,12 +1604,13 @@ cello_tuned = {
 			%%%%%%%%%% measure 172 %%%%%%%%%%
 			\time 4/2
 			\circles
-			d\breve ~ ^\markup {\small \italic "*Extremely slow bow speed"}
+			d\breve ~ 
+% 			^\markup {\small \italic "*Extremely slow bow speed"}
 			\diamonds
 			%%%%%%%%%% measure 173 %%%%%%%%%%
 			\time 6/4
-			d8 \< ~ d8 ^\up_bow_light d4 ~ 
-			\wavy_vibrato #1
+			d8 \<  d8 ^\up_bow_light ~ d4 ~ 
+			\wavy_vibrato #0.5
 			\niente
 			\afterGrace d8. \mp [ \> \glissando {\hideNotes d8 \! \unHideNotes} r16 ]
 			r2. \bar "|."

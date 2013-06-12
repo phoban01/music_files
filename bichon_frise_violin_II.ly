@@ -21,11 +21,13 @@ violin_II_bichon_frise = {
 {
 	\time 4/4
 	\switch-staff \string-staff
+	\startStaff
 	\stemDown		
 	\circleheads
-	
+	\set Staff.forceClef = ##t
 	<e' g' b'>8 \< ^\up_bow_very_heavy ^\sulpont
 			^\markup {
+				\translate #'(3 . 0)
 				\center-align
 				\center-column {
 					\bracket

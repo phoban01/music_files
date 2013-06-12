@@ -11,8 +11,8 @@ violin_I_pizz_intro = {
   \once \override Hairpin #'circled-tip = ##t
   \bezier_gliss #'(0.9 . -3) #'(0 1 0 0)
   \once \override Glissando.bound-details.right.attach-dir = #-1
-  \afterGrace d8 ^\vertical_bow _\nutmute ^\markup \string-numbers #'( "III II"  -1.25 2)  \< [ \glissando 
-    {a'8 \effort mf} 
+  \afterGrace d8 ^\vertical_bow ^\nutmute ^\markup \string-numbers #'( "III II"  -1.25 2)  \< [ \glissando 
+    {a'8 \effort mf } 
   \switch-staff \normal_staff
   \once \override Staff.Clef #'extra-offset = #'(-1.5 . 0)
   \bracket-clef
@@ -28,7 +28,7 @@ violin_I_pizz_intro = {
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   \time 4/8
   \glissSkipOn g''8 [ \glissando 
-  \afterGrace f''8  ^\markup {\center-align \parenthesize \down_bow_heavy} \f \> \glissando {\move-markup #'(2 . 0) \glissSkipOff fs'' ^\circular_bow ^\flat_bow }
+  \afterGrace f''8  ^\markup {\center-align \parenthesize \down_bow_heavy} \f \> \glissando {\move-markup #'(2 . 0) \glissSkipOff fs''  }
   \circles
   <<
   	{\new BowPositionStaff \with {
@@ -38,7 +38,7 @@ violin_I_pizz_intro = {
   			d'16 [ \glissando a'16 \glissando d'16]
   		}
   	}} 
-  	{<b' g''>8 \mf } 
+  	{\niente \afterGrace <b' g''>8 \mf \> ^\markup {\center-align \line {\circular_bow \flat_bow}} {s8\!}} 
 
   >>
   r8 ]

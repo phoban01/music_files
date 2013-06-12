@@ -3,8 +3,10 @@ skips_pizz = {
 	{
 		\time 5/16
 		\newSpacingSection		
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 54) 
-		s4
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 65) 
+		\tempo "[loose/busy]" 4=44~48
+		\my_mark "A"
+		s4 
 		s16
 	}
 	% %%%%%%% ============= measure 2 ============= %%%%%%%%
@@ -50,9 +52,12 @@ skips_pizz = {
 	}
 	{
 % 		\compoundMeter #'((3 8) (5 16))
-\time 3/8
+		\time 3/8
 		s4. 
-\time 5/16
+		
+
+		\time 5/16
+		\tempo "" 4=60
 		s4 s16
 	}
 	% %%%%%%% ============= measure 10 ============= %%%%%%%%
@@ -95,12 +100,14 @@ skips_pizz = {
 	% %%%%%%% ============= measure 17 ============= %%%%%%%%
 	{
 		\time 4/8
+		\tempo "" 4=44~48
+		\my_mark "B"
 		s2
 	}
 	% %%%%%%% ============= measure 18 ============= %%%%%%%%
 	{
 
-% 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 40)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 65)
 		\time 9/16
 		s2
 		s16
@@ -133,17 +140,22 @@ skips_pizz = {
 	}
 	% %%%%%%% ============= measure 23 ============= %%%%%%%%
 	{
+		\my_mark "C"
 		s4.
+
 	}
 	% %%%%%%% ============= measure 24 ============= %%%%%%%%
 	{
 		\time 5/4
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
+
 		s1
 		s4
 	}
 	% %%%%%%% ============= measure 25 ============= %%%%%%%%
 	{
 		\time 4/8
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 65)		
 		s2
 	}
 	% %%%%%%% ============= measure 26 ============= %%%%%%%%
@@ -163,12 +175,13 @@ skips_pizz = {
 	}
 	% %%%%%%% ============= measure 29 ============= %%%%%%%%
 	{
+		\my_mark "D"
 		s4.
 	}
 	% %%%%%%% ============= measure 30 ============= %%%%%%%%
 	{
 		\newSpacingSection		
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 45)
 		\time 6/8
 		s2.
 	}
@@ -185,6 +198,7 @@ skips_pizz = {
 	% %%%%%%% ============= measure 33 ============= %%%%%%%%
 	{
 		\time 6/4
+		\tempo "" 4=60
 		s1.
 	}
 	% %%%%%%% ============= measure 34 ============= %%%%%%%%
@@ -201,8 +215,9 @@ skips_pizz = {
 	% %%%%%%% ============= measure 36 ============= %%%%%%%%
 	{
 		\time 3/8
+		\my_mark "E"
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)		
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)		
 		s4.
 	}
 	% %%%%%%% ============= measure 37 ============= %%%%%%%%
@@ -214,13 +229,14 @@ skips_pizz = {
 	{
 		\time 4/4
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)
+		\tempo "" 4=44~48
 		s1
 	}
 	% %%%%%%% ============= measure 39 ============= %%%%%%%%
 	{
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)
 		\time 3/8
 		s4.
 	}
@@ -275,6 +291,7 @@ skips_pizz = {
 	% %%%%%%% ============= measure 49 ============= %%%%%%%%
 	{
 		\time 3/8
+		\my_mark "F"
 		s4.
 	}
 	% %%%%%%% ============= measure 50 ============= %%%%%%%%
@@ -392,6 +409,7 @@ skips_pizz = {
 	% %%%%%%% ============= measure 71 ============= %%%%%%%%
 	{
 		\time 3/4
+		\my_mark "G"
 		s2.
 	}
 	% %%%%%%% ============= measure 72 ============= %%%%%%%%
@@ -476,6 +494,7 @@ skips_pizz = {
 	% %%%%%%% ============= measure 88 ============= %%%%%%%%
 	{
 		\time 7/16
+		\tempo "" 4=50~56
 		s4..
 	}
 	% %%%%%%% ============= measure 89 ============= %%%%%%%%

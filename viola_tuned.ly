@@ -327,8 +327,10 @@ viola_tuned = {
 		 \switch-staff \normal_staff
 		 r8 [ \clef alto
 		 \squares
+	\once\override Staff.TextScript.outside-staff-priority = #100000
+
 		 <ces aqf e' c''>8 \mp \>] ~ ^\down_bow
-		 		_\markup {\override #'(line-width . 18) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+		 		_\markup {\override #'(line-width . 26) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 		 <ces aqf e' c''>4 ^\down_bow_light \pp ~ <ces aqf e' c''> ~ <ces aqf e' c''> ~
 		 %%%%%%%%%% measure 25 %%%%%%%%%%
 		 \time 5/4
@@ -379,10 +381,12 @@ viola_tuned = {
 		 \time 4/4
 		 \transpose ces  e {<ces aqf e' c''>8 ~ \< }
 		 \transpose ces  e {<ces aqf e' c''>8 ~ \mf }
+	\once\override Staff.TextScript.outside-staff-priority = #100000
+
 		 \transpose ces  e {
 		 	<ces aqf e' c''>8 ~ ^\trill 
 		 		_\markup {
-	  					\override #'(line-width . 20)
+	  					\override #'(line-width . 26)
 	  					\translate #'(-1.5 . 0) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}}
 		 		}
@@ -434,8 +438,10 @@ viola_tuned = {
 		 %%%%%%%%%% measure 40 %%%%%%%%%%
 		 \time 8/4
 		 r1 r2. \clef alto \squares 
+	\once\override Staff.TextScript.outside-staff-priority = #100000
+
 		 \niente <ces aqf e' c''>4 ~ \< ^\down_bow_light
-		 	 		_\markup {\override #'(line-width . 20) 
+		 	 		_\markup {\override #'(line-width . 26) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 		 %%%%%%%%%% measure 41 %%%%%%%%%%
@@ -1095,16 +1101,16 @@ viola_tuned = {
 		 \circleheads
 		 \clef treble
 		 \niente 
-		 \ppos #0.8 c'4 \< ^\down_bow_light ^\markup \string-numbers #'( "IV" 1.5 0)
+		 \ppos #0.8 c'4 \< ^\down_bow_light ^\s_bow ^\markup \string-numbers #'( "IV" 1.5 0)
 		 	\glissando 
-		 \ppos #1.05 c'16 \p \glissando \ppos #0.9 c'16 \glissando \ppos #0.75 c'16 \glissando \ppos #1.15 c'16 \glissando
+		 \ppos #1.05 c'8 [ \p \glissando \ppos #0.55 c'8 ] \glissando
 		 \draw_line_arrow " " \down_bow
 		 \ppos #0.9 c'8. \startTextSpan ^\markup \string-numbers #'( "III IV" 1.5 0)
 		 	\glissando 
 		 \draw_line_arrow " " \down_bow_light
 		 \span-shift-x #2
 		 \ppos #0.7 c'16 \stopTextSpan \startTextSpan \glissando
-		 \ppos #0.9 c'4 \stopTextSpan
+		 \ppos #0.95 c'4 \stopTextSpan
 		 %%%%%%%%%% measure 102 %%%%%%%%%%
 		 \time 2/4
 		 \switch-staff \normal_staff
@@ -1692,7 +1698,7 @@ viola_tuned = {
 		\set Staff.forceClef = ##t
 		\circleheads
 		\clef treble
-		\ppos #0.55 c'4 \pp ~ ^\aldita ^\up_bow_light
+		\ppos #0.55 c'4 \pp \glissando ^\aldita ^\up_bow_light
 			_\markup {
 					\center-align
 					\center-column {
@@ -1700,28 +1706,28 @@ viola_tuned = {
 						\fingering-diagram #'(("di" . 0.5) ("di" . 0.5) ("di" . 0.5) ("di" . 0.5))
 					}
 			}
-		\ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~ \ppos #0.55 c'4  ~ 
-		\ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~ 
+		\ppos #0.55 c'4 \glissando \ppos #0.55 c'4 \glissando \ppos #0.55 c'4  \glissando 
+		\ppos #0.55 c'4 \glissando \ppos #0.55 c'4 \glissando 
 		%%%%%%%%%% measure 162 %%%%%%%%%%		
 		\time 5/4
-		\ppos #0.55 c'4 ~ 
+		\ppos #0.55 c'4 \glissando 
 		\tuplet 3/2 {
 			\ppos #0.55 c'8 
 			\ppos #0.55 c'8 ^\down_bow
 			\ppos #0.55 c'8  ^\up_bow_light
 		}
-		\ppos #0.55 c'4 ~ ^\down_bow_light
- 		\ppos #0.55 c'4 ~ \ppos #0.55 c'4 
+		\ppos #0.55 c'4 \glissando ^\down_bow_light
+ 		\ppos #0.55 c'4 \glissando \ppos #0.55 c'4 
  		%%%%%%%%%% measure 163 %%%%%%%%%%
  		\time 5/8
- 		\ppos #0.55 c'4 ~ \ppos #0.55 c'4 ~ \ppos #0.55 c'16 ^\up_bow_very_heavy _\bow-mute r16
+ 		\ppos #0.55 c'4 \glissando \ppos #0.55 c'4 \glissando \ppos #0.55 c'16 ^\up_bow_very_heavy _\bow-mute r16
  		%%%%%%%%%% measure 164 %%%%%%%%%%
  		\time 2/4
  		R2
  		%%%%%%%%%% measure 165 %%%%%%%%%%
  		\time 4/4
  		\override NoteHead.stencil = #scratch-tone
- 		\ppos #0.75 c'32 [ \mf ^\markup \string-numbers #'( "IV" 1.5 0)
+ 		\ppos #0.75 c'32 [ \mf ^\markup \string-numbers #'( "IV" 1.5 0) ^\mute
  		\ppos #0.75 c'32] r8.
  		r2.
  		%%%%%%%%%% measure 166 %%%%%%%%%%
@@ -1741,6 +1747,7 @@ viola_tuned = {
  		\time 4/4
  		\switch-staff \normal_staff
  		r4 \clef treble
+ 		\set Staff.forceClef = ##t
  		\circles
  		\flare_width eqs'''4 \p \< ~ ^\sulpont ^\up_bow
  		\afterGrace eqs'''8. [ {s8\flare_sf} r16 ]
@@ -1750,7 +1757,7 @@ viola_tuned = {
 		\clef treble
 		\set Staff.forceClef = ##t
 		\circleheads
-		\ppos #0.55 c'8] ~  \pp ^\aldita ^\down_bow_light
+		\ppos #0.55 c'8] \glissando  \pp ^\aldita ^\down_bow_light
 			_\markup {
 					\center-align
 					\center-column {
@@ -1760,7 +1767,7 @@ viola_tuned = {
 			}
 		%%%%%%%%%% measure 170 %%%%%%%%%%
 		\time 4/4
-		\ppos #0.55 c'4 ~ 
+		\ppos #0.55 c'4 \glissando 
 		\ppos #0.55 c'8 [ r8] r2
 		%%%%%%%%%% measure 171 %%%%%%%%%%
 		\time 5/8
@@ -1812,9 +1819,9 @@ viola_tuned = {
 		\set Staff.forceClef = ##t
 		<<
 			{\tuplet 3/2 {
-				r8 \niente \pizz_head "II III" \ppos #0.4 c4 ~ ^\circular_bow \<
+				r8 \niente \pizz_head "II III" \ppos #0.4 c4 \glissando ^\circular_bow \<
 			} 
-			\pizz_head "II III" \ppos #0.4 c4 \mp ~ \pizz_head "II III" \ppos #0.4 c4 
+			\pizz_head "II III" \ppos #0.4 c4 \mp \glissando \pizz_head "II III" \ppos #0.4 c4 
 			}\\{
 				s4 s4 s8 \< \niente \afterGrace s8 \mf \> {s8\!}
 			}
