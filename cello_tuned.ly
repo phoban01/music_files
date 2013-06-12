@@ -250,7 +250,7 @@ cello_tuned = {
 			\squares
 			\niente 
 			<ces, ges, eqf bqf>2 ~ \<  ^\up_bow_light	
-						^\markup {\override #'(line-width . 12) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+						_\markup {\override #'(line-width . 18) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 						%>
 			%%%%%%%%%% measure 25 %%%%%%%%%%
 			\time 5/4
@@ -292,7 +292,7 @@ cello_tuned = {
 			<ces, ges, eqf bqf>4 ~ <ces, ges, eqf bqf>4 ~
 			<ces, ges, eqf bqf>8 \< ~ <ces, ges, eqf bqf>8:64 ~ ^\trill \mp \>
 						_\markup {
-	  					\override #'(line-width . 30)
+	  					\override #'(line-width . 20)
 	  					\translate #'(-1.5 . 0) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}
 		 		}
@@ -363,7 +363,7 @@ cello_tuned = {
 			\squares
 			\niente 
 			<ces, ges, eqf bqf>4 \< ~ ^\down_bow_light
-				 		^\markup {\override #'(line-width . 20) 
+				 		_\markup {\override #'(line-width . 20) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 			<ces, ges, eqf bqf>4 \pp ~
@@ -660,7 +660,7 @@ cello_tuned = {
 		 	\clef bass
 		 	\tuplet 9/8 {
 		 		\niente
-		 		\circles aes8 \< ~ ^\down_bow_light <aes eqf~> <eqf ~ gqf \harmonic> <eqf a,~> a,~ <ef,~ \harmonic a,> ^\up_bow_light
+		 		\circles aes8 \< ~ ^\down_bow_light <aes eqf~> <eqf ~ gqf \harmonic> <eqf a,~> a,~ <ef,~ \harmonic a,> ^\up_bow_light ^\sulpont
 		 		\diamonds ef, \circles a, 
 		 		\draw_line_arrow \down_bow \down_bow_very_heavy
 		 		eqf16 \startTextSpan \diamonds aes16
@@ -1059,7 +1059,7 @@ cello_tuned = {
 			\ppos #0.5 c'16 \ppos #0.5 c'16 \ppos #0.5 c'4 \glissando
 			%%%%%%%%%% measure 101 %%%%%%%%%%
 			\time 2/16
-			\flare_width \afterGrace \ppos #0.5 \< c'8 \glissando {\ppos #1.05 c'16 [ \glissando \ppos #0.75 c'16 \flare_mf ] }
+			\flare_width \afterGrace \ppos #0.5 c'8 \<  \glissando {\ppos #1.05 c'16 [ \glissando \ppos #0.75 c'16 \flare_mf ] }
 			%%%%%%%%%% measure 102 %%%%%%%%%%
 			\time 4/4
 			r16 [
@@ -1593,9 +1593,9 @@ cello_tuned = {
 			d4 ~ ^\markup {\translate #'(-0.5 . 0) \left-align \fontsize #2 \musicglyph #"scripts.ufermata" }
 			d4 \> ~ d8  ^\down_bow_light \ppp ~
 			%%%%%%%%%% measure 172 %%%%%%%%%%
-			\time 2/1
+			\time 4/2
 			\circles
-			d\breve ~ ^\markup {\small \italic "extremely slow bow speed"}
+			d\breve ~ ^\markup {\small \italic "*Extremely slow bow speed"}
 			\diamonds
 			%%%%%%%%%% measure 173 %%%%%%%%%%
 			\time 6/4
@@ -2251,7 +2251,7 @@ cello_pos_tuned = {
 				\time 5/8
 				s4 \startStaff g'4 \glissando b'8 \stopStaff
 				%%%%%%%%%% measure 173 %%%%%%%%%%
-				\time 2/1
+				\time 4/2
 				s1 s1 
 				%%%%%%%%%% measure 174 %%%%%%%%%%
 				\time 6/4

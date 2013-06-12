@@ -291,7 +291,7 @@ viola_tuned = {
 		 %%%%%%%%%% measure 19 %%%%%%%%%%
 		 \time 4/4
 		 c'4 ~ 
-% 		 \wavy_line #1 
+		 \wavy_line #1 
 		 \niente \afterGrace c'8. \> \glissando {s8 \!} r16
 		 r8. [
 		 \switch-staff \body_staff
@@ -328,7 +328,7 @@ viola_tuned = {
 		 r8 [ \clef alto
 		 \squares
 		 <ces aqf e' c''>8 \mp \>] ~ ^\down_bow
-		 		^\markup {\override #'(line-width . 12) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+		 		_\markup {\override #'(line-width . 18) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 		 <ces aqf e' c''>4 ^\down_bow_light \pp ~ <ces aqf e' c''> ~ <ces aqf e' c''> ~
 		 %%%%%%%%%% measure 25 %%%%%%%%%%
 		 \time 5/4
@@ -382,7 +382,7 @@ viola_tuned = {
 		 \transpose ces  e {
 		 	<ces aqf e' c''>8 ~ ^\trill 
 		 		_\markup {
-	  					\override #'(line-width . 30)
+	  					\override #'(line-width . 20)
 	  					\translate #'(-1.5 . 0) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}}
 		 		}
@@ -435,7 +435,7 @@ viola_tuned = {
 		 \time 8/4
 		 r1 r2. \clef alto \squares 
 		 \niente <ces aqf e' c''>4 ~ \< ^\down_bow_light
-		 	 		^\markup {\override #'(line-width . 20) 
+		 	 		_\markup {\override #'(line-width . 20) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 		 %%%%%%%%%% measure 41 %%%%%%%%%%
@@ -668,7 +668,7 @@ viola_tuned = {
 		 \set Staff.forceClef = ##t
 		 \clef alto
 		 \niente
-		 \diamonds ces8 \< ^\down_bow_light
+		 \diamonds ces8 \< ^\down_bow_light ^\sulpont
 		 \circles aqf ~ 
 		 <aqf c'\harmonic> e' ~  ^\up_bow
 		 <e' c''~>  
@@ -915,7 +915,7 @@ viola_tuned = {
  						\center-column {\fontsize #2 " 10\"" \scale #'(1.35 . 1) \fontsize #2 \musicglyph #"scripts.ulongfermata" }}
 		 %%%%%%%%%% measure 91 %%%%%%%%%%
 		 \time 2/4
-% 		 \wavy_vibrato #1
+		 \wavy_vibrato #1
 		 \flare_width \afterGrace d'''8. \< \glissando {d'''8 }
 		 \afterGrace fs'''16 \flare_sfz \glissando {cs''8}
 		 <<
@@ -1037,13 +1037,14 @@ viola_tuned = {
 		 %%%%%%%%%% measure 97 %%%%%%%%%%
 		 \time 2/4
 		 r8 \niente 
-		 \ppos #0.5 c'8 \< ^\horz_bow
+		 \draw_bracket \s_bow
+		 \ppos #0.5 c'8 \< \startTextSpan
 		 	\glissando 
-		 \ppos #1.05 c'8 \p ^\vertical_bow
+		 \ppos #1.05 c'8 \p 
 		 	\glissando 
 		 \niente 
-		 \afterGrace \ppos #0.75 c'8 \> ^\horz_bow
-		 	\glissando {\ppos #0.5 c'8\!}
+		 \afterGrace \ppos #0.75 c'8 \> 
+		 	\glissando {\ppos #0.5 c'8\! \stopTextSpan}
 		 %%%%%%%%%% measure 98 %%%%%%%%%%
 		 \time 5/4
 		 r2 r8 
@@ -1051,7 +1052,7 @@ viola_tuned = {
 		 \clef treble
 		 \circles
 		 \set Staff.forceClef = ##t
-		 d'''16 \mp -. -> ^\sulpont ^\up_bow 
+		 d'''16 \mp -. -> ^\sulpont ^\up_bow ^\horz_bow
 		 \niente d'''16 \< 
 		 	\glissando \glissSkipOn 
 		 \tuplet 3/2 {
@@ -1434,7 +1435,7 @@ viola_tuned = {
  		<g g'~>4 \mp ^\markup \string-numbers #'( "III IV" 1.5 0)
  		%%%%%%%%%% measure 131 %%%%%%%%%%
  		\time 4/8
-%  		\wavy_vibrato #1
+ 		\wavy_vibrato #1
  		\circles
  		\niente \flare_width 
  		\afterGrace g'8 \< ^\altosulpont
@@ -1449,7 +1450,7 @@ viola_tuned = {
  		\glissSkipOff
  		\transpose ces ef {<ces \single\hideNotes aqf \single\hideNotes e' \single\hideNotes c''>4 \mp \> \glissando }
  		\diamonds
-%  		\wavy_vibrato #1
+ 		\wavy_vibrato #1
  		\afterGrace <ces \single\hideNotes aqf \single\hideNotes e' \single\hideNotes c''>4 \ppp \<
  			\glissando {\hideNotes <ces \single\hideNotes aqf \single\hideNotes e' \single\hideNotes c''> \p \unHideNotes}
  		\tuplet 3/2 {
@@ -1802,8 +1803,8 @@ viola_tuned = {
 		<dqf' d'>16 ~ 
 		\afterGrace <dqf' d'>8 ^\sultasto ^\jete \mf \> {s8\p} r16 r8
 		%%%%%%%%%% measure 177 %%%%%%%%%%
-		\time 2/1
-		r2 r2 r2 r2
+		\time 4/2
+		r1 r1
 		%%%%%%%%%% measure 178 %%%%%%%%%%
 		\time 6/4
 		\switch-staff \body_staff
@@ -2490,7 +2491,7 @@ viola_pos_tuned = {
  			\time 5/8
  			s8 s8 s8 s8 s8
  			%%%%%%%%%% measure 184 %%%%%%%%%%
- 			\time 2/1
+			\time 4/2
  			s1 s1
  			%%%%%%%%%% measure 185 %%%%%%%%%%
  			\time 6/4

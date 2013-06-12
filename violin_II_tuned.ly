@@ -288,13 +288,13 @@ violin_II_tuned = {
 	  	\time 3/8
 	  	\diamonds <e'' e'''>16 [ \ff ^\up_bow r16 ] r8
 	  	\squares <bf fs' d'' eqs''>8 \pp ~ ^\up_bow_light
-	  			^\markup {\override #'(line-width . 12) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+	  			_\markup {\override #'(line-width . 18) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 	  	%%%%%%%%%% measure 30 %%%%%%%%%%
 	  	\time 4/4
 	  	<bf fs' d'' eqs''>4 ~ 
 	  	<bf fs' d'' eqs''>8 ^\circular_bow ^\trill  _\markup {
-	  					\override #'(line-width . 30)
-	  					\translate #'(-1.5 . 0) 
+	  					\override #'(line-width . 20)
+	  					\translate #'(-1.5 . -1) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}}
 	  	~ \<  <bf fs' d'' eqs''>8 ~ \mf \>  
 	  	<bf fs' d'' eqs''>4 \p ~ ^\down_bow_light ^\horz_bow
@@ -347,7 +347,7 @@ violin_II_tuned = {
 	  	g''4 \glissSkipOff 
 	  	a''4 ~
 	  	a''8. 
-% 	  	\wavy_vibrato #1.5 
+	  	\wavy_vibrato #1.5 
 	  	a''16 \< \glissando \glissSkipOn 
 	  	\afterGrace a''16 [ {\glissSkipOff \hideNotes a''8 \mf \unHideNotes} r8. ]
 	  	%%%%%%%%%% measure 38 %%%%%%%%%%
@@ -364,7 +364,7 @@ violin_II_tuned = {
 	  	%%%%%%%%%% measure 40 %%%%%%%%%%
 	  	\time 8/4
 	  	r2 r2 r2 r8 \squares \niente <bf fs' d'' eqs''>8 ~ \< ^\aldita ^\down_bow_light 
-	  		 		^\markup {\override #'(line-width . 20) 
+	  		 		_\markup {\override #'(line-width . 20) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 	  	 <bf fs' d'' eqs''>4 \pp
@@ -749,7 +749,7 @@ violin_II_tuned = {
 	 	\time 2/4
 	 	<< 
 	 	{
-% 	 	\wavy_vibrato #1.25 
+	 	\wavy_vibrato #1.25 
 	 		\afterGrace dqs'8 [ \< \glissando {\hideNotes dqs'8 \unHideNotes}
 	 	} \\ {}
 	 	>>
@@ -817,7 +817,7 @@ violin_II_tuned = {
 
 	 	e'4 ~ \<
 	 	\circles
-% 	 	\wavy_line #1
+	 	\wavy_line #1
 	 	e'8 [ \glissando \glissSkipOn e'8 ] \mf
 	 	e'8 [ \glissSkipOff \diamonds  d'8] \> \glissando
 	 	%%%%%%%%%% measure 98 %%%%%%%%%%
@@ -863,7 +863,7 @@ violin_II_tuned = {
 	 	%%%%%%%%%% measure 104 %%%%%%%%%%
 	 	\time 5/4
 	 	r4 
-% 	 	\wavy_line #1.25
+	 	\wavy_line #1.25
 	 	\niente fs''4 \< ^\markup \string-numbers #'( "III" 3 0)
 	 		\glissando 
 	 	\glissSkipOn fs''8 \glissSkipOff gqf''8 \glissando 
@@ -1335,7 +1335,7 @@ violin_II_tuned = {
 	 	\switch-staff \normal_staff
 	 	\circles
 	 	r4 r8. [ \ottava #2 
-% 	 	\wavy_vibrato #1.25 
+	 	\wavy_vibrato #1.25 
 	 	\flare_width \niente
 	 	\afterGrace b''''16 \< ] ^\sulpont ^\markup \string-numbers #'( "I" 2 0)
 	 		\glissando {\ottava #0 \hideNotes b'''8 \flare_sf \unHideNotes}
@@ -1364,7 +1364,7 @@ violin_II_tuned = {
 	 	%%%%%%%%%% measure 173 %%%%%%%%%%
 	 	\time 4/4
 	 	b''32 b''8.. ^\up_bow b''4 \glissSkipOff 
-% 	 	\wavy_vibrato #1.25 
+	 	\wavy_vibrato #1.25 
 	 	\flare_width \afterGrace e'''8 \p ^\down_bow \< [ \glissando {\hideNotes e'''8 \flare_sfz \unHideNotes} r8 ]
 	 	
 	 	\switch-staff \body_staff
@@ -1409,11 +1409,11 @@ violin_II_tuned = {
 	 		^\sulpont ^\markup {\translate #'(-0.5 . 0) \left-align \fontsize #2 \musicglyph #"scripts.ufermata" }
 	 			{s8\!} 
 	 		r16 ] r16 [ \ottava #2 
-% 	 	\wavy_vibrato #1.25 
+	 	\wavy_vibrato #1.25 
 	 	\niente \flare_width \afterGrace b''''8. \<  \glissando {\ottava #0 \hideNotes b'''8 \flare_sfz \unHideNotes}
 	 	r8 ]
 	 	%%%%%%%%%% measure 181 %%%%%%%%%%
-	 	\time 2/1
+		\time 4/2
 	 	r1 r1
 	 	%%%%%%%%%% measure 182 %%%%%%%%%%
 		\time 6/4
@@ -2038,7 +2038,7 @@ violin_two_pos_tuned = {
  				\time 5/8
  				s2 s8
  				%%%%%%%%%% measure 184 %%%%%%%%%%
- 				\time 2/1
+				\time 4/2
  				s1 s1
  				%%%%%%%%%% measure 185 %%%%%%%%%%
  				\time 6/4

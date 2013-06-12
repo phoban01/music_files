@@ -120,6 +120,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 24 ============= %%%%%%%%
 	{
 		\time 4/4
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 22)
 		s1
 	}
 	% %%%%%%% ============= measure 25 ============= %%%%%%%%
@@ -201,11 +203,15 @@ skips_tuned = {
 	% %%%%%%% ============= measure 40 ============= %%%%%%%%
 	{
 		\time 8/4
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 15)
 		s\breve
 	}
 	% %%%%%%% ============= measure 41 ============= %%%%%%%%
 	{
 		\time 6/4
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)
 		s1.
 	}
 	% %%%%%%% ============= measure 42 ============= %%%%%%%%
@@ -248,6 +254,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 49 ============= %%%%%%%%
 	{
 		\time 5/4
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 22)
 		s1
 		s4
 	}
@@ -285,6 +293,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 56 ============= %%%%%%%%
 	{
 		\time 3/8
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)
 		s4.
 	}
 	% %%%%%%% ============= measure 57 ============= %%%%%%%%
@@ -528,6 +538,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 103 ============= %%%%%%%%
 	{
 		\time 3/4
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 24)
 		s2.
 	}
 	% %%%%%%% ============= measure 104 ============= %%%%%%%%
@@ -857,6 +869,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 165 ============= %%%%%%%%
 	{
 		\time 5/4
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)
 		s1
 		s4
 	}
