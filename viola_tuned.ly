@@ -1727,7 +1727,7 @@ viola_tuned = {
  		%%%%%%%%%% measure 165 %%%%%%%%%%
  		\time 4/4
  		\override NoteHead.stencil = #scratch-tone
- 		\ppos #0.75 c'32 [ \mf ^\markup \string-numbers #'( "IV" 1.5 0) ^\mute
+ 		\ppos #0.75 c'32 [ \mf ^\markup \string-numbers #'( "IV" 1.5 0) ^\mute-sign
  		\ppos #0.75 c'32] r8.
  		r2.
  		%%%%%%%%%% measure 166 %%%%%%%%%%

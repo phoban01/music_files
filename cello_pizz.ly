@@ -805,12 +805,45 @@ r4. r4.
 
       \time 9/16
 
-      r8. r8. r8.      
+      r8. r8. r8.  
+
+      \time 4/4
+      r1
+
+      \time 9/8
+
+      r4. r4. r4.
+
+      \time 4/8
+
+      r4 r4
+
+      \time 3/16
+
+      r8.
+
+      \time 4/8
+
+      r2
+
+      \time 4/8
+
+      r2
+
+      \time 3/16
+
+      r8.
+
+      \time 3/4
+
+      r2.
+
+
     } \\
     \new StringStaff \with {alignAboveContext="cello"} {
       \time 3/8
       \circleheads
-      <e' g'>4. \mf ^\markup {\small \italic "Take bow in both hands."}
+      <e' g'>4. \mf ^\vertical_bow ^\markup {\small \italic "*Pressed bow glissando."}
         \glissando 
       \time 5/16
       <e' g'>4 \glissando <g' b'>16 \glissando
@@ -848,47 +881,45 @@ r4. r4.
 
       r8. r8. r8.   
 
+      \time 4/4
+      r1
+
+      \time 9/8
+
+      r4. r4. r4.
+
+      \time 4/8
+
+      r4 r4
+
+      \time 3/16
+
+      r8.
+
+      \time 4/8
+
+      r2
+
+      \time 4/8
+
+      r2
+
+      \time 3/16
+
+      r8.
+
+      \time 3/4
+
+      r2.
+
     }
 >>
 
-
-
-% \time 4/4
-r1
-
-% \time 9/8
-
-r4. r4. r4.
-
-% \time 4/8
-
-r4 r4
-
-% \time 3/16
-
-r8.
-
-% \time 4/8
-
-r2
-
-% \time 4/8
-
-r2
-
-% \time 3/16
-
-r8.
-
-% \time 3/4
-
-r2.
-
-% \time 4/16
+\time 4/16
 
 r8 r8
 
-% \time 3/8
+\time 3/8
 
 \switch-staff \string-staff
 \niente
