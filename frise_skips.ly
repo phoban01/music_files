@@ -2,7 +2,7 @@ frise_skips = {
 	% %%%%%%% ============= measure 1 ============= %%%%%%%%
 	{
 		\time 4/4
-		
+		\newSpacingSection		
 		\tempo "[WILD/HYSTERICAL/BEAUTIFUL]" 4=96~110
 		s1
 	}

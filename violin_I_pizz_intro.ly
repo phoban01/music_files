@@ -168,8 +168,11 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   \clockhead c'32 [ \mf \anti-clockhead c'16 r32 r16 ]
 %  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 4/8
-  \squares
-   r16 [  \switch-staff \body_staff a'8. ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0) \mf ~ a'8 ] ~ 
+   r16   
+  \switch-staff \body_staff 
+  \set Staff.forceClef = ##t
+  \circleheads
+  a'8. ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0) \mf \glissando a'8 ] \glissando 
   \no-gliss-pad
   a'16 [ ^\vertical_bow ^\flat_bow \effort mf  \glissando \no-gliss-pad \afterGrace c' ] \glissando {a'8}
 
@@ -198,7 +201,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
  r4.
 
  \time 3/8
-  r4.
+  r4. ^\pizz_hold
 
  \violin_I_first_pizz
 
@@ -216,7 +219,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   r4 r4
 
   \time 3/8
-  r4.
+  r4. ^\normal_hold
 
  %%%%%%%% ============= measure 22 ============= %%%%%%%% 
   \time 3/8
@@ -224,6 +227,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   \stemDown
   \circles
   \niente
+  \bracket-clef
    gqs8 ~ [ \<  ^\up_bow_light ^\sulpont
 
  %>%%%%%%% ============= measure 23 ============= %%%%%%%% 
@@ -360,5 +364,5 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 11/16
 
-  r4 r4 r8.
+  r4 ^\pizz_hold r4 r8.
 }

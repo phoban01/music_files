@@ -373,6 +373,8 @@ skips_tuned = {
 		\time 4/4
 		\my_mark "R"
 		\tempo "" 4=60
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)		
 		s1
 	}
 	% %%%%%%% ============= measure 70 ============= %%%%%%%%
@@ -390,6 +392,8 @@ skips_tuned = {
 	{
 		\time 6/4
 		\tempo "" 4=52
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 36)		
 		s1.
 	}
 	% %%%%%%% ============= measure 73 ============= %%%%%%%%
@@ -557,7 +561,7 @@ skips_tuned = {
 	{
 		\time 3/4
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 24)
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)
 		s2.
 	}
 	% %%%%%%% ============= measure 104 ============= %%%%%%%%

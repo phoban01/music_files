@@ -9,7 +9,7 @@ viola_pizz_right = {
 \set subdivideBeams = ##t
 \set baseMoment = #(ly:make-moment 1/8)
 
-r64 [ 
+r64 [  ^\pizz_hold
 
 \pizz_head "I" \ppos #0.6 c64 \mp
 \pizz_head "II" \ppos #0.5 c64

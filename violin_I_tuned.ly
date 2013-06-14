@@ -3,7 +3,7 @@ violin_I_tuned = {
  %%%%%%%% ============= measure 1 ============= %%%%%%%% 
   	\time 3/4
   	\set Score.proportionalNotationDuration = #(ly:make-moment 1 36)
-
+  	\override Staff.Glissando.style = #'solid
   	<< 
   		{
   	\switch-staff \normal_staff
@@ -316,7 +316,7 @@ violin_I_tuned = {
 	  \once\override Staff.TextScript.outside-staff-priority = #100000
 
 	  <c' fs' b' eqs''>4 \mp ^\down_bow_light 
-	  		_\markup {\override #'(line-width . 26) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+	  		_\markup {\override #'(line-width . 40) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 	   \> ~  <c' fs' b' eqs''>4 \pp ~  <c' fs' b' eqs''>4 ~  <c' fs' b' eqs''>4 ~
 	  %%%%%%%%%% measure 25 %%%%%%%%%%
 	  \time 5/4
@@ -346,8 +346,8 @@ violin_I_tuned = {
 	  
 	  \once\override Staff.TextScript.outside-staff-priority = #100000
 
-	  <gqs g' cs'' g''>4 _\trill _\markup {
-	  					\override #'(line-width . 26)
+	  <gqs g' cs'' g''>4 ^\trill _\markup {
+	  					\override #'(line-width . 35)
 	  					\translate #'(-1.5 . 0) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}} \mp \>
 	  %%%%%%%%%% measure 31 %%%%%%%%%%
@@ -404,7 +404,7 @@ violin_I_tuned = {
 	 \squares
 	 \once\override Staff.TextScript.outside-staff-priority = #100000
 	 <bf fs' d'' eqs''>4 \pp ^\down_bow_light 
-	 		_\markup {\override #'(line-width . 26) 
+	 		_\markup {\override #'(line-width . 40) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 	 ~  <bf fs' d'' eqs''>4 ~ <bf fs' d'' eqs''>4 ~
@@ -457,18 +457,18 @@ violin_I_tuned = {
  	 \afterGrace \ppos #0.65 c'16 ] \glissando  {\ppos #0.3 c'8}
  	 %%%%%%%%%% measure 50 %%%%%%%%%%
  	 \time 5/4
- 	 \ppos #0.75 c'8 \f \> [ ~ ^\horz_bow ^\down_bow ^\markup \string-numbers #'( "I" 2.5 0) \ppos #0.75 c'8] \pp ~ 
- 	 \ppos #0.75 c'4 ~ 
- 	 \ppos #0.75 c'8 \ppos #0.75 c'8 ~ \< ^\down_bow
- 	 \ppos #0.75 c'8 \f \ppos #0.75 c'8 ~ \sub_pp ^\down_bow
- 	 \ppos #0.75 c'4 ~
+ 	 \ppos #0.75 c'8 \f \> [ \glissando ^\horz_bow ^\down_bow ^\markup \string-numbers #'( "I" 2.5 0) \ppos #0.75 c'8] \pp \glissando 
+ 	 \ppos #0.75 c'4 \glissando 
+ 	 \ppos #0.75 c'8 \ppos #0.75 c'8 \glissando \< ^\down_bow
+ 	 \ppos #0.75 c'8 \f \ppos #0.75 c'8 \glissando \sub_pp ^\down_bow
+ 	 \ppos #0.75 c'4 \glissando
  	 %%%%%%%%%% measure 51 %%%%%%%%%%
  	 \time 3/4
- 	 \ppos #0.75 c'4   ~ \ppos #0.75 c'4 ~ \ppos #0.75 c'16 \ppos #0.75 c'8. ~ ^\up_bow
+ 	 \ppos #0.75 c'4   \glissando \ppos #0.75 c'4 \glissando \ppos #0.75 c'16 \ppos #0.75 c'8. \glissando ^\up_bow
  	 %%%%%%%%%% measure 52 %%%%%%%%%%
  	 \time 3/8
  	 \draw_line_arrow \down_bow \down_bow_very_heavy
- 	 \ppos #0.75 c'4 \<  ~ \startTextSpan \afterGrace \ppos #0.75 c'8 \ff \stopTextSpan {s8_\bow-mute}
+ 	 \ppos #0.75 c'4 \<  \glissando \startTextSpan \afterGrace \ppos #0.75 c'8 \ff \stopTextSpan {s8_\bow-mute}
  	 %%%%%%%%%% measure 53 %%%%%%%%%%
  	 \time 4/8
  	 \tuplet 5/4 {
@@ -957,7 +957,7 @@ violin_I_tuned = {
 	 \once\override Staff.TextScript.outside-staff-priority = #100000
 
  	\ppos #0.2 c'4. \glissando \effort mf ^\down_bow_light ^\nutharm 
- 			 		_\markup {\override #'(line-width . 26) 
+ 			 		_\markup {\override #'(line-width . 40) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 
@@ -1512,7 +1512,7 @@ violin_I_tuned = {
 	\niente
 	\once\override Staff.TextScript.outside-staff-priority = #100000
 	\pizz_head "II III" \ppos #0.4 c4 \glissando \<
-		_\markup {\override #'(line-width . 28) \tiny \italic \justify 
+		_\markup {\override #'(line-width . 35) \tiny \italic \justify 
 			{*Bow behind the fingers to produce a multiphonic. (Fingers should be placed on the bridge side of the bow)}}
 	\pizz_head "II III" \ppos #0.4 c4 \glissando \mp ^\circular_bow
 	\niente 

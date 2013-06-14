@@ -5,6 +5,9 @@ violin_I_tuning = {
   \time 6/4
   \tempo " " 4=52~56
   \newSpacingSection
+  \override Staff.Glissando.style = #'line
+  \override Staff.Glissando.style = #'line
+
   \set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
   << 
   	{\oneVoice r2 ^\attach_tuner _\lay_flat r2  \circleheads <c' e'>2 \glissando ^\down_bow ^\angle_bow } \\ 
@@ -13,7 +16,7 @@ violin_I_tuning = {
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   \time 6/4
-  << {\oneVoice  <c' e' g'>2 \glissando <e' g' b'>2 \glissando <e' g' b'>2 ^\up_bow} \\
+  << {\oneVoice \circleheads  <c' e' g'>2 \glissando <e' g' b'>2 \glissando <e' g' b'>2 ^\up_bow} \\
   	 {s1 s4  \niente \afterGrace s4 \> { s8 \! }} 
   >>
 
@@ -26,14 +29,14 @@ violin_I_tuning = {
   <<
   	{s2 s2 \niente s4 \< s4 \mp} \\
 
-  	{\oneVoice r2 r2 \stemUp \circles <c' e' g'>2 ^\down_bow \glissando }
+  	{\oneVoice r2 r2  \circleheads <c' e' g'>2 ^\down_bow \glissando }
    >>
 
  %%%%%%%% ============= measure 5 ============= %%%%%%%% 
  \time 6/4
   <<
  	{s2 s2 s4 \niente \afterGrace s4 \> {s8\!}} \\
- 	{\oneVoice  <c' e' g'>2 \glissando <e' g'>2 ^\up_bow \glissando <e' g'>2 }
+ 	{\oneVoice \circleheads  <c' e' g'>2 \glissando <e' g'>2 ^\up_bow \glissando <e' g'>2 }
  >> 
 
  %%%%%%%% ============= measure 6 ============= %%%%%%%% 
@@ -95,7 +98,7 @@ violin_I_tuning = {
 
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
   \time 6/4
-  \circles
+  \circleheads
   r2 r4 <c' e' g'>4 \mp ^\down_bow \glissando <c' e' g'>8 r8 r4
 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
@@ -121,8 +124,8 @@ violin_I_tuning = {
   \time 5/4
   <<
   	{	\oneVoice 
-  		\circles
-      \once \override Voice.TextSpanner.outside-staff-priority = #10
+  		\circleheads
+      \once \override TextSpanner.outside-staff-priority = #1000
   		\draw_tuning_arrow \tuning_peg_third \violin_third
       \niente
   		<e' g'>8 \glissando ^\altosulpont ^\horz_bow \<
@@ -141,7 +144,7 @@ violin_I_tuning = {
   	} 
     \\ 
     {
-      \once \override Voice.TextSpanner.outside-staff-priority = #5
+      \once \override TextSpanner.outside-staff-priority = #0
   		\draw_line_arrow " " \sulpont
   		s2. s4 \startTextSpan s4 \stopTextSpan
   	}
@@ -153,7 +156,7 @@ violin_I_tuning = {
   \time 5/4
   <<
   	{
-      \circles \oneVoice  <e' g'>8. [ \p \glissando <e' g'>16 ] 
+      \circleheads \oneVoice  <e' g'>8. [ \p \glissando <e' g'>16 ] 
       e'2  ^\down_bow  \glissando e'4 ^\up_bow \stopTextSpan e'4 \< ^\down_bow \glissando 
     } \\ 
   	{
@@ -169,6 +172,7 @@ violin_I_tuning = {
   <<
 	  {
 	  	\oneVoice 
+      \circleheads
 		  \tuplet 3/2 {
 % 		  	\draw_line_arrow \markup \string-numbers #'("II" 0 0) \markup \string-numbers #'( "II III" 0 0)
 		  	e'8 \glissando g'4 \mf \> \glissando  ^\up_bow 
@@ -189,7 +193,7 @@ violin_I_tuning = {
  <<
  	{
  		\oneVoice 
- 		\circles
+ 		\circleheads
  		\draw_tuning_arrow \tuning_peg_first \violin_first
  		<g' b'>8 [  \glissando b'8 ] \> \glissando \startTextSpan ^\horz_bow  
  		b'2 \p b'4 \stopTextSpan 
@@ -206,6 +210,7 @@ violin_I_tuning = {
  <<
  	{
  		\oneVoice 
+    \circleheads
  		<e' g' b'>2. \stopTextSpan <e' g' b'>2  
  	} \\
  	{
@@ -220,6 +225,7 @@ violin_I_tuning = {
   <<
   	{
   		\oneVoice 
+      \circleheads
   		\draw_tuning_arrow \tuning_peg_second \violin_second
   		g'4 \pp \< ^\up_bow_light ^\altosulpont ^\horz_bow \glissando g'2 \startTextSpan g'2
   	} \\
@@ -237,6 +243,7 @@ violin_I_tuning = {
  	{
     \time 5/4
     \oneVoice 
+    \circleheads
  		g'4 ^\nat \glissando g'8 \mf [ \glissando g'8 ^\down_bow \glissando ] 
     \niente \afterGrace g'2 \> \stopTextSpan {s8\!}
 
@@ -354,7 +361,7 @@ violin_I_tuning = {
   \time 5/4
   <<
   	{
-  		\circles
+  		\circleheads
   		\oneVoice 
   		\draw_line_arrow \down_bow \down_bow_heavy
   		c'2 c'32 ^\up_bow <c' e'>16. ^\down_bow \glissando <c' e'>16. c'32 ^\up_bow 

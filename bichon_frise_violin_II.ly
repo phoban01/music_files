@@ -24,8 +24,9 @@ violin_II_bichon_frise = {
 	\startStaff
 	\stemDown		
 	\circleheads
+	\stemDown
 	\set Staff.forceClef = ##t
-	<e' g' b'>8 \< ^\up_bow_very_heavy ^\sulpont
+	<e' g' b'>8 \mf \< ^\up_bow_very_heavy ^\sulpont
 			^\markup {
 				\translate #'(3 . 0)
 				\center-align
@@ -60,22 +61,22 @@ violin_II_bichon_frise = {
 		}
 	\hideNote c'8 \fposs ^\down_bow_heavy
 	\times 2/3 {
-		<e' g'>8 ^\down_bow_light
+		<e' g'>8 ^\down_bow_light \mf
 		\hideNote c'16 ^\up_bow_light
-		<c' e'>8. ^\down_bow_light
+		<c' e'>8. ^\down_bow_light \<
 	}
-	<e' g' b'>16 ^\up_bow_very_heavy
-	<g' b'>8. \glissando ^\down_bow_light
-	<g' b'>4
+	<e' g' b'>16 ^\up_bow_very_heavy \fposs
+	<g' b'>8. \glissando ^\down_bow_light \mf
+	<g' b'>4 \<
 	\revert NoteHead.font-size 
 	\revert TextScript.X-offset
-	\stemNeutral
 }  
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
   {
 	\time 4/4
-	<c' e' g'>8. ^\up_bow_heavy
+	<c' e' g'>8. ^\up_bow_heavy \fposs
+		_\markup {\small \italic "Continue dynamic changes in similar manner..."}
 	\hideNote c'16 ^\down_bow_heavy
 	\hideNote c'8 ^\up_bow_very_heavy
 	\times 2/3 {

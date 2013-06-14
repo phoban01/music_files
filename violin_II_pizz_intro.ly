@@ -45,7 +45,7 @@ g''8 [ \glissando a''8 \glissando \glissSkipOff aqs''8 ] ~
  \time 5/16
  a''16 _\bow-mute [ r8 
  \once \override Hairpin #'circled-tip = ##t
-%  \wavy_vibrato #1.5
+ \wavy_vibrato #1.5
  \afterGrace a''8 \< ] ^\markup \string-numbers #'("I" 1.5 0) ^\sulpont
  	\glissando {\hideNotes a''8 \mf _\bow-mute \unHideNotes}  %>
 
@@ -123,7 +123,7 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
 %  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 4/8
   \switch-staff \body_staff 
-  \squares
+  \circleheads
   \set Staff.forceClef = ##t
   \body-clef #'fingerboard-small
   a'4 \glissando \mf  ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0)   
@@ -152,7 +152,7 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
   r4 r8.
  
   \time 3/8
-  r4.
+  r4. ^\pizz_hold
 
  %%%%%%% ============= measure 24 ============= %%%%%%%% 
   \violin_II_first_pizz
@@ -170,10 +170,11 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
   r4 r4
  %%%%%%%% ============= measure 28 ============= %%%%%%%% 
   \time 3/8
-  r4.
+  r4. ^\normal_hold
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 3/8
   r8 
+  \bracket-clef
   \niente
   \circles gqs8 \< ^\up_bow_light ^\sulpont [ ~ gqs ~
 
@@ -301,6 +302,6 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
 	r4
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 11/16
-  	r4 ^\markup {SWITCH TO PIZZ HOLD} r4 r8. 
+  	r4 ^\pizz_hold r4 r8. 
  
 }

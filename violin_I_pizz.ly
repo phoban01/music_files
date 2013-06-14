@@ -1327,7 +1327,7 @@ violin_I_pizz_left = {
 <<
     {
       \switch-staff \pizz_staff
-      \body-clef #'full
+      \body-clef #'fingerboard
 
       \override NoteHead.stencil = #scratch-tone
       \override Glissando.style = #'dashed-line
@@ -1336,38 +1336,49 @@ violin_I_pizz_left = {
 
       \time 6/8
       \med-zigzag
-      \ppos #0.8 c'4. \glissando \ppos #0.4 c'4. \glissando
+      \niente
+      \ppos #0.8 c'4. \< \glissando 
+      \ppos #0.4 c'4 \mf \glissando
+      \ppos #0.8 c'8 \glissando
+
       \time 3/8
       \slow-zigzag
-        \ppos #0.8 c'4. \glissando
+      \ppos #0.6 c'8 \glissando
+      \ppos #0.85 c'8 \glissando
+      \ppos #0.5 c'8 \glissando
+
       \time 5/16
-        \ppos #0.4 c'4 \glissando 
-        \med-zigzag
-        \ppos #0.8 c'16 \glissando
+      \ppos #0.85 c'8 \glissando 
+      \med-zigzag
+      \ppos #0.5 c'8. \glissando
+
       \time 5/8
-        \glissSkipOn \ppos #0.6 c'4 \glissSkipOff 
-        \fast-zigzag
-        \ppos #0.4 c'4. \glissando
+      \glissSkipOn \ppos #0.65 c'4.
+      \glissSkipOff \ppos #0.85 c'4 \glissando
 
       \time 7/16
       \slow-zigzag
-      \ppos #0.8 c'4 \glissando \ppos #0.5 c'8. 
+      \ppos #0.6 c'4 \glissando \ppos #0.8 c'8. \glissando \glissSkipOn
 
       \time 3/16
-
-      r8.
+      \med-zigzag
+      \ppos #0.6 c'8.
 
       \time 3/8
 
-      r4.
+      \glissSkipOff 
+      \fast-zigzag
+      \ppos #0.5 c'8 \glissando
+      \ppos #0.85 c'8 \glissando
+      \ppos #0.6 c'8 \glissando
 
       \time 4/8
 
-      r4 r4
+      \ppos #0.85 c'4 \glissando \ppos #0.45 c'4 \glissando
 
       \time 2/8
-
-      r4
+      \med-zigzag
+      \niente \afterGrace \ppos #0.8 c'4 \> \glissando {\ppos #0.5 c'8\!}
 
       \time 3/16
 
@@ -1375,26 +1386,49 @@ violin_I_pizz_left = {
 
       \time 4/8
 
-      r2
+      \niente
+      \slow-zigzag
+      \ppos #0.85 c'4 \< \glissando \glissSkipOn 
+
+      \ppos #0.6 c'4 \mf
 
       \time 9/16
 
-      r8. r8. r8.  
+      \med-zigzag
+      \glissSkipOff \ppos #0.85 c'8. \glissando 
+      \ppos #0.5 c'8. \glissando \glissSkipOn 
+
+      \fast-zigzag
+      \ppos #0.7 c'8.  
 
       \time 4/4
-      r1
+
+      \glissSkipOff \ppos #0.9 c'4 \glissando \ppos #0.5 c'4 \glissando 
+      \niente 
+      \med-zigzag
+      \afterGrace 
+      \ppos #0.75 c'4 \> \glissando {\ppos #0.5 c'8 \!} r4
 
       \time 9/8
 
-      r4. r4. r4.
+      r4. 
+      r8 
+      \niente 
+      \slow-zigzag
+      \ppos #0.75 c'4 \< \glissando 
+      \med-zigzag
+      \ppos #0.5 c'4. \mf \glissando
 
       \time 4/8
 
-      r4 r4
+      \ppos #0.8 c'4 \glissando 
+      \fast-zigzag
+      \ppos #0.5 c'4 \glissando \glissSkipOn
 
       \time 3/16
-
-      r8.
+      \niente
+      \med-zigzag
+      \afterGrace \ppos #0.75 c'8. \>  {\glissSkipOff \ppos #0.9 c'8 \!}
 
       \time 4/8
 
@@ -1402,54 +1436,58 @@ violin_I_pizz_left = {
 
       \time 4/8
 
-      r2
+      r4.
+      \niente 
+      \med-zigzag
+      \ppos #0.85 c'8 \< \glissando
 
       \time 3/16
-
-      r8.
+      \fast-zigzag
+      \ppos #0.55 c'8. \mf \glissando
 
       \time 3/4
 
-      r2.
-
+      \ppos #0.85 c'4 \glissando \ppos #0.5 c'2 \glissando 
 
       \time 4/16
-      r4
+
+      \niente \afterGrace \ppos #0.85 c'4 \> \glissando {\slow-zigzag \ppos #0.45 c'8\!}
 
       \time 3/8
       r4.      
 
-    } \\
+    } 
+    \\
     \new StringStaff \with {alignAboveContext="violin_1"} {
       \time 6/8
       \circleheads
-      <g' b'>4. \glissando <g' b'>4 \glissando <g' b'>8 \glissando
+      <g' b'>4. \glissando ^\vertical_bow _\markup {\italic "*Pressed bow glissando (take bow in both hands)"}
+      <g' b'>4. \glissando
+      
       \time 3/8
-      <e' g'>4. 
-        \glissando 
+      <e' g'>4. \glissando
+
       \time 5/16
-      <e' g'>4 \glissando <g' b'>16 \glissando
+      <e' g'>8. \glissando <e' g'>8 \glissando
+
       \time 5/8
-      <g' b'>4. \glissando <g' b'>4 \glissando
+      <g' b'>4 \glissando <g' b'>4. \glissando
 
       \time 7/16
-      <e' g'>4 \glissando <e' g'>8.
+      <e' g'>4 \glissando <e' g'>8. \glissando
+
 
       \time 3/16
-
-      r8.
+      <c' e'>8. \glissando
 
       \time 3/8
-
-      r4.
+      <c' e'>4. \glissando
 
       \time 4/8
-
-      r4 r4
+      <c' e'>4 \glissando <e' g'>4 \glissando
 
       \time 2/8
-
-      r4
+      <g' b'>4
 
       \time 3/16
 
@@ -1457,34 +1495,36 @@ violin_I_pizz_left = {
 
       \time 4/8
 
-      r2
+      \tuplet 3/2 {
+        <e' g'>4 \glissando <c' e'>4 \glissando <g' b'>4 \glissando
+      }
 
       \time 9/16
 
-      r8. r8. r8.   
+      <e' g'>8. \glissando <e' g'>8. \glissando <g' b'>8.  \glissando 
 
       \time 4/4
-      r1
+      <g' b'>4 \glissando <e' g'>4 \glissando <e' g'>4 r4
 
       \time 9/8
 
-      r4. r4. r4.
+      r4. r8 <e' g'>4 \glissando  <e' g'>4. \glissando
+
+      \time 4/8
+
+      <c' e'>4 \glissando <c' e'>4 \glissando
+
+      \time 3/16
+
+      <e' g'>8.
 
       \time 4/8
 
       r4 r4
 
-      \time 3/16
-
-      r8.
-
       \time 4/8
 
-      r2
-
-      \time 4/8
-
-      r2
+      r4. <g' b'>8
 
       \time 3/16
 

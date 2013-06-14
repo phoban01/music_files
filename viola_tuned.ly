@@ -129,15 +129,16 @@ viola_tuned = {
 	  	  \switch-staff \body_staff
 	  	  \body-clef #'fingerboard-small
 	  	  \set Staff.forceClef = ##t
+	  	  \clef treble
 	  	  \tuplet 6/4 {
 	  	  	\circleheads
-	  	  	\ppos #0.5 c'32 \p  ^\vertical_bow ^\markup \string-numbers #'( "II III" 1 0)
+	  	  	\ppos #0.8 c'32 \p  ^\vertical_bow ^\markup \string-numbers #'( "II III" 1 0)
 	  	  	\glissando 
-	  	  	\ppos #0.2 c'32 \glissando
 	  	  	\ppos #0.5 c'32 \glissando
-	  	  	\ppos #0.2 c'32 \glissando 
+	  	  	\ppos #0.8 c'32 \glissando
 	  	  	\ppos #0.5 c'32 \glissando 
-	  	  	\ppos #0.2 c'32 \glissando 
+	  	  	\ppos #0.8 c'32 \glissando 
+	  	  	\ppos #0.5 c'32 \glissando 
 
 	  	  }
 	  	  \switch-staff \normal_staff
@@ -163,10 +164,14 @@ viola_tuned = {
 	  	  \circleheads
 	  	  r16 [
 	  	  \set Staff.forceClef = ##t
-	  	  \flare_width \niente \afterGrace \ppos #0.75 c'16 \< ^\tilt_bow ^\frog ^\markup \string-numbers #'( "I" 1.5 0) {s8\flare_sf} r8 ]
+	  	  \clef treble
+	  	  \stemDown
+	  	  \flare_width \niente \afterGrace \ppos #1 c'16 \< ^\tilt_bow ^\frog ^\markup \string-numbers #'( "I" 1.5 0) {s8\flare_sf} r8 ]
 		  \switch-staff \normal_staff
+		  \stemNeutral
 		  \clef alto
 		  \circles
+		  \set Staff.forceClef = ##t
 		  \niente
 		  <ces ges eqf' bqf'>4 \< ^\circular_bow ^\flat_bow 
 		  	\glissando 
@@ -185,35 +190,41 @@ viola_tuned = {
 		 	r4 ^\markup {\translate #'(-0.5 . 0) \left-align \center-column {\fontsize #2 " 5\"" \fontsize #2 \musicglyph #"scripts.ufermata" }}
 		 	\set Staff.forceClef = ##t
 		 	\clef treble
-		 	\flare_width \niente \afterGrace \ppos #0.75 c'8 \< ^\tilt_bow ^\frog ^\markup \string-numbers #'( "I" 2 0) {s8\flare_f}
+		 	\stemDown
+		 	\flare_width \niente \afterGrace \ppos #0.75 c'8 \< 
+		 			^\tilt_bow ^\frog ^\markup \string-numbers #'( "I" 1.5 0) _\nutmute
+		 			{s8\flare_f}
 		 }
+		 \stemNeutral
 		 %%%%%%%%%% measure 14 %%%%%%%%%%
 		 \time 3/8
 		 \niente 
-		 \ppos #0.2 c'8 \< [ ^\vertical_bow ^\flat_bow ^\markup \string-numbers #'( "II III" 0 0) \glissando 
-		 \ppos #0.75 c'8 \p \glissando 
-		 \ppos #0.2 c'8 ] \glissando
+		 \ppos #0.5 c'8 \< [ ^\vertical_bow ^\flat_bow ^\markup \string-numbers #'( "II III" 0 0) \glissando 
+		 \ppos #0.8 c'8 \p \glissando 
+		 \ppos #0.5 c'8 ] \glissando
 		 %%%%%%%%%% measure 15 %%%%%%%%%%
 		 \time 4/4
 		 \tuplet 3/2 {
-		 	\glissSkipOn \afterGrace \ppos #0.3 c'8 [ {\glissSkipOff \ppos #0.75 c'8 }
+		 	\glissSkipOn \afterGrace \ppos #0.3 c'8 [ {\glissSkipOff \ppos #0.9 c'8 }
 		 	r8
-		 	\ppos #0.2 c'8 ] ^\markup \string-numbers #'( "I II" 2 0)
+		 	\ppos #0.5 c'8 ] ^\markup \string-numbers #'( "I II" 2 0)
 		 		\glissando
 		 }
-		 \glissSkipOn \afterGrace \ppos #0.5 c'8  [ {\glissSkipOff \ppos #0.5 c'8}
+		 \glissSkipOn \afterGrace \ppos #0.7 c'8  [ {\glissSkipOff \ppos #0.9 c'8}
 		 r16 \ppos #0.5 c'16 ] \p \< \glissando
 		 \glissSkipOn
 		 \ppos #0.6 c'4 \glissando 
+		 \tweak #'positions #'(7 . 7)
 		 \tuplet 3/2 {
-		 	\glissSkipOn \ppos #0.6 c'8 \glissSkipOff \ppos #0.85 c'8 
-		 	\afterGrace \ppos #0.75 c'8 \glissando {\ppos #0.2 c'8 \f}
+		 	\glissSkipOn \ppos #0.8 c'8 \glissSkipOff \ppos #1 c'8 
+		 	\afterGrace \ppos #0.9 c'8 \glissando {\ppos #0.65 c'8 \f}
 		 }
 		 %%%%%%%%%% measure 16 %%%%%%%%%%
 		 \time 2/4
 		 \switch-staff \normal_staff
 		 \clef alto
 		 \once \override Staff.Clef.transparent = ##t
+		 \tweak #'direction #DOWN
 		 \tuplet 3/2 {
 		 	r8 
 		 		\set Staff.forceClef = ##t
@@ -271,13 +282,13 @@ viola_tuned = {
 
 		 \tuplet 5/4 {
 		 	\niente
-		 	<ces' a'>8 \< ^\circular_bow \glissando \afterGrace <cqs' aqs'>8. \mf \> ^\angle_bow 
+		 	<ces' a'>8 \< ^\angle_bow  \glissando \afterGrace <cqs' aqs'>8. \mf \> 
 		 		\glissando {<bqs aqf'>8 \ppp}
 		 }
 		 <<
 		 	{\oneVoice 
 		 		\tuplet 7/4 {
-		 			dqf'16 ( ^\altosulpont  b \< c' bqf b \mf \> bqs \diamonds c' ) ~ \pp 
+		 			dqf'16 ( ^\altosulpont ^\horz_bow  b \< c' bqf b \mf \> bqs \diamonds c' ) ~ \pp 
 		 		}
 		 	}\\
 		 	{
@@ -330,7 +341,7 @@ viola_tuned = {
 	\once\override Staff.TextScript.outside-staff-priority = #100000
 
 		 <ces aqf e' c''>8 \mp \>] ~ ^\down_bow
-		 		_\markup {\override #'(line-width . 26) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+		 		_\markup {\override #'(line-width . 40) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 		 <ces aqf e' c''>4 ^\down_bow_light \pp ~ <ces aqf e' c''> ~ <ces aqf e' c''> ~
 		 %%%%%%%%%% measure 25 %%%%%%%%%%
 		 \time 5/4
@@ -386,7 +397,7 @@ viola_tuned = {
 		 \transpose ces  e {
 		 	<ces aqf e' c''>8 ~ ^\trill 
 		 		_\markup {
-	  					\override #'(line-width . 26)
+	  					\override #'(line-width . 35)
 	  					\translate #'(-1.5 . 0) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}}
 		 		}
@@ -441,7 +452,7 @@ viola_tuned = {
 	\once\override Staff.TextScript.outside-staff-priority = #100000
 
 		 \niente <ces aqf e' c''>4 ~ \< ^\down_bow_light
-		 	 		_\markup {\override #'(line-width . 26) 
+		 	 		_\markup {\override #'(line-width . 40) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 		 %%%%%%%%%% measure 41 %%%%%%%%%%
@@ -664,10 +675,10 @@ viola_tuned = {
 		 \afterGrace \ppos #0.5 c'4  \glissando {\ppos #1.05 c'8}
 		 %%%%%%%%%% measure 67 %%%%%%%%%%
 		 \time 5/16
-		 \ppos #0.7 c'4 ^\down_bow \ppos #0.7 c'16 ~ ^\up_bow
+		 \ppos #0.7 c'4 ^\down_bow \ppos #0.7 c'16 \glissando ^\up_bow
 		 %%%%%%%%%% measure 68 %%%%%%%%%%
 		 \time 3/4
-		 \ppos #0.7 c'8  \ppos #0.7 c'8 ^\down_bow \ppos #0.7 c'16 ^\up_bow \ppos #0.7 c'8. ^\down_bow  ~ \ppos #0.7 c'4 
+		 \ppos #0.7 c'8  \ppos #0.7 c'8 ^\down_bow \ppos #0.7 c'16 ^\up_bow \ppos #0.7 c'8. ^\down_bow  \glissando \ppos #0.7 c'4 
 		 %%%%%%%%%% measure 69 %%%%%%%%%%  
 		 \time 4/4
 		 \switch-staff \normal_staff
@@ -1646,7 +1657,7 @@ viola_tuned = {
  		%%%%%%%%%% measure 154 %%%%%%%%%%
  		\time 5/4
  		\niente \flare_width 
- 		\afterGrace <d d'>4.. ^\markup \string-numbers #'( "III IV" 1.5 0)
+ 		\afterGrace <d d'>4.. \< ^\markup \string-numbers #'( "III IV" 1.5 0)
  			{s8\flare_sf} r16
  		r2.
  		%%%%%%%%%% measure 155 %%%%%%%%%%
@@ -1819,8 +1830,14 @@ viola_tuned = {
 		\set Staff.forceClef = ##t
 		<<
 			{\tuplet 3/2 {
-				r8 \niente \pizz_head "II III" \ppos #0.4 c4 \glissando ^\circular_bow \<
-			} 
+				r8 
+				\once\override Staff.TextScript.outside-staff-priority = #100000
+				\niente \pizz_head "II III" \ppos #0.4 c4 \glissando ^\circular_bow \<
+								_\markup {\override #'(line-width . 35) \tiny \italic \justify 
+										{*Bow behind the fingers to produce a multiphonic. 
+												(Fingers should be placed on the bridge side of the bow)}}
+
+			} 						
 			\pizz_head "II III" \ppos #0.4 c4 \mp \glissando \pizz_head "II III" \ppos #0.4 c4 
 			}\\{
 				s4 s4 s8 \< \niente \afterGrace s8 \mf \> {s8\!}
@@ -1908,9 +1925,7 @@ viola_pos_tuned = {
  			s2
  			%%%%%%%%%% measure 18 %%%%%%%%%%
  			\time 4/4
- 			s2 \startStaff \tuplet 3/2 {
- 					d'8 \glissando g'8 \glissando \afterGrace d'8 \glissando {a'8}
- 			} \hideNotes r8 \unHideNotes \stopStaff s8
+ 			s1
  			%%%%%%%%%% measure 19 %%%%%%%%%%
  			\time 4/4
  			s1

@@ -31,7 +31,7 @@ viola_bichon_frise = {
 
 	\times 2/3 {
 		\draw_line_arrow \up_bow_light \up_bow_very_heavy
-		b'16 [ \startTextSpan
+		b'16 [ \startTextSpan \mf \<
 		g'16
 		e'16 ] \stopTextSpan \fposs
 	}
@@ -43,12 +43,13 @@ viola_bichon_frise = {
 
 	\times 2/3 {
 		\draw_line_arrow \up_bow_light \up_bow_very_heavy
-		b'16 [ \startTextSpan
+		b'16 [ \startTextSpan \mf \<
 		g'16
 		e'16 ] \stopTextSpan \fposs
 	}
 	\times 2/3 {
-		c'16  [ ^\down_bow_very_heavy
+		c'16  [ ^\down_bow_very_heavy 
+			_\markup {\small \italic "Continue dynamic changes in similar manner..."}
 		e'16
 		g'16  ]
 	}

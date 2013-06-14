@@ -290,14 +290,14 @@ violin_II_tuned = {
 	\once\override Staff.TextScript.outside-staff-priority = #100000
 
 	  	\squares <bf fs' d'' eqs''>8 \pp ~ ^\up_bow_light
-	  			_\markup {\override #'(line-width . 26) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+	  			_\markup {\override #'(line-width . 40) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 	  	%%%%%%%%%% measure 30 %%%%%%%%%%
 	  	\time 4/4
 	  	<bf fs' d'' eqs''>4 ~ 
 	    \once\override Staff.TextScript.outside-staff-priority = #100000
 
 	  	<bf fs' d'' eqs''>8 ^\circular_bow ^\trill  _\markup {
-	  					\override #'(line-width . 26)
+	  					\override #'(line-width . 35)
 	  					\translate #'(-1.5 . -1) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}}
 	  	~ \<  <bf fs' d'' eqs''>8 ~ \mf \>  
@@ -371,7 +371,7 @@ violin_II_tuned = {
 		\once\override Staff.TextScript.outside-staff-priority = #100000
 
 	  	\squares \niente <bf fs' d'' eqs''>8  ] ~ \< ^\aldita ^\down_bow_light 
-	  		 		_\markup {\override #'(line-width . 26) 
+	  		 		_\markup {\override #'(line-width . 40) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 	  	 <bf fs' d'' eqs''>4 \pp
@@ -1428,7 +1428,12 @@ violin_II_tuned = {
 		\body-clef #'bow-area-small
 		\set Staff.forceClef = ##t
 		\tuplet 3/2 {
-			r4 \niente \pizz_head "II III" \ppos #0.4 c8 \glissando \< 					%>
+			r4 
+			\once\override Staff.TextScript.outside-staff-priority = #100000
+			\niente \pizz_head "II III" \ppos #0.4 c8 \glissando \< 	
+								_\markup {\override #'(line-width . 35) \tiny \italic \justify 
+			{*Bow behind the fingers to produce a multiphonic. (Fingers should be placed on the bridge side of the bow)}}
+							%>
 		} 
 		\pizz_head "II III" \ppos #0.4 c4 \mp \glissando
 		\pizz_head "II III" \ppos #0.4 c4 \glissando

@@ -100,10 +100,10 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   \time 6/8 
   e''8 [  \afterGrace g''8 \mp {\glissSkipOff a''8  } \diamonds \flare_width \afterGrace a'8 \p \< ^\down_bow ^\nat {s8 \flare_sf} 
   \draw_line_arrow \altosultasto \altosulpont
-  \diamonds gs'16 ^\up_bow_light  \p \startTextSpan 
+  \diamonds gs'16 ( ^\up_bow_light  \p \startTextSpan 
   g'16  fs'  f' ] 
   \tuplet 5/4 {
-  	e'32 [ fs'32 a'32 b'32 cs''32 \stopTextSpan ]
+  	e'32 [ fs'32 a'32 b'32 cs''32 ) \stopTextSpan ]
   }
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
@@ -167,7 +167,8 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   \time 3/16
   \tieDown 
   \stemDown
-  \anti-clockhead \afterGrace  c'8. \mf ~ ^\down_bow_very_heavy ^\sulpont ^\markup \string-numbers #'("III" 1 0.35) \< {\anti-clockhead c'8 \sfz} %>
+  \anti-clockhead 
+  \afterGrace  c'8. \mf ~ ^\down_bow_very_heavy ^\sulpont ^\markup \string-numbers #'("III" 1 0.35) \< {\anti-clockhead c'8 \sfz} %>
 
   \tieNeutral
   \stemNeutral
@@ -211,6 +212,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
         \temporary\override Glissando.bound-details.right.padding = #0.35
         \temporary\override Glissando.thickness = #2
         \set Staff.forceClef = ##t
+        \niente
         \slow-zigzag
         \ppos #0.8 c'2 \< \glissando 
 
@@ -277,7 +279,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
 
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 3/8
-  r4.
+  r4. ^\take_bow
 
     \revert NoteHead.stencil 
     \revert Glissando.style 
@@ -288,7 +290,8 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
     \clef bass
  %%%%%%%% ============= measure 32 ============= %%%%%%%% 
   \time 6/8
-   	r8 \set Staff.forceClef = ##t
+   	r8 
+    \set Staff.forceClef = ##t
     \tuplet 6/5 { \niente ces,8 [ \< ~ ^\up_bow_light <ces, aqf,>8 ~ 
   	<aqf, e>8 ~ <e \single\diamonds gs>8  ~ <e c'>8 ~ ^\down_bow <c' \single\diamonds f'>8 ] ^\up_bow }
 
@@ -388,7 +391,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   e'''2. ~ ^\down_bow  
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 11/16  
-  e'''4 ~  \niente \afterGrace e'''8 \> ~ {s8\!} r8 r8.
+  e'''4 ~  \niente \afterGrace e'''8 \> ~ {s8\!} r8 ^\pizz_hold r8.
   \override NoteHead.no-ledgers = ##f
  %%%%%%% ============= measure 40 ============= %%%%%%%% 
   

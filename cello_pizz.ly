@@ -245,6 +245,7 @@ cello_pizz_right = {
   \time 6/8
   \switch-staff \string-staff
   \set Staff.forceClef = ##t
+  \clef treble
   r8 \override Voice.NoteHead.stencil = #circle-head 
   <c' e'>4 \mp ^\angle_bow ^\down_bow \glissando <c' e'>8 \glissando <c' e' g'>4 \glissando 
 
@@ -756,48 +757,52 @@ r4. r4.
 <<
     {
       \switch-staff \pizz_staff
-      \body-clef #'full
-
+      \body-clef #'fingerboard
       \override NoteHead.stencil = #scratch-tone
       \override Glissando.style = #'dashed-line
       \override Glissando.bound-details.right.padding = #0.35
       \override Glissando.thickness = #2
-
+      \set Staff.forceClef = ##t
       \time 3/8
       \slow-zigzag
-        \ppos #0.8 c'4. \glissando
+       \niente
+        \ppos #0.8 c'4. \< \glissando
       \time 5/16
-        \ppos #0.4 c'4 \glissando 
         \med-zigzag
+        \ppos #0.4 c'4 \mf \glissando 
+        \fast-zigzag
         \ppos #0.8 c'16 \glissando
       \time 5/8
         \glissSkipOn \ppos #0.6 c'4 \glissSkipOff 
-        \fast-zigzag
+        \med-zigzag
         \ppos #0.4 c'4. \glissando
 
       \time 7/16
       \slow-zigzag
-      \ppos #0.8 c'4 \glissando \ppos #0.5 c'8. 
+      \ppos #0.8 c'4 \glissando \niente \afterGrace \ppos #0.5 c'8. \> {s8\!}
 
       \time 3/16
 
-      r8.
+      r8 [
+      \med-zigzag
+      \niente \ppos #0.8 c'16 ] \< \glissando \glissSkipOn
 
       \time 3/8
-
-      r4.
+      \fast-zigzag
+      \ppos #0.6  c'8 \mf \glissSkipOff \ppos #0.5 c'4 \glissando \glissSkipOn
 
       \time 4/8
 
-      r4 r4
+      \glissSkipOff \ppos #0.6 c'4 \glissando
+      \ppos #0.85 c'4 \glissando
 
       \time 2/8
 
-      r4
+      \ppos #0.5 c'4 \glissando
 
       \time 3/16
-
-      r8.
+      \med-zigzag
+      \niente \afterGrace \ppos #0.8 c'8. \> \glissando {\ppos #0.4 c'8 \!}
 
       \time 4/8
 
@@ -805,22 +810,35 @@ r4. r4.
 
       \time 9/16
 
-      r8. r8. r8.  
+      r8. 
+      \slow-zigzag
+      \niente 
+      \ppos #0.8 c'8. \< \glissando 
+   
+      \ppos #0.5 c'8. \mf \glissando
 
       \time 4/4
-      r1
+
+      \med-zigzag
+      \ppos #0.8 c'4 \glissando
+      \ppos #0.5 c'4 \glissando
+      \ppos #0.8 c'4 \glissando
+      \fast-zigzag
+      \ppos #0.5 c'8. [ \glissando \ppos #0.8 c'16 ] \glissando \glissSkipOn
 
       \time 9/8
 
-      r4. r4. r4.
+      \ppos #0.7 c'8 \glissSkipOff \ppos #0.4 c'4 \glissando \glissSkipOn
+
+      \ppos #0.6 c'4. \glissSkipOff \ppos #0.85 c'4. \glissando
 
       \time 4/8
-
-      r4 r4
+      \med-zigzag
+      \ppos #0.55 c'4 \glissando \ppos #0.85 c'4 \glissando
 
       \time 3/16
 
-      r8.
+      \niente \afterGrace \ppos #0.6 c'8. \glissando \> {\ppos #0.9 c'8\!}
 
       \time 4/8
 
@@ -831,19 +849,22 @@ r4. r4.
       r2
 
       \time 3/16
-
-      r8.
+      \niente 
+      \fast-zigzag
+      \ppos #0.85 c'8. \< \glissando
 
       \time 3/4
 
-      r2.
+      \ppos #0.5 c'4 \mf \glissando 
+      \niente 
+      \afterGrace \ppos #0.8 c'4 \> {s8\!}   r4
 
 
     } \\
     \new StringStaff \with {alignAboveContext="cello"} {
       \time 3/8
       \circleheads
-      <e' g'>4. \mf ^\vertical_bow ^\markup {\small \italic "*Pressed bow glissando."}
+      <e' g'>4. ^\vertical_bow _\markup {\italic "*Pressed bow glissando (take bow in both hands)"}
         \glissando 
       \time 5/16
       <e' g'>4 \glissando <g' b'>16 \glissando
@@ -855,23 +876,23 @@ r4. r4.
 
       \time 3/16
 
-      r8.
+      r8 [ <g' b'>16 ] \glissando
 
       \time 3/8
 
-      r4.
+      <g' b'>4 \glissando <g' b'>8 \glissando
 
       \time 4/8
 
-      r4 r4
+      <e' g'>4 \glissando <e' g'>4 \glissando
 
       \time 2/8
 
-      r4
+      <e' g'>8 \glissando <c' e'>8 \glissando
 
       \time 3/16
 
-      r8.
+      <e' g'>8. \glissando
 
       \time 4/8
 
@@ -879,22 +900,23 @@ r4. r4.
 
       \time 9/16
 
-      r8. r8. r8.   
+      r8. 
+      <e' g'>8. \glissando <e' g'>8. \glissando  
 
       \time 4/4
-      r1
+      <g' b'>2 \glissando <c' e'>2 \glissando 
 
       \time 9/8
 
-      r4. r4. r4.
+      <c' e'>4. \glissando <e' g'>4. \glissando <e' g'>4.
 
       \time 4/8
 
-      r4 r4
+      <e' g'>4 \glissando <e' g'>4 \glissando
 
       \time 3/16
 
-      r8.
+      \afterGrace <e' g'>8. \glissando {<g' b'>8}
 
       \time 4/8
 
@@ -906,11 +928,11 @@ r4. r4.
 
       \time 3/16
 
-      r8.
+      <g' b'>8. \glissando
 
       \time 3/4
 
-      r2.
+      <e' g'>4 \glissando <g' b'>4 r4
 
     }
 >>
@@ -923,7 +945,11 @@ r8 r8
 
 \switch-staff \string-staff
 \niente
-\stemUp \circles 
+\revert Glissando.style
+\override Glissando.thickness = #3
+\clef treble
+\set Staff.forceClef = ##t
+\stemUp \circleheads 
 <e' g' b'>8 \< \glissando ^\down_bow ^\angle_bow <e' g' b'>4 \mp \glissando
 
 }

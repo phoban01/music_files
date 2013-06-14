@@ -491,9 +491,9 @@ violin_II_tuning = {
  %%%%%%%% ============= measure 40 ============= %%%%%%%% 
   \time 5/4
   r8.. [
-    <cqs''' fqs'''\harmonic>32 ] -. -> ^\sulpont 
+    <cqs''' fqs'''\harmonic>32 ] -. -> ^\sulpont \p
   r8 [ 
-  csef'8 ] ~ ^\aldita ^\up_bow_light csef'2 ~ csef'8.. [ r32 ] _\bow-mute
+  csef'8 ] \pp \< ~ ^\aldita ^\up_bow_light csef'2 \mp \> ~ csef'8.. \p [ r32 ] _\bow-mute
 
  %%%%%%%% ============= measure 41 ============= %%%%%%%% 
   \time 2/8

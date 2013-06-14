@@ -4,6 +4,7 @@ cello_tuned = {
 			\oneVoice
 			\switch-staff \body_staff
 			\body-clef #'fingerboard-small
+			\clef treble
 			r4 
 			\set Staff.forceClef = ##t
 			\circleheads
@@ -252,7 +253,7 @@ cello_tuned = {
 	\once\override Staff.TextScript.outside-staff-priority = #100000
 
 			<ces, ges, eqf bqf>2 ~ \<  ^\up_bow_light	
-						_\markup {\override #'(line-width . 26) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
+						_\markup {\override #'(line-width . 40) \justify \small \italic {*Slowly & smoothly vary strings ad. libitum}}
 						%>
 			%%%%%%%%%% measure 25 %%%%%%%%%%
 			\time 5/4
@@ -298,7 +299,7 @@ cello_tuned = {
 
 			<ces, ges, eqf bqf>8:64 ~ ^\trill \mp \>
 						_\markup {
-	  					\override #'(line-width . 26)
+	  					\override #'(line-width . 35)
 	  					\translate #'(-1.5 . 0) 
 	  					\small \italic \justify {*Randomly trill all strings between stopped position & open string.}
 		 		}
@@ -320,7 +321,7 @@ cello_tuned = {
 			\time 4/4
 			\squares
 			\niente
-			<ces, ges, eqf bqf>8 \< ~ ^\down_bow_light <ces, ges, eqf bqf>8 \pp ~ <ces, ges, eqf bqf>4 ~
+			<ces, ges, eqf bqf>8 \< ~ \stopTextSpan <ces, ges, eqf bqf>8 \pp ~ <ces, ges, eqf bqf>4 ~
 			<ces, ges, eqf bqf>4  \< ~ 
 			<ces, ges, eqf bqf>4 ~ \mf ^\jete
 			%%%%%%%%%% measure 34 %%%%%%%%%%
@@ -372,7 +373,7 @@ cello_tuned = {
 		\once\override Staff.TextScript.outside-staff-priority = #100000
 
 			<ces, ges, eqf bqf>4 \< ~ ^\down_bow_light
-				 		_\markup {\override #'(line-width . 26) 
+				 		_\markup {\override #'(line-width . 40) 
 	 					\small \italic \justify {
 	 						*Slowly & smoothly vary strings ad. libitum. Use at least two strings at all times.}} 
 			<ces, ges, eqf bqf>4 \pp ~
@@ -653,7 +654,7 @@ cello_tuned = {
 		 	%%%%%%%%%% measure 67 %%%%%%%%%%
 		 	\time 5/16
 		 	r8. [ 
-		 	\niente \circles fs,8 ] ^\down_bow_light  \< \glissando
+		 	\niente \circles fs,8 ] ^\down_bow_light  ^\altosulpont \< \glissando
 		 	%%%%%%%%%% measure 68 %%%%%%%%%%
 		 	\time 3/4
 		 	\glissSkipOn
@@ -1087,9 +1088,9 @@ cello_tuned = {
 			r16 [ \ppos #0.5 c'16 ] \effort mf \glissando
 			%%%%%%%%%% measure 104 %%%%%%%%%%
 			\time 5/16
-			\ppos #0.5 c'16 \glissando 
-			\afterGrace \ppos #0.5 c'16 ^\vertical_bow ^\markup \string-numbers #'( "II III" 1.5 0) \glissando {\ppos #1.05 c'8}
-			\ppos #0.5 c'8. ^\horz_bow
+			\ppos #0.5 c'16 [ \glissando 
+			\afterGrace \ppos #0.5 c'16  ^\vertical_bow ^\markup \string-numbers #'( "II III" 1.5 0) \glissando {\ppos #1.05 c'8}
+			\ppos #0.5 c'8. ] ^\horz_bow
 				\glissando
 			%%%%%%%%%% measure 105 %%%%%%%%%%
 			\time 2/4
@@ -1161,10 +1162,10 @@ cello_tuned = {
 			\afterGrace \ppos #0.95 c'16 ] \startTextSpan \glissando {\ppos #0.5 c'8 \stopTextSpan}
 			r16 [ 
 			\ppos #0.75 c'8.:64 ] \effort "mf" ^\vertical_bow
-			r8 [ \ppos #0.9 c'8] ~ \effort p ^\down_bow_light
+			r8 [ \ppos #0.9 c'8] \glissando \effort p ^\down_bow_light
 			%%%%%%%%%% measure 116 %%%%%%%%%%
 			\time 2/4
-			\ppos #0.9 c'8 [ \ppos #0.75 c'8 ] ~ 
+			\ppos #0.9 c'8 [ \ppos #0.75 c'8 ] \glissando 
 			\ppos #0.75 c'8 [ \ppos #0.55 c'8 ] \glissando
 			%%%%%%%%%% measure 117 %%%%%%%%%%
 			\time 5/4
@@ -1399,7 +1400,7 @@ cello_tuned = {
 			as8 ~ \niente \afterGrace as8 ] \> {s8\!} r4
 			%%%%%%%%%% measure 142 %%%%%%%%%%
 			\time 5/16
-			\niente b4 \< ^\altosultasto \glissando \niente \afterGrace cqs'16 \p \> \glissando {c'8\!}
+			\niente b8 [ \< ^\altosultasto \glissando \niente \afterGrace cqs'8  \p \> \glissando {c'8\!} r16 ]
 			%%%%%%%%%% measure 143 %%%%%%%%%%
 			\time 4/16
 			\clef bass

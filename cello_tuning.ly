@@ -4,6 +4,8 @@ cello_tuning = {
   \time 6/4
   \circleheads
   \switch-staff \string-staff  
+  \override Staff.Glissando.bound-details.left.padding = #0
+  \override Staff.Glissando.bound-details.right.padding = #0
   <c' e' g'>2 \glissando <c' e' g'>2 \glissando \niente \afterGrace <e' g' b'>2 \> \glissando (<e' g' b'>8\!)
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
@@ -296,6 +298,7 @@ cello_tuning = {
       \tieDown
       \stemUp
       \switch-staff \string-staff
+      \clef treble
       r8
       \set Staff.forceClef = ##t
       <e' g'>2. ^\angle_bow  
@@ -351,6 +354,7 @@ cello_tuning = {
       \clef tenor
       ef'32 ^\down_bow  [ c' \< ^\up_bow g  bf  \niente c' \mp \> cs' d' cs' \! )]  r8
       \switch-staff \string-staff
+      \clef treble
       \stemUp
       \set Staff.forceClef = ##t
       <g' b'>2. 

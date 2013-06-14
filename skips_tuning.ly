@@ -2,6 +2,10 @@ skips_tuning = {
 	% %%%%%%% ============= measure 1 ============= %%%%%%%%
 	{
 		\bar "||"
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 18)		
+
+
 		\time 6/4
 		\my_mark "H"
 		\tempo "" 4=52~56
@@ -85,6 +89,8 @@ skips_tuning = {
 		\time 5/4
 		\my_mark "J"
 		\tempo "" 8=60
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 28)				
 		s1
 		s4
 	}
@@ -212,7 +218,7 @@ skips_tuning = {
 	{
 		\time 5/4
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 36)		
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 40)		
 		s1
 		s4
 	}
