@@ -6,6 +6,8 @@ cello_tuning = {
   \switch-staff \string-staff  
   \override Staff.Glissando.bound-details.left.padding = #0
   \override Staff.Glissando.bound-details.right.padding = #0
+  \override Glissando.bound-details.left.padding = #0
+  \override Glissando.bound-details.right.padding = #0  
   <c' e' g'>2 \glissando <c' e' g'>2 \glissando \niente \afterGrace <e' g' b'>2 \> \glissando (<e' g' b'>8\!)
 
  %%%%%%%% ============= measure 2 ============= %%%%%%%% 
@@ -14,7 +16,7 @@ cello_tuning = {
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 
   <<
   	{s2 s2 \niente s4 \< s4 \mp} \\
-  	{\oneVoice \stemUp \circleheads r2 r2 <e' g' b'>2 ^\down_bow ^\angle_bow \glissando }
+  	{\oneVoice \stemUp \circleheads r2 r2 \set Staff.forceClef = ##t  <e' g' b'>2 ^\down_bow ^\angle_bow \glissando }
   >>
 
  %%%%%%%% ============= measure 4 ============= %%%%%%%% 

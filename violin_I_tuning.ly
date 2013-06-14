@@ -5,12 +5,13 @@ violin_I_tuning = {
   \time 6/4
   \tempo " " 4=52~56
   \newSpacingSection
-  \override Staff.Glissando.style = #'line
-  \override Staff.Glissando.style = #'line
+  \revert Staff.Glissando.style
 
   \set Score.proportionalNotationDuration = #(ly:make-moment 1 4)
   << 
-  	{\oneVoice r2 ^\attach_tuner _\lay_flat r2  \circleheads <c' e'>2 \glissando ^\down_bow ^\angle_bow } \\ 
+  	{
+    \revert Glissando.style
+    \oneVoice r2 ^\attach_tuner _\lay_flat r2  \clef treble \set Staff.forceClef = ##t \circleheads <c' e'>2 \glissando ^\down_bow ^\angle_bow } \\ 
   	{s2 s2 \niente s4 \< s4 \mp}
   >>
 

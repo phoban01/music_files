@@ -1450,7 +1450,7 @@ violin_I_pizz_left = {
       \ppos #0.85 c'4 \glissando \ppos #0.5 c'2 \glissando 
 
       \time 4/16
-
+      #(define afterGraceFraction (cons 9 10))
       \niente \afterGrace \ppos #0.85 c'4 \> \glissando {\slow-zigzag \ppos #0.45 c'8\!}
 
       \time 3/8
@@ -1524,18 +1524,19 @@ violin_I_pizz_left = {
 
       \time 4/8
 
-      r4. <g' b'>8
+      r4. <g' b'>8 \glissando
 
       \time 3/16
 
-      r8.
+      <g' b'>8 \glissando <g' b'>16 \glissando
 
       \time 3/4
 
-      r2.
+      <e' g'>2 \glissando <e' g'>4 \glissando
 
       \time 4/16
-      r4
+        
+      <c' e'>8 \glissando <e' g'>8  
 
       \time 3/8
       r4.

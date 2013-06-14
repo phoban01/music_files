@@ -272,7 +272,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   f''8 [ \glissSkipOff <bqs'' b''>8 \< ] \glissando
 
   \glissSkipOn f''8 [ e''8 ]
-  \glissSkipOff <fqs'' f''>8 \f [ \glissando \glissSkipOn f''8]  g''8 [ \glissSkipOff \niente \afterGrace <aqs'' a''>8 ] {s8\!}
+  \glissSkipOff <fqs'' f''>8 \f [ \glissando \glissSkipOn f''8]  g''8 [ \glissSkipOff \niente \afterGrace <aqs'' a''>8 ] \> {s8\!}
   
 
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 

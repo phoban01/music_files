@@ -9,7 +9,7 @@ viola_tuning = {
   \time 6/4
   \time 6/4
   <<
-    {\oneVoice \tieDown \circleheads <c' e' g'>2 ^\down_bow ^\angle_bow \glissando <c' e' g'>2 \glissando <c' e' g'>2} \\
+    {\oneVoice \tieDown \clef treble \set Staff.forceClef = ##t \circleheads <c' e' g'>2 ^\down_bow ^\angle_bow \glissando <c' e' g'>2 \glissando <c' e' g'>2} \\
     {\niente s4 \< s4 \mp s2 s4 \niente \afterGrace s4 \> {s4 \! }}
   >>
 

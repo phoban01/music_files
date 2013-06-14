@@ -11,6 +11,8 @@ violin_II_tuning = {
   \time 6/4
   r2 
   \niente
+  \set Staff.forceClef = ##t
+  \clef treble
   <e' g' b'>2 \glissando ^\up_bow ^\angle_bow \< <c' e' g'>2 \mp \glissando
 
  %%%%%%%% ============= measure 3 ============= %%%%%%%% 

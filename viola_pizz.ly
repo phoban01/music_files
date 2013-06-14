@@ -2493,7 +2493,7 @@ r8
 
  %%%%%%%% ============= measure 44 ============= %%%%%%%% 
 %   \time 4/8
-  \tweak #'positions #'(-24 . -24)
+  \tweak #'positions #'(-22 . -22)
   \tuplet 3/2 {
   	\ppos #0.3 c16 [ \mf \glissando
   		_\markup {

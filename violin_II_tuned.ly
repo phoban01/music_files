@@ -3,7 +3,17 @@ violin_II_tuned = {
 
 	  	%%%%%%%%%% measure 1 %%%%%%%%%%
 	  	\time 3/4
-	  	\afterGrace c'4 {\glissSkipOff \ppos #0.3 c'8}
+	  	<<
+	  		{
+	  		\override NoteHead.stencil = #scratch-tone
+			\override Glissando.style = #'dashed-line
+			\override Glissando.bound-details.right.padding = #0.35
+			\override Glissando.thickness = #2
+			\glissSkipOff \afterGrace \ppos #0.5 c'4 \glissando {\ppos #0.8 c'8}}
+	  		\\
+	  		{}
+	  	>>
+
 
 	  	r4
 

@@ -151,10 +151,10 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
  \stemNeutral
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
   \time 5/16
-  cs'''4 ^\markup \string-numbers #'("I" 1.5 0) \glissando 
+  cs'''4 \< ^\markup \string-numbers #'("I" 1.5 0) \glissando 
   #(define afterGraceFraction (cons 49 50))
   \wavy_vibrato #1
-  \afterGrace cs''16 \glissando {\hideNotes cs''8 \unHideNotes}
+  \afterGrace cs''16 \mf \glissando {\hideNotes cs''8 \unHideNotes}
 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
   \switch-staff \single_line_staff
@@ -168,7 +168,7 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
   \tieDown 
   \stemDown
   \anti-clockhead 
-  \afterGrace  c'8. \mf ~ ^\down_bow_very_heavy ^\sulpont ^\markup \string-numbers #'("III" 1 0.35) \< {\anti-clockhead c'8 \sfz} %>
+  \afterGrace  c'8. \mf \glissando ^\down_bow_very_heavy ^\sulpont ^\markup \string-numbers #'("III" 1 0.35) \< {\anti-clockhead c'8 \sfz} %>
 
   \tieNeutral
   \stemNeutral

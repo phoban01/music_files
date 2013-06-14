@@ -103,10 +103,10 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
   \tuplet 6/4 {
   	f''32 [ e'' d'' cs'' c'' cs'' ] ) 
   }
-  d''32 [ cs''16.  \glissando \glissSkipOn f''8  ]
+  d''32 [ cs''16. \<  \glissando \glissSkipOn f''8  ]
  %%%%%%%% ============= measure 15 ============= %%%%%%%% 
   \time 5/16
-  g'''8 [ \glissSkipOff cs''''8 \glissando g'''16 ]
+  g'''8 [ \glissSkipOff cs''''8 \f \> \glissando g'''16 \ppp ]
   \switch-staff \single_line_staff
 
  %%%%%%%% ============= measure 16 ============= %%%%%%%% 
