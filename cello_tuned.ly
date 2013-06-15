@@ -414,7 +414,7 @@ cello_tuned = {
 				<eqf' ef''>4 ~
 					^\markup {\translate #'(-0.5 . 0) \left-align \center-column {\fontsize #2 " 10\"" \fontsize #2 \musicglyph #"scripts.ufermata" }}
 			} \\ {
-				s4 s4 s4 s8 \< s8\mp \> s8. \pp \niente \afterGrace s16 \> {s8\ppp}
+				s4 s4 s4 s8 \< s8\mp \> s8. \pp \afterGrace s16 \> {s8\ppp}
 			}>>
 			%%%%%%%%%% measure 45 %%%%%%%%%%
 			\time 5/8
@@ -443,14 +443,14 @@ cello_tuned = {
 			\afterGrace \ppos #1.05 c'8.. \f \> ^\tilt_bow ^\markup \string-numbers #'( "IV" 1.5 0) {s8\pp}
 			%%%%%%%%%% measure 47 %%%%%%%%%%
 			\time 4/8
-			\ppos #1.05 c'2 ~ ^\down_bow
+			\ppos #1.05 c'2 \glissando ^\down_bow
 			%%%%%%%%%% measure 48 %%%%%%%%%%
 			\time 3/16
 			\ppos #1.05 c'8. 
 			%%%%%%%%%% measure 49 %%%%%%%%%%
 			\time 5/4
 			r32 [ 
-			\ppos #1.05 c'8. \f \> ^\down_bow ~ \ppos #1.05 c'32 \pp ]
+			\ppos #1.05 c'8. \f \> ^\down_bow \glissando \ppos #1.05 c'32 \pp ]
 			\switch-staff \normal_staff
 			\clef bass
 			\circles
@@ -474,9 +474,10 @@ cello_tuned = {
 				}
 			>>
 			\tuplet 5/4 {
-				r16 [ \clef treble <gqs' dqs''\harmonic>16 \mf ^\sulpont gqs'8. ~] ^\aldita
+				\draw_line_arrow \sulpont \aldita
+				r16 [ \clef treble <gqs' dqs''\harmonic>16 \mf \startTextSpan <gqs' dqs''\harmonic>8. \> ~ ]  
 			}
-			\niente \afterGrace gqs'8. [  {s8\!} r16 ]
+			\niente \afterGrace gqs'8. \stopTextSpan [  {s8\!} r16 ]
 			%%%%%%%%%% measure 50 %%%%%%%%%%
 			\time 3/4
 			r4
@@ -507,7 +508,7 @@ cello_tuned = {
 			%%%%%%%%%% measure 53 %%%%%%%%%%
 			\time 3/16
 			\glissSkipOn 
-			\afterGrace \ppos #0.5 c'8. \> {\glissSkipOff \ppos #1.05 c'8 \pp}
+			\afterGrace \ppos #0.7 c'8. \> {\glissSkipOff \ppos #1.05 c'8 \pp}
 			
 			%%%%%%%%%% measure 54 %%%%%%%%%%
 			\time 5/4
@@ -881,7 +882,7 @@ cello_tuned = {
 			\time 2/4
 			\tuplet 3/2 {
 				\wavy_vibrato #1.5
-				\afterGrace a'''4 \glissando  {\hideNotes a'''8 \unHideNotes}
+				\afterGrace a'''4 \< \glissando  {\hideNotes a'''8 \unHideNotes}
 				\squares
 				\niente 
 				\afterGrace <c'' g'' d''' a'''>8 \f \> ^\circular_bow
@@ -941,7 +942,7 @@ cello_tuned = {
 			\time 5/4
 			r4 \tuplet 3/2 {
 					r4 \clef treble 
-					\niente gs'8 ~ \<
+					\niente gs'8 ~ \< ^\markup \string-numbers #'( "II" 1.5 0)
 			}
 			\tuplet 3/2 {
 				gs'4 ~ gs'8 ~ \p
@@ -1933,10 +1934,10 @@ cello_pos_tuned = {
 				\hideNotes r4. \unHideNotes 
 				%%%%%%%%%% measure 84 %%%%%%%%%%
 				\time 3/4
-				s2.
+				d'4 \glissando \glissSkipOn f'4 g'4
 				%%%%%%%%%% measure 85 %%%%%%%%%%
 				\time 2/4
-				s2
+				b'4 \glissando e'4
 				%%%%%%%%%% measure 86 %%%%%%%%%%
 				\time 2/4
 				s2

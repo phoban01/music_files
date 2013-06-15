@@ -438,14 +438,14 @@ viola_tuned = {
 		 \time 2/8
 		 r8 [
 		 \clef treble
-		 \diamonds  \afterGrace e'''8 ] \mp ^\down_bow ^\altosulpont \glissando {e''8 \f}
+		 \diamonds  \afterGrace e'''8 ] \mp \< ^\down_bow ^\altosulpont \glissando {e''8 \f}
 		 %%%%%%%%%% measure 39 %%%%%%%%%%
 		 \time 4/4
 		 r8 \tuplet 3/2 {
 		 		r16 [ e'''16 \mf -. -> ^\sulpont ^\up_bow ^\markup \string-numbers #'( "I" 1.5 0) r16 ]
 		 }
 		 \draw_line_arrow \down_bow \down_bow_very_heavy
-		 \afterGrace e'''8. \mf \< ^\altosulpont \startTextSpan \glissando {e''8 \fz \stopTextSpan} r16 r2
+		 \afterGrace e'''8. \< ^\altosulpont \startTextSpan \glissando {e''8 \fz \stopTextSpan} r16 r2
 		 %%%%%%%%%% measure 40 %%%%%%%%%%
 		 \time 8/4
 		 r1 r2. \clef alto \squares 
@@ -504,6 +504,7 @@ viola_tuned = {
 		 %%%%%%%%%% measure 47 %%%%%%%%%%
 		 \time 4/8
 		 r8
+		 \tweak #'positions #'(-8 . -8)
 		 \tuplet 3/2 {
 		 	r8 r8 r32 
 		 	\niente
@@ -543,7 +544,7 @@ viola_tuned = {
 		 	{\oneVoice \circles r32 [ \afterGrace cses'8.. ] ^\aldita ^\markup \string-numbers #'( "IV" 0 0) \glissando {cqs'8} r4}
 		 	\\
 		 	{
-		 		s32 \niente s16 \< s32 s16 \p \> \niente \afterGrace s16 {s8\!} s4
+		 		s32 \niente s16 \< s32 \niente s16 \p \>  \afterGrace s16 {s8\!} s4
 		 	}
 		 >>
 		 %%%%%%%%%% measure 51 %%%%%%%%%%
@@ -792,11 +793,11 @@ viola_tuned = {
 		 %%%%%%%%%% measure 77 %%%%%%%%%%
 		 \time 5/8
 		 \draw_line_arrow \down_bow_light \down_bow
-		 \glissSkipOn \ppos #0.75 c'8 \startTextSpan
+		 \glissSkipOn \ppos #0.2 c'8 \startTextSpan
 		 \draw_line_arrow " " \down_bow_light
 		 \span-shift-x #2
-		 \ppos #0.75 c'8 \mf \> \stopTextSpan \startTextSpan
-		 \afterGrace \ppos #0.75 c'8 \stopTextSpan
+		 \ppos #0.35 c'8 \mf \> \stopTextSpan \startTextSpan
+		 \afterGrace \ppos #0.5 c'8 \stopTextSpan
 		 {\glissSkipOff \ppos #1.05 c'8 \pp } r4
 		 %%%%%%%%%% measure 78 %%%%%%%%%%
 		 \time 4/8
@@ -840,7 +841,7 @@ viola_tuned = {
 		 	\glissando
 		 %%%%%%%%%% measure 80 %%%%%%%%%%
 		 \time 4/8	
-		 \glissSkipOn \afterGrace \ppos #0.5 c'8 [ {\glissSkipOff \ppos #0.5 c'8 \mf }
+		 \glissSkipOn \afterGrace \ppos #0.8 c'8 [ {\glissSkipOff \ppos #0.5 c'8 \mf }
 		 r8 ]
 		 \switch-staff \normal_staff
 		 \clef treble
@@ -863,7 +864,7 @@ viola_tuned = {
 		 \set Staff.forceClef = ##t
 		 \circleheads
 		 \niente
-		 \ppos #0.75 c'8 \glissando \< ^\angle_bow ^\markup \string-numbers #'( "I II III" 0 0)
+		 \ppos #0.4 c'8 \glissando \< ^\angle_bow ^\markup \string-numbers #'( "I II III" 0 0)
 		 %%%%%%%%%% measure 84 %%%%%%%%%%
 		 \time 3/4
 		 \ppos #0.75 c'8 \mp \glissando \niente \afterGrace \ppos #0.75 c'8 \> {s8\!}
@@ -997,7 +998,8 @@ viola_tuned = {
 		 \time 5/4
 		 r4 r8
 		 \clef treble 
-		 \niente dqf''8 \< \glissando \glissSkipOn
+		 \niente dqf''8 \< ^\markup \string-numbers #'( "II" 1.5 0)
+		 	\glissando \glissSkipOn
 		 c''8 [ \glissSkipOff cs''8 ] \p ~ cs''8 [ \glissando
 		 \niente \glissSkipOn d''8 ] \> \afterGrace d''8 [ {\glissSkipOff e''8 \!} r8]
 		 %%%%%%%%%% measure 90 %%%%%%%%%%
@@ -1021,7 +1023,7 @@ viola_tuned = {
 		 r4 r16 [
 		 \set Staff.forceClef = ##t
 		 \niente 
-		 \squares e'8. ] \< 
+		 \squares e'8. ] \< ^\markup \string-numbers #'( "IV" 1.5 0)
 		 	\glissando \glissSkipOn
 		 c'4 \glissSkipOff \circles \niente \afterGrace cs'8 \p \> [ \glissando {d'8 \!} r8]
 		 %%%%%%%%%% measure 93 %%%%%%%%%%
@@ -1070,7 +1072,7 @@ viola_tuned = {
 		 \circles
 		 \set Staff.forceClef = ##t
 		 d'''16 \mp -. -> ^\sulpont ^\up_bow ^\horz_bow
-		 \niente d'''16 \< 
+		 d'''16 \ppp \< 
 		 	\glissando \glissSkipOn 
 		 \tuplet 3/2 {
 		 	d'''8 \glissSkipOff \niente 
@@ -1195,9 +1197,11 @@ viola_tuned = {
 		 	\glissando \glissSkipOn <f b>8 \>
 		 %%%%%%%%%% measure 112 %%%%%%%%%%
 		 \time 5/4
+		 \stemUp
 		 c'8 \pp \< ^\circular_bow
 		 \niente \afterGrace c'8 \mf \> {\glissSkipOff <ef a>8\!}
 		 r4 
+		 \stemNeutral
 		 <<
 		 	{	
 		 		\oneVoice
@@ -1255,9 +1259,10 @@ viola_tuned = {
 		 \glissSkipOn c'8 \niente \afterGrace c'8 \> {\glissSkipOff <a fs'>8 \!}
 		 r8 
 		 <<
-		 	{\tuplet 5/4 {
-		 		bqs32 [( c' df' b c' ) ]
-		 	}}
+		 	{\oneVoice
+		 		\tuplet 5/4 {
+		 			bqs32 [( c' df' b c' ) ]
+		 		}}
 		 	\\
 		 	{
 		 		\tweak #'stencil ##f \tuplet 5/4 {
@@ -1266,7 +1271,7 @@ viola_tuned = {
 		 			\niente r32 
 		 			\draw_line_arrow " " \down_bow_light
 		 			\span-shift-x #2
-		 			r32 \stopTextSpan \startTextSpan \afterGrace r32 \p \> {r8\!} r32 \stopTextSpan \unHideNotes
+		 			r32 \stopTextSpan \startTextSpan \niente \afterGrace r32 \p \> {r8\!} r32 \stopTextSpan \unHideNotes
 		 		}
 		 	}
 		 >> 
@@ -1277,14 +1282,21 @@ viola_tuned = {
 		 	\glissando \glissSkipOn 
 		 \circles
 		 \afterGrace a'8 [ {\glissSkipOff g'8} \niente \afterGrace <fs' c''>8 \mp ] \> \glissando {<fqs' bqs'>8\!}
-		 \tuplet 3/2 {
-		 	r8 
-		 		<< {\afterGrace <c' fs'>4 ^\circular_bow ^\markup \string-numbers #'( "III IV" 1.5 0)
-		 				\glissando {<bfes fqs'>8}}
-		 			\\
-		 			{\niente s8 \< \niente \afterGrace s8 \p \> {s8\!}}
-		 		>>
-		 }
+		 <<
+		 	{
+		 		\oneVoice
+		 		\tuplet 3/2 {
+		 				r8 
+		 				\afterGrace <c' fs'>4 ^\circular_bow ^\markup \string-numbers #'( "III IV" 1.5 0)
+		 				\glissando {<bfes fqs'>8}
+		 		}
+		 		} \\
+		 		{\tweak #'stencil ##f 
+		 			\tuplet 3/2 {
+		 				\hideNotes r8 \niente r8 \< \niente \afterGrace r8 \p \> {r8\!} \unHideNotes
+		 			}
+		 		}
+		 >>
 		 \clef treble
 		 \tuplet 5/4 {
 		 	\afterGrace <f'' cs''>16 ^\circular_bow

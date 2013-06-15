@@ -268,7 +268,7 @@ cello_tuning = {
     r8.[ 
 
     g16] \laissezVibrer \effort "ff" ^\markup {\small \italic "pizz."} ^\markup \string-numbers #'( "III" 1.5 0.5) 
-    r4 ^\remove_tuner r4
+    r4 r4
     \squares
     r8 \tweak #'direction #-1 \tuplet 3/2 {
     r16 [ 
@@ -358,6 +358,7 @@ cello_tuning = {
       \switch-staff \string-staff
       \clef treble
       \stemUp
+      \circleheads
       \set Staff.forceClef = ##t
       <g' b'>2. 
         \glissando ^\down_bow ^\angle_bow

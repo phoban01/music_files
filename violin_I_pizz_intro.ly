@@ -219,7 +219,7 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   r4 r4
 
   \time 3/8
-  r4. ^\normal_hold
+  r4. ^\normal_hold _\take_bow
 
  %%%%%%%% ============= measure 22 ============= %%%%%%%% 
   \time 3/8

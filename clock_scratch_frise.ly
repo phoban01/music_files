@@ -534,7 +534,9 @@ cello_bichon_frise = {
 		\circleheads
 		\stemDown
 
-		\silence \silence \silence
+		\time 4/4
+		R1 ^\remove_tuner
+		\silence \silence
 		\silence \silence \silence
 
 		\three \two \ten

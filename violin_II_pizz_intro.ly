@@ -170,10 +170,10 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
   r4 r4
  %%%%%%%% ============= measure 28 ============= %%%%%%%% 
   \time 3/8
-  r4. ^\normal_hold
+  r4. 
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 3/8
-  r8 
+  r8 ^\normal_hold _\take_bow
   \bracket-clef
   \niente
   \circles gqs8 \< ^\up_bow_light ^\sulpont [ ~ gqs ~

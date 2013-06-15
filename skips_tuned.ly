@@ -1,6 +1,7 @@
 skips_tuned = {
 	% %%%%%%% ============= measure 1 ============= %%%%%%%%
 	{
+		\my_mark "O"
 		\time 3/4
 		\newSpacingSection
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)	
@@ -81,7 +82,7 @@ skips_tuned = {
 	% %%%%%%% ============= measure 16 ============= %%%%%%%%
 	{
 		\time 2/4
-		\my_mark "O"
+		\my_mark "P"
 		\tempo "" 4=52~56
 		s2
 	}
@@ -126,7 +127,7 @@ skips_tuned = {
 		\time 4/4
 		\newSpacingSection
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 22)
-		\my_mark "P"
+		\my_mark "Q"
 		s1
 	}
 	% %%%%%%% ============= measure 25 ============= %%%%%%%%
@@ -182,7 +183,7 @@ skips_tuned = {
 	% %%%%%%% ============= measure 35 ============= %%%%%%%%
 	{
 		\time 3/8
-		\my_mark "Q"
+		\my_mark "R"
 		s4.
 	}
 	% %%%%%%% ============= measure 36 ============= %%%%%%%%
@@ -366,12 +367,12 @@ skips_tuned = {
 	% %%%%%%% ============= measure 68 ============= %%%%%%%%
 	{
 		\time 3/4
-		s2.
+		s2. \bar "||"
 	}
 	% %%%%%%% ============= measure 69 ============= %%%%%%%%
 	{
 		\time 4/4
-		\my_mark "R"
+		\my_mark "S"
 		\tempo "" 4=60
 		\newSpacingSection
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)		
@@ -386,7 +387,7 @@ skips_tuned = {
 	% %%%%%%% ============= measure 71 ============= %%%%%%%%
 	{
 		\time 3/4
-		s2.
+		s2. \bar "||"
 	}
 	% %%%%%%% ============= measure 72 ============= %%%%%%%%
 	{
@@ -399,7 +400,7 @@ skips_tuned = {
 	% %%%%%%% ============= measure 73 ============= %%%%%%%%
 	{
 		\time 3/4
-		\my_mark "S"
+		\my_mark "T"
 		s2.
 	}
 	% %%%%%%% ============= measure 74 ============= %%%%%%%%
@@ -468,7 +469,7 @@ skips_tuned = {
 	% %%%%%%% ============= measure 85 ============= %%%%%%%%
 	{
 		\time 3/8
-		\my_mark "T"
+		\my_mark "U"
 		s4.
 	}
 	% %%%%%%% ============= measure 86 ============= %%%%%%%%
@@ -579,7 +580,7 @@ skips_tuned = {
 	{
 		\time 5/8
 		\tempo "" 4=60
-		\my_mark "U"
+		\my_mark "V"
 		s2
 		s8
 	}
@@ -688,6 +689,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 126 ============= %%%%%%%%
 	{
 		\time 3/4
+		\newSpacingSection
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 42)
 		s2.
 	}
 	% %%%%%%% ============= measure 127 ============= %%%%%%%%
@@ -946,7 +949,7 @@ skips_tuned = {
 	% %%%%%%% ============= measure 175 ============= %%%%%%%%
 	{
 		\time 3/8
-		\my_mark "V"
+		\my_mark "X"
 		s4.
 	}
 	% %%%%%%% ============= measure 176 ============= %%%%%%%%

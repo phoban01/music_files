@@ -115,7 +115,7 @@ violin_I_tuning = {
  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 6/4
   \draw_bracket \up_bow
-  <e' g' b'>2. \startTextSpan \glissando \afterGrace <c' e' g'>2.  {<c' e' g'>8 \stopTextSpan}
+  <e' g' b'>2. \startTextSpan \glissando \afterGrace <c' e' g'>2. \glissando  {<c' e' g'>8 \stopTextSpan}
   
 
  %%%start of tuning section 

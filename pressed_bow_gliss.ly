@@ -148,7 +148,7 @@ viola_pressed_bow = {
 			\med-zigzag
 			\ppos #0.45 c'4 \glissando \glissSkipOn
 			\niente \afterGrace c'4 \> {\glissSkipOff \ppos #0.9 c'8\!}
-			s4
+			r4
 		}
 		\\
 		{
@@ -233,4 +233,5 @@ skips_pressed_bow = {
 	s2
 	\time 3/4
 	s2.
+	\bar "||"
 }
