@@ -15,11 +15,11 @@ violin_I_tuned = {
 	  \set glissandoMap = #'((1 . 1) (2 . 2) (3 . 3))
 	  \niente
 	  \draw_line_arrow \down_bow_light \down_bow_heavy
-	  <bqs~ fs' c'' fs''>4  ^\circular_bow \startTextSpan ^\markup \string-numbers #'( "III IV" -1 2)
+	  <bqs~ fs' c'' fs''>4  ^\circular_bow \startTextSpan 
 	  	\< \glissando 
 	  	\draw_line_arrow " " \down_bow_light
 	  	\span-shift-x #1.5
-	  	\glissSkipOn f''4  \fp \> \stopTextSpan \startTextSpan ^\markup \string-numbers #'( "I II III IV" 0 2)
+	  	\glissSkipOn f''4  \fp \> \stopTextSpan \startTextSpan
 	  	\glissSkipOff  
 	  	<bqs g' cs'' g''>4 ~ \ppp ^\horz_bow \stopTextSpan
 	  \stemNeutral
@@ -140,6 +140,7 @@ violin_I_tuned = {
 	  \time 3/4
 	  \set glissandoMap = #'((0 . 1) (1 . 0))	  
 	  \niente 
+	  \circles
 	  <bf ees'>16 [ \< ^\circular_bow
 	  	\glissando \niente \afterGrace <eqs' bqf>8. \mf \> ] \glissando {<a dqf'>8 \!}
 	  \diamonds
@@ -175,7 +176,7 @@ violin_I_tuned = {
 	  	s2. s8\pp \<  \niente  \afterGrace s8 \mf \> {s8 \!}
 	  }
 	  >>
-	  r8 \diamonds def''8 ~ \pp ^\aldita  ^\markup \string-numbers #'( "IV" 0 0)
+	  r8 [ \diamonds def''8 ] ~ \pp ^\aldita  ^\markup \string-numbers #'( "IV" 0 0)
 	  %%%%%%%%%% measure 11 %%%%%%%%%%
 	  \time 4/8
 	  def''4 ~ def''8. [ r16 ] _\bow-mute
@@ -188,11 +189,14 @@ violin_I_tuned = {
 	  \set Staff.forceClef = ##t
 	  \niente \flare_width 
 	  \afterGrace \ppos #0.7 c'16 \< [ ^\tilt_bow {s8 \flare_f}  r8
-	  \ppos #0.75 c'16 ] ^\fingernail ^\pizz \effort "f"
+	  \ppos #0.7 c'16 ] ^\fingernail ^\pizz \effort "f"
 	  \switch-staff \body_staff
 	  \body-clef #'fingerboard-small
 	  \set Staff.forceClef = ##t
-	  \ppos #0.6 c'32 \p ^\vertical_bow ^\down_bow_light [ \glissando \ppos #0.3 c'32 \glissando \ppos #0.6 c'32 \glissando \ppos #0.3 c'32]
+	  \tuplet 5/4 {
+	  	\ppos #0.6 c'32 \p ^\vertical_bow ^\down_bow_light [ \glissando \ppos #0.3 c'32 \glissando \ppos #0.6 c'32 \glissando 
+	  	\ppos #0.3 c'32 \glissando \ppos #0.6 c'32 ]
+	  }
 	  r8
 	  \circles
 	  \switch-staff \normal_staff
@@ -207,13 +211,13 @@ violin_I_tuned = {
 	  } \\ {\niente s8 \< \niente \afterGrace s8 \mf \> {s8 \!} }
 	  >>	
 	  
-	  r8
+	  r8 [
 	  \switch-staff \body_staff	  
 	  \circleheads
 	  \body-clef #'bow-area-small
 	  \set Staff.forceClef = ##t
 	  \draw_line_arrow \down_bow_light \down_bow_heavy
-	  \niente \ppos #0.75 c'8 \< \glissando ^\tilt_bow ^\frog \startTextSpan
+	  \niente \ppos #0.75 c'8 ] \< \glissando ^\tilt_bow ^\frog \startTextSpan
 	  %%%%%%%%%% measure 13 %%%%%%%%%%
 	  \time 2/4
 	  \ppos #0.75 c'8. [ 
@@ -302,10 +306,10 @@ violin_I_tuned = {
 	  \afterGrace \ppos #0.75 c'4 \f \< \glissando {\ppos #0.75 c'8 \ff _\bow-mute}
 	  %%%%%%%%%% measure 23 %%%%%%%%%%
 	  \time 5/8
-	  r4 r8 
+	  r4.
 	  \once \override TextScript.extra-offset = #'(-1.5 . 0)
-	  \afterGrace \ppos #0.75 c'8 \mf ^\down_bow
-	  	\glissando {\ppos #0.75 c'8 _\bow-mute} r8
+	  \afterGrace \ppos #0.75 c'8 [ \mf ^\down_bow
+	  	\glissando {\ppos #0.75 c'8 _\bow-mute} r8 ]
 	  %%%%%%%%%% measure 24 %%%%%%%%%%
 	  \time 4/4
 	  \switch-staff \normal_staff
@@ -508,9 +512,14 @@ violin_I_tuned = {
  	%%%%%%%%%% measure 58 %%%%%%%%%%
  	\time 4/8
  	\niente \afterGrace cs'8 \> {s8\!}
- 	\niente \circles <c' \single\diamonds f'>8 ~ \< ^\up_bow ^\sulpont
- 	<c' \single\diamonds f'>16 \sf \squares 
- 	<<{cs'8. ~ \sub_pp ^\down_bow ^\aldita}\\{}>>
+ 	\circles
+ 	<<{
+ 		\oneVoice
+ 		\niente \circles <c' \single\diamonds f'>8 ~ \< ^\up_bow ^\sulpont
+ 		<c' \single\diamonds f'>16 [ \sf \squares  		
+ 		cs'8. ] ~ \sub_pp ^\down_bow ^\aldita
+ 		
+ 	}\\{}>>
  	%%%%%%%%%% measure 59 %%%%%%%%%%
  	\diamonds
  	\time 5/16
@@ -747,10 +756,10 @@ violin_I_tuned = {
  	\niente \afterGrace d''4 \pp \> {s8\!} r16
  	%%%%%%%%%% measure 83 %%%%%%%%%%
  	\time 5/8
- 	r8
+ 	r8 [
  	\circles
  	\niente
- 	<eqs''' aqs'''\harmonic>8 \< ^\sulpont ~ <eqs''' aqs'''\harmonic>4 \p ~ \niente \afterGrace <eqs''' aqs'''\harmonic>8 \> {s8\!}
+ 	<eqs''' aqs'''\harmonic>8 ] \< ^\sulpont ~ <eqs''' aqs'''\harmonic>4 \p ~ \niente \afterGrace <eqs''' aqs'''\harmonic>8 \> {s8\!}
  	%%%%%%%%%% measure 84 %%%%%%%%%%
  	\time 4/8
  	\squares
@@ -790,11 +799,11 @@ violin_I_tuned = {
  	%%%%%%%%%% measure 90 %%%%%%%%%%
  	\time 4/8
  	<< {
- 				
+ 			\oneVoice	
  			d''4 ^\altosulpont ^\markup \string-numbers #'( "III" 3 0) \glissando \glissSkipOn \afterGrace g''4 { \glissSkipOff fs'''8 ~}
  		} \\
  		{
- 			s16 \< s8 \sfzp  \niente s16 \> \afterGrace s4 {s8\ppp}
+ 			s16 \< s8 \sfzp  s16 \> \afterGrace s4 {s8\ppp}
  		}
  	>>
  	%%%%%%%%%% measure 91 %%%%%%%%%%
@@ -806,10 +815,10 @@ violin_I_tuned = {
  	\wavy_vibrato #1.5
  	\afterGrace fs'''8 \ppp \< \glissando {\hideNotes fs'''8  \unHideNotes}
  	\afterGrace <fs''' b'''>16 \sfz ^\trill \glissando {<d'' a''>8 }
- 	r16 r16 
+ 	r16  
  	<<
- 		{<bf fs' d'' eqs''>8. ^\jete } \\ {
- 			\niente s16 \< \niente s16 \mf \> s16 \!
+ 		 { \oneVoice r16 [ <bf fs' d'' eqs''>8. ] ^\jete } \\ {
+ 			s16 \niente s16 \< \niente s16 \mf \> s16 \!
  		}
  	>>
  	%%%%%%%%%% measure 93 %%%%%%%%%%
@@ -1192,7 +1201,7 @@ violin_I_tuned = {
 		\ppos #0.5 c'32 -. \ppos #0.5 c'32 -. \ppos #0.5 c'32 -. ] )
 	\ppos #0.75 c'16 [ ^\vertical_bow \glissando \afterGrace \ppos #0.2 c'16 ] \glissando {\ppos #0.75 c'8}
 	\ppos #0.25 c'4 ~ \ppos #0.25 c'4 
-	\afterGrace \ppos #0.25 c'8. \effort "mf" ^\markup {\small \box LEGNO} ^\markup \string-numbers #'( "III IV" 3 0) {\ppos #0.6 c'8} r16
+	\afterGrace \ppos #0.25 c'8. [ \glissando \effort "mf" ^\markup {\small \box LEGNO} ^\markup \string-numbers #'( "III IV" 3 0) {\ppos #0.6 c'8} r16 ]
 	%%%%%%%%%% measure 143 %%%%%%%%%%
 	\time 3/4
 	r8 \ppos #0.6 c'8 \mp ^\circular_bow ^\markup {\small \box CRINE} \glissando \ppos #0.25 c'8 \glissando \ppos #0.75 c'8 \glissando
@@ -1203,18 +1212,18 @@ violin_I_tuned = {
 	r8 [ \ppos #0.6 c'8 ] \effort "f" ^\down_bow
 	%%%%%%%%%% measure 145 %%%%%%%%%%
 	\time 3/4
-	r8 \afterGrace \ppos #0.3 c'16 \effort "mf" ^\vertical_bow \glissando {\ppos #0.75 c'8} r16
-	\ppos #0.35 c'16 ^\horz_bow ^\down_bow
-	r8 \ppos #0.35 c'32 ^\up_bow \ppos #0.35 c'32 ^\down_bow
-	r8 \ppos #0.35 c'16 ^\up_bow  r16
+	r8 [ \afterGrace \ppos #0.3 c'16 \effort "mf" ^\vertical_bow \glissando {\ppos #0.75 c'8} r16 ]
+	\ppos #0.35 c'16 [ ^\horz_bow ^\down_bow
+	r8 \ppos #0.35 c'32 ^\up_bow \ppos #0.35 c'32 ] ^\down_bow
+	r8 [ \ppos #0.35 c'16 ^\up_bow  r16 ]
 	%%%%%%%%%% measure 146 %%%%%%%%%%
 	\time 2/4
 	r8 [ \ppos #0.4 c'16 ^\down_bow r16 ]
 	r16 [ \ppos #0.3 c'16 ^\up_bow \ppos #0.4 c'16 ^\down_bow \ppos #0.5 c'16 ] ^\down_bow
 	%%%%%%%%%% measure 147 %%%%%%%%%%
 	\time 5/8
-	\afterGrace \ppos #0.25 c'16 [ ^\vertical_bow \glissando {\ppos #0.75 c'8} r16 ]
-	\flare_width \afterGrace \ppos #0.5 c'8 ] \< ^\horz_bow {\ppos #0.5 c'8 \flare_sf}
+	\afterGrace \ppos #0.25 c'16 [ ^\vertical_bow \glissando {\ppos #0.75 c'8} r16 
+	\flare_width \afterGrace \ppos #0.5 c'8 ] \glissando \< ^\horz_bow {\ppos #0.5 c'8 \flare_sf}
 	r16 [ \ppos #0.75 c'16  ^\horz_bow ^\down_bow_light \glissando
 	\glissSkipOn \afterGrace \ppos #0.5 c'8 \effort mf ^\down_bow_heavy {\glissSkipOff \ppos #0.3 c'8 ^\down_bow_light}
 	r16 \ppos #0.5 c'16 ] \effort mf ^\up_bow
@@ -1225,7 +1234,7 @@ violin_I_tuned = {
 	\time 4/4
 	\ppos #0.5 c'16 [ r16 \afterGrace \ppos #0.3 c'8 ] ^\vertical_bow \glissando {\ppos #0.6 c'8}
 	\ppos #0.75 c'16 [ ^\horz_bow ^\down_bow r16 \ppos #0.5 c'16 ^\up_bow r16 ]
-	r16 [ \ppos #0.5 c'32 ^\down_bow \ppos #0.5 c'32 ^\up_bow r16 \ppos #0.5 c'16 ~ ]
+	r16 [ \ppos #0.5 c'32 ^\down_bow \ppos #0.5 c'32 ^\up_bow r16 \ppos #0.5 c'16 \glissando ]
 					^\markup {
 						\fingering-diagram #'(("di" . 0.5) (#f . 0.5) ("di" . 0.5) ("di" . 0.5))
 					}
@@ -1244,9 +1253,8 @@ violin_I_tuned = {
 % 	\time 2/8
 	\tuplet 3/2 {
 		\diamonds
-		\ottava #1 cs'''8 \f ^\up_bow ^\altosulpont ^\markup \string-numbers #'( "II" 2 0) \glissando 
+		cs'''8 \f ^\up_bow ^\altosulpont ^\markup \string-numbers #'( "II" 2 0) \glissando 
 		a'''8 \glissando \afterGrace  e'''8 \glissando {e''''8 ^\down_bow_very_heavy \glissando}
-		\ottava #0
 	}
 	%%%%%%%%%% measure 153 %%%%%%%%%%
 	\time 3/4
@@ -1334,25 +1342,26 @@ violin_I_tuned = {
 	\slurSolid
 
 	\tuplet 3/2 {
-		r8 \single\slurDown \niente a'8 ( \< ^\up_bow ^\flat_bow  bqf' \p
+		r8 \slurDown \niente a'8 ( \< ^\up_bow ^\flat_bow  bqf' \p
 	}
+	\slurNeutral
 	\draw_line_arrow \flat_bow \tilt_bow
 	\niente \afterGrace cqs''8. ) \startTextSpan [ \> \glissando {d''8 \! \stopTextSpan} r16 ]
-	r4 r4 r16 
-	\diamonds \flare_width \niente \afterGrace b''8. \< ^\sulpont ^\up_bow  ^\markup \string-numbers #'( "I" 3 0) {s8 \flare_p}
+	r4 r4 r16 [
+	\diamonds \flare_width \niente \afterGrace b''8. ] \< ^\sulpont ^\up_bow  ^\markup \string-numbers #'( "I" 3 0) {s8 \flare_p}
 	%%%%%%%%%% measure 165 %%%%%%%%%%
 	\time 3/4 
 	\circles
-	r8
-	\niente aqf'8 \< ^\markup \string-numbers #'( "IV" 3 0) \glissando \tuplet 3/2 {
+	r8 [
+	\niente aqf'8 ] \< ^\markup \string-numbers #'( "IV" 3 0) \glissando \tuplet 3/2 {
 		\glissSkipOn a'8 \p \glissSkipOff g'4
 	}
 	\wavy_vibrato #1 
 	\afterGrace g'8. \< [ \glissando {\hideNotes g'8 \mf \unHideNotes} r16 ]
 	%%%%%%%%%% measure 166 %%%%%%%%%%
 	\time 5/8
-	\diamonds e''8 \p ^\pizz ^\markup \string-numbers #'( "II" 3 0) r8 
-	r16 c'8. \p ^\pizz ^\markup \string-numbers #'( "IV" 3 0) r8
+	\diamonds e''8 [ \p ^\pizz ^\markup \string-numbers #'( "II" 3 0) r8 ]
+	r16 [ c'8. ] \p ^\pizz ^\markup \string-numbers #'( "IV" 3 0) r8
 	%%%%%%%%%% measure 167 %%%%%%%%%%
 	\time 5/4
 	\circles
@@ -1365,7 +1374,7 @@ violin_I_tuned = {
 	\switch-staff \body_staff
 	\body-clef #'fingerboard-small
 	\set Staff.forceClef = ##t
-	\ppos #0.2 c'4 ^\aldita ^\up_bow_light \glissando \pp _\nutmute
+	\ppos #0.2 c'4 ^\up_bow_light \glissando \pp _\nutmute
 
 	\ppos #0.2 c'4
 	%%%%%%%%%% measure 168 %%%%%%%%%%
@@ -1387,13 +1396,13 @@ violin_I_tuned = {
 	%%%%%%%%%% measure 173 %%%%%%%%%%
 	\time 5/8
 	\draw_line_arrow \up_bow_light \up_bow_heavy
-	\ppos #0.2 c'8 \glissando  \ppos #0.2 c'8 \startTextSpan \glissando \< \ppos #0.2 c'8 \glissando \ppos #0.2 c'16 \mf \stopTextSpan r16 _\bow-mute
+	\ppos #0.2 c'8 [ \glissando  \ppos #0.2 c'8 \startTextSpan \glissando \< \ppos #0.2 c'8 \glissando \ppos #0.2 c'16 \mf \stopTextSpan r16 ] _\bow-mute
 	\switch-staff \normal_staff
 	\set Staff.forceClef = ##t
 	\ottava #1
 	\circles 
 	\wavy_vibrato #1 
-	\afterGrace  b''''16.  \f ^\down_bow_heavy ^\sulpont \glissando {\ottava #0 \hideNotes b''8 \unHideNotes} r32
+	\afterGrace  b''''16. [ \f ^\down_bow_heavy ^\sulpont \glissando {\ottava #0 \hideNotes b''8 \unHideNotes} r32 ]
 	%%%%%%%%%% measure 174 %%%%%%%%%%
 	\time 2/4
 	\switch-staff \body_staff
@@ -1443,7 +1452,7 @@ violin_I_tuned = {
 	r16 ] r4
 	%%%%%%%%%% measure 181 %%%%%%%%%%
 	\time 5/8
-	r4 r4 \ppos #0.5 c'8 \mf ^\up_bow_light ^\aldita ^\markup \string-numbers #'( "III IV" 3 0)
+	r4 r4 \ppos #0.5 c'8 \mf ^\up_bow_light ^\markup \string-numbers #'( "III IV" 3 0)
 	%%%%%%%%%% measure 182 %%%%%%%%%%
 	\time 3/4
 	\switch-staff \normal_staff 
@@ -1456,7 +1465,7 @@ violin_I_tuned = {
 	\tweak #'direction #DOWN
 	\tuplet 5/4 {
 		\circles
-		#(define afterGraceFraction (cons 5 10))
+% 		#(define afterGraceFraction (cons 5 10))
 		\niente
 		\slurUp
 		\afterGrace dqf''8 ( \< ^\circular_bow ^\markup \string-numbers #'( "III" 0 0) \glissando {cqs''8}
@@ -1466,11 +1475,13 @@ violin_I_tuned = {
 	r4 r4
 	%%%%%%%%%% measure 184 %%%%%%%%%%
 	\time 4/4
-	r4 r4 r4 
+	r4 ^\markup \string-numbers #'( "III" 3 0)
+
+	r4 r4 
 	<< {
 		\oneVoice
 			\tuplet 3/2 {
-				r8 d'4 \mfpp ^\altosulpont ^\markup \string-numbers #'( "III" 3 0) ^\markup {\small \box "con sord"} ~ 
+				r8 d'4 \mfpp ^\altosulpont  ~ 
 			}
 		} \\ {}>>
 	%%%%%%%%%% measure 185 %%%%%%%%%%
@@ -1503,7 +1514,7 @@ violin_I_tuned = {
 	\afterGrace b''8 \mf ^\up_bow_very_heavy \glissando {fs''8} r16 ]
 	%%%%%%%%%% measure 187 %%%%%%%%%%
 	\time 4/2
-	r1 r1
+	r1 ^\markup {\small \italic {*Wilde scordatur II & III}} r1 ^\gamba
 	%%%%%%%%%% measure 188 %%%%%%%%%%
 	\time 6/4
 	\switch-staff \body_staff

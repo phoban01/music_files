@@ -756,6 +756,7 @@ r4. r4.
 
 <<
     {
+      \oneVoice
       \switch-staff \pizz_staff
       \body-clef #'fingerboard
       \override NoteHead.stencil = #scratch-tone
@@ -950,7 +951,7 @@ r8 r8
 \clef treble
 \set Staff.forceClef = ##t
 \stemUp \circleheads 
-<e' g' b'>8 \< \glissando ^\down_bow ^\angle_bow <e' g' b'>4 \mp \glissando
+<e' g' b'>8 \< ^\down_bow ^\angle_bow \glissando  <e' g' b'>4 \mp \glissando
 
 }
 

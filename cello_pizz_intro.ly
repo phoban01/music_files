@@ -217,7 +217,8 @@ a'16 \p ^\down_bow_light ^\aldita ^\markup \string-numbers #'("I" 1 0) [  a'16 ^
         \set Staff.forceClef = ##t
         \niente
         \slow-zigzag
-        \ppos #0.8 c'2 \< \glissando 
+        \ppos #0.8 c'2 \< ^\vertical_bow _\markup {\italic "*Pressed bow glissando (take bow in both hands)"}
+          \glissando 
 
         \time 3/16
         \ppos #0.5 c'8. \mf \glissando

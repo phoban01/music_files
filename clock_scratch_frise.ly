@@ -1,19 +1,7 @@
-\include "/pieces/diotima_quartet/code_files/quartet_template.ly"
-
 \pointAndClickOff
 
 %%%%MUSIC
-\include "/pieces/diotima_quartet/music_files/violin_I_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/viola_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/cello_pizz.ly"
-\include "/pieces/diotima_quartet/music_files/violin_I_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/cello_pizz_intro.ly"
-\include "/pieces/diotima_quartet/music_files/violin_I_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/violin_II_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/viola_tuning.ly"
-\include "/pieces/diotima_quartet/music_files/cello_tuning.ly"
+
 
 frise_settings_clock = {
 		#(add-grace-property 'Voice 'Stem 'transparent #t)
@@ -480,8 +468,7 @@ silence = {
 }
 
 violin_I_bichon_frise = {
-		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 40)
+
 
 		\switch-staff \pizz_staff
 		\frise_settings_clock
@@ -492,8 +479,7 @@ violin_I_bichon_frise = {
 		\silence \silence \silence
 
 		\silence 
-		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
+
 		\four \nine
 		\three \one \eight
 		\five \two \ten

@@ -260,6 +260,7 @@ violin_I_tuning = {
         \once\override Flag.transparent =##t
         \parenthesize d''8}  
         \glissSkipOn \niente d''8 ] \mp \>
+    #(define afterGraceFraction (cons 9 10))
     \time 5/4
      e'' [ \glissSkipOff 
     \afterGrace fs''8]  
@@ -469,7 +470,7 @@ violin_I_tuning = {
  %%%%%%%% ============= measure 38 ============= %%%%%%%% 
   \time 5/4
   r8 \niente cses'8 \< ^\up_bow_light ^\altosultasto ~ cses'2 \p ~ \niente \afterGrace cses'4 \> {s8\!} r4
-
+  \tag #'violin-I-part {\pageBreak}
  %%%%%%%% ============= measure 39 ============= %%%%%%%% 
   \time 5/4
   \stemNeutral

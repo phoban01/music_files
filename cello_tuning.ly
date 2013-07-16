@@ -524,7 +524,7 @@ cello_tuning = {
       \oneVoice 
       \clef treble
       \niente
-      asef'8. [  \< cs'''16 \f ] ^\down_bow_very_heavy \glissando 
+      asef'8. [  \< \diamonds cs'''16 \f ] ^\down_bow_very_heavy \glissando 
     } \\
     {
       \new BowPositionStaff \with {alignAboveContext="cello"} {
@@ -537,9 +537,10 @@ cello_tuning = {
   \time 4/4
   <<
     {
-      \circles
-       \glissSkipOn \afterGrace c''8 [  \glissando {\glissSkipOff e'8} r8 ] 
+      \diamonds
+      \glissSkipOn \afterGrace c''8 [  \glissando {\glissSkipOff e'8} r8 ] 
       \niente
+      \circles      
       gs'4 ~ \< ^\altosultasto gs'8 ~ gs'8 \p ~ gs'4 ~
     }\\
     { 

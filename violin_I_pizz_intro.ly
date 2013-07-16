@@ -168,13 +168,13 @@ fqs''16 [ ^\altosulpont \pp e'' d'' \diamonds  a'' \mp  ~ ^\down_bow ^\nat \flar
   \clockhead c'32 [ \mf \anti-clockhead c'16 r32 r16 ]
 %  %%%%%%%% ============= measure 18 ============= %%%%%%%% 
   \time 4/8
-   r16   
+   r16  [
   \switch-staff \body_staff 
   \set Staff.forceClef = ##t
   \circleheads
-  a'8. ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0) \mf \glissando a'8 ] \glissando 
+  a'8. ] ^\down_bow_heavy ^\tilt_bow ^\markup \string-numbers #'("I" 0 0) \mf \glissando a'8 [ \glissando 
   \no-gliss-pad
-  a'16 [ ^\vertical_bow ^\flat_bow \effort mf  \glissando \no-gliss-pad \afterGrace c' ] \glissando {a'8}
+  a'16  ^\vertical_bow ^\flat_bow \effort mf  \glissando \no-gliss-pad \afterGrace c' ] \glissando {a'8}
 
  \time 9/16
   

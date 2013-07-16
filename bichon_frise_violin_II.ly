@@ -951,7 +951,8 @@ violin_II_bichon_frise = {
  %%%%%%%% ============= measure 27 ============= %%%%%%%% 
   {
 	\time 4/4
-	<c' e'>4 ^\down_bow_light
+	r4
+% 	<c' e'>4 ^\down_bow_light
 	\times 2/3 {
 		<e' g' b'>16 ^\up_bow_heavy
 		\hideNote c'8. ^\down_bow_heavy
@@ -1981,31 +1982,14 @@ violin_II_bichon_frise = {
 		<e' g' b'>8 ^\up_bow_very_heavy
 		\hideNote c'8 ^\down_bow_very_heavy
 	}
-	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
-		g'16
-		e'16 ]
-	}
-	\times 2/3 {
-		c'16 [ ^\down_bow_very_heavy
-		e'16
-		g'16 ]
-	}
+	r8
+	r8
 }
 
  %%%%%%%% ============= measure 58 ============= %%%%%%%% 
   {
 	\time 4/4
-	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
-		g'16
-		e'16 ]
-	}
-	\times 2/3 {
-		c'16 [ ^\down_bow_very_heavy
-		e'16
-		g'16 ]
-	}
+	r8 r8
 	\times 2/3 {
 		b'16 [  ^\up_bow_very_heavy
 		g'16
@@ -2170,10 +2154,10 @@ violin_II_bichon_frise = {
 	<e' g' b'>8 ^\up_bow_heavy
 	\hideNote c'16 ^\down_bow_heavy
 	\times 2/3 {
-		\hideNote c'8 ^\up_bow_very_heavy
+		\hideNote c'8 [ ^\up_bow_very_heavy
 		\hideNote c'16 ^\down_bow_very_heavy
 		<c' e'>16 ^\up_bow_very_heavy
-		<e' g' b'>8  ^\down_bow_heavy
+		r8 ]
 	}
 } 
 
@@ -2181,7 +2165,8 @@ violin_II_bichon_frise = {
  {
 	\time 4/4
 	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
+		\niente
+		b'16 [  \> ^\up_bow_very_heavy
 		g'16
 		e'16 ]
 	}
@@ -2190,74 +2175,78 @@ violin_II_bichon_frise = {
 		e'16
 		g'16 ]
 	}
+% 	\times 2/3 {
+% 		b'16 [  ^\up_bow_very_heavy
+% 		g'16
+% 		e'16 ]
+% 	}
+	r8
 	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
+		c'16 [ ^\up_bow_very_heavy
+		e'16
+		r16 ]
+	}
+	\times 2/3 {
+		r16 [  
+		g'16 ^\up_bow_very_heavy
+		e'16 ]
+	}
+	r8
+% 	\times 2/3 {
+% 		c'16 [ ^\down_bow_very_heavy
+% 		e'16
+% 		g'16 ]
+% 	}
+	\times 2/3 {
+		b'16 [  ^\down_bow_very_heavy
 		g'16
 		e'16 ]
 	}
-	\times 2/3 {
-		c'16 [ ^\down_bow_very_heavy
-		e'16
-		g'16 ]
-	}
-	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
-		g'16
-		e'16 ]
-	}
-	\times 2/3 {
-		c'16 [ ^\down_bow_very_heavy
-		e'16
-		g'16 ]
-	}
-	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
-		g'16
-		e'16 ]
-	}
-	\times 2/3 {
-		c'16 [ ^\down_bow_very_heavy
-		e'16
-		g'16 ]
-	}
+	r8 \!
+% 	\times 2/3 {
+% 		c'16 [ ^\down_bow_very_heavy
+% 		e'16
+% 		g'16 ]
+% 	}
 } 
 
  %%%%%%%% ============= measure 64 ============= %%%%%%%% 
 {
 	\time 4/4	
-	\times 2/3 {
-		<g' b'>8 ^\down_bow_light ^\sulpont 
-		\hideNote c'8 ^\up_bow
-		\hideNote c'8 ^\down_bow
-	}
-	\times 2/3 {
-		\draw_line_arrow \up_bow_heavy \up_bow_very_heavy
-		b'16 [  \startTextSpan
-		g'16
-		e'16 ] \stopTextSpan
-	}
-	\times 2/3 {
-		c'16 [ ^\down_bow_very_heavy
-		e'16
-		g'16 ]
-	}
-	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
-		g'16
-		e'16 ]
-	}
-	\times 2/3 {
-		c'16 [ ^\down_bow_very_heavy
-		e'16
-		g'16 ]
-	}
-	\times 2/3 {
-		b'16 [  ^\up_bow_very_heavy
-		g'16
-		e'16 ]
-	}
-	<e' g' b'>16 ^\down_bow_very_heavy
-	\hideNote c'16 ^\up_bow_very_heavy
+	R1
+% 	\times 2/3 {
+% 		<g' b'>8 ^\down_bow_light ^\sulpont 
+% 		\hideNote c'8 ^\up_bow
+% 		\hideNote c'8 ^\down_bow
+% 	}
+% 	\times 2/3 {
+% 		\draw_line_arrow \up_bow_heavy \up_bow_very_heavy
+% 		b'16 [  \startTextSpan
+% 		g'16
+% 		e'16 ] \stopTextSpan
+% 	}
+% 	\times 2/3 {
+% 		c'16 [ ^\down_bow_very_heavy
+% 		e'16
+% 		g'16 ]
+% 	}
+% 	\times 2/3 {
+% 		b'16 [  ^\up_bow_very_heavy
+% 		g'16
+% 		e'16 ]
+% 	}
+% 	\times 2/3 {
+% 		c'16 [ ^\down_bow_very_heavy
+% 		e'16
+% 		g'16 ]
+% 	}
+% 	\times 2/3 {
+% 		b'16 [  ^\up_bow_very_heavy
+% 		g'16
+% 		e'16 ]
+% 	}
+% 	<e' g' b'>16 ^\down_bow_very_heavy
+% 	\hideNote c'16 ^\up_bow_very_heavy
 	\revert NoteHead.font-size 
 	\revert TextScript.X-offset
 	\stemNeutral

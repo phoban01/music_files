@@ -4,7 +4,11 @@ skips_tuned = {
 		\my_mark "O"
 		\time 3/4
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)	
+		\tag #'score {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}	
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}	
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 35)}	
+		\tag #'viola-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 35)}	
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 35)}	
 		s2.
 	}
 	% %%%%%%% ============= measure 2 ============= %%%%%%%%
@@ -52,11 +56,14 @@ skips_tuned = {
 		\time 5/4
 		s1
 		s4
+% 		\tag #'violin-I-part {\noBreak}
 	}
 	% %%%%%%% ============= measure 11 ============= %%%%%%%%
 	{
 		\time 4/8
 		s2
+		\tag #'violin-I-part {\pageTurn}
+
 	}
 	% %%%%%%% ============= measure 12 ============= %%%%%%%%
 	{
@@ -89,6 +96,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 17 ============= %%%%%%%%
 	{
 		\time 4/8
+		\newSpacingSection
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 38)}	
 		s2
 	}
 	% %%%%%%% ============= measure 18 ============= %%%%%%%%
@@ -99,6 +108,8 @@ skips_tuned = {
 	}
 	% %%%%%%% ============= measure 19 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}		
 		s1
 	}
 	% %%%%%%% ============= measure 20 ============= %%%%%%%%
@@ -185,6 +196,7 @@ skips_tuned = {
 		\time 3/8
 		\my_mark "R"
 		s4.
+		\tag #'violin-I-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 36 ============= %%%%%%%%
 	{
@@ -207,6 +219,8 @@ skips_tuned = {
 	{
 		\time 4/4
 		s1
+		\tag #'viola-part {\pageTurn}
+		\tag #'cello-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 40 ============= %%%%%%%%
 	{
@@ -237,6 +251,7 @@ skips_tuned = {
 		\time 5/4
 		s1
 		s4
+		\tag #'violin-II-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 45 ============= %%%%%%%%
 	{
@@ -280,16 +295,22 @@ skips_tuned = {
 	% %%%%%%% ============= measure 52 ============= %%%%%%%%
 	{
 		\time 4/8
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}	
 		s2
 	}
 	% %%%%%%% ============= measure 53 ============= %%%%%%%%
 	{
 		\time 3/16
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 22)}			
 		s8.
 	}
 	% %%%%%%% ============= measure 54 ============= %%%%%%%%
 	{
 		\time 5/4
+		\newSpacingSection
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}			
 		s1
 		s4
 	}
@@ -302,7 +323,9 @@ skips_tuned = {
 	{
 		\time 3/8
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)
+		\tag #'score {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 20)}			
 		s4.
 	}
 	% %%%%%%% ============= measure 57 ============= %%%%%%%%
@@ -320,6 +343,7 @@ skips_tuned = {
 	{
 		\time 3/8
 		s4.
+		\tag #'violin-I-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 60 ============= %%%%%%%%
 	{
@@ -329,6 +353,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 61 ============= %%%%%%%%
 	{
 		\time 3/4
+		\newSpacingSection
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}
 		s2.
 	}
 	% %%%%%%% ============= measure 62 ============= %%%%%%%%
@@ -375,12 +401,16 @@ skips_tuned = {
 		\my_mark "S"
 		\tempo "" 4=60
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)		
+		\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
+		\tag #'viola-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 30)}
+
 		s1
 	}
 	% %%%%%%% ============= measure 70 ============= %%%%%%%%
 	{
 		\time 5/16
+		\newSpacingSection
+		\tag #'viola-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 56)}
 		s4
 		s16
 	}
@@ -394,7 +424,12 @@ skips_tuned = {
 		\time 6/4
 		\tempo "" 4=52
 		\newSpacingSection
-		\set Score.proportionalNotationDuration = #(ly:make-moment 1 36)		
+		\tag #'score {\set Score.proportionalNotationDuration = #(ly:make-moment 1 36)}	
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 36)}
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 22)}
+		\tag #'viola-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 25)}
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 25)}
+
 		s1.
 	}
 	% %%%%%%% ============= measure 73 ============= %%%%%%%%
@@ -409,6 +444,9 @@ skips_tuned = {
 		\tempo "" 4=60~66
 		s1
 		s4
+		\newSpacingSection
+		\tag #'violin-I-part {\pageTurn}			
+
 	}
 	% %%%%%%% ============= measure 75 ============= %%%%%%%%
 	{
@@ -418,7 +456,9 @@ skips_tuned = {
 	% %%%%%%% ============= measure 76 ============= %%%%%%%%
 	{
 		\time 3/16
-		\tempo "" 4=72~78
+		\tempo "" 4=72~76
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 28)}			
 		s8.
 	}
 	% %%%%%%% ============= measure 77 ============= %%%%%%%%
@@ -426,6 +466,7 @@ skips_tuned = {
 		\time 5/8
 		s2
 		s8
+		\tag #'viola-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 78 ============= %%%%%%%%
 	{
@@ -514,6 +555,8 @@ skips_tuned = {
 	{
 		\time 4/4
 		\tempo "" 4=72~76
+		\newSpacingSection
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 24)}			
 		s1
 	}
 	% %%%%%%% ============= measure 95 ============= %%%%%%%%
@@ -557,6 +600,7 @@ skips_tuned = {
 		\time 4/4
 		\tempo "" 4=60~66
 		s1
+		\tag #'viola-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 103 ============= %%%%%%%%
 	{
@@ -588,6 +632,7 @@ skips_tuned = {
 	{
 		\time 2/4
 		s2
+		\tag #'violin-II-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 108 ============= %%%%%%%%
 	{
@@ -636,6 +681,7 @@ skips_tuned = {
 	{
 		\time 3/8
 		s4.
+		\tag #'viola-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 117 ============= %%%%%%%%
 	{
@@ -680,6 +726,7 @@ skips_tuned = {
 		\time 5/8
 		s2
 		s8
+		\tag #'violin-I-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 125 ============= %%%%%%%%
 	{
@@ -692,6 +739,7 @@ skips_tuned = {
 		\newSpacingSection
 		\set Score.proportionalNotationDuration = #(ly:make-moment 1 42)
 		s2.
+
 	}
 	% %%%%%%% ============= measure 127 ============= %%%%%%%%
 	{
@@ -760,6 +808,8 @@ skips_tuned = {
 	% %%%%%%% ============= measure 139 ============= %%%%%%%%
 	{
 		\time 3/4
+		\newSpacingSection
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 22)}
 		s2.
 	}
 	% %%%%%%% ============= measure 140 ============= %%%%%%%%
@@ -860,6 +910,7 @@ skips_tuned = {
 	{
 		\time 4/4
 		s1
+		\tag #'cello-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 159 ============= %%%%%%%%
 	{
@@ -876,12 +927,15 @@ skips_tuned = {
 	{
 		\time 4/4
 		s1
+		\tag #'violin-II-part {\pageTurn}
+
 	}
 	% %%%%%%% ============= measure 162 ============= %%%%%%%%
 	{
 		\time 5/4
 		s1
 		s4
+		\tag #'viola-part {\pageTurn}		
 	}
 	% %%%%%%% ============= measure 163 ============= %%%%%%%%
 	{
@@ -975,6 +1029,8 @@ skips_tuned = {
 	{
 		\time 3/4
 		s2.
+		\tag #'violin-I-part {\pageTurn}
+
 	}
 	% %%%%%%% ============= measure 181 ============= %%%%%%%%
 	{

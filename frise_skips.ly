@@ -2,8 +2,16 @@ frise_skips = {
 	% %%%%%%% ============= measure 1 ============= %%%%%%%%
 	{
 		\time 4/4
-		\newSpacingSection		
-		\tempo "[WILD/HYSTERICAL/BEAUTIFUL]" 4=96~110
+		\newSpacingSection
+		\tag #'score {\set Score.proportionalNotationDuration = #(ly:make-moment 1 40)}
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)}
+		\tag #'violin-II-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)}	
+		\tag #'viola-part {
+			\set Score.proportionalNotationDuration = #(ly:make-moment 1 8)
+			\once \override MetronomeMark.extra-offset = #'(0 . -5)
+		}	
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 6)}
+		\tempo "[WILD/HYSTERICAL/BEAUTIFUL]" 8=184~220
 		s1
 	}
 	% %%%%%%% ============= measure 2 ============= %%%%%%%%
@@ -28,10 +36,15 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 7 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}
 		s1
 	}
 	% %%%%%%% ============= measure 8 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'score {\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)}	
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}
 		s1
 	}
 	% %%%%%%% ============= measure 9 ============= %%%%%%%%
@@ -48,14 +61,20 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 12 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 13 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 14 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 15 ============= %%%%%%%%
@@ -64,34 +83,55 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 16 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 17 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 18 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 19 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
+		\tag #'violin-I-part {\pageTurn}		
+
 	}
 	% %%%%%%% ============= measure 20 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 21 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 22 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 23 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 24 ============= %%%%%%%%
@@ -124,18 +164,28 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 31 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}	
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}
 		s1
 	}
 	% %%%%%%% ============= measure 32 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 33 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}	
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}
 		s1
 	}
 	% %%%%%%% ============= measure 34 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 35 ============= %%%%%%%%
@@ -144,18 +194,27 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 36 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}	
 		s1
 	}
 	% %%%%%%% ============= measure 37 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}				
 		s1
 	}
 	% %%%%%%% ============= measure 38 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 39 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}				
 		s1
 	}
 	% %%%%%%% ============= measure 40 ============= %%%%%%%%
@@ -164,10 +223,14 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 41 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}				
 		s1
 	}
 	% %%%%%%% ============= measure 42 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 43 ============= %%%%%%%%
@@ -176,14 +239,20 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 44 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}				
 		s1
 	}
 	% %%%%%%% ============= measure 45 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}				
 		s1
 	}
 	% %%%%%%% ============= measure 46 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 47 ============= %%%%%%%%
@@ -196,18 +265,28 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 49 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}				
 		s1
 	}
 	% %%%%%%% ============= measure 50 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}	
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
+
 		s1
 	}
 	% %%%%%%% ============= measure 51 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}				
 		s1
 	}
 	% %%%%%%% ============= measure 52 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 53 ============= %%%%%%%%
@@ -216,34 +295,53 @@ frise_skips = {
 	}
 	% %%%%%%% ============= measure 54 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 55 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}	
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
+
 		s1
 	}
 	% %%%%%%% ============= measure 56 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}						
 		s1
+		\tag #'cello-part {\pageTurn}
 	}
 	% %%%%%%% ============= measure 57 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'cello-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}				
 		s1
 	}
 	% %%%%%%% ============= measure 58 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}		
 		s1
 	}
 	% %%%%%%% ============= measure 59 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 60 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 60)}
 		s1
 	}
 	% %%%%%%% ============= measure 61 ============= %%%%%%%%
 	{
+		\newSpacingSection
+		\tag #'violin-I-part {\set Score.proportionalNotationDuration = #(ly:make-moment 1 10)}		
 		s1
 	}
 	% %%%%%%% ============= measure 62 ============= %%%%%%%%
@@ -257,5 +355,6 @@ frise_skips = {
 	% %%%%%%% ============= measure 64 ============= %%%%%%%%
 	{
 		s1
+		\tag #'viola-part {\pageTurn}
 	}
 }

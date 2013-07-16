@@ -68,12 +68,23 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
  \diamonds
  \flare_width
  \afterGrace a''8 [ ^\nat \< {s8 \flare_mf} 
- r8. \mute_head c'16:128 ~ ] ^\markup {\center-align \center-column {\altosultasto \vertical_bow \altosulpont}}
- \mute_head c'8:64 r8 r8]
+ r8. ]
+
+  \switch-staff \body_staff
+  \body-clef #'fingerboard-small
+  \set Staff.forceClef = ##t
+  \ppos #0.6 c'32 \effort mf ^\vertical_bow ^\down_bow_light [ \glissando \ppos #0.3 c'32 \glissando 
+
+  \ppos #0.6 c'32 \glissando \ppos #0.3 c'32 \glissando 
+  \ppos #0.6 c'32 \glissando \ppos #0.3 c'32 ]
+
+  r8 r8 
 
  %%%%%%%% ============= measure 10 ============= %%%%%%%% 
-%   \compoundMeter #'((3 8 ) (5 16))
-\time 3/8
+  \time 3/8
+  \switch-staff \normal_staff
+  \set Staff.forceClef = ##t  
+  \diamonds
   \draw_line_arrow \sultasto \altosulpont
   d''16 ( \startTextSpan [ \p  dqf''16 cs'' d'' e'' ) \mf ^\staccato ^\accent \stopTextSpan r16 ]
 
@@ -170,10 +181,10 @@ f''8 [ \glissSkipOff ef''16 \mf g'' ( \p fs'' fqs'' e'' d'' )]
   r4 r4
  %%%%%%%% ============= measure 28 ============= %%%%%%%% 
   \time 3/8
-  r4. 
+  r4. ^\normal_hold _\take_bow
  %%%%%%%% ============= measure 31 ============= %%%%%%%% 
   \time 3/8
-  r8 ^\normal_hold _\take_bow
+  r8 
   \bracket-clef
   \niente
   \circles gqs8 \< ^\up_bow_light ^\sulpont [ ~ gqs ~

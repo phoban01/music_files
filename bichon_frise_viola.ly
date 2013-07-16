@@ -2128,7 +2128,7 @@ viola_bichon_frise = {
 	\times 2/3 {
 		c'16 [ ^\down_bow_light
 		e'16
-		g'16 ]
+		r16 ]
 	}
 	\times 2/3 {
 		\times 2/3 {
@@ -2147,7 +2147,7 @@ viola_bichon_frise = {
 	\hideNote c'16 ^\down_bow
 	\hideNote c'8 ^\up_bow_light
 	\times 2/3 {
-		c'16 [ ^\down_bow
+		c'16 [ ^\down_bow \>
 		e'16
 		g'16 ]
 	}
@@ -2169,7 +2169,7 @@ viola_bichon_frise = {
 	\times 2/3 {
 		c'16 [ ^\down_bow
 		e'16
-		g'16 ]
+		g'16 ] \!
 	}
 }
 %%%%%%%%%   MEASURE 64   %%%%%%%%% 

@@ -9,14 +9,14 @@ cello_tuned = {
 			\set Staff.forceClef = ##t
 			\circleheads
 			\niente 
-			\ppos #0.2 c'4 \< \glissando ^\nutmute ^\vertical_bow ^\markup \string-numbers #'( "II III" 1.5 0)
+			\ppos #0.5 c'4 \< \glissando ^\nutmute ^\vertical_bow ^\markup \string-numbers #'( "II III" 1.5 0)
 				
-			\glissSkipOn \ppos #0.5 c'4  \p
+			\glissSkipOn \ppos #0.75 c'4  \p
 			%%%%%%%%%% measure 2 %%%%%%%%%%
 			\time 2/4
 			\niente 
-			\afterGrace \ppos #0.5 c'8 \> 
-			{\glissSkipOff \ppos #0.7 c'8\!}
+			\afterGrace \ppos #0.9 c'8 \> 
+			{\glissSkipOff \ppos #1.05 c'8\!}
 			<<
 				{
 				\oneVoice
@@ -69,7 +69,7 @@ cello_tuned = {
 			\body-clef #'fingerboard-small
 			\set Staff.forceClef = ##t
 			\clef treble
-			\circles
+			\circleheads
 			\niente 
 			\draw_line_arrow \down_bow_light \down_bow_heavy
 			\ppos #0.5 c'4 \< ^\vertical_bow _\nutharm \startTextSpan ^\markup \string-numbers #'( "I II" 1 0)
@@ -80,6 +80,7 @@ cello_tuned = {
 			\niente \afterGrace \ppos #0.8 c'4 \> {\glissSkipOff \ppos #1.05 c'8 \!}
 			\switch-staff \normal_staff
 			\clef bass
+			\circles
 			\set Staff.forceClef = ##t
 			<<
 				{			
@@ -97,14 +98,16 @@ cello_tuned = {
 			r4
 			\switch-staff \body_staff
 			\body-clef #'bow-area-small
-			r8 
+			r8 [
 			\clef treble
 			\set Staff.forceClef = ##t
 			\set glissandoMap = #'((0 . 0) (1 . 1) (2 . 2) (3 . 3))
-			\afterGrace \ppos #1.05 c'8 \f ^\tilt_bow ^\frog ^\vertical_bow ^\markup \string-numbers #'( "I" 1.5 0)
+			\circleheads
+			\afterGrace \ppos #1.05 c'8 ] \f ^\tilt_bow ^\frog ^\vertical_bow ^\markup \string-numbers #'( "I" 1.5 0)
 				\glissando {\ppos #0.6 c'8}
 			\tuplet 3/2 {
 				r4
+				\circles
 				\switch-staff \normal_staff
 				\clef bass
 				\niente 
@@ -113,10 +116,10 @@ cello_tuned = {
 			} 
 			\tuplet 3/2 {
 				\afterGrace <e, cqs g>4 \mp \> \glissando {\transpose e, dqf, {<e, \single\hideNote cqs \single\hideNote g>8 \pp }}
-				<a, eqf>8 \< ^\horz_bow
+				<a, eqf>8  \< ^\horz_bow
 					\glissando \glissSkipOn
 			}
-			\afterGrace g8 \glissando {\glissSkipOff <bf, fqf>8 \mf} r8
+			\afterGrace g8 [ \glissando {\glissSkipOff <bf, fqf>8 \mf} r8 ]
 			%%%%%%%%%% measure 13 %%%%%%%%%%
 			\time 2/4
 			r4 r4 ^\markup {\translate #'(-0.5 . 0) \left-align \center-column {\fontsize #2 " 5\"" \fontsize #2 \musicglyph #"scripts.ufermata" }}
@@ -219,7 +222,7 @@ cello_tuned = {
 			\time 2/4
 			\glissSkipOn
 			\ppos #0.6 c'8 ^\tilt_bow ^\frog
-			\ppos #0.7 \afterGrace c'8 \mf \> 
+			\ppos #0.8 \afterGrace c'8 \mf \> 
 				{\glissSkipOff \ppos #0.75 c'8 \pp}
 			r16 [ \ppos #1.05 c'8. ] \mf
 			%%%%%%%%%% measure 21 %%%%%%%%%%
@@ -355,11 +358,12 @@ cello_tuned = {
 			\time 4/4
 			g''8 \p \glissSkipOff 
 			\draw_line_arrow " " \up_bow_very_heavy
-			e'''8 \< \glissando
+			e'''8 \< \glissando \startTextSpan \glissSkipOn
 			\tuplet 3/2 {
-				\afterGrace \glissSkipOn g''8 \glissSkipOff {s8\stopTextSpan }
+				\afterGrace  g''8  {\glissSkipOff g''8\stopTextSpan }
 				\wavy_vibrato #1.25 
-				\niente a''8 \fz \> ^\down_bow_light \glissando \glissSkipOn 
+				\niente a''8 \fz \> ^\down_bow_light \glissando 
+				\glissSkipOn 
 				\afterGrace a''8 {\glissSkipOff \hideNotes a''8 \! \unHideNotes}
 			}
 			r2
@@ -508,8 +512,9 @@ cello_tuned = {
 			%%%%%%%%%% measure 53 %%%%%%%%%%
 			\time 3/16
 			\glissSkipOn 
-			\afterGrace \ppos #0.7 c'8. \> {\glissSkipOff \ppos #1.05 c'8 \pp}
-			
+			\stemDown
+			\afterGrace \ppos #0.8 c'8. \> {\glissSkipOff \ppos #1.05 c'8 \pp}
+			\stemNeutral
 			%%%%%%%%%% measure 54 %%%%%%%%%%
 			\time 5/4
 			\switch-staff \normal_staff
@@ -527,6 +532,7 @@ cello_tuned = {
 			}>>
 			<<
 				{
+					\oneVoice
 					\tuplet 3/2 { 
 						r8
 						\circles 
@@ -540,9 +546,9 @@ cello_tuned = {
 					}
 				}
 			>>
-			r4 r8
+			r4 r8 [
 			\set glissandoMap = #'((0 . 1))
-			\niente \circles cqs'8 \< ^\aldita ^\markup \string-numbers #'( "III" 1.5 0)
+			\niente \circles cqs'8 ] \< ^\aldita ^\markup \string-numbers #'( "III" 1.5 0)
 				\glissando 
 			%%%%%%%%%% measure 55 %%%%%%%%%%
 			\time 3/4
@@ -620,8 +626,8 @@ cello_tuned = {
 		 	\override NoteHead.stem-attachment = #'(0 . 0)
 		 	\override NoteHead.stencil = #ly:text-interface::print
 		 	\override NoteHead.text = \fingernail
-		 	r8. [
 		 	\clef treble
+		 	r8. [
 		 	\set Staff.forceClef = ##t 
 		 	\ppos #0.6 c'16 ] \mf \< ^\markup \string-numbers #'( "IV" 1.5 0)
 		 		\glissando
@@ -664,14 +670,13 @@ cello_tuned = {
 		 		\diamonds
 		 		\niente
 		 		\draw_line_arrow \down_bow_light \down_bow_heavy
-		 		b,16 (\< \startTextSpan c cs cqs as, b, \stopTextSpan c ^\down_bow_light dqf cqs cs d \p )
+		 		b,16 (\< \startTextSpan c cs cqs as, b, \stopTextSpan c ^\down_bow_light dqf cqs cs d  )
 		 	}
 		 	%%%%%%%%%% measure 66 %%%%%%%%%%
 		 	\time 4/4
 		 	\clef bass
 		 	\tuplet 9/8 {
-		 		\niente
-		 		\circles aes8 \< ~ ^\down_bow_light <aes eqf~> <eqf ~ gqf \harmonic> <eqf a,~> a,~ <ef,~ \harmonic a,> ^\up_bow_light ^\sulpont
+		 		\circles aes8 ~ ^\down_bow_light <aes eqf~> <eqf ~ gqf \harmonic> <eqf a,~> a,~ <ef,~ \harmonic a,> ^\up_bow_light ^\sulpont
 		 		\diamonds ef, \circles a, 
 		 		\draw_line_arrow \down_bow \down_bow_very_heavy
 		 		eqf16 \startTextSpan \diamonds aes16
@@ -718,8 +723,10 @@ cello_tuned = {
 			\switch-staff \body_staff
 			\body-clef #'fingerboard-small			  				  
 			\set Staff.forceClef = ##t
-			\afterGrace \ppos #0.6 c'4 \mf ^\vertical_bow ^\tilt_bow ^\frog
-				\glissando {\ppos #1.05 c'8}
+			\clef treble
+			\circleheads
+			\afterGrace \ppos #0.8 c'4 \mf ^\vertical_bow ^\tilt_bow ^\frog ^\markup \string-numbers #'( "I" 1.5 0)
+				\glissando {\ppos #1.1 c'8}
 			\switch-staff \normal_staff
 			\clef bass
 			\circles
@@ -868,7 +875,7 @@ cello_tuned = {
 			}
 			%%%%%%%%%% measure 86 %%%%%%%%%%
 			\time 4/8
-			\afterGrace bf,8 ^\altosulpont
+			\afterGrace bf,8 
 				\glissando {f8 \flare_sf} 
 			g'8 \p \< \glissando \glissSkipOn
 			\afterGrace a,8  \mf \> {\glissSkipOff a,8}
@@ -1194,7 +1201,8 @@ cello_tuned = {
 				\ppos #0.75 c'16 \ppos #0.75 c'16 \ppos #0.75 c'16
 			} \ppos #0.75 c'8 \glissando
 			\tuplet 3/2 {
-				\glissSkipOn \afterGrace c'8 {\glissSkipOff \ppos #1.05 c'8}
+				\glissSkipOn 
+				\afterGrace \ppos #1 c'8 {\glissSkipOff \ppos #1.05 c'8}
 				\ppos #0.85 c'8 \ppos #0.75 c'8
 			}
 			%%%%%%%%%% measure 120 %%%%%%%%%%
@@ -1278,7 +1286,7 @@ cello_tuned = {
 			\diamonds
 			\draw_line_arrow \down_bow_very_heavy \down_bow_light
 			aes16 \mfpp ^\altosulpont \startTextSpan
-				\glissando \glissSkipOn d'8 ] \stopTextSpan 
+				\glissando \glissSkipOn a8 ] \stopTextSpan 
 			%%%%%%%%%% measure 128 %%%%%%%%%%
 			\time 4/8
 			a8 \glissSkipOff cs'8 ~ cs'8 ~ 
@@ -1477,6 +1485,7 @@ cello_tuned = {
 			r4 
 			<<
 			{
+				\oneVoice
 				\clef treble
 					\tuplet 3/2 {
 						\circles r8 \niente d''4 \< ^\sultasto ^\up_bow ^\markup {\small \italic "arco"} \glissando
@@ -1937,13 +1946,13 @@ cello_pos_tuned = {
 				d'4 \glissando \glissSkipOn f'4 g'4
 				%%%%%%%%%% measure 85 %%%%%%%%%%
 				\time 2/4
-				b'4 \glissando e'4
+				\glissSkipOff b'4 \glissando e'4
 				%%%%%%%%%% measure 86 %%%%%%%%%%
 				\time 2/4
-				s2
+				s8 e'4. \glissando
 				%%%%%%%%%% measure 48 %%%%%%%%%%
 				\time 4/8
-				s2
+				b'4 s4
 				%%%%%%%%%% measure 49 %%%%%%%%%%
 				\time 4/16
 				s4

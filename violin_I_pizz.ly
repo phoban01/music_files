@@ -1326,6 +1326,7 @@ violin_I_pizz_left = {
 
 <<
     {
+      \oneVoice
       \switch-staff \pizz_staff
       \body-clef #'fingerboard
 
@@ -1388,9 +1389,9 @@ violin_I_pizz_left = {
 
       \niente
       \slow-zigzag
-      \ppos #0.85 c'4 \< \glissando \glissSkipOn 
+      \ppos #0.85 c'4 \< \glissando 
 
-      \ppos #0.6 c'4 \mf
+      \ppos #0.6 c'4 \mf \glissando
 
       \time 9/16
 
@@ -1432,7 +1433,7 @@ violin_I_pizz_left = {
 
       \time 4/8
 
-      r2
+      R2
 
       \time 4/8
 

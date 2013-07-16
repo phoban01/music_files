@@ -1,10 +1,9 @@
 violin_one_pressed_bow = {
 	<<
 		{
+			\oneVoice
 			\switch-staff \pizz_staff
 			\body-clef #'fingerboard
-			\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
-
 			\override NoteHead.stencil = #scratch-tone
 			\override Glissando.style = #'dashed-line
 			\override Glissando.bound-details.right.padding = #0.35
@@ -77,13 +76,13 @@ violin_two_pressed_bow = {
 		{
 			\switch-staff \pizz_staff
 			\body-clef #'fingerboard
-
 			\override NoteHead.stencil = #scratch-tone
 			\override Glissando.style = #'dashed-line
 			\override Glissando.bound-details.right.padding = #0.35
 			\override Glissando.thickness = #2
+			\oneVoice
+			
 			\time 2/4
-			\stemDown
 			r4   
 			\set Staff.forceClef = ##t
 			\slow-zigzag
@@ -126,6 +125,7 @@ violin_two_pressed_bow = {
 viola_pressed_bow = {
 	<<
 		{
+			\oneVoice
 			\switch-staff \pizz_staff
 			\body-clef #'fingerboard
 
@@ -147,7 +147,7 @@ viola_pressed_bow = {
 			\time 3/4
 			\med-zigzag
 			\ppos #0.45 c'4 \glissando \glissSkipOn
-			\niente \afterGrace c'4 \> {\glissSkipOff \ppos #0.9 c'8\!}
+			\niente \afterGrace \ppos #0.6 c'4 \> {\glissSkipOff \ppos #1 c'8 \!}
 			r4
 		}
 		\\
@@ -170,6 +170,7 @@ viola_pressed_bow = {
 cello_pressed_bow = {
 	<<
 		{
+			\oneVoice
 			\switch-staff \pizz_staff
 			\body-clef #'fingerboard
 
@@ -228,6 +229,7 @@ skips_pressed_bow = {
 	\time 2/4
 	\my_mark "N"
 	\tempo "" 4=60
+	\set Score.proportionalNotationDuration = #(ly:make-moment 1 50)
 	s2
 	\time 2/4
 	s2
